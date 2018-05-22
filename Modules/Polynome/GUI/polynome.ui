@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Polynome</class>
+ <widget class="QMainWindow" name="Polynome">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>875</width>
+    <height>785</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Polynome de modelisation v1.11</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <widget class="QWidget" name="tab_1">
+       <attribute name="title">
+        <string>Saisie</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>73</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Selection operation </string>
+          </property>
+          <widget class="QSplitter" name="splitter">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>1061</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <widget class="QRadioButton" name="radioButton_new_saisie">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Nouvelle Saisie</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="radioButton_modification">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Modification/Consultation</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter_2">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline;&quot;&gt;Instrument à modeliser&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="margin">
+            <number>4</number>
+           </property>
+          </widget>
+          <widget class="QWidget" name="layoutWidget">
+           <layout class="QFormLayout" name="formLayout">
+            <property name="fieldGrowthPolicy">
+             <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>6</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>10</number>
+            </property>
+            <property name="leftMargin">
+             <number>9</number>
+            </property>
+            <property name="rightMargin">
+             <number>9</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Identification Instrument&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="ExtendedCombo" name="comboBox_identification">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="mouseTracking">
+               <bool>true</bool>
+              </property>
+              <property name="acceptDrops">
+               <bool>true</bool>
+              </property>
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_15">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;N°Certificat&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="comboBox_n_ce">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+              <property name="modelColumn">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_7">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Date Etalonnage&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QDateEdit" name="dateEdit">
+              <property name="minimumSize">
+               <size>
+                <width>206</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="date">
+               <date>
+                <year>2014</year>
+                <month>1</month>
+                <day>1</day>
+               </date>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_12">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Constructeur&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QTextEdit" name="textEdit_constructeur">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_13">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;N° Serie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QTextEdit" name="textEdit_n_serie">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_14">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Model&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QTextEdit" name="textEdit_model">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_16">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Etat Polynome&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QComboBox" name="comboBox_etat_polynome">
+              <item>
+               <property name="text">
+                <string>Archivé</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Actif</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLineEdit" name="lineEdit_resolution"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Resolution&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter_3">
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline;&quot;&gt;Information Etalonnage&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="margin">
+            <number>4</number>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableWidget_table_etalonnage">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>200</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="midLineWidth">
+            <number>0</number>
+           </property>
+           <property name="autoScroll">
+            <bool>false</bool>
+           </property>
+           <property name="autoScrollMargin">
+            <number>10</number>
+           </property>
+           <property name="showDropIndicator" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+           <property name="showGrid">
+            <bool>true</bool>
+           </property>
+           <property name="gridStyle">
+            <enum>Qt::DashDotLine</enum>
+           </property>
+           <attribute name="verticalHeaderMinimumSectionSize">
+            <number>19</number>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Valeurs de l'etalon corrigées</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Valeurs chaine de mesure à étalonner</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Corrections</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Incertitude (k=2)</string>
+            </property>
+           </column>
+          </widget>
+          <widget class="QWidget" name="layoutWidget_2">
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="Button_plus">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../Icones.qrc">
+                <normaloff>:/Icones/ajouter-en-plus-icone-7956-48.png</normaloff>:/Icones/ajouter-en-plus-icone-7956-48.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="buttton_supp">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../Icones.qrc">
+                <normaloff>:/Icones/moins-arriere-zoom-icone-6351-128.PNG</normaloff>:/Icones/moins-arriere-zoom-icone-6351-128.PNG</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>2000</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="0" colspan="4">
+             <widget class="QTableWidget" name="tableWidget_polynome">
+              <row>
+               <property name="text">
+                <string>Polynome Correction = f(Tlue)</string>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>Ordre Polynome</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>A</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>B</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>C</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="button_actualise">
+              <property name="maximumSize">
+               <size>
+                <width>28</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../Icones.qrc">
+                <normaloff>:/Icones/icone_actualiser.png</normaloff>:/Icones/icone_actualiser.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Analyse</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>775</width>
+             <height>539</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QSplitter" name="splitter_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <widget class="PlotWidget" name="graphicsView">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>214</height>
+                </size>
+               </property>
+              </widget>
+              <widget class="QTableWidget" name="tableWidget_modelisation">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>200</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="baseSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Panel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <property name="autoScroll">
+                <bool>false</bool>
+               </property>
+               <property name="autoScrollMargin">
+                <number>10</number>
+               </property>
+               <property name="showDropIndicator" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="showGrid">
+                <bool>true</bool>
+               </property>
+               <property name="gridStyle">
+                <enum>Qt::DashDotLine</enum>
+               </property>
+               <attribute name="verticalHeaderMinimumSectionSize">
+                <number>19</number>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Valeurs de l'etalon corrigées</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Valeurs chaine de mesure à étalonner</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Corrections</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Incertitudes</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Corrections modelisees</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Residus</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Recouvrement incertitudes</string>
+                </property>
+               </column>
+              </widget>
+              <widget class="QWidget" name="layoutWidget">
+               <layout class="QFormLayout" name="formLayout_2">
+                <property name="fieldGrowthPolicy">
+                 <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                </property>
+                <property name="verticalSpacing">
+                 <number>19</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>500</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Incertitude d'etalonnage max</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="lineEdit_incertitude_max_etal"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_2">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Residu max</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="lineEdit_residu_max"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_3">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Incertitude Residu max</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="lineEdit_incertitude_residu_max"/>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_4">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Ecart type des residus</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="lineEdit_ecartype_residus"/>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_8">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Normalite des residus</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QLineEdit" name="lineEdit_normalite_residus"/>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_17">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Incertitude modelisation</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLineEdit" name="lineEdit_incertitude_modelisation"/>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Analyse_residus</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="PlotWidget" name="graphicsView_2"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>875</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEnregistrer">
+    <property name="title">
+     <string>Sauvegarder</string>
+    </property>
+    <addaction name="actionEnregistrer"/>
+    <addaction name="actionMise_jour"/>
+    <addaction name="actionSupprimer"/>
+   </widget>
+   <widget class="QMenu" name="menuEdition">
+    <property name="title">
+     <string>Edition</string>
+    </property>
+    <addaction name="actionExport_Rapport"/>
+   </widget>
+   <addaction name="menuEnregistrer"/>
+   <addaction name="menuEdition"/>
+  </widget>
+  <action name="actionEnregistrer">
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+  </action>
+  <action name="actionMise_jour">
+   <property name="text">
+    <string>Mise à jour</string>
+   </property>
+  </action>
+  <action name="actionSupprimer">
+   <property name="text">
+    <string>Supprimer</string>
+   </property>
+  </action>
+  <action name="actionExport_Rapport">
+   <property name="text">
+    <string>Export Rapport</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+  <customwidget>
+   <class>ExtendedCombo</class>
+   <extends>QComboBox</extends>
+   <header>extendedcombo</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Icones.qrc"/>
+ </resources>
+ <connections/>
+</ui>

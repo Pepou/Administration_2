@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric project file for project Labo_temp v2.2 -->
+<!-- Saved: 2017-04-26, 10:41:01 -->
+<!-- Copyright (C) 2017 F.CARIOU,  -->
+<Project version="5.1">
+  <Language></Language>
+  <Hash>60720875bf6b85573eb83936f367f3ecd19f8f7f</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
+  <ProjectType>Qt4</ProjectType>
+  <Description>21/03/17
+_modification requete recuperation_eiv avec ajout d'une requete qui renvoie la designation du generateur et permet de definir l'incertitude (meilleure ou courant) en fct designation generateur et non en fct du nom
+
+_modification terme EIV en u final dans la gui et sur fichier excel de saisie
+
+_modification cv (k=2) pour incertitude
+_modification cv/ce &quot;phrase sur laboratoire accredité chaine de temperature&quot; enlevées
+_correction bug sur remissionde document : pb sur nom generateur modif requete recuperation_donnees_etalonnage
+_correction erreur sur n!° de procedure lors de reemission de document
+
+_mise en place ctrl dans le cas d'une prestation COFRAC pas de possibilité d'avoir une incertitude &lt; à la portee:
+modification de la fct calcul_incertitude: parametres U_delcaration et num_intrument pris en compte
+Creation de la fct calcul_incertitude_bis pour l'autoechauffement/fuite thermique
+modification de la requete recuperation_eiv pour renvoyer un tupple avec u_eiv et u_declaration (ajout d'une colonne dans la table)
+
+26/04/2017
+Modification du calcul de stabilite :
+ne tient plus compte du generateur mais de la temp de consigne : 0°C </Description>
+  <Version>2.2</Version>
+  <Author>F.CARIOU</Author>
+  <Email></Email>
+  <Eol index="-1"/>
+  <Sources>
+    <Source>IHM/connexion2.py</Source>
+    <Source>IHM/Menu.py</Source>
+    <Source>IHM/resume_onglet_resultat.py</Source>
+    <Source>IHM/Saisie_etalonnage.py</Source>
+    <Source>IHM/saisie_instrument.py</Source>
+    <Source>IHM/Ui_connexion2.py</Source>
+    <Source>IHM/Ui_Menu.py</Source>
+    <Source>Package/fonctions.py</Source>
+    <Source>Package/GestionBdd.py</Source>
+    <Source>Package/RapportEtalonnage.py</Source>
+    <Source>Package/RapportSaisie.py</Source>
+    <Source>Package/__init__.py</Source>
+    <Source>IHM/Ui_Saisie_etalonnage.py</Source>
+    <Source>IHM/Ui_Combobox_referentiel.py</Source>
+    <Source>IHM/Combobox_referentiel.py</Source>
+    <Source>Package/OngletConformite.py</Source>
+    <Source>LaboTemp 2.2.py</Source>
+  </Sources>
+  <Forms>
+    <Form>IHM/connexion2.ui</Form>
+    <Form>IHM/Menu.ui</Form>
+    <Form>IHM/resume_onglet_resultat.ui</Form>
+    <Form>IHM/Saisie_etalonnage.ui</Form>
+    <Form>IHM/saisie_instrument.ui</Form>
+    <Form>IHM/Combobox_referentiel.ui</Form>
+  </Forms>
+  <Translations/>
+  <Resources/>
+  <Interfaces/>
+  <Others/>
+  <MainScript>LaboTemp 2.2.py</MainScript>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+  </FiletypeAssociations>
+</Project>

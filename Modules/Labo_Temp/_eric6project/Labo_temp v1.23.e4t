@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
+<!-- eric6 tasks file for project Labo_temp v1.23 -->
+<!-- Saved: 2016-02-26, 13:40:33 -->
+<Tasks version="5.1">
+  <ProjectScanFilter></ProjectScanFilter>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2015-12-31, 14:34:27</Created>
+    <Resource>
+      <Filename>IHM/connexion2.py</Filename>
+      <Linenumber>40</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2015-12-31, 14:34:27</Created>
+    <Resource>
+      <Filename>IHM/connexion2.py</Filename>
+      <Linenumber>63</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>33</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>41</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>49</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>57</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>65</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>73</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>81</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>89</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>99</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>107</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>115</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>123</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>131</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>139</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>147</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>155</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>163</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>171</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>179</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>187</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>195</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>203</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>211</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>222</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>230</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-15, 13:21:26</Created>
+    <Resource>
+      <Filename>IHM/saisie_instrument.py</Filename>
+      <Linenumber>238</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-22, 16:46:31</Created>
+    <Resource>
+      <Filename>IHM/Menu.py</Filename>
+      <Linenumber>48</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-22, 16:46:31</Created>
+    <Resource>
+      <Filename>IHM/Menu.py</Filename>
+      <Linenumber>73</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-22, 16:46:31</Created>
+    <Resource>
+      <Filename>IHM/Menu.py</Filename>
+      <Linenumber>88</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-01-22, 16:46:31</Created>
+    <Resource>
+      <Filename>IHM/Menu.py</Filename>
+      <Linenumber>133</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>523</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>532</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>540</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>548</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>556</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>564</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>572</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>580</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>588</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>611</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>619</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>627</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>635</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>643</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>651</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>659</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>667</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>675</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>683</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>691</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:32</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>699</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3184</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3193</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3202</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3211</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3220</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3229</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3238</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3247</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3256</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3265</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3274</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3283</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3292</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3301</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3310</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3319</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3328</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3337</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2016-02-26, 11:37:33</Created>
+    <Resource>
+      <Filename>IHM/Saisie_etalonnage.py</Filename>
+      <Linenumber>3346</Linenumber>
+    </Resource>
+  </Task>
+</Tasks>

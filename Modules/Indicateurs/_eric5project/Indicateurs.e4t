@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
+<!-- eric5 tasks file for project Indicateurs -->
+<!-- Saved: 2014-12-30, 15:28:36 -->
+<Tasks version="5.1">
+  <ProjectScanFilter></ProjectScanFilter>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2014-10-15, 13:51:18</Created>
+    <Resource>
+      <Filename>GUI/connexion2.py</Filename>
+      <Linenumber>56</Linenumber>
+    </Resource>
+  </Task>
+</Tasks>

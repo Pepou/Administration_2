@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainCaracterisation</class>
+ <widget class="QMainWindow" name="MainCaracterisation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1370</width>
+    <height>808</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Caracterisation Generateurs</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;t'(t(t''(t('&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabBar::tab {
+   font-size: 12px;
+font-weight: bold;
+min-width: 50ex;
+ padding: 3px
+
+}</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>16</width>
+        <height>16</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="tab">
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Menu Principal</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>39</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel{
+background-color: rgb(170, 255, 255);
+border: 1px solid Black;
+border-radius: 5px;}</string>
+          </property>
+          <property name="text">
+           <string>Recapitulatif des Caracterisations</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="cursor" stdset="0">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="whatsThis">
+           <string extracomment="freeghrehtzh"/>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="cornerButtonEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>120</number>
+          </attribute>
+          <attribute name="horizontalHeaderHighlightSections">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>32</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Date</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Generateur</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Operateur</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Commentaires</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Stabilité</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Temperature
+Stabilite</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Homogeneite</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Temperature
+Homogeneite</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Diagonale</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>u 
+generateur 
+(k=1)</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Archivage</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ID_Caracterisation</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Graphique</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinAndMaxSize</enum>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox_total">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>156</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Suivi des Caracterisations</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="gridLayoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>20</y>
+               <width>481</width>
+               <height>127</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Generateur</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="comboBox_type_donnees">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>u_generateur</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Stabilite</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Homogeneite</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="comboBox_generateur">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Type donnees</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Etat archivage des 
+caracterisation</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QComboBox" name="comboBox_archivage_carcaterisations">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Toutes</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivées</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Non Archivées</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_individuel">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>130</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Suivi des caracterisations individuelles</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="gridLayoutWidget_2">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>20</y>
+               <width>481</width>
+               <height>116</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="3" column="1">
+               <widget class="QComboBox" name="comboBox_type_donnees_2">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Stabilite</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Homogeneite</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Type donnees</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="comboBox_caracterisation">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="comboBox_generateur_2">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Caracterisation</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Generateur</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QCommandLinkButton" name="tracer">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QCommandLinkButton{
+background-color: rgb(170, 255, 255);
+border: 1px solid Black;
+border-radius: 5px;}</string>
+          </property>
+          <property name="text">
+           <string>Tracer</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="matplotlibWidget" name="graphique" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <widget class="QLabel" name="label_8">
+           <property name="geometry">
+            <rect>
+             <x>770</x>
+             <y>30</y>
+             <width>112</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Caracterisation</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1370</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBains">
+    <property name="title">
+     <string>Bains</string>
+    </property>
+    <addaction name="actionNouvelle_caracterisation_bain"/>
+    <addaction name="actionModifier_caracterisation_bain"/>
+   </widget>
+   <widget class="QMenu" name="menuEnceintes">
+    <property name="title">
+     <string>Enceintes</string>
+    </property>
+    <addaction name="actionNouvelle_caracterisation_enceinte"/>
+    <addaction name="actionModifier_caracterisation_enceinte"/>
+   </widget>
+   <widget class="QMenu" name="menuFours">
+    <property name="title">
+     <string>Fours</string>
+    </property>
+    <addaction name="actionNouvelle_caracterisation_four"/>
+    <addaction name="actionModifier_caracterisation_four"/>
+    <addaction name="actionVisualiser_caracterisation_four"/>
+   </widget>
+   <addaction name="menuBains"/>
+   <addaction name="menuEnceintes"/>
+   <addaction name="menuFours"/>
+  </widget>
+  <action name="actionNouvelle_caracterisation_enceinte">
+   <property name="text">
+    <string>Nouvelle caracterisation</string>
+   </property>
+  </action>
+  <action name="actionModifier_caracterisation_enceinte">
+   <property name="text">
+    <string>Modifier caracterisation</string>
+   </property>
+  </action>
+  <action name="actionVisualiser_caracterisation_enceinte">
+   <property name="text">
+    <string>Visualiser caracterisation</string>
+   </property>
+  </action>
+  <action name="actionNouvelle_caracterisation_bain">
+   <property name="text">
+    <string>Nouvelle caracterisation</string>
+   </property>
+  </action>
+  <action name="actionVisualiser_caracterisation_bain">
+   <property name="text">
+    <string>Visualiser caracterisation</string>
+   </property>
+  </action>
+  <action name="actionModifier_caracterisation_bain">
+   <property name="text">
+    <string>Modifier caracterisation</string>
+   </property>
+  </action>
+  <action name="actionNouvelle_caracterisation_four">
+   <property name="text">
+    <string>Nouvelle caracterisation</string>
+   </property>
+  </action>
+  <action name="actionModifier_caracterisation_four">
+   <property name="text">
+    <string>Modifier caracterisation</string>
+   </property>
+  </action>
+  <action name="actionVisualiser_caracterisation_four">
+   <property name="text">
+    <string>Visualiser caracterisation</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>matplotlibWidget</class>
+   <extends>QWidget</extends>
+   <header>matplotlibwidgetFile</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Modification_Entite_Client</class>
+ <widget class="QMainWindow" name="Modification_Entite_Client">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>688</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Modification Entite Client</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+      </property>
+      <property name="horizontalSpacing">
+       <number>6</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>16</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_10">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>2</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Choix du Client</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_select_client"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>2</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Nom Complet</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_client_nom">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Abreviation</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit__client_abrev"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Adresse 
+siege social</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QTextEdit" name="textEdit_client_adresse"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Code Postal</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="lineEdit__client_code_p"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ville</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="lineEdit__client_ville"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>N° Telephone</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="lineEdit__client_tel"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>N° Fax</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLineEdit" name="lineEdit__client_fax"/>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Courriel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QLineEdit" name="lineEdit__client_courriel"/>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Contact</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QLineEdit" name="lineEdit__client_contact"/>
+      </item>
+      <item row="10" column="1">
+       <widget class="QComboBox" name="comboBox_archivage">
+        <item>
+         <property name="text">
+          <string>Non</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Oui</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Archivage</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::NoToolBarArea</set>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSauvegarder"/>
+  </widget>
+  <action name="actionSauvegarder">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/Sauvegarde/b_1_q_0_p_0.jpg</normaloff>:/Sauvegarde/b_1_q_0_p_0.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Sauvegarder</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icones.qrc"/>
+ </resources>
+ <connections/>
+</ui>

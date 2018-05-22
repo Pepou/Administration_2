@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Cartographie</class>
+ <widget class="QMainWindow" name="Cartographie">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cartographie v 0.3</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>39</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+background-color: rgb(170, 255, 255);
+border: 1px solid Black;
+border-radius: 5px;}</string>
+        </property>
+        <property name="text">
+         <string>Recapitulatif des Cartographies</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="TableWidget_Recap" name="tableWidget_recap">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursor" stdset="0">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="mouseTracking">
+         <bool>true</bool>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::ActionsContextMenu</enum>
+        </property>
+        <property name="whatsThis">
+         <string extracomment="freeghrehtzh"/>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="showGrid">
+         <bool>true</bool>
+        </property>
+        <property name="gridStyle">
+         <enum>Qt::SolidLine</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="cornerButtonEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="rowCount">
+         <number>0</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>120</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>32</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Enceinte</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Date</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nom</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Prenom</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Rapport</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Centrale</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Application</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Condition Desiree</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Temp Consigne</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Signe EMT</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>EMT</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nouvelle colonne</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Conformite</string>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuNouvelle_Cartographie">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionNouvelle_Cartographie"/>
+    <addaction name="actionModifier_une_cartographie"/>
+    <addaction name="actionAnnule_et_Remplace"/>
+   </widget>
+   <addaction name="menuNouvelle_Cartographie"/>
+  </widget>
+  <action name="actionNouvelle_Cartographie">
+   <property name="text">
+    <string>Nouvelle Cartographie</string>
+   </property>
+  </action>
+  <action name="actionModifier_une_cartographie">
+   <property name="text">
+    <string>Modifier une Cartographie</string>
+   </property>
+  </action>
+  <action name="actionAnnule_et_Remplace">
+   <property name="text">
+    <string>Annule et Remplace</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TableWidget_Recap</class>
+   <extends>QTableWidget</extends>
+   <header>Modules.Cartographie.GUI.Tablewidget_Recap</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

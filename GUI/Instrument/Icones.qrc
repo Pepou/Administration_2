@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="Icones">
+    <file>icone_actualiser.png</file>
+    <file>ajouter-en-plus-icone-7956-48.png</file>
+    <file>moins-arriere-zoom-icone-6351-128.PNG</file>
+  </qresource>
+</RCC>

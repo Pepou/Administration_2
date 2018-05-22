@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric5 project file for project Gestion_Fichiers_Enregistreurs -->
+<!-- Saved: 2017-11-21, 16:16:09 -->
+<!-- Copyright (C) 2017 F.Cariou, francois.cariou@efs.sante.fr -->
+<Project version="5.1">
+  <Language>en_US</Language>
+  <Hash>5f974034728d2930453f7c7f180d084b5b7f1657</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
+  <ProjectType>Qt4</ProjectType>
+  <Description>-Correction bug si pas de mesure preminute sur l'etalon et meme chose si pas de mesure post minute
+-correction bug sur fichier waranet sil y a des lignes vides
+-correction bug sur resolution decimal to float
+-correction pb avec tag_ela
+-correction bug ordre des sondes des centrales
+-correction bug sur fichier SA32 : marche peut importe config fichier
+-15/06/2016 correction bug mois de juin/juillet
+-16/06/2016 gestion tag ela sur le model des centrales
+-04/07/2016 mise en place demande intervention operateur si n°serie non trouvé dans la bdd pour puces waranet/logtag et progesplus
+
+12/07/2016
+Pb fichier datalog :
+-Prise en compte si separateur == tabulation ou espace
+-Mis en place format heure en h min seconde si pas de seconce
+-mis en forme keys dictionnaire date et heure peu importe comment ils sont ecrit
+
+30/08/2016
+-Correction bug sur waranet en aout :utilisation de replace sur û par u
+
+21/11/2017
+-Correction bug sur logtag si n° de serie ne contient pas de 0 en debut</Description>
+  <Version>0.5</Version>
+  <Author>F.Cariou</Author>
+  <Email>francois.cariou@efs.sante.fr</Email>
+  <Eol index="-1"/>
+  <Sources>
+    <Source>__init__.py</Source>
+    <Source>GestionsFichiersEnregistreurs.py</Source>
+    <Source>GUI/Ui_Exploitation_enregistreurs.py</Source>
+    <Source>GUI/Exploitation_enregistreurs.py</Source>
+    <Source>Axis_x_Time.py</Source>
+    <Source>customPlot.py</Source>
+    <Source>GUI/connexion2.py</Source>
+    <Source>Package/AccesBdd.py</Source>
+    <Source>Package/__init__.py</Source>
+    <Source>GUI/Ui_connexion2.py</Source>
+    <Source>Synchronisation v0.5.py</Source>
+    <Source>GUI/matplotlibwidgetFile.py</Source>
+    <Source>GUI/Ui_Affichage_graphique.py</Source>
+    <Source>GUI/Affichage_graphique.py</Source>
+    <Source>GUI/Ui_Gestion_centrales.py</Source>
+    <Source>GUI/Gestion_centrales.py</Source>
+    <Source>GUI/extendedcombo.py</Source>
+  </Sources>
+  <Forms>
+    <Form>GUI/Exploitation_enregistreurs.ui</Form>
+    <Form>GUI/connexion2.ui</Form>
+    <Form>GUI/Affichage_graphique.ui</Form>
+    <Form>GUI/Gestion_centrales.ui</Form>
+  </Forms>
+  <Translations/>
+  <Resources/>
+  <Interfaces/>
+  <Others>
+    <Other>.issues</Other>
+  </Others>
+  <MainScript>Synchronisation v0.5.py</MainScript>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="*.ui.h" type="FORMS"/>
+  </FiletypeAssociations>
+</Project>

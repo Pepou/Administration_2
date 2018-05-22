@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>982</width>
+    <height>809</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QDateEdit" name="dateEdit">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Parc d'instrument</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>Recherche</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>Valeur à chercher</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_valeur">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>Signe</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_signe">
+                   <item>
+                    <property name="text">
+                     <string>Contient</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>=</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>&gt;</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>&lt;</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>≥</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>≤</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>Nom Colonne</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_nom_colonne"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSplitter" name="splitter">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <widget class="Tableview_donnees_fichier" name="tableView_instruments"/>
+            <widget class="QWidget" name="graph_instruments" native="true"/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Planning de receptions</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QSplitter" name="splitter_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <widget class="Tableview_donnees_fichier" name="tableView_reception"/>
+            <widget class="QWidget" name="graph_reception" native="true"/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>982</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTemperature">
+    <property name="title">
+     <string>Temperature</string>
+    </property>
+    <addaction name="actionLaboTemp"/>
+    <addaction name="actionSynchronisation_enregisteurs"/>
+    <addaction name="actionCaracterisation_Generateurs"/>
+    <addaction name="actionDeclaration_incertitudes"/>
+    <addaction name="actionCartographie"/>
+    <addaction name="separator"/>
+    <addaction name="actionPilotage_des_instruments"/>
+   </widget>
+   <widget class="QMenu" name="menuAfficheurs">
+    <property name="title">
+     <string>Afficheurs</string>
+    </property>
+    <addaction name="actionAfficheurs"/>
+   </widget>
+   <widget class="QMenu" name="menuAdministration">
+    <property name="title">
+     <string>Administration</string>
+    </property>
+    <widget class="QMenu" name="menuInstruments">
+     <property name="title">
+      <string>Instruments</string>
+     </property>
+     <widget class="QMenu" name="menuIntervention">
+      <property name="title">
+       <string>Intervention</string>
+      </property>
+      <addaction name="actionAffecter"/>
+      <addaction name="actionModifier_2"/>
+      <addaction name="actionRechercher"/>
+     </widget>
+     <addaction name="actionCreation"/>
+     <addaction name="actionModification"/>
+     <addaction name="menuIntervention"/>
+    </widget>
+    <widget class="QMenu" name="menuClients">
+     <property name="title">
+      <string>Clients</string>
+     </property>
+     <widget class="QMenu" name="menuModification">
+      <property name="title">
+       <string>Modification</string>
+      </property>
+      <addaction name="actionEntite_Client"/>
+      <addaction name="actionSite_Client"/>
+     </widget>
+     <addaction name="actionCreation_2"/>
+     <addaction name="menuModification"/>
+     <addaction name="actionRecherche_2"/>
+    </widget>
+    <widget class="QMenu" name="menuInterventions">
+     <property name="title">
+      <string>Interventions</string>
+     </property>
+     <addaction name="actionCreer"/>
+     <addaction name="actionModifier"/>
+    </widget>
+    <widget class="QMenu" name="menuBase_de_Donnees">
+     <property name="title">
+      <string>Base de Donnees</string>
+     </property>
+     <addaction name="actionConsultation"/>
+    </widget>
+    <addaction name="actionIndicateurs"/>
+    <addaction name="menuInstruments"/>
+    <addaction name="menuBase_de_Donnees"/>
+    <addaction name="separator"/>
+    <addaction name="menuClients"/>
+    <addaction name="menuInterventions"/>
+   </widget>
+   <widget class="QMenu" name="menuExploitation_Certificats">
+    <property name="title">
+     <string>Exploitation Certificats</string>
+    </property>
+    <addaction name="actionPolynome"/>
+   </widget>
+   <addaction name="menuAdministration"/>
+   <addaction name="menuTemperature"/>
+   <addaction name="menuAfficheurs"/>
+   <addaction name="menuExploitation_Certificats"/>
+  </widget>
+  <action name="actionLaboTemp">
+   <property name="text">
+    <string>LaboTemp</string>
+   </property>
+  </action>
+  <action name="actionSynchronisation_enregisteurs">
+   <property name="text">
+    <string>Synchronisation enregisteurs</string>
+   </property>
+  </action>
+  <action name="actionCaracterisation_Generateurs">
+   <property name="text">
+    <string>Caracterisation Generateurs</string>
+   </property>
+  </action>
+  <action name="actionAfficheurs">
+   <property name="text">
+    <string>Afficheurs</string>
+   </property>
+  </action>
+  <action name="actionIndicateurs">
+   <property name="text">
+    <string>Indicateurs</string>
+   </property>
+  </action>
+  <action name="actionCreation">
+   <property name="text">
+    <string>Creation(s)</string>
+   </property>
+  </action>
+  <action name="actionModification">
+   <property name="text">
+    <string>Modification(s)</string>
+   </property>
+  </action>
+  <action name="actionRecherche">
+   <property name="text">
+    <string>Recherche</string>
+   </property>
+  </action>
+  <action name="actionCreation_2">
+   <property name="text">
+    <string>Creation</string>
+   </property>
+  </action>
+  <action name="actionRecherche_2">
+   <property name="text">
+    <string>Recherche</string>
+   </property>
+  </action>
+  <action name="actionCreer">
+   <property name="text">
+    <string>Creer</string>
+   </property>
+  </action>
+  <action name="actionModifier">
+   <property name="text">
+    <string>Modifier</string>
+   </property>
+  </action>
+  <action name="actionAffecter">
+   <property name="text">
+    <string>Affecter</string>
+   </property>
+  </action>
+  <action name="actionModifier_2">
+   <property name="text">
+    <string>Modifier</string>
+   </property>
+  </action>
+  <action name="actionRechercher">
+   <property name="text">
+    <string>Rechercher</string>
+   </property>
+  </action>
+  <action name="actionPolynome">
+   <property name="text">
+    <string>Polynome</string>
+   </property>
+  </action>
+  <action name="actionConsultation">
+   <property name="text">
+    <string>Consultation</string>
+   </property>
+  </action>
+  <action name="actionPilotage_des_instruments">
+   <property name="text">
+    <string>Pilotage des instruments </string>
+   </property>
+  </action>
+  <action name="actionDeclaration_incertitudes">
+   <property name="text">
+    <string>Declaration incertitudes</string>
+   </property>
+  </action>
+  <action name="actionEntite_Client">
+   <property name="text">
+    <string>Entite Client</string>
+   </property>
+  </action>
+  <action name="actionSite_Client">
+   <property name="text">
+    <string>Site Client</string>
+   </property>
+  </action>
+  <action name="actionServices_Client">
+   <property name="text">
+    <string>Services Client</string>
+   </property>
+  </action>
+  <action name="actionCartographie">
+   <property name="text">
+    <string>Cartographie</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Tableview_donnees_fichier</class>
+   <extends>QTableView</extends>
+   <header>GUI.qtableview_donnees</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

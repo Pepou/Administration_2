@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric5 project file for project Administration 0.1 -->
+<!-- Saved: 2018-05-18, 19:11:38 -->
+<!-- Copyright (C) 2018 F.Cariou, francois.cariou@efs.sante.fr -->
+<Project version="5.1">
+  <Language>fr_FR</Language>
+  <Hash>84cd45c746850b65296d0e62e4998856a107f2ef</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
+  <ProjectType>Qt4</ProjectType>
+  <Description></Description>
+  <Version>0.1</Version>
+  <Author>F.Cariou</Author>
+  <Email>francois.cariou@efs.sante.fr</Email>
+  <Eol index="-1"/>
+  <Sources>
+    <Source>Administration 0.1.py</Source>
+    <Source>__init__.py</Source>
+    <Source>GUI/connexion2.py</Source>
+    <Source>GUI/graph_repartition_parc.py</Source>
+    <Source>GUI/qtableview_donnees.py</Source>
+    <Source>GUI/Ui_connexion2.py</Source>
+    <Source>GUI/Ui_Main_Administration.py</Source>
+    <Source>GUI/__init__.py</Source>
+    <Source>GUI/Main_Administration.py</Source>
+    <Source>Package/AccesBdd.py</Source>
+    <Source>Package/__init__.py</Source>
+    <Source>Modules/Indicateurs/indicateurs v0.3.py</Source>
+    <Source>Modules/Indicateurs/__init__.py</Source>
+    <Source>Modules/Indicateurs/GUI/connexion2.py</Source>
+    <Source>Modules/Indicateurs/GUI/Indicateurs.py</Source>
+    <Source>Modules/Indicateurs/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Indicateurs/GUI/Ui_Indicateurs.py</Source>
+    <Source>Modules/Indicateurs/GUI/__init__.py</Source>
+    <Source>Modules/Indicateurs/Package/AccesBdd.py</Source>
+    <Source>Modules/Indicateurs/Package/Export_excel.py</Source>
+    <Source>Modules/Indicateurs/Package/__init__.py</Source>
+    <Source>GUI/Instrument/Creation_Instruments.py</Source>
+    <Source>GUI/Instrument/Ui_Creation_Instruments.py</Source>
+    <Source>GUI/Instrument/__init__.py</Source>
+    <Source>GUI/Instrument/extendedcombo.py</Source>
+    <Source>Modules/Afficheurs/afficheur v1.3.py</Source>
+    <Source>Modules/Afficheurs/Icones_rc.py</Source>
+    <Source>Modules/Afficheurs/__init__.py</Source>
+    <Source>Modules/Afficheurs/GUI/afficheurs.py</Source>
+    <Source>Modules/Afficheurs/GUI/connexion2.py</Source>
+    <Source>Modules/Afficheurs/GUI/creation_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/creation_emt.py</Source>
+    <Source>Modules/Afficheurs/GUI/extendedcombo.py</Source>
+    <Source>Modules/Afficheurs/GUI/modification_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/select_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_afficheurs.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_creation_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_creation_emt.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_select_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/__init__.py</Source>
+    <Source>Modules/Afficheurs/Package/AccesBdd.py</Source>
+    <Source>Modules/Afficheurs/Package/RapportAfficheur.py</Source>
+    <Source>Modules/Afficheurs/Package/__init__.py</Source>
+    <Source>Modules/Labo_Temp/LaboTemp 2.2.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Combobox_referentiel.py</Source>
+    <Source>Modules/Labo_Temp/IHM/connexion2.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Menu.py</Source>
+    <Source>Modules/Labo_Temp/IHM/resume_onglet_resultat.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Saisie_etalonnage.py</Source>
+    <Source>Modules/Labo_Temp/IHM/saisie_instrument.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_Combobox_referentiel.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_connexion2.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_Menu.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_resume_onglet_resultat.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_Saisie_etalonnage.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_saisie_instrument.py</Source>
+    <Source>Modules/Labo_Temp/Package/fonctions.py</Source>
+    <Source>Modules/Labo_Temp/Package/GestionBdd.py</Source>
+    <Source>Modules/Labo_Temp/Package/OngletConformite.py</Source>
+    <Source>Modules/Labo_Temp/Package/RapportEtalonnage.py</Source>
+    <Source>Modules/Labo_Temp/Package/RapportSaisie.py</Source>
+    <Source>Modules/Labo_Temp/Package/__init__.py</Source>
+    <Source>Modules/Synchronisation/GUI/Affichage_graphique.py</Source>
+    <Source>Modules/Synchronisation/GUI/connexion2.py</Source>
+    <Source>Modules/Synchronisation/GUI/Exploitation_enregistreurs.py</Source>
+    <Source>Modules/Synchronisation/GUI/extendedcombo.py</Source>
+    <Source>Modules/Synchronisation/GUI/Gestion_centrales.py</Source>
+    <Source>Modules/Synchronisation/GUI/matplotlibwidgetFile.py</Source>
+    <Source>Modules/Synchronisation/GUI/Ui_Affichage_graphique.py</Source>
+    <Source>Modules/Synchronisation/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Synchronisation/GUI/Ui_Exploitation_enregistreurs.py</Source>
+    <Source>Modules/Synchronisation/GUI/Ui_Gestion_centrales.py</Source>
+    <Source>Modules/Synchronisation/GUI/__init__.py</Source>
+    <Source>Modules/Synchronisation/Package/AccesBdd.py</Source>
+    <Source>Modules/Synchronisation/Package/__init__.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/connexion2.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/extendedcombo.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Main_Caracterisation.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/matplotlibwidgetFile.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Ui_Interface_caracterisation.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Ui_Main_Caracterisation.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/__init__.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/Package/AccesBdd.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/Package/AccesBdd_caracterisation_bain.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/Package/AccesBdd_caracterisation_enceinte.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/Package/AccesBdd_consultation.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/Package/RapportCaracterisationBain.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/Package/RapportCaracterisationEnceinte.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/Package/__init__.py</Source>
+    <Source>Modules/Consultation/GUI/connexion2.py</Source>
+    <Source>Modules/Consultation/GUI/Consultation_bdd.py</Source>
+    <Source>Modules/Consultation/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Consultation/GUI/Ui_Consultation_bdd.py</Source>
+    <Source>Modules/Consultation/GUI/__init__.py</Source>
+    <Source>Modules/Consultation/Package/AccesBdd.py</Source>
+    <Source>Modules/Consultation/Package/__init__.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/connexion2.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Main_Declaration_Incertitudes.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/matplotlibwidgetFile.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Select_Caracterisation.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Select_CE.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Select_Etalons.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Select_Generateur.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Ui_Main_Caracterisation.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Ui_Main_Declaration_Incertitudes.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Ui_Select_Caracterisation.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Ui_Select_CE.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Ui_Select_Etalons.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/Ui_Select_Generateur.py</Source>
+    <Source>Modules/Declaration_incertitudes/GUI/__init__.py</Source>
+    <Source>Modules/Declaration_incertitudes/Package/AccesBdd.py</Source>
+    <Source>Modules/Declaration_incertitudes/Package/__init__.py</Source>
+    <Source>Modules/Declaration_incertitudes/Report/Rapport.py</Source>
+    <Source>Modules/Declaration_incertitudes/Report/__init__.py</Source>
+    <Source>Modules/Polynome/GUI/connexion2.py</Source>
+    <Source>Modules/Polynome/GUI/extendedcombo.py</Source>
+    <Source>Modules/Polynome/GUI/modelisation_matplotlib.py</Source>
+    <Source>Modules/Polynome/GUI/polynome.py</Source>
+    <Source>Modules/Polynome/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Polynome/GUI/Ui_polynome.py</Source>
+    <Source>Modules/Polynome/GUI/__init__.py</Source>
+    <Source>Modules/Polynome/Package/AccesBdd.py</Source>
+    <Source>Modules/Polynome/Package/RapportSaisie.py</Source>
+    <Source>Modules/Polynome/Package/__init__.py</Source>
+    <Source>GUI/Clients/Ui_Creation_Client.py</Source>
+    <Source>GUI/Clients/Creation_Client.py</Source>
+    <Source>GUI/Clients/Tablewidget_recap_site.py</Source>
+    <Source>GUI/Clients/Tablewidget_recap_service.py</Source>
+    <Source>GUI/Clients/icones_rc.py</Source>
+    <Source>GUI/Clients/Ui_Modification_Entite_Client.py</Source>
+    <Source>GUI/Clients/Modification_Entite_Client.py</Source>
+    <Source>GUI/Clients/Ui_Modification_Site_Client.py</Source>
+    <Source>GUI/Clients/Modification_Site_Client.py</Source>
+    <Source>GUI/Clients/qtableview_service.py</Source>
+    <Source>GUI/Instrument/Ui_Modification_Instruments.py</Source>
+    <Source>GUI/Instrument/Modification_Instrument.py</Source>
+    <Source>Modules/Cartographie/Carto.py</Source>
+    <Source>Modules/Cartographie/__init__.py</Source>
+    <Source>Modules/Cartographie/GUI/connexion2.py</Source>
+    <Source>Modules/Cartographie/GUI/Interface_Centrales.py</Source>
+    <Source>Modules/Cartographie/GUI/matplotlibwidgetFile_graph_total.py</Source>
+    <Source>Modules/Cartographie/GUI/qtableview_donnees.py</Source>
+    <Source>Modules/Cartographie/GUI/tableview_resultats.py</Source>
+    <Source>Modules/Cartographie/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Cartographie/GUI/Ui_Interface_Centrales.py</Source>
+    <Source>Modules/Cartographie/GUI/__init__.py</Source>
+    <Source>Modules/Cartographie/Package/AccesBdd.py</Source>
+    <Source>Modules/Cartographie/Package/GestionsFichiersCentrales.py</Source>
+    <Source>Modules/Cartographie/Package/__init__.py</Source>
+    <Source>Modules/Cartographie/Report/Rapport.py</Source>
+    <Source>Modules/Cartographie/Report/__init__.py</Source>
+    <Source>Modules/Cartographie/Ressources/ressource_rc.py</Source>
+    <Source>Modules/Cartographie/Ressources/__init__.py</Source>
+    <Source>Modules/Cartographie/GUI/Tablewidget_Recap.py</Source>
+    <Source>Modules/Cartographie/GUI/Ui_Main_Carto.py</Source>
+    <Source>Modules/Cartographie/GUI/Main_Carto.py</Source>
+    <Source>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.py</Source>
+    <Source>Modules/Cartographie/GUI/Visu_Modif/Ui_Interface_Centrales_Visu_Modif.py</Source>
+    <Source>Modules/Cartographie/GUI/Visu_Modif/__init__.py</Source>
+  </Sources>
+  <Forms>
+    <Form>GUI/connexion2.ui</Form>
+    <Form>GUI/Main_Administration.ui</Form>
+    <Form>GUI/Instrument/Creation_Instruments.ui</Form>
+    <Form>Modules/Afficheurs/GUI/afficheurs.ui</Form>
+    <Form>Modules/Afficheurs/GUI/connexion2.ui</Form>
+    <Form>Modules/Afficheurs/GUI/creation_afficheur.ui</Form>
+    <Form>Modules/Afficheurs/GUI/creation_emt.ui</Form>
+    <Form>Modules/Afficheurs/GUI/select_afficheur.ui</Form>
+    <Form>Modules/Indicateurs/GUI/connexion2.ui</Form>
+    <Form>Modules/Indicateurs/GUI/Indicateurs.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/Combobox_referentiel.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/connexion2.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/Menu.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/resume_onglet_resultat.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/Saisie_etalonnage.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/Saisie_etalonnage_test.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/saisie_instrument.ui</Form>
+    <Form>GUI/Clients/Creation_Client.ui</Form>
+    <Form>GUI/Clients/Modification_Entite_Client.ui</Form>
+    <Form>GUI/Clients/Modification_Site_Client.ui</Form>
+    <Form>GUI/Instrument/Modification_Instruments.ui</Form>
+    <Form>Modules/Cartographie/GUI/connexion2.ui</Form>
+    <Form>Modules/Cartographie/GUI/Interface_Centrales.ui</Form>
+    <Form>Modules/Caracterisation_generateurs_temperature/GUI/connexion2.ui</Form>
+    <Form>Modules/Caracterisation_generateurs_temperature/GUI/Interface_caracterisation.ui</Form>
+    <Form>Modules/Caracterisation_generateurs_temperature/GUI/Main_Caracterisation.ui</Form>
+    <Form>Modules/Consultation/GUI/connexion2.ui</Form>
+    <Form>Modules/Consultation/GUI/Consultation_bdd.ui</Form>
+    <Form>Modules/Declaration_incertitudes/GUI/connexion2.ui</Form>
+    <Form>Modules/Declaration_incertitudes/GUI/Main_Declaration_Incertitudes.ui</Form>
+    <Form>Modules/Declaration_incertitudes/GUI/Select_Caracterisation.ui</Form>
+    <Form>Modules/Declaration_incertitudes/GUI/Select_CE.ui</Form>
+    <Form>Modules/Declaration_incertitudes/GUI/Select_Etalons.ui</Form>
+    <Form>Modules/Declaration_incertitudes/GUI/Select_Generateur.ui</Form>
+    <Form>Modules/Polynome/GUI/connexion2.ui</Form>
+    <Form>Modules/Polynome/GUI/polynome.ui</Form>
+    <Form>Modules/Synchronisation/GUI/Affichage_graphique.ui</Form>
+    <Form>Modules/Synchronisation/GUI/connexion2.ui</Form>
+    <Form>Modules/Synchronisation/GUI/Exploitation_enregistreurs.ui</Form>
+    <Form>Modules/Synchronisation/GUI/Gestion_centrales.ui</Form>
+    <Form>Modules/Cartographie/GUI/Main_Carto.ui</Form>
+    <Form>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.ui</Form>
+  </Forms>
+  <Translations/>
+  <Resources>
+    <Resource>GUI/Clients/icones.qrc</Resource>
+    <Resource>Modules/Cartographie/Ressources/ressource.qrc</Resource>
+  </Resources>
+  <Interfaces/>
+  <Others/>
+  <MainScript>Administration 0.1.py</MainScript>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="*.ui.h" type="FORMS"/>
+  </FiletypeAssociations>
+</Project>

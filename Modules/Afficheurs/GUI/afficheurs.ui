@@ -1,0 +1,1634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1015</width>
+    <height>895</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Configuration</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <property name="rowWrapPolicy">
+         <enum>QFormLayout::WrapLongRows</enum>
+        </property>
+        <property name="verticalSpacing">
+         <number>13</number>
+        </property>
+        <property name="topMargin">
+         <number>13</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Date Contrôle&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>11</number>
+          </property>
+          <item>
+           <widget class="QDateEdit" name="dateEdit">
+            <property name="minimumSize">
+             <size>
+              <width>206</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="date">
+             <date>
+              <year>2014</year>
+              <month>1</month>
+              <day>1</day>
+             </date>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;CMR&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="ExtendedCombo" name="comboBox_cmr">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_31">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Famille Afficheur&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="comboBox_famille_afficheur">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>Sonde alarme température</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Afficheur de température</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Afficheur de temps</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Afficheur de vitesse</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Identification Afficheur&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="ExtendedCombo" name="comboBox_identification">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="acceptDrops">
+           <bool>true</bool>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_38">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Site</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="lineEdit_site">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_39">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Service</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="lineEdit_service">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_33">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Constructeur</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="lineEdit_constructeur">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_34">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QLineEdit" name="lineEdit_type">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="label_13">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;N° Serie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QTextEdit" name="textEdit_n_serie">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="label_35">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Renseignement complementaire</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QTextEdit" name="textEdit_renseignement_complementaire">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0">
+         <widget class="QLabel" name="label_36">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Commentaire</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="1">
+         <widget class="QTextEdit" name="textEdit_commentaire">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="0">
+         <widget class="QLabel" name="label_17">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Identification Etalon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="1">
+         <widget class="ExtendedCombo" name="comboBox_ident_etalon">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="0">
+         <widget class="QLabel" name="label_32">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;N°Certificat Polynome&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="1">
+         <widget class="QComboBox" name="comboBox_ce_etal">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="0">
+         <widget class="QLabel" name="label_30">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Nombre point contrôle&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="1">
+         <widget class="QSpinBox" name="spinBox">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>3</number>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="0">
+         <widget class="QLabel" name="label_37">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Nombre de mesure par point</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="1">
+         <widget class="QSpinBox" name="spinBox_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>20</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboBox_type_rapport">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <item>
+           <property name="text">
+            <string>*</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Certificat d'étalonnage</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Rapport de qualification</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_43">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Type de Rapport</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Pt_1</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Resolution</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_resolution">
+                <property name="maximum">
+                 <double>2.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.100000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>EMT</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_EMT">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tableWidget">
+            <row>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Etalon</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Etalon corrigé</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Afficheur</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="formLayout_2">
+            <property name="fieldGrowthPolicy">
+             <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Moyenne Etalon Corrigée</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_etalon"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Moyenne Afficheur</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_afficheur"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_5">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Correction moyenne</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="lineEdit_correction"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Ecart type</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLineEdit" name="lineEdit_ecartype"/>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U&lt;span style=&quot; vertical-align:sub;&quot;&gt;k=2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QLineEdit" name="lineEdit_incertitude"/>
+            </item>
+            <item row="10" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Conformite</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="QLineEdit" name="lineEdit_conformite"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_etalon_arrondie"/>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_afficheur_arrondie"/>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="lineEdit_correction_arrondie"/>
+            </item>
+            <item row="8" column="1">
+             <widget class="QLineEdit" name="lineEdit_incertitude_arrondie"/>
+            </item>
+            <item row="11" column="1">
+             <widget class="QTextEdit" name="textEdit_commentaire_conformite">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>22</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="0">
+             <widget class="QLabel" name="label_40">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="midLineWidth">
+               <number>0</number>
+              </property>
+              <property name="text">
+               <string>Commentaire Conformite</string>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="wordWrap">
+               <bool>false</bool>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <property name="indent">
+               <number>-1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_44">
+              <property name="text">
+               <string>Valeur EMT</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QLineEdit" name="lineEdit_valeur_emt"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Pt_2</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Resolution</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_resolution_2">
+                <property name="maximum">
+                 <double>2.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.100000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>EMT</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_EMT_2">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tableWidget_2">
+            <row>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Etalon</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Etalon corrigé</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Afficheur</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="formLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_14">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Moyenne Etalon Corrigée</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_etalon_2"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_15">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Moyenne Afficheur</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_afficheur_2"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_18">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Correction moyenne</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="lineEdit_correction_2"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_19">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Ecart type</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLineEdit" name="lineEdit_ecartype_2"/>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_20">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U&lt;span style=&quot; vertical-align:sub;&quot;&gt;k=2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QLineEdit" name="lineEdit_incertitude_2"/>
+            </item>
+            <item row="10" column="0">
+             <widget class="QLabel" name="label_21">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Conformite</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="QLineEdit" name="lineEdit_conformite_2"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_etalon_2_arrondie"/>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_afficheur_2_arrondie"/>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="lineEdit_correction_2_arrondie"/>
+            </item>
+            <item row="8" column="1">
+             <widget class="QLineEdit" name="lineEdit_incertitude_2_arrondie"/>
+            </item>
+            <item row="11" column="0">
+             <widget class="QLabel" name="label_41">
+              <property name="text">
+               <string>Commentaire Conformite</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="1">
+             <widget class="QTextEdit" name="textEdit_commentaire_conformite_2">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>22</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_45">
+              <property name="text">
+               <string>Valeur EMT</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QLineEdit" name="lineEdit_valeur_emt_2"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Pt_3</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="label_22">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Resolution</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_resolution_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximum">
+                 <double>2.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.100000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_23">
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>EMT</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_EMT_3">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tableWidget_3">
+            <row>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Etalon</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Etalon corrigé</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Afficheur</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="formLayout_4">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_24">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Moyenne Etalon Corrigée</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_etalon_3"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_25">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Moyenne Afficheur</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_afficheur_3"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_26">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Correction moyenne</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="lineEdit_correction_3"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_27">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Ecart type</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QLineEdit" name="lineEdit_ecartype_3"/>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_28">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U&lt;span style=&quot; vertical-align:sub;&quot;&gt;k=2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QLineEdit" name="lineEdit_incertitude_3"/>
+            </item>
+            <item row="10" column="0">
+             <widget class="QLabel" name="label_29">
+              <property name="font">
+               <font>
+                <family>Calibri</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Conformite</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="QLineEdit" name="lineEdit_conformite_3"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_etalon_3_arrondie"/>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="lineEdit_moyenne_afficheur_3_arrondie"/>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="lineEdit_correction_3_arrondie"/>
+            </item>
+            <item row="8" column="1">
+             <widget class="QLineEdit" name="lineEdit_incertitude_3_arrondie"/>
+            </item>
+            <item row="11" column="0">
+             <widget class="QLabel" name="label_42">
+              <property name="text">
+               <string>Commentaire Conformite</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="1">
+             <widget class="QTextEdit" name="textEdit_commentaire_conformite_3">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>22</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_46">
+              <property name="text">
+               <string>Valeur EMT</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QLineEdit" name="lineEdit_valeur_emt_3"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Commentaire resultat(s)</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QTextEdit" name="textEdit_renseignementresultat">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1015</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Administration</string>
+    </property>
+    <widget class="QMenu" name="menuAfficheur">
+     <property name="title">
+      <string>Afficheur</string>
+     </property>
+     <addaction name="actionCreation_afficheur"/>
+     <addaction name="actionModification_Afficheur"/>
+    </widget>
+    <addaction name="menuAfficheur"/>
+    <addaction name="actionCreation_EMT"/>
+    <addaction name="actionModification_de_saisie"/>
+    <addaction name="actionAnnule_et_Remplace"/>
+    <addaction name="actionValidation"/>
+   </widget>
+   <widget class="QMenu" name="menuSauvegarde">
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>Sauvegarde</string>
+    </property>
+    <addaction name="actionEnregistrement"/>
+    <addaction name="actionMise_jour"/>
+    <addaction name="actionArchivage"/>
+   </widget>
+   <addaction name="menuMenu"/>
+   <addaction name="menuSauvegarde"/>
+  </widget>
+  <action name="actionCreation_afficheur">
+   <property name="text">
+    <string>Creation afficheur</string>
+   </property>
+  </action>
+  <action name="actionEnregistrement">
+   <property name="text">
+    <string>Enregistrement</string>
+   </property>
+  </action>
+  <action name="actionModification">
+   <property name="text">
+    <string>Modification</string>
+   </property>
+  </action>
+  <action name="actionCreation_EMT">
+   <property name="text">
+    <string>Creation_EMT</string>
+   </property>
+  </action>
+  <action name="actionModification_de_saisie">
+   <property name="text">
+    <string>Modification de saisie</string>
+   </property>
+  </action>
+  <action name="actionValidation">
+   <property name="text">
+    <string>Validation</string>
+   </property>
+  </action>
+  <action name="actionMise_jour">
+   <property name="text">
+    <string>Mise à jour </string>
+   </property>
+  </action>
+  <action name="actionArchivage">
+   <property name="text">
+    <string>Archivage</string>
+   </property>
+  </action>
+  <action name="actionModification_Afficheur">
+   <property name="text">
+    <string>Modification Afficheur</string>
+   </property>
+  </action>
+  <action name="actionAnnule_et_Remplace">
+   <property name="text">
+    <string>Annule et Remplace</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ExtendedCombo</class>
+   <extends>QComboBox</extends>
+   <header>extendedcombo</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

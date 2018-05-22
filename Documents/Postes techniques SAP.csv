@@ -1,0 +1,2358 @@
+17;Région Centre Atlantique;0;None;0
+17-0000;Sortie physique matériel;0;None;0
+17-0001;Matériel à statuer fin cycle inventaire;0;None;0
+17-1602;Zone analytique d'Angoulème;0;None;0
+17-1602-ANG-I;En attente informatique Angoulème;1602420;None;420
+17-1602-ASM;Site d'Angoulème;0;None;0
+17-1602-ASM-A;Angoulême - Batiment A;1602401;None;401
+17-1602-ASM-A-R;Angoulême - Niveau 0;1602401;None;401
+17-1602-ASM-A-R-00R001;Angoulême - Rampe accès PMR;1602401;None;401
+17-1602-ASM-A-R-00R002;Angoulême - Perron PMR;1602401;None;401
+17-1602-ASM-A-R-00R003;Angoulême - SAS entrée;1602401;None;401
+17-1602-ASM-A-R-00R004;Angoulême - Hall accueil;1602401;None;401
+17-1602-ASM-A-R-00R005;Angoulême - Banque d'accueil;1602110;None;110
+17-1602-ASM-A-R-00R006;Angoulême - SAS sanitaires donneurs;1602110;None;401
+17-1602-ASM-A-R-00R007;Angoulême - Sanitaire Donneurs Hommes;1602110;None;401
+17-1602-ASM-A-R-00R008;Angoulême - Sanitaire Donneurs Femmes;1602110;None;401
+17-1602-ASM-A-R-00R009;Angoulême - Bureau entretien médical 1;1602110;None;110
+17-1602-ASM-A-R-00R010;Angoulême - Bureau entretien médical 2;1602110;None;110
+17-1602-ASM-A-R-00R011;Angoulême - Magasin secondaire;1602110;None;431
+17-1602-ASM-A-R-00R012;Angoulême - Salle prélèvements;1602110;None;110
+17-1602-ASM-A-R-00R013;Angoulême - Espace administratif;1602110;None;110
+17-1602-ASM-A-R-00R014;Angoulême - Circulation vers collation;1602110;None;401
+17-1602-ASM-A-R-00R015;Angoulême - Restauration donneurs;1602110;None;110
+17-1602-ASM-A-R-00R016;Angoulême - Office donneurs;1602110;None;110
+17-1602-ASM-A-R-00R017;Angoulême - Bureau IDE;1602430;None;110
+17-1602-ASM-A-R-00R018;Angoulême - Salle réunion;1602430;None;430
+17-1602-ASM-A-R-00R019;Angoulême - Bureau Responsa Prélèvements;1602430;None;110
+17-1602-ASM-A-R-00R020;Angoulême - Secrétariat donneurs;1602110;None;114
+17-1602-ASM-A-R-00R021;Angoulême - SAS sanitaires personnels;1602401;None;401
+17-1602-ASM-A-R-00R022;Angoulême - Sanitaire personnels Hommes;1602401;None;401
+17-1602-ASM-A-R-00R023;Angoulême - Sanitaire personnels Femmes;1602401;None;401
+17-1602-ASM-A-R-00R024;Angoulême - Espace photocopieurs;1602430;None;430
+17-1602-ASM-A-R-00R025;Angoulême - Circulation distribution;1602401;None;401
+17-1602-ASM-A-R-00R026;Angoulême - Réserve alimentaire;1602110;None;110
+17-1602-ASM-A-R-00R027;Angoulême - Bur Responsable Centre Soins;1602150;None;221
+17-1602-ASM-A-R-00R028;Angoulême - Bur Responsable Distribution;1602110;None;151
+17-1602-ASM-A-R-00R029;Angoulême - Bureau Techniciens Distribu;1602150;None;150
+17-1602-ASM-A-R-00R030;Angoulême - Local expédition;1602151;None;151
+17-1602-ASM-A-R-00R031;Angoulême - SAS Navettes;1602151;None;151
+17-1602-ASM-A-R-00R032;Angoulême - SAS Distrbution;1602151;None;151
+17-1602-ASM-A-R-00R033;Angoulême - Local réception;1602151;None;151
+17-1602-ASM-A-R-00R034;Angoulême - Distribution & Laboratoire;1602151;None;151
+17-1602-ASM-A-R-00R035;Angoulême - Local enceintes;1602151;None;151
+17-1602-ASM-A-R-00R036;Angoulême - Circulation entrée personnel;1602401;None;401
+17-1602-ASM-A-R-00R037;Angoulême - Bur Correspondant Administra;1602110;None;413
+17-1602-ASM-A-R-00R038;Angoulême - Sanitaire personnels Hommes;1602401;None;401
+17-1602-ASM-A-R-00R039;Angoulême - Vestiaires Hommes;1602401;None;401
+17-1602-ASM-A-R-00R040;Angoulême - Douche Vestiaires Hommes;1602401;None;401
+17-1602-ASM-A-R-00R041;Angoulême - Sanitaire personnels Femmes;1602401;None;401
+17-1602-ASM-A-R-00R042;Angoulême - Vestiaires Femmes;1602401;None;401
+17-1602-ASM-A-R-00R043;Angoulême - Douche Vestiaires Femmes;1602401;None;401
+17-1602-ASM-A-R-00R044;Angoulême - TGBT;1602401;None;401
+17-1602-ASM-A-R-00R045;Angoulême - Local groupe électrogène;1602401;None;401
+17-1602-ASM-A-R-00R046;Angoulême - Local chaufferie;1602401;None;401
+17-1602-ASM-A-R-00R047;Angoulême - Perron personnels distrib;1602401;None;401
+17-1602-ASM-A-R-00R048;Angoulême - Rampe PMR personnels;1602401;None;401
+17-1602-ASM-A-R-00R049;Angoulême - Circulation vers garage;1602401;None;401
+17-1602-ASM-A-R-00R050;Angoulême - Bureau Responsable de Site;1602401;None;413
+17-1602-ASM-A-R-00R051;Angoulême - Responsable Hygiène;1602401;None;450
+17-1602-ASM-A-R-00R052;Angoulême - Local ménage;1602401;None;401
+17-1602-ASM-A-R-00R053;Angoulême - Local déchets DASRI;1602401;None;401
+17-1602-ASM-A-R-00R054;Angoulême - Réserve Promo du Don;1602401;None;114
+17-1602-ASM-A-R-00R055;Angoulême - Local PC U;1602110;None;110
+17-1602-ASM-A-R-00R056;Angoulême - Local informatique;1602420;None;420
+17-1602-ASM-A-R-00R057;Angoulême - Bureau magasinier;1602431;None;431
+17-1602-ASM-A-R-00R058;Angoulême - Cuisine personnels;1602430;None;430
+17-1602-ASM-A-R-00R059;Angoulême - Espace photocopieur;1602430;None;430
+17-1602-ASM-A-R-00R060;Angoulême - Local IRP & Chambre garde;1602418;None;418
+17-1602-ASM-A-R-00R061;Angoulême - Terrasse cuisine personnels;1602401;None;401
+17-1602-ASM-A-R-00R062;Angoulême - Local Groupe climatisations;1602401;None;401
+17-1602-ASM-A-R-00R063;Angoulême - Magasin;1602431;None;431
+17-1602-ASM-A-R-00R064;Angoulême - Archives;1602430;None;430
+17-1602-ASM-A-R-00R065;Angoulême - Garage;1602430;None;430
+17-1602-ASM-A-R-00R066;Angoulême - Rampe garage;1602401;None;401
+17-1602-ASM-A-R-00R067;Angoulême - Garage véhicule collecte;1602110;None;110
+17-1602-ASM-A-R-00R068;Angoulême - Combles technique;1602401;None;401
+17-1602-ASM-A-R-00R069;Angoulême - Combles;1602401;None;401
+17-1602-ASM-A-R-00R070;Angoulême - Combles garage;1602401;None;401
+17-1602-ASM-M;Angoulème - Métrologie;0;None;0
+17-1702;Zone analytique de La Rochelle;0;None;0
+17-1702-LRO;Site de La Rochelle;0;None;0
+17-1702-LRO-A;La Rochelle - Batiment A;1702401;None;401
+17-1702-LRO-A-R;La Rochelle - Niveau 0;1702401;None;401
+17-1702-LRO-A-R-00R001;La Rochelle - Sas;1702401;None;110
+17-1702-LRO-A-R-00R002;La Rochelle - Salle d'attente donneurs;1702401;None;110
+17-1702-LRO-A-R-00R003;La Rochelle - Bureau d'accueil donneurs;1702401;None;110
+17-1702-LRO-A-R-00R004;La Rochelle - Entrée site;1702401;None;110
+17-1702-LRO-A-R-00R005;La Rochelle - Local ménage;1702401;None;400
+17-1702-LRO-A-R-00R006;La Rochelle - Distribution;1702401;None;151
+17-1702-LRO-A-R-00R007;La Rochelle - laboratoire IHR;1702401;None;154
+17-1702-LRO-A-R-00R008;La Rochelle - Chambre de garde;1702401;None;151
+17-1702-LRO-A-R-00R009;La Rochelle - Salle de bain chbre garde;1702401;None;151
+17-1702-LRO-A-R-00R010;La Rochelle - Sanitaires;1702401;None;430
+17-1702-LRO-A-R-00R011;La Rochelle - Bur. secrétaire admin.;1702401;None;413
+17-1702-LRO-A-R-00R012;La Rochelle - Circulation;1702401;None;401
+17-1702-LRO-A-R-00R013;La Rochelle - Local Technique;1702401;None;420
+17-1702-LRO-A-R-00R014;La Rochelle - Réserve;1702401;None;431
+17-1702-LRO-A-R-00R015;La Rochelle - Bur. Secrét. promo du don;1702401;None;114
+17-1702-LRO-A-R-00R016;La Rochelle - Salle personnel-vestiaires;1702401;None;430
+17-1702-LRO-A-R-00R017;La Rochelle - Bureau secrétaire collecte;1702401;None;110
+17-1702-LRO-A-R-00R018;La Rochelle - Bureau Médecin;1702401;None;150
+17-1702-LRO-A-R-00R019;La Rochelle - Restauration donneurs;1702401;None;110
+17-1702-LRO-A-R-00R020;La Rochelle - Circulation;1702401;None;401
+17-1702-LRO-A-R-00R021;La Rochelle - Archives;1702401;None;430
+17-1702-LRO-A-R-00R022;La Rochelle - Bureau resp. site;1702401;None;413
+17-1702-LRO-A-R-00R023;La Rochelle - Réserve alimentaire;1702401;None;110
+17-1702-LRO-A-R-00R024;La Rochelle - Salle de prélèvements;1702401;None;110
+17-1702-LRO-A-R-00R025;La Rochelle - Entretien médical;1702401;None;110
+17-1702-LRO-A-R-00R026;La Rochelle - Magasin 2;1702401;None;110
+17-1702-LRO-A-R-00R027;La Rochelle - Magasin 3;1702401;None;110
+17-1702-LRO-A-R-00R028;La Rochelle - Local déchets;1702401;None;401
+17-1702-LRO-A-R-00R029;La Rochelle - Local U;1702401;None;110
+17-1702-LRO-I;En attente informatique La Rochelle;1702420;None;420
+17-1702-LRO-M;La Rochelle - Métrologie;0;None;0
+17-1710;Zone analytique de Saintes;0;None;0
+17-1710-SAI;Site de Saintes;0;None;0
+17-1710-SAI-A;Saintes - Batiment A;1710401;None;401
+17-1710-SAI-A-1;Saintes - Niveau 1;1710401;None;401
+17-1710-SAI-A-1-001001;Saintes - Palier escalier;1710401;None;401
+17-1710-SAI-A-1-001002;Saintes - Accueil;1710401;None;110
+17-1710-SAI-A-1-001003;Saintes - Circulation;1710401;None;401
+17-1710-SAI-A-1-001004;Saintes - Laboratoire IHR/Dist;1710401;None;150
+17-1710-SAI-A-1-001005;Saintes - Réserve laboratoire;1710150;None;150
+17-1710-SAI-A-1-001006;Saintes - Chambre de garde;1710401;None;150
+17-1710-SAI-A-1-001007;Saintes - Sas;1710401;None;401
+17-1710-SAI-A-1-001008;Saintes - Salle de réunion;1710401;None;413
+17-1710-SAI-A-1-001009;Saintes - Bureau Contrôle de gestion-RH;1710401;None;413
+17-1710-SAI-A-1-001010;Saintes - Bureau Responsable de site;1710401;None;413
+17-1710-SAI-A-1-001011;Saintes - Sas;1710401;None;401
+17-1710-SAI-A-1-001012;Saintes - Bur Corresp admin-Relation don;1710401;None;413
+17-1710-SAI-A-1-001013;Saintes - Bur Appro - Maint IHD - ST;1710401;None;431
+17-1710-SAI-A-1-001014;Saintes - Laverie;1710401;None;401
+17-1710-SAI-A-1-001015;Saintes - Circulation;1710401;None;401
+17-1710-SAI-A-1-001016;Saintes - Palier escalier;1710401;None;401
+17-1710-SAI-A-1-001017;Saintes - Circulation;1710401;None;110
+17-1710-SAI-A-1-001018;Saintes - Salle de collation donneurs;1710401;None;110
+17-1710-SAI-A-1-001019;Saintes - Salle de prélèvements;1710401;None;110
+17-1710-SAI-A-1-001020;Saintes - Salle de repos donneurs;1710401;None;110
+17-1710-SAI-A-1-001021;Saintes - Bureau médical;1710401;None;110
+17-1710-SAI-A-1-001022;Saintes - Bur. médecin resp. IHR/Distri;1710401;None;150
+17-1710-SAI-A-1-001023;Saintes - Bur. médecin resp. Prél.;1710401;None;110
+17-1710-SAI-A-1-001024;Saintes - Salle Repos personnels;1710401;None;430
+17-1710-SAI-A-1-001025;Saintes - Ascenceur;1710401;None;401
+17-1710-SAI-A-1-001026;Saintes - Vestiaire femmes;1710401;None;430
+17-1710-SAI-A-1-001027;Saintes - Réserve Prélèvement;1710401;None;110
+17-1710-SAI-A-1-001028;Saintes - Sanitaire personnel femmes;1710401;None;430
+17-1710-SAI-A-1-001029;Saintes - Sanitaire personnel femmes;1710401;None;110
+17-1710-SAI-A-1-001030;Saintes - Réserve alimentation donneurs;1710110;None;110
+17-1710-SAI-A-1-001031;Saintes - Local technique;1710401;None;420
+17-1710-SAI-A-1-001032;Vestiaire Hommes;1710401;None;401
+17-1710-SAI-A-1-001033;Sanitaires Hommes;1710401;None;401
+17-1710-SAI-A-1-001034;Sanitaire public;1710401;None;401
+17-1710-SAI-A-1-001035;Sanitaire public;1710401;None;401
+17-1710-SAI-A-1-001036;Linge sale;1710401;None;401
+17-1710-SAI-A-1-001037;Douche;1710401;None;401
+17-1710-SAI-A-1-001038;Local déchets;1710401;None;401
+17-1710-SAI-A-1-001039;Réserve Promotion du don;1710401;None;114
+17-1710-SAI-A-1-001040;Saintes - Local Enceintes PSL;1710151;None;151
+17-1710-SAI-A-R;Saintes - Niveau 0;1710401;None;401
+17-1710-SAI-A-R-00R001;Saintes - Sas EFS;1710401;None;401
+17-1710-SAI-A-R-00R002;Saintes - Réception Expédition;1710401;None;110
+17-1710-SAI-A-R-00R003;Saintes - Local Technique Ascenceur;1710401;None;401
+17-1710-SAI-A-R-00R004;Saintes - Ascenceur;1710401;None;401
+17-1710-SAI-A-R-00R005;Saintes - Palier escalier;1710401;None;401
+17-1710-SAI-A-R-00R006;Saintes - Hall EFS;1710401;None;401
+17-1710-SAI-A-R-00R007;Saintes - Archives;1710401;None;430
+17-1710-SAI-A-S;Saintes - Niveau sous sol;1710401;None;401
+17-1710-SAI-A-S-00S001;Saintes - Sas;1710401;None;430
+17-1710-SAI-A-S-00S002;Saintes - Réserve sous-sol;1710401;None;110
+17-1710-SAI-A-S-00S003;CH Saintonge - Chaufferie;0;None;0
+17-1710-SAI-A-S-00S004;Saintes - Local groupe électrogène;1710401;None;401
+17-1710-SAI-A-T;Terrasse;1710401;None;401
+17-1710-SAI-A-T-TH;Terrasse Haute;1710401;None;401
+17-1710-SAI-G;Saintes - Garage;1710401;None;433
+17-1710-SAI-G-R;Saintes - Rez de chaussée;1710401;None;433
+17-1710-SAI-G-R-00R001;Saintes - Garage;1710401;None;433
+17-1710-SAI-G-R-00R002;Saintes - Local préparation collectes;1710401;None;110
+17-1710-SAI-G-R-00R003;Saintes - Local Dechets;1710401;None;430
+17-1710-SAI-I;En attente informatique Saintes;1710420;None;420
+17-1710-SAI-M;Saintes - Métrologie;0;None;0
+17-1802;Zone analytique de Bourges;0;None;0
+17-1802-BOU;Site de Bourges;0;None;0
+17-1802-BOU-A;Bourges - Batiment A;1802401;None;401
+17-1802-BOU-A-R;Bourges - Niveau 0;1802401;None;401
+17-1802-BOU-A-R-00R001;Bourges - Hall d'entrée;1802401;None;110
+17-1802-BOU-A-R-00R002;Bourges - Sanitaires handicapés;1802401;None;151
+17-1802-BOU-A-R-00R003;Bourges - Chambre froide +4°;1802401;None;151
+17-1802-BOU-A-R-00R005;Bourges - Réception distribution;1802401;None;150
+17-1802-BOU-A-R-00R006;Bourges - Immuno Hématologie;1802401;None;154
+17-1802-BOU-A-R-00R007;Bourges - Réserve labo;1802401;None;151
+17-1802-BOU-A-R-00R008;Bourges - Chef d'équipe IHR;1802401;None;150
+17-1802-BOU-A-R-00R009;Bourges - Sanitaires hommes;1802401;None;401
+17-1802-BOU-A-R-00R010;Bourges - Sanitaires femmes;1802401;None;401
+17-1802-BOU-A-R-00R011;Bourges - Annexe archivage;1802401;None;413
+17-1802-BOU-A-R-00R012;Bourges - Salle de réunion;1802401;None;413
+17-1802-BOU-A-R-00R013;Bourges - Circulation;1802401;None;401
+17-1802-BOU-A-R-00R014;Bourges - Conservation plaquettes;1802401;None;151
+17-1802-BOU-A-R-00R015;Bourges - Annexe prélèvement;1802401;None;110
+17-1802-BOU-A-R-00R016;Bourges - Local archives;1802401;None;413
+17-1802-BOU-A-R-00R017;Bourges - Cuisine personnel;1802401;None;430
+17-1802-BOU-A-R-00R018;Bourges - Vestiaire sanitaire;1802401;None;430
+17-1802-BOU-A-R-00R019;Bourges - Utilités sales;1802401;None;430
+17-1802-BOU-A-R-00R020;Bourges - Utilités propres;1802401;None;430
+17-1802-BOU-A-R-00R021;Bourges - Circulation;1802401;None;401
+17-1802-BOU-A-R-00R022;Bourges - Correspondant ADM;1802401;None;413
+17-1802-BOU-A-R-00R023;Bourges - Bureau Responsable de Site;1802401;None;413
+17-1802-BOU-A-R-00R024;Bourges - Directeur site;1802401;None;413
+17-1802-BOU-A-R-00R025;Bourges - Surveillante;1802401;None;110
+17-1802-BOU-A-R-00R026;Bourges - Responsable IHR;1802401;None;154
+17-1802-BOU-A-R-00R027;Bourges - Vestiaire sanitaire;1802401;None;430
+17-1802-BOU-A-R-00R028;Bourges - Secrétariat;1802401;None;110
+17-1802-BOU-A-R-00R029;Bourges - Local  U;1802111;None;110
+17-1802-BOU-A-R-00R030;Bourges - Local informatique;1802401;None;420
+17-1802-BOU-A-R-00R031;Bourges - Magasin;1802401;None;431
+17-1802-BOU-A-R-00R032;Bourges - Garage;1802401;None;433
+17-1802-BOU-A-R-00R033;Bourges - Circulation;1802401;None;110
+17-1802-BOU-A-R-00R034;Bourges - Restauration;1802401;None;110
+17-1802-BOU-A-R-00R035;Bourges - Restauration;1802401;None;110
+17-1802-BOU-A-R-00R036;Bourges - Responsable prélèvement;1802401;None;110
+17-1802-BOU-A-R-00R037;Bourges - Bureau médical;1802401;None;110
+17-1802-BOU-A-R-00R038;Bourges - Prélèvement;1802401;None;110
+17-1802-BOU-A-R-00R039;Bourges - Sanitaire donneurs;1802401;None;110
+17-1802-BOU-A-R-00R040;Bourges - Secrétariat accueil;1802401;None;110
+17-1802-BOU-A-R-00R041;Bourges - Local ménage;1802401;None;401
+17-1802-BOU-A-R-00R042;Bourges - SAS Distribution;1802151;None;401
+17-1802-BOU-A-R-00R043;Bourges - Local Navettes;1802151;None;401
+17-1802-BOU-A-R-00R044;Bourges - Distribution;1802151;None;401
+17-1802-BOU-A-R-00R050;Bourges - Patio CH (propriété CH);1802401;None;401
+17-1802-BOU-A-S-00S001;Vide sanitaire CH;1802401;None;401
+17-1802-BOU-I;En attente informatique Bourges;1802420;None;420
+17-1802-BOU-M;Bourges - Métrologie;0;None;0
+17-2802;Zone analytique de Chartres Luisant;0;None;0
+17-2802-CLU;Site de Chartres Luisant;0;None;0
+17-2802-CLU-A;Chartres Luisant - Batiment A;2802401;None;401
+17-2802-CLU-A-R;Chartres Luisant - Niveau 0;2802401;None;401
+17-2802-CLU-A-R-00R001;Chartres Luisant - Sas d'entrée Public;2802401;None;401
+17-2802-CLU-A-R-00R002;Chartres Luisant - Accueil/Dégagement;2802401;None;401
+17-2802-CLU-A-R-00R003;Chartres Luisant - Sas;2802401;None;401
+17-2802-CLU-A-R-00R004;Chartres Luisant - Bureau médical;2802401;None;110
+17-2802-CLU-A-R-00R005;Chartres Luisant - Autologues;2802401;None;110
+17-2802-CLU-A-R-00R006;Chartres Luisant - Homologues;2802401;None;110
+17-2802-CLU-A-R-00R007;Chartres Luisant - Restauration;2802401;None;110
+17-2802-CLU-A-R-00R008;Chartres Luisant - Cuisine;2802401;None;110
+17-2802-CLU-A-R-00R009;Chartres Luisant - Sas navette;2802401;None;110
+17-2802-CLU-A-R-00R010;Chartres Luisant - Rangement;2802401;None;431
+17-2802-CLU-A-R-00R011;Chartres Luisant - Rangement;2802401;None;401
+17-2802-CLU-A-R-00R012;Chartres Luisant - Rangement;2802401;None;431
+17-2802-CLU-A-R-00R013;Chartres Luisant - Magasin 2802;2802401;None;431
+17-2802-CLU-A-R-00R014;Chartres Luisant - Magasin 2802;2802401;None;431
+17-2802-CLU-A-R-00R015;Chartres Luisant - Circulation;2802401;None;401
+17-2802-CLU-A-R-00R016;Chartres Luisant - Vestiaire hommes;2802401;None;401
+17-2802-CLU-A-R-00R017;Chartres Luisant - Sanitaires;2802401;None;401
+17-2802-CLU-A-R-00R018;Chartres Luisant - Sanitaires;2802401;None;401
+17-2802-CLU-A-R-00R019;Chartres Luisant - Vestiaire femmes;2802401;None;401
+17-2802-CLU-A-R-00R020;Chartres Luisant - Circulation;2802401;None;401
+17-2802-CLU-A-R-00R021;Chartres Luisant - Cafétéria personnels;2802401;None;401
+17-2802-CLU-A-R-00R022;Chartres Luisant - Magasin - Stockage;2802401;None;431
+17-2802-CLU-A-R-00R023;Chartres Luisant - Sanitaires;2802401;None;401
+17-2802-CLU-A-R-00R024;Chartres Luisant - Garage;2802401;None;110
+17-2802-CLU-A-R-00R025;Chartres Luisant - Atelier;2802401;None;432
+17-2802-CLU-A-R-00R026;Chartres Luisant - Magasin - Stockage;2802401;None;431
+17-2802-CLU-A-R-00R027;Chartres Luisant - Local électrique;2802401;None;401
+17-2802-CLU-A-R-00R028;Chartres Luisant - Local déchets;2802401;None;401
+17-2802-CLU-A-R-00R029;Chartres Luisant - Entrée des personnels;2802401;None;401
+17-2802-CLU-A-R-00R030;Chartres Luisant - Laverie;2802401;None;401
+17-2802-CLU-A-R-00R031;Chartres Luisant - Bureau;2802401;None;413
+17-2802-CLU-A-R-00R032;Chartres Luisant - Responsable de site;2802401;None;413
+17-2802-CLU-A-R-00R033;Chartres Luisant - PC portables Collecte;2802401;None;401
+17-2802-CLU-A-R-00R034;Chartres Luisant - Circulation;2802401;None;401
+17-2802-CLU-A-R-00R035;Chartres Luisant - Bureau Cadre Infirmie;2802401;None;110
+17-2802-CLU-A-R-00R036;Chartres Luisant - Bureau Corresp Admini;2802401;None;413
+17-2802-CLU-A-R-00R037;Chartres Luisant - Bur. Org. collecte Pr;2802401;None;110
+17-2802-CLU-A-R-00R038;Chartres Luisant - Bur. DP & Référ. Maté;2802401;None;418
+17-2802-CLU-A-R-00R039;Chartres Luisant - Salle de réunion;2802401;None;413
+17-2802-CLU-A-R-00R040;Chartres Luisant - Sanitaires personnel;2802401;None;401
+17-2802-CLU-A-R-00R041;Chartres Luisant - Sanitaires public;2802401;None;401
+17-2802-CLU-A-R-00R042;Chartres Luisant - Sanitaires handicapé;2802401;None;401
+17-2802-CLU-A-R-00R043;Chartres Luisant - Local électrique;2802401;None;401
+17-2802-CLU-I;En attente informatique Chartres Luisant;2802420;None;420
+17-2802-CLU-M;Chartres Luisant - Métrologie;0;None;0
+17-2810;Zone analytique de Chartres Le Coudray;0;None;0
+17-2810-CLC;Site de Chartres Le Coudray;0;None;401
+17-2810-CLC-A;Chartres le Coudray - Batiment A;2810401;None;401
+17-2810-CLC-A-R;Chartres le Coudray - Niveau 0;2810401;None;401
+17-2810-CLC-A-R-00R001;Chartres le Coudray - Laboratoire;2810401;None;154
+17-2810-CLC-A-R-00R002;Chartres le Coudray - Surveillante;2810401;None;154
+17-2810-CLC-A-R-00R003;Chartres le Coudray - Secrétariat;2810401;None;154
+17-2810-CLC-A-R-00R004;Chartres le Coudray - Médecin biologiste;2810401;None;154
+17-2810-CLC-A-R-00R005;Chartres le Coudray - Circulation;2810401;None;401
+17-2810-CLC-A-R-00R006;Chartres le Coudray - Chambre de garde;2810401;None;150
+17-2810-CLC-A-R-00R007;Chartres le Coudray - Magasin;2810401;None;431
+17-2810-CLC-A-R-00R008;Chartres le Coudray - Reception;2810401;None;150
+17-2810-CLC-A-R-00R009;Chartres le Coudray - Local technique;2810401;None;401
+17-2810-CLC-A-R-00R010;Chartres le Coudray - Sanitaires hand.;2810401;None;401
+17-2810-CLC-A-R-00R011;Chartres le Coudray - Sanitaires;2810401;None;401
+17-2810-CLC-A-R-00R012;Chartres le Coudray - Entretien;2810401;None;401
+17-2810-CLC-A-R-00R013;Chartres le Coudray - Vestiaires F;2810401;None;401
+17-2810-CLC-A-R-00R014;Chartres le Coudray - Ascenseur;2810401;None;401
+17-2810-CLC-A-R-00R015;Chartres le Coudray - Déchets;2810401;None;401
+17-2810-CLC-A-R-00R016;Chartres le Coudray - Distribution;2810401;None;151
+17-2810-CLC-A-R-00R017;Chartres le Coudray - Dépôt PSL;2810401;None;151
+17-2810-CLC-A-R-00R018;Chartres le Coudray - Chambre froide;2810401;None;151
+17-2810-CLC-A-R-00R019;Chartres le Coudray - Vestiaires H;2810401;None;401
+17-2810-CLC-A-T;Chartres le Coudray - Terrasse;2810401;None;401
+17-2810-CLC-I;En attente informatique Chartres Coudray;2810420;None;420
+17-2810-CLC-M;Chartres le Coudray - Métrologie;0;None;0
+17-3602;Zone analytique de Châteauroux;0;None;0
+17-3602-CHX;Site de Châteauroux;0;None;0
+17-3602-CHX-A;Châteauroux - Batiment A;3602401;None;401
+17-3602-CHX-A-1;Châteauroux - Niveau 1;3602401;None;401
+17-3602-CHX-A-1-001001;Châteauroux - Hall & Circulation;3602401;None;401
+17-3602-CHX-A-1-001002;Châteauroux - Délégués du personnel;3602401;None;418
+17-3602-CHX-A-1-001003;Châteauroux - Circulation;3602401;None;401
+17-3602-CHX-A-1-001004;Châteauroux - Surveillante tech Laborato;3602401;None;150
+17-3602-CHX-A-1-001005;Châteauroux - Réserve fournitures;3602401;None;431
+17-3602-CHX-A-1-001006;Châteauroux - Sanitaires;3602401;None;401
+17-3602-CHX-A-1-001007;Châteauroux - Bureau technique;3602401;None;432
+17-3602-CHX-A-1-001008;Châteauroux - Correspondante Administrat;3602401;None;413
+17-3602-CHX-A-1-001009;Châteauroux - Médecin Responsable;3602401;None;110
+17-3602-CHX-A-1-001010;Châteauroux - Surveillante IDE;3602401;None;110
+17-3602-CHX-A-1-001011;Châteauroux - Salle de réunion;3602401;None;413
+17-3602-CHX-A-1-001012;Châteauroux - Archives;3602401;None;413
+17-3602-CHX-A-R;Châteauroux - Niveau 0;3602401;None;401
+17-3602-CHX-A-R-00R001;Châteauroux - Hall/Accueil/Attente;3602401;None;401
+17-3602-CHX-A-R-00R002;Châteauroux - Restauration;3602401;None;110
+17-3602-CHX-A-R-00R003;Châteauroux - Cuisine donneurs;3602401;None;110
+17-3602-CHX-A-R-00R004;Châteauroux - Sanitaire;3602401;None;401
+17-3602-CHX-A-R-00R005;Châteauroux - Cabine Médicale;3602401;None;110
+17-3602-CHX-A-R-00R006;Châteauroux - Prélèvement;3602401;None;110
+17-3602-CHX-A-R-00R007;Châteauroux - Secrétariat Accueil;3602401;None;110
+17-3602-CHX-A-R-00R008;Châteauroux - Circulation;3602401;None;401
+17-3602-CHX-A-R-00R009;Châteauroux - Laboratoire IHR;3602401;None;154
+17-3602-CHX-A-R-00R010;Châteauroux - Distribution;3602401;None;151
+17-3602-CHX-A-R-00R011;Châteauroux - Zone de conservation;3602401;None;151
+17-3602-CHX-A-R-00R012;Châteauroux - Archives Laboratoire IHR;3602401;None;150
+17-3602-CHX-A-R-00R013;Châteauroux - Hall distribution;3602401;None;151
+17-3602-CHX-A-R-00R014;Châteauroux - local autocommutateur;3602401;None;401
+17-3602-CHX-A-R-00R015;Châteauroux - Logistique collecte mobile;3602401;None;401
+17-3602-CHX-A-R-00R016;Châteauroux - no non affecté;3602401;None;401
+17-3602-CHX-A-R-00R017;Châteauroux - Circulation;3602401;None;401
+17-3602-CHX-A-R-00R018;Châteauroux - Sanitaire;3602401;None;401
+17-3602-CHX-A-R-00R019;Châteauroux - Local informatique;3602420;None;401
+17-3602-CHX-A-R-00R020;Châteauroux - Laverie;3602401;None;401
+17-3602-CHX-A-R-00R021;Châteauroux - Local déchets;3602401;None;401
+17-3602-CHX-A-R-00R022;Châteauroux - Réserve papier & Promo don;3602401;None;110
+17-3602-CHX-A-R-00R023;Châteauroux - Circulation;3602401;None;401
+17-3602-CHX-A-R-00R024;Châteauroux - Réserve Alimentaire;3602401;None;431
+17-3602-CHX-A-R-00R025;Châteauroux - Départ navettes;3602401;None;431
+17-3602-CHX-A-R-00R026;Châteauroux - Magasin annexe;3602401;None;431
+17-3602-CHX-A-R-00R027;Châteauroux - Magasin;3602401;None;431
+17-3602-CHX-A-R-00R028;Châteauroux - Vestiaires;3602401;None;401
+17-3602-CHX-A-R-00R029;Châteauroux - Toilettes;3602401;None;401
+17-3602-CHX-A-R-00R030;Châteauroux - Sas;3602401;None;401
+17-3602-CHX-A-R-00R031;Châteauroux - Placard;3602401;None;401
+17-3602-CHX-A-R-00R032;Châteauroux - Cuisine personnel;3602401;None;401
+17-3602-CHX-A-R-00R033;Châteauroux - Local Ménage;3602401;None;401
+17-3602-CHX-A-R-00R034;Châteauroux - Utilités propres;3602401;None;401
+17-3602-CHX-A-R-00R035;Châteauroux - Direction site;3602401;None;413
+17-3602-CHX-A-R-00R040;Châteauroux - Conservation Biothèque;3602401;None;160
+17-3602-CHX-A-R-00R041;Châteauroux - Chambre froide -30°/B;3602401;None;430
+17-3602-CHX-A-R-00R042;Châteauroux - Chambre froide -30°/A;3602401;None;430
+17-3602-CHX-A-R-00R043;Châteauroux - Chambre froide +4;3602401;None;430
+17-3602-CHX-A-R-00R044;Châteauroux - Stockage Cryo;3602401;None;160
+17-3602-CHX-A-R-00R045;Châteauroux - Stockage Biothèque;3602401;None;160
+17-3602-CHX-A-R-00R046;Châteauroux - Biothèque;3602401;None;160
+17-3602-CHX-A-R-00R047;Châteauroux - Zone centrifugation;3602401;None;160
+17-3602-CHX-A-R-00R048;Châteauroux - SAS navettes;3602110;None;401
+17-3602-CHX-A-R-00R050;Châteauroux - SAS entrée public;3602401;None;401
+17-3602-CHX-A-S;Chateauroux - Sous Sol;3602401;None;401
+17-3602-CHX-A-S-00S001;Chateauroux - Sous sol Sud;3602401;None;401
+17-3602-CHX-A-S-00S002;Chateauroux - Sous sol Chaufferie;3602401;None;401
+17-3602-CHX-A-T;Chateauroux - Terrasse;3602401;None;401
+17-3602-CHX-A-T-TB;Chateauroux - Terrasse Basse;3602401;None;401
+17-3602-CHX-A-T-TH;Chateauroux - Terrasse Haute;3602401;None;401
+17-3602-CHX-I;En attente informatique Chateauroux;3602420;None;420
+17-3602-CHX-M;Chateauroux - Métrologie;0;None;0
+17-3701;Zone analytique de Tours Bretonneau;0;None;0
+17-3701-TBR;Site de Tours Bretonneau;0;None;0
+17-3701-TBR-A;Tours Bretonneau - Batiment A;3701401;None;401
+17-3701-TBR-A-1;Tours Bret - Niveau 1;3701401;None;401
+17-3701-TBR-A-1-001001;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-1-001002;Tours Bret - Bureau  Responsa IHR;3701401;None;150
+17-3701-TBR-A-1-001003;Tours Bret - Bur. Cadre Technique HLA;3701401;None;213
+17-3701-TBR-A-1-001004;Tours Bret - Bureau techniciens HLA;3701401;None;213
+17-3701-TBR-A-1-001006;Tours Bret - Labo Histo-Compatibilité;3701401;None;213
+17-3701-TBR-A-1-001007;Tours Bret - Labo post-amplification;3701401;None;213
+17-3701-TBR-A-1-001008;Tours Bret - Bureau Techniciens HLA;3701401;None;213
+17-3701-TBR-A-1-001009;Tours Bret - Secrétariat HLA;3701401;None;213
+17-3701-TBR-A-1-001010;Tours Bret - Vestiaire femmes;3701401;None;430
+17-3701-TBR-A-1-001011;Tours Bret - Laboratoire HLA;3701401;None;213
+17-3701-TBR-A-1-001012;Tours Bret - WC handicapés;3701401;None;430
+17-3701-TBR-A-1-001013;Tours Bret - Local électrique;3701401;None;401
+17-3701-TBR-A-1-001014;Tours Bret - WC femmes;3701401;None;430
+17-3701-TBR-A-1-001015;Tours Bret - WC hommes;3701401;None;430
+17-3701-TBR-A-1-001016;Tours Bret - Vestiaire hommes;3701401;None;430
+17-3701-TBR-A-1-001017;Tours Bret - Laboratoire Recherche HLA;3701401;None;213
+17-3701-TBR-A-1-001018;Tours Bret - Bureau Libre;3701401;None;413
+17-3701-TBR-A-1-001019;Tours Bret - local disponible;3701401;None;0
+17-3701-TBR-A-1-001025;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-1-001026;Tours Bret - Labo. Biologi moléculaire 1;3701401;None;213
+17-3701-TBR-A-1-001027;Tours Bret - Labo. Biologi moléculaire 2;3701401;None;213
+17-3701-TBR-A-1-001028;Tours Bret - Sas;3701401;None;213
+17-3701-TBR-A-1-001029;Tours Bret - Laverie;3701401;None;400
+17-3701-TBR-A-1-001030;Tours Bret - Laboratoire Post PCR HLA;3701401;None;213
+17-3701-TBR-A-1-001031;Tours Bret - Bureau HLA;3701401;None;213
+17-3701-TBR-A-1-001033;Tours Bret - Labo contrôle qualité;3701401;None;140
+17-3701-TBR-A-1-001034;Tours Bret - Local Congélateurs HLA;3701401;None;213
+17-3701-TBR-A-1-001035;Tours Bret - Labo contrôle qualité;3701401;None;140
+17-3701-TBR-A-1-001036;Tours Bret - Bureau Responsable CQ;3701401;None;140
+17-3701-TBR-A-1-001037;Tours Bret - Responsable HLA;3701401;None;213
+17-3701-TBR-A-1-001038;Tours Bret - Ascenceur Hors service;3701401;None;401
+17-3701-TBR-A-1-001039;Tours Bret - C.F. Pallas +4°C;3701401;None;213
+17-3701-TBR-A-1-001040;Tours Bret - Local ménage;3701401;None;400
+17-3701-TBR-A-1-001041;CHRU Tours - CRB - Congélateurs;3701253;None;253
+17-3701-TBR-A-1-001042;CHRU Tours - CRB - Réserve;3701253;None;253
+17-3701-TBR-A-1-001043;CHRU Tours - CRB - Bureau;3701253;None;253
+17-3701-TBR-A-1-001044;CHRU Tours - CRB - Laboratoire;3701253;None;253
+17-3701-TBR-A-1-001050;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-1-001051;Tours Bret - Salle réunion;3701401;None;413
+17-3701-TBR-A-1-001052;Tours Bret - Secrétariat Site;3701401;None;413
+17-3701-TBR-A-1-001053;Tours Bret - Local photocopie;3701401;None;413
+17-3701-TBR-A-1-001054;Tours Bret - Bureau Responsable site;3701401;None;413
+17-3701-TBR-A-1-001055;Tours Bret - Bureau HLA;3701401;None;213
+17-3701-TBR-A-1-001060;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-1-001061;Tours Bret - Bureau Responsa & Adj  LICT;3701401;None;240
+17-3701-TBR-A-1-001062;Tours Bret - Bureau Service Informatique;3701401;None;420
+17-3701-TBR-A-1-001063;Tours Bret - Salle de réunion;3701401;None;413
+17-3701-TBR-A-1-001064;Tours Bret - Bur. Cadre Technique LPPT;3701401;None;253
+17-3701-TBR-A-1-001065;Tours Bret - Bureau IRP;3701401;None;418
+17-3701-TBR-A-1-001066;Tours Bret - Bureau IRP;3701401;None;418
+17-3701-TBR-A-1-001067;Tours Bret - WC femmes;3701401;None;430
+17-3701-TBR-A-1-001068;Tours Bret - WC hommes;3701401;None;430
+17-3701-TBR-A-1-001069;Tours Bret - local photocopieur LPPT;3701401;None;253
+17-3701-TBR-A-1-001070;Tours Bret - Liaisons internet et EFS;3701401;None;413
+17-3701-TBR-A-1-001071;Tours Bret - Archives;3701401;None;413
+17-3701-TBR-A-1-001072;Tours Bret - Réserve mobilier;3701401;None;413
+17-3701-TBR-A-1-001073;Tours Bret - Bureau;3701401;None;413
+17-3701-TBR-A-1-001074;Tours Bret - Référent régional AQ IH;3701401;None;413
+17-3701-TBR-A-1-001075;Tours Bret - Local serveurs info.;3701401;None;420
+17-3701-TBR-A-1-001076;Tours Bret - Local électrique;3701401;None;401
+17-3701-TBR-A-1-001077;Tours Bret - Ascenceur;3701401;None;401
+17-3701-TBR-A-R;Tours Bret - Rez de chaussée;3701401;None;401
+17-3701-TBR-A-R-00R001;Tours Bret - Accueil public;3701401;None;100
+17-3701-TBR-A-R-00R002;Tours Bret - Ascenceur;3701401;None;401
+17-3701-TBR-A-R-00R003;Tours Bret - Pré SAS;3701401;None;401
+17-3701-TBR-A-R-00R004;Tours Bret - SAS vestiaires Pyjama;3701401;None;240
+17-3701-TBR-A-R-00R005;Tours Bret - Sas personnel;3701401;None;240
+17-3701-TBR-A-R-00R006;Tours Bret - Local Ménage ZAC;3701401;None;240
+17-3701-TBR-A-R-00R007;Tours Bret - Laboratoire A;3701401;None;240
+17-3701-TBR-A-R-00R008;Tours Bret - Circulation;3701401;None;240
+17-3701-TBR-A-R-00R009;Tours Bret - Laboratoire B;3701401;None;240
+17-3701-TBR-A-R-00R010;Tours Bret - Laboratoire C;3701401;None;240
+17-3701-TBR-A-R-00R011;Tours Bret - Sas matériel;3701401;None;240
+17-3701-TBR-A-R-00R012;Tours Bret - Réservoir Azote liquide;3701401;None;401
+17-3701-TBR-A-R-00R013;Tours Bret - Salle Cuves Azote liquide;3701401;None;240
+17-3701-TBR-A-R-00R014;Tours Bret - Salle cuves azote, congél.;3701401;None;240
+17-3701-TBR-A-R-00R015;Tours Bret - Réception L.I.C.T.;3701401;None;240
+17-3701-TBR-A-R-00R016;Tours Bret - Local réserve congélateurs;3701401;None;240
+17-3701-TBR-A-R-00R017;Tours Bret - Local nicool;3701401;None;240
+17-3701-TBR-A-R-00R018;Tours Bret - Local étuves;3701401;None;240
+17-3701-TBR-A-R-00R019;Tours Bret - Local distribution;3701401;None;240
+17-3701-TBR-A-R-00R020;Tours Bret - Sas local stérile;3701401;None;240
+17-3701-TBR-A-R-00R021;Tours Bret - Local stérile;3701401;None;240
+17-3701-TBR-A-R-00R022;Tours Bret - Distrib. & Stockage consom.;3701401;None;240
+17-3701-TBR-A-R-00R023;Tours Bret - Vestiaire pyjama femmes;3701240;None;401
+17-3701-TBR-A-R-00R024;Tours Bret - Vestiaire pyjama hommes;3701240;None;401
+17-3701-TBR-A-R-00R030;Tours Bret - Attente donneurs;3701401;None;110
+17-3701-TBR-A-R-00R031;Tours Bret - Réserve Promotion du don;3701401;None;114
+17-3701-TBR-A-R-00R032;Tours Bret - Office;3701401;None;110
+17-3701-TBR-A-R-00R033;Tours Bret - Restauration donneurs;3701401;None;110
+17-3701-TBR-A-R-00R034;Tours Bret - Sas;3701401;None;401
+17-3701-TBR-A-R-00R035;Tours Bret - Secrétariat CDS & 2nd médec;3701401;None;221
+17-3701-TBR-A-R-00R036;Tours Bret - Secrétariat Centre de Soins;3701401;None;221
+17-3701-TBR-A-R-00R037;Tours Bret - Chambre de repos;3701401;None;110
+17-3701-TBR-A-R-00R038;Tours Bret - WC handicapés public;3701401;None;110
+17-3701-TBR-A-R-00R039;Tours Bret - Attente malades;3701401;None;221
+17-3701-TBR-A-R-00R040;Tours Bret - R.I.A.;3701401;None;401
+17-3701-TBR-A-R-00R041;Tours Bret - Local électrique;3701401;None;401
+17-3701-TBR-A-R-00R042;Tours Bret - WC femmes public;3701401;None;110
+17-3701-TBR-A-R-00R043;Tours Bret - WC hommes public;3701401;None;110
+17-3701-TBR-A-R-00R044;Tours Bret - Bureau médical;3701401;None;110
+17-3701-TBR-A-R-00R045;Tours Bret - Bureau médical donneurs;3701401;None;110
+17-3701-TBR-A-R-00R046;Tours Bret - Annexe cabine;3701401;None;110
+17-3701-TBR-A-R-00R047;Tours Bret - Salle prélèvement donneurs;3701401;None;110
+17-3701-TBR-A-R-00R048;Tours Bret - Vestiaires-Sanitaires femme;3701401;None;430
+17-3701-TBR-A-R-00R049;Tours Bret - Réserve & Ordi. collecte mo;3701401;None;110
+17-3701-TBR-A-R-00R050;Tours Bret - Secrétariat donneurs;3701401;None;110
+17-3701-TBR-A-R-00R051;Tours Bret - Photocopieur;3701401;None;110
+17-3701-TBR-A-R-00R052;Tours Bret - Chef département collecte;3701401;None;110
+17-3701-TBR-A-R-00R053;Tours Bret - R.I.A.;3701401;None;401
+17-3701-TBR-A-R-00R054;Tours Bret - Local collectes mobiles;3701401;None;110
+17-3701-TBR-A-R-00R055;Tours Bret - Secrétariat collecte;3701401;None;110
+17-3701-TBR-A-R-00R056;Tours Bret - Responsabl Promotion du don;3701401;None;114
+17-3701-TBR-A-R-00R060;Tours Bret - Prélèvement Autotransfusion;3701401;None;110
+17-3701-TBR-A-R-00R061;Tours Bret - Bureau médical consultation;3701401;None;221
+17-3701-TBR-A-R-00R062;Tours Bret - Sas;3701401;None;221
+17-3701-TBR-A-R-00R063;Tours Bret - Sanitaires;3701401;None;221
+17-3701-TBR-A-R-00R064;Tours Bret - Sanitaires;3701401;None;221
+17-3701-TBR-A-R-00R065;Tours Bret - Centre de soins;3701401;None;221
+17-3701-TBR-A-R-00R066;Tours Bret - Rangement;3701401;None;221
+17-3701-TBR-A-R-00R067;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-R-00R075;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-R-00R076;Tours Bret - Cadre médicotech Collectes;3701401;None;110
+17-3701-TBR-A-R-00R077;Tours Bret - Cafétéria personnel;3701401;None;401
+17-3701-TBR-A-R-00R079;Tours Bret - Local informatique;3701401;None;420
+17-3701-TBR-A-R-00R080;Tours Bret - Local courrier;3701401;None;400
+17-3701-TBR-A-R-00R081;Tours Bret - Rangement;3701401;None;401
+17-3701-TBR-A-R-00R082;Tours Bret - Ascenseurs Hors service;3701401;None;401
+17-3701-TBR-A-R-00R083;Tours Bret - Réserve Service technique;3701401;None;432
+17-3701-TBR-A-R-00R090;Tours Bret - Sas service technique;3701401;None;432
+17-3701-TBR-A-R-00R091;Tours Bret - Atelier service technique;3701401;None;432
+17-3701-TBR-A-R-00R092;Tours Bret - Bureau Service technique;3701401;None;432
+17-3701-TBR-A-R-00R093;Tours Bret - Bur. Tissus/thérapie cell.;3701401;None;240
+17-3701-TBR-A-R-00R094;Tours Bret - Local serveurs informatique;3701401;None;420
+17-3701-TBR-A-R-00R095;Tours Bret - Réserve Prélèvement;3701401;None;110
+17-3701-TBR-A-R-00R096;Tours Bret - Réserve LICT;3701401;None;240
+17-3701-TBR-A-R-00R099;Tours Bret - Allée centrale;3701401;None;401
+17-3701-TBR-A-S;Tours Bret - Niveau sous sol;3701401;None;401
+17-3701-TBR-A-S-00S001;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-S-00S002;Tours Bret - Sas distribution PSL;3701401;None;150
+17-3701-TBR-A-S-00S003;Tours Bret - Secrétariat distribution;3701401;None;150
+17-3701-TBR-A-S-00S004;Tours Bret - Chambre de garde;3701401;None;150
+17-3701-TBR-A-S-00S005;Tours Bret - Sanitaires;3701401;None;150
+17-3701-TBR-A-S-00S006;Tours Bret - Laboratoire distribution;3701401;None;151
+17-3701-TBR-A-S-00S007;Tours Bret - Dégagement;3701401;None;401
+17-3701-TBR-A-S-00S008;Tours Bret - Chef département IHR;3701401;None;150
+17-3701-TBR-A-S-00S009;Tours Bret - Rangement / Escalier;3701401;None;150
+17-3701-TBR-A-S-00S010;Tours Bret - Laboratoire IHR;3701401;None;154
+17-3701-TBR-A-S-00S011;Tours Bret - Secrétariat traçabilité IHR;3701401;None;150
+17-3701-TBR-A-S-00S015;Tours Bret - Sérologie Nord;3701401;None;120
+17-3701-TBR-A-S-00S016;Tours Bret - Bureau validation;3701401;None;120
+17-3701-TBR-A-S-00S017;Tours Bret - Réserve frigorifique;3701401;None;120
+17-3701-TBR-A-S-00S018;Tours Bret - Sérologie Sud;3701401;None;120
+17-3701-TBR-A-S-00S019;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-S-00S020;Tours Bret - C.F. Zéphir -25°C;3701401;None;151
+17-3701-TBR-A-S-00S021;Tours Bret - C.F. Pomone +4°C;3701401;None;151
+17-3701-TBR-A-S-00S022;Tours Bret - TGBT;3701401;None;401
+17-3701-TBR-A-S-00S023;Tours Bret - Bur. cadre tech. IH-distri;3701401;None;150
+17-3701-TBR-A-S-00S024;Tours Bret - Sanitaires;3701401;None;430
+17-3701-TBR-A-S-00S025;Tours Bret - R.I.A;3701401;None;401
+17-3701-TBR-A-S-00S026;Tours Bret - Local Technique;3701401;None;401
+17-3701-TBR-A-S-00S027;Tours Bret - C.F. Orphée +4°C;3701401;None;120
+17-3701-TBR-A-S-00S028;Tours Bret - Stockage;3701401;None;120
+17-3701-TBR-A-S-00S029;Tours Bret - Paludisme (Labo noir);3701401;None;120
+17-3701-TBR-A-S-00S035;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-S-00S036;Tours Bret - Sous station chauffage;3701401;None;401
+17-3701-TBR-A-S-00S037;Tours Bret - Bureau syndicat CGT;3701401;None;418
+17-3701-TBR-A-S-00S038;Tours Bret - Bureau Syndicat CFE-CGC;3701401;None;418
+17-3701-TBR-A-S-00S039;Tours Bret - C.F. Eole +4°C;3701401;None;151
+17-3701-TBR-A-S-00S040;Tours Bret - Local déchets;3701401;None;430
+17-3701-TBR-A-S-00S041;Tours Bret - Sas Escalier;3701401;None;401
+17-3701-TBR-A-S-00S042;Tours Bret - Réserve IHR;3701401;None;150
+17-3701-TBR-A-S-00S043;Tours Bret - Sas;3701401;None;401
+17-3701-TBR-A-S-00S044;Tours Bret - Sanitaires hommes;3701401;None;401
+17-3701-TBR-A-S-00S045;Tours Bret - Vestiaires/sanitaires F;3701401;None;401
+17-3701-TBR-A-S-00S046;Tours Bret - Local compresseurs;3701401;None;401
+17-3701-TBR-A-S-00S047;Tours Bret - Ascenseurs Hors service;3701401;None;401
+17-3701-TBR-A-S-00S048;Tours Bret - Traitement de l'eau;3701401;None;401
+17-3701-TBR-A-S-00S049;Tours Bret - Local onduleurs;3701401;None;401
+17-3701-TBR-A-S-00S050;Tours Bret - Linge propre;3701401;None;401
+17-3701-TBR-A-S-00S051;Tours Bret - Irradiateur;3701401;None;132
+17-3701-TBR-A-S-00S053;Tours Bret - Réserve containers DASRI;3701401;None;100
+17-3701-TBR-A-S-00S054;Tours Bret - Local ménage;3701401;None;400
+17-3701-TBR-A-S-00S055;Tours Bret - Local électrique;3701401;None;401
+17-3701-TBR-A-S-00S056;Tours Bret - Local Ménage;3701401;None;400
+17-3701-TBR-A-S-00S060;Tours Bret - Circulation;3701401;None;401
+17-3701-TBR-A-S-00S061;Tours Bret - Labo pré-analytique B;3701401;None;120
+17-3701-TBR-A-S-00S062;Tours Bret - Labo pré-analytique A;3701401;None;120
+17-3701-TBR-A-S-00S063;Tours Bret - Laboratoire IHD;3701401;None;120
+17-3701-TBR-A-S-00S064;Tours Bret - C.F. Rhea +4°C;3701401;None;120
+17-3701-TBR-A-S-00S065;Tours Bret - C.F. Hestia +4°C;3701401;None;120
+17-3701-TBR-A-S-00S066;Tours Bret - Vestiaires / Sanitaires;3701401;None;430
+17-3701-TBR-A-S-00S070;Tours Bret - Ascenseur;3701401;None;401
+17-3701-TBR-A-S-00S071;Tours Bret - Local machinerie ascenseur;3701401;None;401
+17-3701-TBR-A-S-00S072;Tours Bret - Local électrique;3701401;None;401
+17-3701-TBR-A-S-00S075;Tours Bret - Bureau DGV;3701401;None;123
+17-3701-TBR-A-S-00S076;Tours Bret - Sas 3;3701401;None;123
+17-3701-TBR-A-S-00S077;Tours Bret - Laboratoire M2 DGV;3701401;None;123
+17-3701-TBR-A-S-00S078;Tours Bret - Sas 2;3701401;None;123
+17-3701-TBR-A-S-00S079;Tours Bret - Laboratoire M1 DGV;3701401;None;123
+17-3701-TBR-A-S-00S080;Tours Bret - Sas 1;3701401;None;123
+17-3701-TBR-A-S-00S085;Tours Bret - Sas vestiaires;3701401;None;401
+17-3701-TBR-A-S-00S086;Tours Bret - Gestion des dépôts;3701401;None;150
+17-3701-TBR-A-S-00S087;Tours Bret - C.F. Gaia +4°C;3701401;None;150
+17-3701-TBR-A-S-00S088;Tours Bret - C.F. Olympe -30°C;3701401;None;123
+17-3701-TBR-A-S-00S089;Tours Bret - Local Congélateurs;3701401;None;240
+17-3701-TBR-A-S-00S090;Tours Bret - Transformations;3701401;None;132
+17-3701-TBR-A-S-00S099;Tours Bret - Allée centrale;3701401;None;401
+17-3701-TBR-A-T;Tours Bret - Terrasse;3701401;None;401
+17-3701-TBR-A-T-TB;Tours Bret - Terasse Basse;3701401;None;401
+17-3701-TBR-A-T-TH;Tours Bret - Terrasse haute;3701401;None;401
+17-3701-TBR-I-1;En attente informatique Bretonneau RDC;3701420;None;420
+17-3701-TBR-I-2;En attente informatique Bretonneau Ssol;3701420;None;420
+17-3701-TBR-I-3;En attente informatique Bretonneau Etage;3701420;None;420
+17-3701-TBR-M;Tours Bret - Métrologie;0;None;0
+17-3702;Zone analytique de Tours Deux Lions;0;None;0
+17-3702-TDL;Site de Tours Deux Lions;0;None;0
+17-3702-TDL-A;Tours Deux Lions - Batiment A;3702401;None;401
+17-3702-TDL-A-1;Tours 2 Lions - Niveau 1;3702401;None;401
+17-3702-TDL-A-1-001001;Tours 2 Lions - Zone attente/circulation;3702401;None;430
+17-3702-TDL-A-1-001002;Tours 2 Lions - circulation 5;3702401;None;401
+17-3702-TDL-A-1-001003;Tours 2 Lions - circulation 6;3702401;None;401
+17-3702-TDL-A-1-001004;Tours 2 Lions - Responsable Prélèvements;3702401;None;411
+17-3702-TDL-A-1-001005;Tours 2 Lions - Directeur RH;3702401;None;415
+17-3702-TDL-A-1-001006;Tours 2 Lions - Adjoint DRH;3702401;None;415
+17-3702-TDL-A-1-001007;Tours 2 Lions - Apprenti RH;3702401;None;415
+17-3702-TDL-A-1-001008;Tours 2 Lions - Service personnel & paie;3702401;None;415
+17-3702-TDL-A-1-001009;Tours 2 Lions - Apprenti RH;3702401;None;415
+17-3702-TDL-A-1-001010;Tours 2 Lions - zone photocopie 04;3702401;None;430
+17-3702-TDL-A-1-001011;Tours 2 Lions - archives 03;3702401;None;430
+17-3702-TDL-A-1-001012;Tours 2 Lions - secrétariat général;3702401;None;411
+17-3702-TDL-A-1-001013;Tours 2 Lions - Secrétariat CA;3702401;None;411
+17-3702-TDL-A-1-001014;Tours 2 Lions - Directeur CA;3702401;None;411
+17-3702-TDL-A-1-001015;Tours 2 Lions - Sanitaires 03 femmes;3702401;None;430
+17-3702-TDL-A-1-001016;Tours 2 Lions - WC;3702401;None;430
+17-3702-TDL-A-1-001017;Tours 2 Lions - WC;3702401;None;430
+17-3702-TDL-A-1-001018;Tours 2 Lions - douche F;3702401;None;430
+17-3702-TDL-A-1-001019;Tours 2 Lions - douche F;3702401;None;430
+17-3702-TDL-A-1-001020;Tours 2 Lions - vestiaires F;3702401;None;430
+17-3702-TDL-A-1-001021;Tours 2 Lions - Juriste Travaux Immobili;3702401;None;416
+17-3702-TDL-A-1-001022;Tours 2 Lions - Juriste AQ;3702401;None;416
+17-3702-TDL-A-1-001023;Tours 2 Lions - baie de brassage;3702401;None;420
+17-3702-TDL-A-1-001024;Tours 2 Lions - local technique;3702401;None;401
+17-3702-TDL-A-1-001025;Tours 2 Lions - local ménage;3702401;None;400
+17-3702-TDL-A-1-001026;Tours 2 Lions - Responsable AQ;3702401;None;450
+17-3702-TDL-A-1-001027;Tours 2 Lions - Assurance Qualité;3702401;None;450
+17-3702-TDL-A-1-001028;Tours 2 Lions - Adjoint RF;3702401;None;419
+17-3702-TDL-A-1-001029;Tours 2 Lions - Comptabilité ordonnateur;3702401;None;419
+17-3702-TDL-A-1-001030;Tours 2 Lions - ACS;3702401;None;419
+17-3702-TDL-A-1-001031;Tours 2 Lions - Agence compta./factur.;3702401;None;419
+17-3702-TDL-A-1-001031-B;Tours 2 Lions - Local DP;3702401;None;418
+17-3702-TDL-A-1-001032;Tours 2 Lions - bureau facturation;3702401;None;419
+17-3702-TDL-A-1-001033;Tours 2 Lions - zone photocopie 03;3702401;None;430
+17-3702-TDL-A-1-001034;Tours 2 Lions - sanitaires hommes;3702401;None;430
+17-3702-TDL-A-1-001035;Tours 2 Lions - WC;3702401;None;430
+17-3702-TDL-A-1-001036;Tours 2 Lions - production;3702401;None;419
+17-3702-TDL-A-1-001037;Tours 2 Lions - archives compta;3702401;None;430
+17-3702-TDL-A-1-001040;Tours 2 Lions - service achats / appro;3702401;None;431
+17-3702-TDL-A-1-001041;Tours 2 Lions - adjoint appro;3702401;None;431
+17-3702-TDL-A-1-001042;Tours 2 Lions - Achats;3702401;None;431
+17-3702-TDL-A-1-001043;Tours 2 Lions - adjoint achats;3702401;None;431
+17-3702-TDL-A-1-001044;Tours 2 Lions - Juriste Achats;3702401;None;416
+17-3702-TDL-A-1-001045;Tours 2 Lions - responsable achats;3702401;None;431
+17-3702-TDL-A-1-001046;Tours 2 Lions - Contrôleur de gestion;3702401;None;411
+17-3702-TDL-A-1-001047;Tours 2 Lions - Réunions 03;3702401;None;411
+17-3702-TDL-A-1-001048;Tours 2 Lions - Apprenti RH;3702401;None;415
+17-3702-TDL-A-1-001050;Tours 2 Lions - ascenseur;3702401;None;401
+17-3702-TDL-A-1-001051;Tours 2 Lions - Mezzanine magasin;3702401;None;431
+17-3702-TDL-A-1-001052;Tours 2 Lions - Terrasse technique;3702401;None;401
+17-3702-TDL-A-R;Tours 2 Lions - Rez de chaussée;3702401;None;401
+17-3702-TDL-A-R-00R001;Tours 2 Lions - Hall, circulation 3;3702401;None;430
+17-3702-TDL-A-R-00R002;Tours 2 Lions - circulation 2;3702401;None;401
+17-3702-TDL-A-R-00R003;Tours 2 Lions - circulation 1;3702401;None;401
+17-3702-TDL-A-R-00R004;Tours 2 Lions - vaguemestre;3702401;None;430
+17-3702-TDL-A-R-00R005;Tours 2 Lions - zone photocopie 01;3702401;None;430
+17-3702-TDL-A-R-00R006;Tours 2 Lions - archives PRL;3702401;None;430
+17-3702-TDL-A-R-00R007;Tours 2 Lions - stagiaire 01;3702401;None;114
+17-3702-TDL-A-R-00R008;Tours 2 Lions - resp communication;3702401;None;114
+17-3702-TDL-A-R-00R009;Tours 2 Lions - secretariat collecte;3702401;None;110
+17-3702-TDL-A-R-00R010;Tours 2 Lions - Salle formation-réunion;3702401;None;430
+17-3702-TDL-A-R-00R011;Tours 2 Lions - Marketing du don;3702401;None;114
+17-3702-TDL-A-R-00R012;Tours 2 Lions - Bureau Resp IH régionale;3702401;None;150
+17-3702-TDL-A-R-00R013;Tours 2 Lions - bureau Chauffeurs;3702401;None;110
+17-3702-TDL-A-R-00R014;Tours 2 Lions - bureau magasiniers;3702401;None;431
+17-3702-TDL-A-R-00R015;Tours 2 Lions - vestiaires F;3702401;None;430
+17-3702-TDL-A-R-00R016;Tours 2 Lions - douche;3702401;None;430
+17-3702-TDL-A-R-00R017;Tours 2 Lions - vestiaire sanitaire 1;3702401;None;430
+17-3702-TDL-A-R-00R018;Tours 2 Lions - WC;3702401;None;430
+17-3702-TDL-A-R-00R019;Tours 2 Lions - WC;3702401;None;430
+17-3702-TDL-A-R-00R020;Tours 2 Lions - local frigos collecte;3702401;None;110
+17-3702-TDL-A-R-00R021;Tours 2 Lions - départ retour collecte;3702401;None;110
+17-3702-TDL-A-R-00R022;Tours 2 Lions - cafétéria;3702401;None;430
+17-3702-TDL-A-R-00R023;Tours 2 Lions - baie de brassage;3702401;None;420
+17-3702-TDL-A-R-00R024;Tours 2 Lions - local technique;3702401;None;401
+17-3702-TDL-A-R-00R025;Tours 2 Lions - Local ménage;3702401;None;400
+17-3702-TDL-A-R-00R026;Tours 2 Lions - circulation 04;3702401;None;401
+17-3702-TDL-A-R-00R030;Tours 2 Lions - local serveurs 2;3702401;None;420
+17-3702-TDL-A-R-00R031;Tours 2 Lions - archives 01;3702401;None;430
+17-3702-TDL-A-R-00R032;Tours 2 Lions - local CE;3702401;None;418
+17-3702-TDL-A-R-00R033;Tours 2 Lions - Resp adjoint S. tech;3702401;None;432
+17-3702-TDL-A-R-00R034;Tours 2 Lions - salle de réunions 01;3702401;None;411
+17-3702-TDL-A-R-00R035;Tours 2 Lions - salle de réunions 02;3702401;None;411
+17-3702-TDL-A-R-00R036;Tours 2 Lions - resp service tech;3702401;None;432
+17-3702-TDL-A-R-00R037;Tours 2 Lions - zone photocopie 02;3702401;None;430
+17-3702-TDL-A-R-00R038;Tours 2 Lions - bureau service technique;3702401;None;432
+17-3702-TDL-A-R-00R039;Tours 2 Lions - bureau service technique;3702401;None;432
+17-3702-TDL-A-R-00R041;Tours 2 Lions - local serveur;3702401;None;420
+17-3702-TDL-A-R-00R042;Tours 2 Lions - S. technique;3702401;None;420
+17-3702-TDL-A-R-00R043;Tours 2 Lions - DSI équipe 1;3702401;None;420
+17-3702-TDL-A-R-00R044;Tours 2 Lions - Directeur informatique;3702401;None;420
+17-3702-TDL-A-R-00R045;Tours 2 Lions - Infocentre;3702401;None;420
+17-3702-TDL-A-R-00R046;Tours 2 Lions - DSI atelier;3702401;None;420
+17-3702-TDL-A-R-00R047;Tours 2 Lions - DSI équipe 02;3702401;None;420
+17-3702-TDL-A-R-00R048;Tours 2 Lions - sanitaires H 2;3702401;None;430
+17-3702-TDL-A-R-00R049;Tours 2 Lions - WC;3702401;None;430
+17-3702-TDL-A-R-00R050;Tours 2 Lions - ascenseur;3702401;None;401
+17-3702-TDL-A-R-00R051;Tours 2 Lions - Vestiaire H;3702401;None;430
+17-3702-TDL-A-R-00R052;Tours 2 Lions - douche;3702401;None;430
+17-3702-TDL-A-R-00R053;Tours 2 Lions - douche;3702401;None;430
+17-3702-TDL-A-R-00R054;Tours 2 Lions - sanitaire handicapés H;3702401;None;430
+17-3702-TDL-A-R-00R055;Tours 2 Lions - sanitaires handicapés F;3702401;None;430
+17-3702-TDL-A-R-00R056;Tours 2 Lions - DSI adjoint;3702401;None;418
+17-3702-TDL-A-R-00R057;Tours 2 Lions - Magasin Informatique;3702401;None;420
+17-3702-TDL-A-R-00R060;Tours 2 Lions - TGBT;3702401;None;401
+17-3702-TDL-A-R-00R061;Tours 2 Lions - local déchets;3702401;None;430
+17-3702-TDL-A-R-00R062;Tours 2 Lions - Patio;3702401;None;401
+17-3702-TDL-A-R-00R070;Tours 2 Lions - Récept./Expéd./Navette;3702401;None;431
+17-3702-TDL-A-R-00R071;Tours 2 Lions - garage;3702401;None;433
+17-3702-TDL-A-R-00R072;Tours 2 Lions - atelier;3702401;None;110
+17-3702-TDL-A-R-00R073;Tours 2 Lions - local cuve fuel;3702401;None;401
+17-3702-TDL-A-R-00R074;Tours 2 Lions - local onduleur;3702401;None;401
+17-3702-TDL-A-R-00R075;Tours 2 Lions - local groupe électrogène;3702401;None;401
+17-3702-TDL-A-R-00R076;Tours 2 Lions - magasin;3702401;None;431
+17-3702-TDL-A-R-00R077;Tours 2 Lions - zone tempérée;3702401;None;431
+17-3702-TDL-A-R-00R570;Matériel informatique EFS-CA;3702420;None;420
+17-3702-TDL-A-T;Tours 2 Lions - Toiture Terrasse;3702401;None;401
+17-3702-TDL-M;Tours 2 Lions - Métrologie;0;None;0
+17-3710;Zone analytique de Tours Trousseau;0;None;0
+17-3710-TTR;Site de Tours Trousseau;0;None;0
+17-3710-TTR-A;Tours Trousseau - Batiment A;3710401;None;401
+17-3710-TTR-A-R;Tours Trousseau - Rez de chaussée;3710401;None;401
+17-3710-TTR-A-R-00R001;Tours Trousseau - Chambre de garde;3710401;None;150
+17-3710-TTR-A-R-00R002;Tours Trousseau - Réserve;3710401;None;151
+17-3710-TTR-A-R-00R003;Tours Trousseau - Annexe laboratoire;3710401;None;150
+17-3710-TTR-A-R-00R004;Tours Trousseau - Vestiaire;3710401;None;150
+17-3710-TTR-A-R-00R005;Tours Trousseau - Chambre froide;3710401;None;151
+17-3710-TTR-A-R-00R006;Tours Trousseau - Laboratoire IHR;3710401;None;154
+17-3710-TTR-A-R-00R007;Tours Trousseau - Distribution;3710401;None;151
+17-3710-TTR-M;Tours Trousseau - Métrologie;0;None;0
+17-4102;Zone analytique de Blois;0;None;0
+17-4102-BLO;Site de Blois;0;None;0
+17-4102-BLO-A;Blois - Batiment A;4102401;None;401
+17-4102-BLO-A-R;Blois - Niveau 0;4102401;None;401
+17-4102-BLO-A-R-00R001;Blois - Sas d'entrée;4102401;None;110
+17-4102-BLO-A-R-00R002;Blois - Salle d'attente;4102401;None;110
+17-4102-BLO-A-R-00R003;Blois - Accueil;4102401;None;110
+17-4102-BLO-A-R-00R004;Blois - Secrétariat;4102401;None;413
+17-4102-BLO-A-R-00R005;Blois - Médecin prélèvements;4102401;None;110
+17-4102-BLO-A-R-00R006;Blois - Cadre infirmier;4102401;None;110
+17-4102-BLO-A-R-00R007;Blois - Responsable du site;4102401;None;413
+17-4102-BLO-A-R-00R008;Blois - Correspondant Administration;4102401;None;413
+17-4102-BLO-A-R-00R009;Blois - Circulation;4102401;None;401
+17-4102-BLO-A-R-00R010;Blois - Salle de prélèvements;4102401;None;110
+17-4102-BLO-A-R-00R011;Blois - Réserve;4102401;None;110
+17-4102-BLO-A-R-00R012;Blois - Bureau médical;4102401;None;110
+17-4102-BLO-A-R-00R013;Blois - Circulation;4102401;None;401
+17-4102-BLO-A-R-00R014;Blois - Sanitaires publics;4102401;None;110
+17-4102-BLO-A-R-00R015;Blois - Sas;4102401;None;110
+17-4102-BLO-A-R-00R016;Blois - Local Ménage;4102401;None;400
+17-4102-BLO-A-R-00R017;Blois - Sanitaires handicapés;4102401;None;110
+17-4102-BLO-A-R-00R018;Blois - Bureau IRP;4102401;None;418
+17-4102-BLO-A-R-00R019;Blois - Circulation;4102401;None;401
+17-4102-BLO-A-R-00R020;Blois - Cafétéria personnels;4102401;None;401
+17-4102-BLO-A-R-00R021;Blois - Vestiaires F;4102401;None;401
+17-4102-BLO-A-R-00R022;Blois - Restauration;4102401;None;110
+17-4102-BLO-A-R-00R023;Blois - Sas;4102401;None;110
+17-4102-BLO-A-R-00R024;Blois - WC;4102401;None;401
+17-4102-BLO-A-R-00R025;Blois - Sas;4102401;None;150
+17-4102-BLO-A-R-00R026;Blois - Laboratoire;4102401;None;154
+17-4102-BLO-A-R-00R027;Blois - Cadre IHR;4102401;None;154
+17-4102-BLO-A-R-00R028;Blois - Circulation;4102401;None;401
+17-4102-BLO-A-R-00R029;Blois - Déchets;4102401;None;430
+17-4102-BLO-A-R-00R030;Blois - Sas;4102401;None;430
+17-4102-BLO-A-R-00R031;Blois - Magasin;4102401;None;431
+17-4102-BLO-A-R-00R032;Blois - Chambre de garde;4102401;None;150
+17-4102-BLO-A-R-00R033;Blois - Sas - guichet distribution;4102401;None;151
+17-4102-BLO-A-R-00R034;Blois - Point d'eau;4102401;None;430
+17-4102-BLO-A-R-00R035;Blois - Navettes PSL;4102401;None;110
+17-4102-BLO-A-R-00R036;Blois - Local Onduleurs;4102401;None;401
+17-4102-BLO-A-R-00R037;Blois - Distribution;4102401;None;151
+17-4102-BLO-A-R-00R038;Blois - Cadre distribution;4102401;None;154
+17-4102-BLO-A-R-00R039;Blois - Chambre froide;4102401;None;151
+17-4102-BLO-A-R-00R040;Blois - Distribution;4102401;None;151
+17-4102-BLO-A-R-00R041;Blois - PC portables collecte;4102401;None;110
+17-4102-BLO-A-R-00R042;Blois - Départ collecte;4102401;None;110
+17-4102-BLO-A-R-00R043;Blois - Sanitaires F;4102401;None;401
+17-4102-BLO-A-R-00R044;Blois - Sanitaires Hommes;4102401;None;401
+17-4102-BLO-A-R-00R045;Blois - Informatique;4102401;None;420
+17-4102-BLO-A-R-00R046;Blois - Local électrique;4102401;None;401
+17-4102-BLO-A-T;Terrasse;4102401;None;401
+17-4102-BLO-A-T-TB;Terrasse Basse;4102401;None;401
+17-4102-BLO-I;En attente informatique Blois;4102420;None;420
+17-4102-BLO-M;Blois - Métrologie;0;None;0
+17-4502;Zone analytique d'Orléans La Source;0;None;0
+17-4502-OLS;Site d'Orléans La Source;0;None;0
+17-4502-OLS-A;Orléans La Source - Batiment NHO;4502401;None;0
+17-4502-OLS-A-1;Orléans La Source - Niveau 1;4502401;None;0
+17-4502-OLS-A-1-001001;Orléans La Source - Accueil réception;4502150;None;150
+17-4502-OLS-A-1-001002;Orléans La Source - Laboratoire IHR;4502154;None;154
+17-4502-OLS-A-1-001003;Orléans La Source - Secrétariat IHR;4502154;None;154
+17-4502-OLS-A-1-001004;Orléans La Source - Bureau cadre;4502150;None;150
+17-4502-OLS-A-1-001005;Orléans La Source - bureau chef service;4502150;None;150
+17-4502-OLS-A-1-001006;Orléans La Source - Salle repas;4502430;None;430
+17-4502-OLS-A-1-001007;Orléans La Source - chambre de garde;4502150;None;150
+17-4502-OLS-A-1-001008;Orléans La Source - Sanitaires ch. garde;4502150;None;150
+17-4502-OLS-A-1-001009;Orléans La Source - Circulation accueil;4502430;None;430
+17-4502-OLS-A-1-001010;Orléans La Source - Local Déchets;4502430;None;430
+17-4502-OLS-A-1-001011;Orléans La Source - Distribution PSL;4502151;None;151
+17-4502-OLS-A-1-001012;Orléans La Source - Chambre froide +4°C;4502151;None;151
+17-4502-OLS-A-1-001013;Orléans La Source - Préparation commande;4502151;None;151
+17-4502-OLS-A-1-001014;Orléans La Source - Centrifugeuse;4502151;None;151
+17-4502-OLS-A-1-001015;Orléans La Source - Métrologie;4502140;None;140
+17-4502-OLS-A-1-001016;Orléans La Source - Bureau 2nd biologist;4502140;None;140
+17-4502-OLS-A-1-001017;Orléans La Source - Archives;4502430;None;430
+17-4502-OLS-A-1-001018;Orléans La Source - Circulation Patio;4502430;None;430
+17-4502-OLS-A-1-001019;Orléans La Source - Sas sanit vestiaires;4502430;None;430
+17-4502-OLS-A-1-001020;Orléans La Source - Vestiaires femmes;4502430;None;430
+17-4502-OLS-A-1-001021;Orléans La Source - Sanitaire femmes;4502430;None;430
+17-4502-OLS-A-1-001022;Orléans La Source - Sanitaire hommes;4502430;None;430
+17-4502-OLS-A-1-001023;Orléans La Source - Sanitaire handicapés;4502430;None;430
+17-4502-OLS-A-1-001024;Orléans La Source - Vestiaires hommes;4502430;None;430
+17-4502-OLS-A-1-001025;Orléans La Source - Local ménage;4502430;None;430
+17-4502-OLS-A-1-001026;Orléans La Source - Local photocopieur;4502430;None;430
+17-4502-OLS-A-1-001027;Orléans La Source - Local informatique;4502420;None;420
+17-4502-OLS-A-1-001028;Orléans La Source - Magasin;4502431;None;431
+17-4502-OLS-A-R;A supprimer;4502401;None;0
+17-4502-OLS-A-R-00R020;A supprimer;4502401;None;150
+17-4502-OLS-A-R-00R021;A supprimer;4502401;None;150
+17-4502-OLS-A-R-00R025;A supprimer;4502401;None;0
+17-4502-OLS-A-R-00R026;A supprimer;4502401;None;110
+17-4502-OLS-A-R-00R027;A supprimer;4502401;None;110
+17-4502-OLS-A-R-00R030;A supprimer;4502401;None;132
+17-4502-OLS-A-R-00R031;A supprimer;4502401;None;132
+17-4502-OLS-A-R-00R032;A supprimer;4502401;None;110
+17-4502-OLS-A-R-00R033;A supprimer;4502401;None;132
+17-4502-OLS-A-R-00R034;A supprimer;4502401;None;151
+17-4502-OLS-A-R-00R035;A supprimer;4502401;None;430
+17-4502-OLS-A-R-00R036;A supprimer;4502401;None;151
+17-4502-OLS-A-R-00R037;A supprimer;4502401;None;401
+17-4502-OLS-A-R-00R038;A supprimer;4502401;None;401
+17-4502-OLS-A-R-00R039;A supprimer;4502401;None;401
+17-4502-OLS-B;Orléans la Source - Batiment B;4502401;None;401
+17-4502-OLS-B-R;Orléans La Sce - Niveau 0;4502401;None;401
+17-4502-OLS-B-R-00G038;Orléans La Sce - Gaine tech. vestiaire F;4502401;None;401
+17-4502-OLS-B-R-00G046;Orléans La Sce - Gaine tech. Bur. Secr.;4502401;None;401
+17-4502-OLS-B-R-00G054;Orléans La Sce - Gaine tech Circul. R074;4502401;None;401
+17-4502-OLS-B-R-00G064;Orléans La Sce - Gaine technique magasin;4502401;None;401
+17-4502-OLS-B-R-00G067;Orléans La Sce - Gaine tech Circul. R074;4502401;None;401
+17-4502-OLS-B-R-00G072;Orléans La Sce - Gaine tech Circul. R074;4502401;None;401
+17-4502-OLS-B-R-00G073;Orléans La Sce - Gaine tech Circul. R074;4502401;None;401
+17-4502-OLS-B-R-00R035;Orléans La Sce - Sanitaire vestiaire F;4502401;None;401
+17-4502-OLS-B-R-00R036;Orléans La Sce - Douche vestiaire femmes;4502401;None;401
+17-4502-OLS-B-R-00R037;Orléans La Sce - Vestiaire Femmes;4502401;None;401
+17-4502-OLS-B-R-00R039;Orléans La Sce - Sas accès Vestiaire;4502401;None;401
+17-4502-OLS-B-R-00R040;Orléans La Sce - Sanitaire vestiaire H;4502401;None;401
+17-4502-OLS-B-R-00R041;Orléans La Sce - Douche vestiaire hommes;4502401;None;401
+17-4502-OLS-B-R-00R042;Orléans La Sce - Vestiaire Hommes;4502401;None;401
+17-4502-OLS-B-R-00R043;Orléans La Sce - Bur. second biologiste;4502401;None;150
+17-4502-OLS-B-R-00R044;Orléans La Sce - Bureau responsable site;4502401;None;413
+17-4502-OLS-B-R-00R045;Orléans La Sce - Bur. secrétaire du site;4502401;None;413
+17-4502-OLS-B-R-00R047;Orléans La Sce - Laboratoire IHR;4502401;None;154
+17-4502-OLS-B-R-00R048;Orléans La Sce - Sas accueil;4502401;None;150
+17-4502-OLS-B-R-00R049;Orléans La Sce - Distribution;4502401;None;151
+17-4502-OLS-B-R-00R050;Orléans La Sce - Chambre froide +4°C;4502401;None;151
+17-4502-OLS-B-R-00R051;Orléans La Sce - Box centrifugeuse;4502401;None;150
+17-4502-OLS-B-R-00R052;Orléans La Sce - Prépa des commandes;4502401;None;150
+17-4502-OLS-B-R-00R053;Orléans La Sce - Métrologie;4502401;None;140
+17-4502-OLS-B-R-00R055;Orléans La Sce - Salle d'eau chbre garde;4502401;None;150
+17-4502-OLS-B-R-00R056;Orléans La Sce - Chambre de garde;4502401;None;150
+17-4502-OLS-B-R-00R057;Orléans La Sce - Secrétariat IHR;4502401;None;154
+17-4502-OLS-B-R-00R058;Orléans La Sce - Bureau chef de service;4502401;None;150
+17-4502-OLS-B-R-00R059;Orléans La Sce - Bureau surveillante;4502401;None;150
+17-4502-OLS-B-R-00R060;Orléans La Sce - Salle repas personnels;4502401;None;401
+17-4502-OLS-B-R-00R061;Orléans La Sce - Local Déchets;4502401;None;150
+17-4502-OLS-B-R-00R062;Orléans La Sce - Local serveurs;4502401;None;420
+17-4502-OLS-B-R-00R063;Orléans La Sce - Magasin;4502401;None;431
+17-4502-OLS-B-R-00R065;Orléans La Sce - Sanitaire handicapé;4502401;None;401
+17-4502-OLS-B-R-00R066;Orléans La Sce - Sanitaire handicapé;4502401;None;401
+17-4502-OLS-B-R-00R068;Orléans La Sce - Reprographie;4502401;None;413
+17-4502-OLS-B-R-00R069;Orléans La Sce - Local GTC;4502401;None;420
+17-4502-OLS-B-R-00R070;Orléans La Sce - Local ménage;4502401;None;400
+17-4502-OLS-B-R-00R071;Orléans La Sce - Archives;4502401;None;150
+17-4502-OLS-B-R-00R074;Orléans La Sce - Circulation;4502401;None;401
+17-4502-OLS-I;Orléans La Sce - En attente informatique;4502420;None;420
+17-4502-OLS-M;Orléans La Sce - Métrologie;0;None;0
+17-4520;Zone analytique de Montargis;0;None;0
+17-4520-MON;Site de Montargis;0;None;0
+17-4520-MON-A;Montargis - Batiment A;4520401;None;401
+17-4520-MON-A-R;Montargis - Niveau 0;4520401;None;401
+17-4520-MON-A-R-00R001;Montargis - Hall;4520401;None;110
+17-4520-MON-A-R-00R002;Montargis - Secrétariat;4520401;None;110
+17-4520-MON-A-R-00R004;Montargis - Départ collectes;4520401;None;110
+17-4520-MON-A-R-00R014;Montargis - Sanitaires;4520401;None;110
+17-4520-MON-A-R-00R015;Montargis - Sanitaires;4520401;None;110
+17-4520-MON-A-R-00R016;Montargis - Circulation;4520401;None;110
+17-4520-MON-A-R-00R017;Montargis - Cafétéria personnels;4520401;None;401
+17-4520-MON-A-R-00R018;Montargis - Repas donneurs;4520401;None;110
+17-4520-MON-A-R-00R019;Montargis - Bureau médical;4520401;None;110
+17-4520-MON-A-R-00R020;Montargis - Circulation;4520401;None;401
+17-4520-MON-A-R-00R021;Montargis - Salle de réunion;4520401;None;413
+17-4520-MON-A-R-00R022;Montargis - Vestiaire H;4520401;None;401
+17-4520-MON-A-R-00R023;Montargis - Dégagement;4520401;None;401
+17-4520-MON-A-R-00R024;Montargis - Local ménage;4520401;None;400
+17-4520-MON-A-R-00R025;Montargis - Vestiaire F;4520401;None;401
+17-4520-MON-A-R-00R026;Montargis - ATD/Don du sang;4520401;None;114
+17-4520-MON-A-R-00R027;Montargis - Prélèvement Aphérèses;4520401;None;110
+17-4520-MON-A-R-00R028;Montargis - Bureau Accueil;4520401;None;110
+17-4520-MON-I;Montargis - En attente informatique;4520420;None;420
+17-4520-MON-M;Montargis - Métrologie;0;None;0
+17-4521;Zone analytique Orléans St Jean de la R;0;None;0
+17-4521-OSJ;Site d'Orléans Saint Jean de la Ruelle;0;None;0
+17-4521-OSJ-A;Orléans St Jean - Batiment A;4521401;None;401
+17-4521-OSJ-A-1;Orléans St Jean - Niveau 1;4521401;None;401
+17-4521-OSJ-A-1-001001;Orléans St Jean - Dégagement;4521401;None;110
+17-4521-OSJ-A-1-001002;Orléans St Jean - Secrétariat collecte;4521401;None;110
+17-4521-OSJ-A-1-001003;Orléans St Jean - Bureau cadre;4521401;None;110
+17-4521-OSJ-A-1-001004;Orléans St Jean - Responsable Prélèvemen;4521401;None;110
+17-4521-OSJ-A-1-001005;Orléans St Jean - Sas;4521401;None;401
+17-4521-OSJ-A-1-001006;Orléans St Jean - Bureau IRP;4521401;None;418
+17-4521-OSJ-A-1-001007;Orléans St Jean - Sas;4521401;None;401
+17-4521-OSJ-A-1-001008;Orléans St Jean - Correspondante Adminis;4521401;None;413
+17-4521-OSJ-A-1-001009;Orléans St Jean - Salle de réunion;4521401;None;413
+17-4521-OSJ-A-1-001010;Orléans St Jean - Local Technique;4521401;None;401
+17-4521-OSJ-A-1-001011;Orléans St Jean - Sanitaires;4521401;None;401
+17-4521-OSJ-A-1-001012;Orléans St Jean - Magasin 1 (Mezzanine);4521401;None;431
+17-4521-OSJ-A-1-001013;Orléans St Jean - Magasin 2 (Climatisé);4521401;None;431
+17-4521-OSJ-A-R;Orléans St Jean - Niveau 0;4521401;None;401
+17-4521-OSJ-A-R-00R001;Orléans St Jean - Accueil;4521401;None;110
+17-4521-OSJ-A-R-00R002;Orléans St Jean - Hall;4521401;None;110
+17-4521-OSJ-A-R-00R003;Orléans St Jean - Bureau Magasinier;4521401;None;420
+17-4521-OSJ-A-R-00R004;Orléans St Jean - PC Portables;4521401;None;401
+17-4521-OSJ-A-R-00R005;Orléans St Jean - Restauration personnel;4521401;None;401
+17-4521-OSJ-A-R-00R006;Orléans St Jean - Circulation;4521401;None;110
+17-4521-OSJ-A-R-00R007;Orléans St Jean - Vestiaire/Sanitaire F;4521401;None;401
+17-4521-OSJ-A-R-00R008;Orléans St Jean - Vestiaire/Sanitaire H;4521401;None;401
+17-4521-OSJ-A-R-00R009;Orléans St Jean - Sanitaire donneurs;4521401;None;110
+17-4521-OSJ-A-R-00R010;Orléans St Jean - Sanitaire donneurs;4521401;None;110
+17-4521-OSJ-A-R-00R011;Orléans St Jean - Hall escalier;4521401;None;110
+17-4521-OSJ-A-R-00R012;Orléans St Jean - Consultation 1;4521401;None;110
+17-4521-OSJ-A-R-00R013;Orléans St Jean - Consultation 2;4521401;None;110
+17-4521-OSJ-A-R-00R014;Orléans St Jean - Prélèvements;4521401;None;110
+17-4521-OSJ-A-R-00R015;Orléans St Jean - Restauration donneurs;4521401;None;110
+17-4521-OSJ-A-R-00R016;Orléans St Jean - Garage;4521401;None;433
+17-4521-OSJ-A-R-00R017;Orléans St Jean - Salle surgélateur;4521401;None;110
+17-4521-OSJ-A-R-00R018;Orléans St Jean - Sas Navette;4521401;None;110
+17-4521-OSJ-A-R-00R019;Orléans St Jean - Départ collectes;4521401;None;401
+17-4521-OSJ-A-R-00R020;Orléans St Jean - Local serveurs;4521401;None;401
+17-4521-OSJ-A-R-00R021;Orléans St Jean - Local stockage Prèl.;4521401;None;110
+17-4521-OSJ-I;Orléans St Jean - En attente informatiqu;4521420;None;420
+17-4521-OSJ-M;Orléans St Jean - Métrologie;0;None;0
+17-7902;Zone analytique de Niort;0;None;0
+17-7902-NIO;Site de Niort;0;None;0
+17-7902-NIO-A;Niort - Batiment A;7902401;None;401
+17-7902-NIO-A-1;Niort - Niveau 1;7902401;None;401
+17-7902-NIO-A-1-001001;Niort - Palier escalier;7902401;None;430
+17-7902-NIO-A-1-001002;Niort - Machinerie ascenseur;7902401;None;401
+17-7902-NIO-A-1-001003;Niort - Hall;7902401;None;430
+17-7902-NIO-A-1-001004;Niort - Ascenseur;7902401;None;401
+17-7902-NIO-A-1-001005;Niort - Salle de réunion;7902401;None;413
+17-7902-NIO-A-1-001006;Niort - Bureau Responsable de site;7902401;None;413
+17-7902-NIO-A-1-001007;Niort - Bureau Administratif;7902401;None;413
+17-7902-NIO-A-1-001008;Niort - Circulation;7902401;None;401
+17-7902-NIO-A-1-001009;Niort - Bureau Administratif;7902401;None;413
+17-7902-NIO-A-1-001010;Niort - Bureau;7902401;None;114
+17-7902-NIO-A-1-001011;Niort - Promotion du Don;7902401;None;114
+17-7902-NIO-A-1-001012;Niort - Promotion du Don;7902401;None;114
+17-7902-NIO-A-1-001013;Niort - Réserve consommable;7902401;None;431
+17-7902-NIO-A-1-001014;Niort - Bureau maintenance;7902110;None;110
+17-7902-NIO-A-1-001015;Niort - Bureau Resp. IHR/ Hemovigilant;7902154;None;154
+17-7902-NIO-A-1-001016;Niort - Archives UDDSB;7902401;None;114
+17-7902-NIO-A-1-001017;Niort - Toilettes;7902401;None;430
+17-7902-NIO-A-1-001018;Niort - Photocopieur;7902430;None;413
+17-7902-NIO-A-R;Niort - Niveau 0;7902401;None;401
+17-7902-NIO-A-R-00R001;Niort - Accueil distribution;7902401;None;150
+17-7902-NIO-A-R-00R002;Niort - Local informatique;7902401;None;420
+17-7902-NIO-A-R-00R003;Niort - Distribution;7902401;None;150
+17-7902-NIO-A-R-00R004;Niort - Zone de stockage PSL;7902401;None;110
+17-7902-NIO-A-R-00R005;Niort - Annexe distribution;7902401;None;150
+17-7902-NIO-A-R-00R006;Niort - PC portables collecte;7902110;None;110
+17-7902-NIO-A-R-00R007;Niort - Bureau IRP;7902418;None;418
+17-7902-NIO-A-R-00R008;Niort - Circulation;7902401;None;401
+17-7902-NIO-A-R-00R009;Niort - Colonne technique;7902401;None;401
+17-7902-NIO-A-R-00R010;Niort - Toilettes;7902401;None;401
+17-7902-NIO-A-R-00R011;Niort - Palier escalier;7902401;None;401
+17-7902-NIO-A-R-00R012;Niort - Palier escalier;7902401;None;401
+17-7902-NIO-A-R-00R013;Niort - Ascenseur;7902401;None;401
+17-7902-NIO-A-R-00R014;Niort - Circulation;7902401;None;401
+17-7902-NIO-A-R-00R015;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-R-00R016;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-R-00R017;Niort -  CH NIORT;0;None;0
+17-7902-NIO-A-R-00R018;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-R-00R019;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-R-00R020;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-R-00R021;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-R-00R022;Niort - Salle Préllèvements Soins;7902401;None;221
+17-7902-NIO-A-R-00R023;Niort - Salle de Prél. Sang total Plasma;7902401;None;110
+17-7902-NIO-A-R-00R024;Niort - Circulation;7902401;None;401
+17-7902-NIO-A-R-00R025;Niort - Chambre de garde;7902401;None;150
+17-7902-NIO-A-R-00R026;Niort - Local ménage;7902401;None;400
+17-7902-NIO-A-R-00R027;Niort - Matériel ménage;7902401;None;400
+17-7902-NIO-A-R-00R028;Niort - Toilettes;7902401;None;401
+17-7902-NIO-A-R-00R029;Niort - Réserve prélèvement;7902401;None;110
+17-7902-NIO-A-R-00R030;Niort - Cuisine Donneurs;7902401;None;110
+17-7902-NIO-A-R-00R031;Niort - Restauration Donneurs+malades;7902401;None;110
+17-7902-NIO-A-R-00R032;Niort - Bureau médical;7902401;None;110
+17-7902-NIO-A-R-00R033;Niort - Bureau responsable prélèvement;7902401;None;110
+17-7902-NIO-A-R-00R034;Niort - Salle attente donneurs;7902401;None;110
+17-7902-NIO-A-R-00R035;Niort - Accueil;7902401;None;401
+17-7902-NIO-A-R-00R036;Niort - Sanitaires Handicapés;7902110;None;110
+17-7902-NIO-A-R-00R037;Niort - Sanitaires Handicapés;7902110;None;110
+17-7902-NIO-A-R-00R038;Niort - Hall;7902401;None;401
+17-7902-NIO-A-R-00R039;Niort - Cafeteria personnel;7902430;None;430
+17-7902-NIO-A-S;Niort - Niveau sous sol;7902401;None;401
+17-7902-NIO-A-S-00S001;Niort - Palier escalier;7902401;None;401
+17-7902-NIO-A-S-00S002;Niort - Ascenseur;7902401;None;401
+17-7902-NIO-A-S-00S003;Niort - Circulation;7902401;None;401
+17-7902-NIO-A-S-00S004;Niort - Vide sanitaire;7902401;None;430
+17-7902-NIO-A-S-00S005;Niort - local;7902401;None;401
+17-7902-NIO-A-S-00S006;Niort - Chambre froide;7902401;None;151
+17-7902-NIO-A-S-00S007;Niort - Magasin;7902401;None;431
+17-7902-NIO-A-S-00S008;Niort - Magasin;7902401;None;431
+17-7902-NIO-A-S-00S009;Niort - Salle de départ équipe mobile;7902401;None;110
+17-7902-NIO-A-S-00S010;Niort - Vestiaires;7902401;None;430
+17-7902-NIO-A-S-00S011;Niort - Vestiaires;7902401;None;430
+17-7902-NIO-A-S-00S012;Niort -  Vestiaires;7902430;None;430
+17-7902-NIO-A-S-00S013;Niort - Stockage;7902401;None;431
+17-7902-NIO-A-S-00S014;Niort - Chambre froide alimentaire;7902401;None;110
+17-7902-NIO-A-S-00S015;Niort - Ex-Zone Surgélateur;7902401;None;151
+17-7902-NIO-A-S-00S016;Niort - Circulation;7902401;None;401
+17-7902-NIO-A-S-00S017;Niort - Local des eaux;7902401;None;401
+17-7902-NIO-A-S-00S018;Niort - Chaufferie;7902401;None;401
+17-7902-NIO-A-S-00S019;Niort -  Local électrique;7902401;None;401
+17-7902-NIO-A-S-00S020;Niort - Garage;7902401;None;433
+17-7902-NIO-A-S-00S021;Niort - Circulation;7902401;None;401
+17-7902-NIO-A-S-00S022;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-S-00S023;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-S-00S024;Niort - circulation;7902401;None;401
+17-7902-NIO-A-S-00S025;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-S-00S026;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-S-00S027;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-S-00S028;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-S-00S029;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-S-00S030;Niort - CH NIORT;0;None;0
+17-7902-NIO-A-S-00S031;Niort - Archives Niort;7902401;None;430
+17-7902-NIO-A-T;Niort - Terasses;7902401;None;401
+17-7902-NIO-A-T-TB;Niort - Terrasse S+1;7902401;None;401
+17-7902-NIO-A-T-TH;Niort - Terrasse R+2;7902401;None;401
+17-7902-NIO-A-T-TM;Niort - Terrasse R+1;7902401;None;401
+17-7902-NIO-I;En attente informatique Niort;7902420;None;420
+17-7902-NIO-M;Niort - Métrologie;0;None;0
+17-8602;Zone analytique de Poitiers;0;None;0
+17-8602-POI;Site de Poitiers;0;None;0
+17-8602-POI-A;Poitiers - Batiment A;8602401;None;401
+17-8602-POI-A-1;Poitiers - Niveau 1;8602401;None;401
+17-8602-POI-A-1-001001;Poitiers - Palier escalier;8602401;None;401
+17-8602-POI-A-1-001002;Poitiers - Circulation palier;8602401;None;401
+17-8602-POI-A-1-001003;Poitiers - Local technique;8602401;None;401
+17-8602-POI-A-1-001004;Poitiers - Monte malade;8602401;None;401
+17-8602-POI-A-1-001005;Poitiers - Local technique (onduleurs);8602401;None;432
+17-8602-POI-A-1-001006;Poitiers - Bur. surveillance distri.;8602401;None;151
+17-8602-POI-A-1-001007;Poitiers - Archives Hemovigilance;8602401;None;153
+17-8602-POI-A-1-001008;Poitiers - Chambre de garde;8602401;None;150
+17-8602-POI-A-1-001009;Poitiers - Toilette distribution;8602401;None;150
+17-8602-POI-A-1-001010;Poitiers - Salle de bain Chbre de garde;8602401;None;150
+17-8602-POI-A-1-001011;Poitiers - Secretariat IH;8602401;None;150
+17-8602-POI-A-1-001012;Poitiers - Bureau hemovigilance;8602401;None;153
+17-8602-POI-A-1-001013;Poitiers - Bureau medecin distribution;8602401;None;151
+17-8602-POI-A-1-001014;Poitiers - Salle de Repos Général Site;8602401;None;430
+17-8602-POI-A-1-001015;Poitiers - Circulation IHR Distri;8602401;None;150
+17-8602-POI-A-1-001016;Poitiers - Laboratoire groupe sanguin;8602401;None;154
+17-8602-POI-A-1-001017;Poitiers - CF IHR Reactif DHALIA;8602401;None;154
+17-8602-POI-A-1-001018;Poitiers - Local Irradiateur;8602401;None;151
+17-8602-POI-A-1-001019;Poitiers - Labo distribution de garde;8602401;None;151
+17-8602-POI-A-1-001020;Poitiers - Chambre froide distri FUSHIA;8602401;None;151
+17-8602-POI-A-1-001021;Poitiers - Accueil Distribution;8602401;None;151
+17-8602-POI-A-1-001022;Poitiers - Attente produit;8602401;None;151
+17-8602-POI-A-1-001029;Poitiers - Sanitaire handicapé;8602401;None;401
+17-8602-POI-A-1-001030;Poitiers - Circulation;8602401;None;401
+17-8602-POI-A-1-001031;Poitiers - Palier escalier;8602401;None;401
+17-8602-POI-A-1-001032;Poitiers - Monte malade;8602401;None;401
+17-8602-POI-A-1-001033;Poitiers - Local IRP;8602401;None;418
+17-8602-POI-A-1-001034;Poitiers - Sanitaire hommes;8602401;None;401
+17-8602-POI-A-1-001035;Poitiers - Sanitaire handicapés;8602401;None;401
+17-8602-POI-A-1-001036;Poitiers - Sanitaire hommes;8602401;None;401
+17-8602-POI-A-1-001037;Poitiers - Sanitaire femmes;8602401;None;401
+17-8602-POI-A-1-001038;Poitiers - Bureau Logistique PSL;8602401;None;440
+17-8602-POI-A-1-001039;Poitiers - Local photocopieur Adm;8602401;None;419
+17-8602-POI-A-1-001040;Poitiers - Bureau Responsable ADM;8602401;None;413
+17-8602-POI-A-1-001041;Poitiers - Bureau correspondant RH;8602401;None;413
+17-8602-POI-A-1-001042;Poitiers - Bureau responsable de site;8602401;None;413
+17-8602-POI-A-1-001043;Poitiers - Circulation Administration;8602401;None;413
+17-8602-POI-A-1-001044;Poitiers - Bureau Responsable Prépa;8602401;None;131
+17-8602-POI-A-1-001045;Poitiers - Bureau Stockage Magasin;8602401;None;431
+17-8602-POI-A-1-001046;Poitiers - Facturation;8602401;None;419
+17-8602-POI-A-1-001050;Poitiers - Circulation Cryobiologie;8602401;None;240
+17-8602-POI-A-1-001051;Poitiers - Salle de Cryoconservation;8602401;None;240
+17-8602-POI-A-1-001052;Poitiers - Zone Classée TC1 Congélation;8602401;None;240
+17-8602-POI-A-1-001053;Poitiers - Zone Classée Couloir;8602401;None;240
+17-8602-POI-A-1-001054;Poitiers - Zone Classée Sas Personnel;8602401;None;240
+17-8602-POI-A-1-001055;Poitiers - Zone Classée Pré Sas;8602401;None;240
+17-8602-POI-A-1-001056;Poitiers - Zone Classée Sas Matériel;8602401;None;240
+17-8602-POI-A-1-001057;Poitiers - Zone Classée TC2 Décongél.;8602401;None;240
+17-8602-POI-A-1-001058;Poitiers - Palier escalier;8602401;None;401
+17-8602-POI-A-1-001059;Poitiers - Palier cryobiologie;8602401;None;240
+17-8602-POI-A-1-001060;Poitiers - Laboratoire BSP;8602401;None;244
+17-8602-POI-A-1-001061;Poitiers - Laboratoire Banque de Tissus;8602401;None;240
+17-8602-POI-A-1-001062;Poitiers - Bureau médecin cryobiologie;8602401;None;240
+17-8602-POI-A-1-001063;Poitiers - Bur technicien cryobiologie;8602401;None;240
+17-8602-POI-A-1-001064;Poitiers - Réserve Cryobiologie;8602401;None;240
+17-8602-POI-A-1-001070;Poitiers - Circulation;8602401;None;401
+17-8602-POI-A-1-001071;Poitiers - Bureau informaticien;8602401;None;420
+17-8602-POI-A-1-001072;Poitiers - Bur. Resp. Adj. Préparation;8602401;None;131
+17-8602-POI-A-1-001073;Poitiers - Bureau Médecin Hémovigilant;8602401;None;153
+17-8602-POI-A-1-001074;Poitiers - Bureau ServiceTechnique;8602401;None;432
+17-8602-POI-A-1-001075;Poitiers - Salle de réunion;8602401;None;413
+17-8602-POI-A-1-001076;Poitiers - Bureau Médecin Prélèvement;8602401;None;110
+17-8602-POI-A-1-001077;Poitiers - Bureau LIC;8602401;None;240
+17-8602-POI-A-1-001078;Poitiers - Local informatique;8602401;None;420
+17-8602-POI-A-1-001079;Poitiers - no non affecté;8602401;None;401
+17-8602-POI-A-1-001080;Poitiers - Circulation HLA;8602401;None;213
+17-8602-POI-A-1-001081;Poitiers - Local reserve/classement HLA;8602401;None;213
+17-8602-POI-A-1-001082;Poitiers - Circulation BM;8602401;None;213
+17-8602-POI-A-1-001083;Poitiers - Laboratoire BM chimerisme;8602401;None;213
+17-8602-POI-A-1-001084;Poitiers - Local thermo cycleur;8602401;None;213
+17-8602-POI-A-1-001085;Poitiers - Bureau Responsable Adj HLA;8602401;None;213
+17-8602-POI-A-1-001086;Poitiers - Labo extraction pre PCR;8602401;None;213
+17-8602-POI-A-1-001087;Poitiers - Bureau secrétariat BM;8602401;None;213
+17-8602-POI-A-1-001088;Poitiers - Laboratoire post PCR;8602401;None;213
+17-8602-POI-A-1-001089;Poitiers - Palier Escalier Secours Est;8602401;None;213
+17-8602-POI-A-1-001090;Poitiers - Local congélateur HLA;8602401;None;213
+17-8602-POI-A-1-001091;Poitiers - Laboratoire HLA;8602401;None;213
+17-8602-POI-A-1-001092;Poitiers - Bureau secrétaire HLA;8602401;None;213
+17-8602-POI-A-1-001093;Poitiers - Bureau médecin resp.HLA;8602401;None;213
+17-8602-POI-A-1-001094;Poitiers - Bureau médecin resp.HLA;8602401;None;213
+17-8602-POI-A-2;Poitiers - Niveau 2;8602401;None;401
+17-8602-POI-A-2-002001;Machinerie Ascenseur;8602401;None;401
+17-8602-POI-A-P;Poitiers - Niveau sous sol 2;8602401;None;401
+17-8602-POI-A-P-00P001;Poitiers - Gaine Monte Malade;8602401;None;401
+17-8602-POI-A-P-00P002;Poitiers - Palier Escalier Central;8602401;None;401
+17-8602-POI-A-P-00P003;Poitiers - Circulation;8602401;None;401
+17-8602-POI-A-P-00P004;Poitiers - Local Ménage;8602401;None;400
+17-8602-POI-A-P-00P005;Poitiers - Vestiaire;8602401;None;430
+17-8602-POI-A-P-00P006;Poitiers - Magasin;8602401;None;431
+17-8602-POI-A-P-00P007;Poitiers - Gaine Monte malade;8602401;None;401
+17-8602-POI-A-P-00P008;Poitiers - Affecté CHU;8602401;None;401
+17-8602-POI-A-P-00P009;Poitiers - Affecté CHU;8602401;None;401
+17-8602-POI-A-P-00P010;Poitiers - Affecté CHU;8602401;None;401
+17-8602-POI-A-P-00P011;Poitiers - Chambre froide -30 CROCUS;8602401;None;131
+17-8602-POI-A-P-00P012;Poitiers - Stokage EFS;8602401;None;430
+17-8602-POI-A-P-00P013;Poitiers - Vestiaire;8602401;None;430
+17-8602-POI-A-P-00P014;Poitiers - Affecté CHU;8602401;None;401
+17-8602-POI-A-P-00P015;Poitiers - Affecté CHU;8602401;None;401
+17-8602-POI-A-P-00P016;Poitiers - Affecté CHU;8602401;None;401
+17-8602-POI-A-P-00P017;Poitiers - Local archives;8602401;None;430
+17-8602-POI-A-P-00P018;Poitiers - Affecté CHU;8602401;None;401
+17-8602-POI-A-R;Poitiers - Niveau 0;8602401;None;401
+17-8602-POI-A-R-00R001;Poitiers - Sas d'entrée;8602401;None;401
+17-8602-POI-A-R-00R002;Poitiers - Hall d'entrée accueil;8602401;None;401
+17-8602-POI-A-R-00R003;Poitiers - Salle de prélèvement;8602401;None;110
+17-8602-POI-A-R-00R004;Poitiers - Rangement prélèvement;8602401;None;401
+17-8602-POI-A-R-00R005;Poitiers - Salle de collation donneurs;8602401;None;110
+17-8602-POI-A-R-00R006;Poitiers - Réserve prélèvement;8602401;None;110
+17-8602-POI-A-R-00R007;Poitiers - Bur. Salle pause infirmières;8602401;None;110
+17-8602-POI-A-R-00R008;Poitiers - Laverie;8602401;None;110
+17-8602-POI-A-R-00R009;Poitiers - Bur. médecin resp. collecte;8602401;None;110
+17-8602-POI-A-R-00R010;Poitiers - Bureau promotion du don;8602401;None;114
+17-8602-POI-A-R-00R011;Poitiers - Sanitaire public;8602401;None;110
+17-8602-POI-A-R-00R012;Poitiers - Palier escalier;8602401;None;110
+17-8602-POI-A-R-00R013;Poitiers - Monte malade;8602401;None;110
+17-8602-POI-A-R-00R014;Poitiers - Circulation entrée;8602401;None;110
+17-8602-POI-A-R-00R015;Poitiers - Bureau Médical n°1;8602401;None;110
+17-8602-POI-A-R-00R016;Poitiers - Bureau Médical n°2;8602401;None;110
+17-8602-POI-A-R-00R017;Poitiers - Bureau cadre prélèvement;8602401;None;110
+17-8602-POI-A-R-00R030;Poitiers - Circulation;8602401;None;401
+17-8602-POI-A-R-00R031;Poitiers - Autotransfusion-saignées;8602401;None;221
+17-8602-POI-A-R-00R032;Poitiers - Bureau infirmières;8602401;None;221
+17-8602-POI-A-R-00R033;Poitiers - Centre de soins;8602401;None;221
+17-8602-POI-A-R-00R034;Poitiers - Palier escalier;8602401;None;401
+17-8602-POI-A-R-00R035;Poitiers - Circulation/Palier;8602401;None;401
+17-8602-POI-A-R-00R036;Poitiers - Local technique;8602401;None;401
+17-8602-POI-A-R-00R037;Poitiers - Monte malade;8602401;None;401
+17-8602-POI-A-R-00R038;Poitiers - Sanitaire handicapés;8602401;None;221
+17-8602-POI-A-R-00R039;Poitiers - Reserve centre de soins;8602401;None;221
+17-8602-POI-A-R-00R040;Poitiers - Bureau médecin CDS;8602401;None;221
+17-8602-POI-A-R-00R041;Poitiers - Salle d'attente des malades;8602401;None;221
+17-8602-POI-A-R-00R042;Poitiers - Bureau secrétariat CDS;8602401;None;221
+17-8602-POI-A-R-00R050;Poitiers - Sortie dechets et réserve;8602401;None;131
+17-8602-POI-A-R-00R051;Poitiers - Sas personnel préparation;8602401;None;131
+17-8602-POI-A-R-00R052;Poitiers - C froide +4 filtr.CGR PIVOINE;8602401;None;131
+17-8602-POI-A-R-00R053;Poitiers - Circulation;8602401;None;131
+17-8602-POI-A-R-00R054;Poitiers - C.froide +4 quarantaine GENET;8602401;None;131
+17-8602-POI-A-R-00R055;Poitiers - Etiquetage CGR;8602401;None;131
+17-8602-POI-A-R-00R056;Poitiers - Viro attenuation plaquettes;8602401;None;131
+17-8602-POI-A-R-00R057;Poitiers - Viro attenuation plasma;8602401;None;131
+17-8602-POI-A-R-00R058;Poitiers - Chambre froide -35 PAVOT;8602401;None;131
+17-8602-POI-A-R-00R059;Poitiers - Sas +4 PAVOT1;8602401;None;131
+17-8602-POI-A-R-00R060;Poitiers - Palier escalier;8602401;None;131
+17-8602-POI-A-R-00R061;Poitiers - Salle surgelateur plasma;8602401;None;131
+17-8602-POI-A-R-00R062;Poitiers - Surgélateur MISTRAL;8602401;None;131
+17-8602-POI-A-R-00R063;Poitiers - Sas +4 PAVOT2;8602401;None;131
+17-8602-POI-A-R-00R064;Poitiers - Etiquetage plasma;8602401;None;131
+17-8602-POI-A-R-00R065;Poitiers - Contrôle Qualité prépa;8602401;None;131
+17-8602-POI-A-R-00R066;Poitiers - Circulation;8602401;None;131
+17-8602-POI-A-R-00R067;Poitiers - Monte charge;8602401;None;131
+17-8602-POI-A-R-00R068;Poitiers - Extraction;8602401;None;131
+17-8602-POI-A-R-00R069;Poitiers - no non affecté;8602401;None;401
+17-8602-POI-A-R-00R070;Poitiers - Centrifugeuses;8602401;None;131
+17-8602-POI-A-R-00R071;Poitiers - Salle presse et pliage;8602401;None;131
+17-8602-POI-A-R-00R072;Poitiers - Tunnel +4;8602401;None;131
+17-8602-POI-A-R-00R073;Poitiers - Palier Escalier Secours Nord;8602401;None;131
+17-8602-POI-A-R-00R074;Poitiers - Sas entrée arrivée produits;8602401;None;131
+17-8602-POI-A-R-00R075;Poitiers - Arrivée des produits;8602401;None;131
+17-8602-POI-A-R-00R076;Poitiers - Enregistrement;8602401;None;131
+17-8602-POI-A-R-00R077;Poitiers - Centrifugeuses;8602401;None;131
+17-8602-POI-A-S;Poitiers - Niveau sous sol;8602401;None;401
+17-8602-POI-A-S-00S001;Poitiers - Monte malade;8602401;None;401
+17-8602-POI-A-S-00S014;Poitiers - Local Technique affecté CHU;8602401;None;432
+17-8602-POI-A-S-00S019;Poitiers - Circulation;8602401;None;401
+17-8602-POI-A-S-00S020;Poitiers - Local technique;8602401;None;432
+17-8602-POI-A-S-00S021;Poitiers - Circulation;8602401;None;401
+17-8602-POI-A-S-00S022;Poitiers - Local magasinier;8602401;None;431
+17-8602-POI-A-S-00S023;Poitiers - Laverie;8602401;None;131
+17-8602-POI-A-S-00S024;Poitiers - Sanitaires;8602401;None;131
+17-8602-POI-A-S-00S025;Poitiers - Réserve Service Technique;8602401;None;432
+17-8602-POI-A-S-00S026;Poitiers - Chambre froide +4°C OEILLET;8602401;None;131
+17-8602-POI-A-S-00S027;Poitiers - Chambre froide -35°C LILAS;8602401;None;131
+17-8602-POI-A-S-00S028;Poitiers - Palier;8602401;None;401
+17-8602-POI-A-S-00S029;Poitiers - Garage;8602401;None;431
+17-8602-POI-A-S-00S030;Poitiers - Réserve alim. départ collecte;8602401;None;110
+17-8602-POI-A-S-00S031;Poitiers - Réserve collecte;8602401;None;131
+17-8602-POI-A-S-00S032;Poitiers - Local Déchets;8602401;None;401
+17-8602-POI-A-S-00S033;Poitiers - SAS Départ produits;8602401;None;131
+17-8602-POI-A-S-00S034;Poitiers - Sous Station Chauff CH;8602401;None;401
+17-8602-POI-A-S-00S035;Poitiers - Gaine monte charge;8602401;None;131
+17-8602-POI-A-S-00S036;Poitiers - Plaquettes;8602401;None;131
+17-8602-POI-A-S-00S037;Poitiers - Chambre froide -35°C ASTER;8602401;None;110
+17-8602-POI-A-S-00S038;Poitiers - SAS +4°C EXP;8602401;None;110
+17-8602-POI-A-S-00S039;Poitiers - Chambre froide +4°C SAUGE;8602401;None;131
+17-8602-POI-A-T;Poitiers - Terrasse;8602401;None;401
+17-8602-POI-A-T-TB;Poitiers - Terrasse Basse;8602401;None;401
+17-8602-POI-A-T-TH;Poitiers - Terrasse Haute;8602401;None;401
+17-8602-POI-I;Poitiers - En attente informatique;8602420;None;420
+17-8602-POI-M;Poitiers - Métrologie;0;None;0
+17-8610;Zone analytique de Châtellerault;0;None;0
+17-8610-CHL;Site de Châtellerault;0;None;0
+17-8610-CHL-A;Châtellerault - Batiment A;8610401;None;401
+17-8610-CHL-A-R;Châtellerault - Niveau 0;8610401;None;401
+17-8610-CHL-A-T;Châtellerault - Terrasse;8610401;None;401
+17-8610-CHL-I;En attente informatique Châtellerault;8610420;None;420
+17-9991;A sortir suite à inventaire;0;None;0
+17-9999;EN ATTENTE AFFECTATION INFORMATIQUE;3799420;None;420
+23;Pays de la Loire;4499400;None;400
+23-0000;SORTIE PHYSIQUE;4499400;None;400
+23-0001;DEMANDE DE SORTIE;4499400;None;400
+23-4401;ZONE ANALYTIQUE DE NANTES;4499400;None;400
+23-4401-000;ZONE D'ATTENTE DE VENTILATION EQUIPEMENT;4499400;None;400
+23-4401-NTS;Site Nantes;4401401;None;401
+23-4401-NTS-A;Batiment A;4401401;None;401
+23-4401-NTS-A-1;1er étage;4401401;None;401
+23-4401-NTS-A-1-000010;Accueil donneur couloir princi;4401110;None;110
+23-4401-NTS-A-1-000020;Gaine technique 1;4401430;None;430
+23-4401-NTS-A-1-000030;Gaine technique 2;4401430;None;430
+23-4401-NTS-A-1-000040;Gaine technique 3;4401430;None;430
+23-4401-NTS-A-1-000050;Sanitaires femmes 1;4401430;None;430
+23-4401-NTS-A-1-000060;Sanitaires femmes 2;4401430;None;430
+23-4401-NTS-A-1-000070;Sanitaires hommes 1;4401430;None;430
+23-4401-NTS-A-1-000080;Sanitaires hommes 2;4401430;None;430
+23-4401-NTS-A-1-000090;Bureau consultation 1;4401110;None;110
+23-4401-NTS-A-1-000100;Local rangement;4401110;None;110
+23-4401-NTS-A-1-000110;Cuisine;4401110;None;110
+23-4401-NTS-A-1-000120;Foyer donneurs;4401110;None;110
+23-4401-NTS-A-1-000130;Salle cytaphérèse, don sang;4401110;None;110
+23-4401-NTS-A-1-000140;Bureau consultation 2;4401110;None;110
+23-4401-NTS-A-1-000150;Bureau médecin 1;4401110;None;110
+23-4401-NTS-A-1-000160;Bureau responsable donneurs;4401110;None;110
+23-4401-NTS-A-1-000170;Secrétariat donneurs;4401110;None;110
+23-4401-NTS-A-1-000180;Bureau médecin 2;4401110;None;110
+23-4401-NTS-A-1-000190;Centre de santé;4401220;None;221
+23-4401-NTS-A-1-000200;Bureau resp. CSM;4401110;None;110
+23-4401-NTS-A-1-000210;Bureau IDE;4401221;None;221
+23-4401-NTS-A-1-000220;Thérapie cellulaire;4401220;None;221
+23-4401-NTS-A-1-000230;Bureau médecin consultation;4401220;None;221
+23-4401-NTS-A-1-000240;Bureau médecin consultation;4401220;None;221
+23-4401-NTS-A-1-000250;Sanitaires;4401430;None;430
+23-4401-NTS-A-1-000260;Local ménage;4401430;None;430
+23-4401-NTS-A-1-000270;Vestiaires femmes;4401430;None;430
+23-4401-NTS-A-1-000280;Vestiaires hommes;4401430;None;430
+23-4401-NTS-A-1-000290;Labo contrôle biologiques;4401140;None;140
+23-4401-NTS-A-1-000300;Circulation accès labo;4401251;None;251
+23-4401-NTS-A-1-000310;Préparation solution;4401251;None;251
+23-4401-NTS-A-1-000320;Chambre froide +4°C MP et PI;4401251;None;251
+23-4401-NTS-A-1-000330;SAS accès conditionmt primaire;4401251;None;251
+23-4401-NTS-A-1-000340;Conditionnement primaire;4401251;None;251
+23-4401-NTS-A-1-000350;Local autoclave;4401251;None;251
+23-4401-NTS-A-1-000360;Local technique ventilation;4401430;None;430
+23-4401-NTS-A-1-000370;Cond° secondaire étiquetage;4401251;None;251
+23-4401-NTS-A-1-000380;Cond° secondaire mise coffret;4401251;None;251
+23-4401-NTS-A-1-000390;Chambre froide +4°C (PF);4401251;None;251
+23-4401-NTS-A-1-000400;Gest administrat bioréactifs;4401251;None;251
+23-4401-NTS-A-1-000420;Circulation accès labos;4401430;None;430
+23-4401-NTS-A-1-000430;Bureau responsable bioréactifs;4401251;None;251
+23-4401-NTS-A-1-000440;Bureau responsable LCQ;4401140;None;140
+23-4401-NTS-A-1-000450;Local machinerie frigorifique;4401430;None;430
+23-4401-NTS-A-2;2eme étage;4401401;None;401
+23-4401-NTS-A-2-000010;Hall 2eme étage;4401430;None;430
+23-4401-NTS-A-2-000020;Pemanence RH;4401415;None;415
+23-4401-NTS-A-2-000030;Local Vide;4401430;None;430
+23-4401-NTS-A-2-000040;Gaine techique 4;4401430;None;430
+23-4401-NTS-A-2-000050;Gaine techique 5;4401430;None;430
+23-4401-NTS-A-2-000060;Gaine techique 6;4401430;None;430
+23-4401-NTS-A-2-000070;Sanitaires femmes 1;4401430;None;430
+23-4401-NTS-A-2-000080;Circulation;4401430;None;430
+23-4401-NTS-A-2-000090;Salle Ile de Versaille;4401430;None;430
+23-4401-NTS-A-2-000100;Local Vide;4401430;None;430
+23-4401-NTS-A-2-000110;Local photocopieur;4401430;None;430
+23-4401-NTS-A-2-000120;Archive AGO;4401430;None;430
+23-4401-NTS-A-2-000130;salle  Ile de Nantes;4401430;None;430
+23-4401-NTS-A-2-000140;Bureau resp. Logistique;4401151;None;151
+23-4401-NTS-A-2-000150;Local Vide;4401430;None;430
+23-4401-NTS-A-2-000160;Salle Impression Etiquette - Bioréactifs;4401251;None;251
+23-4401-NTS-A-2-000170;Zone de stockage;4401431;None;431
+23-4401-NTS-A-2-000180;Bureau HLA;4401213;None;213
+23-4401-NTS-A-2-000190;Responsable hémovigilance;4401153;None;153
+23-4401-NTS-A-2-000200;Circulation côté informatique;4401430;None;430
+23-4401-NTS-A-2-000210;Responsable Informatique;4401420;None;420
+23-4401-NTS-A-2-000220;Service informatique 2;4401420;None;420
+23-4401-NTS-A-2-000230;Service informatique 1;4401420;None;420
+23-4401-NTS-A-2-000240;Atelier du Sce informatique;4401420;None;420
+23-4401-NTS-A-2-000250;Salle informatique;4401420;None;420
+23-4401-NTS-A-2-000260;Vestiaire;4401430;None;430
+23-4401-NTS-A-2-000270;Sanitaires hommes;4401430;None;430
+23-4401-NTS-A-2-000280;Local frigorifique;4401430;None;430
+23-4401-NTS-A-2-000290;Vestiaires 1;4401430;None;430
+23-4401-NTS-A-2-000300;Sanitaires femmes 2;4401430;None;430
+23-4401-NTS-A-2-000310;Vestiaires 2;4401430;None;430
+23-4401-NTS-A-2-000320;Local ménage 2;4401430;None;430
+23-4401-NTS-A-2-000330;Circulation laboratoire;4401430;None;430
+23-4401-NTS-A-2-000340;Chambre froide +4°C;4401213;None;213
+23-4401-NTS-A-2-000350;Chambre froide -35°C;4401213;None;213
+23-4401-NTS-A-2-000360;HLA chambre noire;4401213;None;213
+23-4401-NTS-A-2-000370;HLQ consommable;4401213;None;213
+23-4401-NTS-A-2-000380;HLA secré France Greffe Moelle;4401213;None;213
+23-4401-NTS-A-2-000390;HLA bureau assistant;4401213;None;213
+23-4401-NTS-A-2-000400;HLA local archive;4401213;None;213
+23-4401-NTS-A-2-000410;Local Congélateurs HLA 2ème;4401213;None;213
+23-4401-NTS-A-2-000420;HLA cytométrie en flux;4401213;None;213
+23-4401-NTS-A-2-000430;HLA chambre noire 2;4401213;None;213
+23-4401-NTS-A-2-000440;HLA pré PCR séquenceur;4401213;None;213
+23-4401-NTS-A-2-000450;HLA extraction & culture;4401213;None;213
+23-4401-NTS-A-2-000460;Responsable HLA;4401213;None;213
+23-4401-NTS-A-2-000470;HLA bureau FGM;4401213;None;213
+23-4401-NTS-A-2-000480;HLA bureau assistant FGM;4401213;None;213
+23-4401-NTS-A-2-000490;HLA zone congélateurs et centris;4401213;None;213
+23-4401-NTS-A-2-000500;HLA sérologie;4401213;None;213
+23-4401-NTS-A-2-000510;HLA secrétariat  sérologie;4401213;None;213
+23-4401-NTS-A-2-000520;HLA local archives 2;4401213;None;213
+23-4401-NTS-A-3;3eme étage;4401401;None;401
+23-4401-NTS-A-3-000010;Hall 3eme étage;4401430;None;430
+23-4401-NTS-A-3-000020;Terrasse & lieu pause;4401430;None;430
+23-4401-NTS-A-3-000030;Pôle relance donneur;4401110;None;110
+23-4401-NTS-A-3-000040;secrétaire PRL;4401110;None;110
+23-4401-NTS-A-3-000050;Gaine technique 1;4401430;None;430
+23-4401-NTS-A-3-000060;Gaine technique 2;4401430;None;430
+23-4401-NTS-A-3-000070;Gaine technique 3;4401430;None;430
+23-4401-NTS-A-3-000080;Sanitaires;4401430;None;430
+23-4401-NTS-A-3-000090;Circulation;4401430;None;430
+23-4401-NTS-A-3-000100;Vestiaire;4401430;None;430
+23-4401-NTS-A-3-000110;Burean Maintenance;4401432;None;432
+23-4401-NTS-A-3-000120;Bureau Directeur du Site;4401413;None;413
+23-4401-NTS-A-3-000130;Salle Ile Feydeau;4401430;None;430
+23-4401-NTS-A-3-000140;Bureau nomade;4401430;None;430
+23-4401-NTS-A-3-000150;Bureau responsable UIC;4401242;None;242
+23-4401-NTS-A-3-000160;Bureau responsable IH;4401154;None;154
+23-4401-NTS-A-3-000170;Bureau Resp. Adj. LCQ;4401140;None;140
+23-4401-NTS-A-3-000180;Burean Maintenance;4401432;None;432
+23-4401-NTS-A-3-000200;Local CE;4401418;None;418
+23-4401-NTS-A-3-000210;Foyer du personnel;4401430;None;430
+23-4401-NTS-A-3-000220;Sanitaires femmes;4401430;None;430
+23-4401-NTS-A-3-000230;Circulation;4401430;None;430
+23-4401-NTS-A-3-000250;Local congélateurs;4401213;None;213
+23-4401-NTS-A-3-000260;Local ménage 3e étage;4401430;None;430
+23-4401-NTS-A-3-000270;SAS box stérile (+);4401302;None;300
+23-4401-NTS-A-3-000280;SAS box stérile (-);4401302;None;300
+23-4401-NTS-A-3-000290;Box stérile 1 (-);4401302;None;300
+23-4401-NTS-A-3-000300;Box stérile 2 (+);4401302;None;300
+23-4401-NTS-A-3-000320;Bactériologie;4401302;None;300
+23-4401-NTS-A-3-000330;Biochimie;4401302;None;300
+23-4401-NTS-A-3-000340;Laverie;4401302;None;300
+23-4401-NTS-A-3-000350;Labo Pré-PCR;4401302;None;300
+23-4401-NTS-A-3-000360;Laboratoire HLA Biologie Moleculaire;4401213;None;213
+23-4401-NTS-A-3-000370;Local congélateur;4401213;None;213
+23-4401-NTS-A-3-000380;Couloir accès box stérile 4 (-);4401302;None;300
+23-4401-NTS-A-3-000390;Sas box stérile 4 (-);4401302;None;300
+23-4401-NTS-A-3-000400;Box stérile 4 (-);4401302;None;300
+23-4401-NTS-A-3-000410;Bureau chargés de recherche;4401302;None;300
+23-4401-NTS-A-3-000420;Local syndicat;4401418;None;418
+23-4401-NTS-A-3-000430;Bureau techniciennes de recherche;4401302;None;300
+23-4401-NTS-A-3-000440;Laboratoire de recherche;4401302;None;300
+23-4401-NTS-A-3-000450;Chambre froide +4°C;4401302;None;300
+23-4401-NTS-A-3-000460;Chambre froide -35°C;4401302;None;300
+23-4401-NTS-A-3-000470;Vestiaire & local consommables;4401430;None;430
+23-4401-NTS-A-3-000480;Local machines frigorifiques;4401430;None;430
+23-4401-NTS-A-R;Rez de chaussée;4401111;None;111
+23-4401-NTS-A-R-000010;SAS Accueil;4401430;None;430
+23-4401-NTS-A-R-000020;Hall entrée & accueil;4401430;None;430
+23-4401-NTS-A-R-000030;Logistique et affranchissement;4401151;None;151
+23-4401-NTS-A-R-000040;SAS côté parking;4401430;None;430
+23-4401-NTS-A-R-000050;Sanitaires handicapées;4401430;None;430
+23-4401-NTS-A-R-000060;Départ personnel collecte;4401110;None;110
+23-4401-NTS-A-R-000070;Plannif personnel collecte;4401110;None;110
+23-4401-NTS-A-R-000080;Bureau Cadre médico-technique;4401110;None;110
+23-4401-NTS-A-R-000090;Circulation collecte;4401430;None;430
+23-4401-NTS-A-R-000100;Médecin assist collecte mobile;4401110;None;110
+23-4401-NTS-A-R-000110;Bureau Cadre médico-technique;4401110;None;110
+23-4401-NTS-A-R-000120;Stockage bacs gris;4401131;None;131
+23-4401-NTS-A-R-000130;SAS;4401430;None;430
+23-4401-NTS-A-R-000140;Couloir Nord;4401430;None;430
+23-4401-NTS-A-R-000150;Labo IH;4401154;None;154
+23-4401-NTS-A-R-000155;Distri produits sanguins;4401151;None;151
+23-4401-NTS-A-R-000160;Chambre froide Kardex +4°C;4401151;None;151
+23-4401-NTS-A-R-000170;Irradiateur;4401132;None;132
+23-4401-NTS-A-R-000180;Sanitaire distri;4401430;None;430
+23-4401-NTS-A-R-000190;Chambre de garde 1;4401151;None;151
+23-4401-NTS-A-R-000200;Chambre de garde 2;4401151;None;151
+23-4401-NTS-A-R-000210;Chambre froide +4°C;4401151;None;151
+23-4401-NTS-A-R-000220;Chambre froide -35°C;4401151;None;151
+23-4401-NTS-A-R-000230;B. assistant technique IH;4401154;None;154
+23-4401-NTS-A-R-000240;Bureau résultats IH;4401154;None;154
+23-4401-NTS-A-R-000250;Sanitaires accueil;4401430;None;430
+23-4401-NTS-A-R-000260;Sanitaires handicapés accueil;4401430;None;430
+23-4401-NTS-A-R-000270;Vestiaire préparation;4401430;None;430
+23-4401-NTS-A-R-000280;Local préparation 1;4401131;None;131
+23-4401-NTS-A-R-000290;Bureau Assistants Techniques PRP;4401131;None;131
+23-4401-NTS-A-R-000300;Laboratoire PRP Plasma Illuminé;4401131;None;131
+23-4401-NTS-A-R-000310;Couloir UIC;4401242;None;242
+23-4401-NTS-A-R-000320;SAS entrée UIC;4401242;None;242
+23-4401-NTS-A-R-000330;Bureau UIC;4401242;None;242
+23-4401-NTS-A-R-000340;Local ménage UIC;4401430;None;430
+23-4401-NTS-A-R-000350;ZAC 2;4401242;None;242
+23-4401-NTS-A-R-000360;SAS personnel ZAC;4401242;None;242
+23-4401-NTS-A-R-000370;ZAC 1;4401242;None;242
+23-4401-NTS-A-R-000380;Salle de Cryogénie;4401242;None;242
+23-4401-NTS-A-R-000390;Local centrifugeuses;4401131;None;131
+23-4401-NTS-A-R-000400;Local ménage prépa;4401430;None;430
+23-4401-NTS-A-R-000410;Local déchets à risques infectieux;4401430;None;430
+23-4401-NTS-A-R-000420;CF livraison +4°C;4401131;None;131
+23-4401-NTS-A-R-000430;SAS livraison;4401131;None;131
+23-4401-NTS-A-R-000440;Local de stockage;4401131;None;131
+23-4401-NTS-A-R-000450;Local laverie;4401131;None;131
+23-4401-NTS-A-R-000460;Local préparation 2;4401131;None;131
+23-4401-NTS-A-R-000470;SAS centrifugeuse;4401131;None;131
+23-4401-NTS-A-R-000480;Local tranformation;4401131;None;131
+23-4401-NTS-A-R-000490;CF transfert +4°C;4401131;None;131
+23-4401-NTS-A-R-000500;CF transfert -30°C;4401131;None;131
+23-4401-NTS-A-R-000510;CF quarantaine +4°C;4401131;None;131
+23-4401-NTS-A-R-000520;CF quarantaine -30°C;4401131;None;131
+23-4401-NTS-A-R-000530;CF cryosas;4401131;None;131
+23-4401-NTS-A-R-000540;Parking extérieur;4401430;None;433
+23-4401-NTS-A-R-000550;Réservoirs azote;4401430;None;430
+23-4401-NTS-A-R-000560;Garage vélos;4401430;None;433
+23-4401-NTS-A-R-000570;Déchets risques infectieux ext;4401430;None;430
+23-4401-NTS-A-R-000580;Local compresseur air comprimé;4401430;None;430
+23-4401-NTS-A-R-000590;Local produits inflammables;4401430;None;430
+23-4401-NTS-A-R-000600;Local papiers cartons;4401430;None;430
+23-4401-NTS-A-S;Sous sol;4401401;None;401
+23-4401-NTS-A-S-000010;Rampe parking sous sol;4401401;None;401
+23-4401-NTS-A-S-000020;Parking sous sol;4401401;None;401
+23-4401-NTS-A-S-000030;Local technique CTA;4401401;None;401
+23-4401-NTS-A-S-000040;Local technique stockage;4401430;None;430
+23-4401-NTS-A-S-000050;Local groupe électrogène;4401430;None;430
+23-4401-NTS-A-S-000060;Local transformateur;4401430;None;430
+23-4401-NTS-A-S-000070;Escalier tranformateur;4401430;None;430
+23-4401-NTS-A-S-000080;Escalier parking sous sol;4401430;None;430
+23-4401-NTS-A-S-000090;Escalier principal;4401430;None;430
+23-4401-NTS-A-S-000100;Local  ménage;4401430;None;430
+23-4401-NTS-A-S-000110;Couloir circulation sous sol;4401430;None;430
+23-4401-NTS-A-S-000115;Local Congélateurs -150 °C;4401430;None;430
+23-4401-NTS-A-S-000120;Local D3E (ex Local stérilisation);4401430;None;430
+23-4401-NTS-A-S-000130;Local osmoseur;4401430;None;430
+23-4401-NTS-A-S-000140;Vestiaire 1;4401430;None;430
+23-4401-NTS-A-S-000150;Local onduleur;4401430;None;430
+23-4401-NTS-A-S-000160;Local autocommutateur;4401430;None;430
+23-4401-NTS-A-S-000170;Local Vide;4401430;None;430
+23-4401-NTS-A-S-000180;Local Vide;4401430;None;430
+23-4401-NTS-A-S-000190;Local Vide;4401430;None;430
+23-4401-NTS-A-S-000200;Escalier secours nord;4401430;None;430
+23-4401-NTS-A-S-000210;Salle Machine de l'île;4401430;None;430
+23-4401-NTS-A-S-000220;Salle Machine de l'île;4401430;None;430
+23-4401-NTS-A-S-000230;Sanitaires sous sol;4401430;None;430
+23-4401-NTS-A-S-000240;Douche sous sol;4401430;None;430
+23-4401-NTS-A-S-000250;Local TGBT;4401430;None;430
+23-4401-NTS-A-S-000260;Monte charges;4401430;None;430
+23-4401-NTS-A-S-000270;Ascenseur;4401430;None;430
+23-4401-NTS-A-S-000280;Lingerie;4401430;None;430
+23-4401-NTS-A-S-000282;Vestiaire;4401430;None;430
+23-4401-NTS-A-S-000285;magasin COM;4401114;None;114
+23-4401-NTS-A-S-000290;Cour anglaise;4401430;None;430
+23-4401-NTS-A-T;Terrasse;4401401;None;401
+23-4401-NTS-A-T-000010;Local chaufferie;4401430;None;430
+23-4401-NTS-A-T-000020;Local ventilation Sud;4401430;None;430
+23-4401-NTS-A-T-000030;Local ventilation Nord;4401430;None;430
+23-4401-NTS-A-T-000040;Local ascenseur;4401430;None;430
+23-4401-NTS-H;Centre hospitalier;4401221;None;221
+23-4401-NTS-I;INSERM NANTES (IRTUN 3eme étage);4401242;None;401
+23-4410;ZONE ANALYTIQUE DE SAINT-NAZAIRE OLD;4499400;None;400
+23-4410-000;ZONE D'ATTENTE DE VENTILATION EQT OLD;4499400;None;400
+23-4410-SNA;Site de St Nazaire;4410401;None;401
+23-4410-SNA-A;Batiment A;4410401;None;401
+23-4410-SNA-A-R;Rez de chaussée;4410401;None;401
+23-4410-SNA-A-R-000010;SAS entrée;4410401;None;401
+23-4410-SNA-A-R-000020;Hall accueil;4410401;None;401
+23-4410-SNA-A-R-000030;Secrétariat;4410110;None;110
+23-4410-SNA-A-R-000040;Salle informatique;4410420;None;420
+23-4410-SNA-A-R-000050;Salle rangement;4410401;None;401
+23-4410-SNA-A-R-000060;Repos personnel;4410430;None;430
+23-4410-SNA-A-R-000070;SAS 1;4410401;None;401
+23-4410-SNA-A-R-000080;WC donneurs;4410401;None;401
+23-4410-SNA-A-R-000090;SAS 2;4410401;None;401
+23-4410-SNA-A-R-000100;WC hommes;4410401;None;401
+23-4410-SNA-A-R-000110;WC femmes;4410401;None;401
+23-4410-SNA-A-R-000120;Couloir secondaire;4410401;None;401
+23-4410-SNA-A-R-000130;B. corres admin & assist tech;4410413;None;413
+23-4410-SNA-A-R-000142;B. biologiste1 & biologiste2;4410150;None;150
+23-4410-SNA-A-R-000153;Bureau directeur;4410413;None;413
+23-4410-SNA-A-R-000164;Chambre de garde;4410150;None;150
+23-4410-SNA-A-R-000175;Sanitaires garde;4410401;None;401
+23-4410-SNA-A-R-000186;Bureau médecin;4410110;None;110
+23-4410-SNA-A-R-000190;Salle des prélèvements;4410110;None;110
+23-4410-SNA-A-R-000200;Salle de collation;4410110;None;110
+23-4410-SNA-A-R-000210;Bureau laboratoire;4410150;None;150
+23-4410-SNA-A-R-000220;Laboratoire IHE - distribution;4410150;None;150
+23-4410-SNA-A-S;Sous sol;4410401;None;401
+23-4410-SNA-A-S-000010;SAS entrée;4410401;None;401
+23-4410-SNA-A-S-000020;Local ménage;4410401;None;401
+23-4410-SNA-A-S-000030;Escalier;4410401;None;401
+23-4410-SNA-A-S-000040;Débarras;4410401;None;401
+23-4410-SNA-A-S-000050;Couloir principal;4410401;None;401
+23-4410-SNA-A-S-000060;Stockage;4410401;None;401
+23-4410-SNA-A-S-000070;WC hommes;4410401;None;401
+23-4410-SNA-A-S-000080;Ascenseur;4410401;None;401
+23-4410-SNA-A-S-000090;Garage;4410401;None;401
+23-4410-SNA-A-S-000100;Grpes compresseur frigorifique;4410401;None;401
+23-4410-SNA-A-S-000110;Chambre froide Distr/IH;4410151;None;151
+23-4410-SNA-A-S-000120;Collectes - encadrage navette;4410111;None;111
+23-4410-SNA-A-S-000130;Encadrage - serveurs collectes;4410111;None;111
+23-4410-SNA-A-S-000140;Couloir magasin archives;4410401;None;401
+23-4410-SNA-A-S-000150;Zone de stockage prélèvements;4410401;None;401
+23-4410-SNA-A-S-000160;Zone de stockage magasin;4410401;None;401
+23-4410-SNA-A-S-000170;Réserve laboratoire;4410150;None;150
+23-4410-SNA-A-S-000180;Local archives;4410401;None;401
+23-4410-SNA-A-S-000190;Local technique;4410401;None;401
+23-4410-SNA-A-S-000200;Entrée vestiaire;4410401;None;401
+23-4410-SNA-A-S-000210;Lingerie;4410401;None;401
+23-4410-SNA-A-S-000220;WC femmes;4410401;None;401
+23-4410-SNA-A-S-000230;Vestiaire 1;4410401;None;401
+23-4410-SNA-A-S-000240;Vestiaire 2;4410401;None;401
+23-4410-SNA-A-S-000250;Vidoir;4410401;None;401
+23-4410-SNA-A-S-000260;Douche;4410401;None;401
+23-4410-SNA-B;Batiment B;4410401;None;401
+23-4410-SNA-B-R;Rez de chaussée;4410401;None;401
+23-4410-SNA-B-R-000010;SAS entrée;4410401;None;401
+23-4410-SNA-B-R-000030;Secrétariat;4410110;None;110
+23-4410-SNA-B-R-000040;Stockage 2 secondaire;4410401;None;401
+23-4410-SNA-B-R-000050;WC Handicapée;4410401;None;401
+23-4410-SNA-B-R-000060;Stockage 1 secondaire;4410401;None;401
+23-4410-SNA-B-R-000070;Sas 1;4410401;None;401
+23-4410-SNA-B-R-000080;Salle de Repos du Personnel;4410430;None;430
+23-4410-SNA-B-R-000090;Stock IH et Archives;4410150;None;150
+23-4410-SNA-B-R-000100;Circultation 3;4410401;None;401
+23-4410-SNA-B-R-000110;Bureau de Relance;4410110;None;110
+23-4410-SNA-B-R-000120;Sanitaire Handicapée;4410401;None;401
+23-4410-SNA-B-R-000130;WC 1;4410401;None;401
+23-4410-SNA-B-R-000140;WC 2;4410401;None;401
+23-4410-SNA-B-R-000150;Salle informatique;4410420;None;420
+23-4410-SNA-B-R-000160;Salle de Réunion;4410401;None;401
+23-4410-SNA-B-R-000170;Bureau de Direction;4410413;None;413
+23-4410-SNA-B-R-000180;Bureau Correspondante Administratif;4410413;None;413
+23-4410-SNA-B-R-000190;Bureau Biologiste 2;4410150;None;150
+23-4410-SNA-B-R-000200;Bureau Assistant(e) Technique;4410413;None;413
+23-4410-SNA-B-R-000210;Bureau Biologiste1;4410150;None;150
+23-4410-SNA-B-R-000220;Laboratoire IH - distribution;4410150;None;150
+23-4410-SNA-B-R-000230;Sas Distri;4410401;None;401
+23-4410-SNA-B-R-000240;Pneumatique;4410401;None;401
+23-4410-SNA-B-R-000250;Sas chambre de garde;4410401;None;401
+23-4410-SNA-B-R-000260;Sanitaire chambre de garde;4410401;None;401
+23-4410-SNA-B-R-000270;Chambre de garde;4410150;None;150
+23-4410-SNA-B-R-000280;Foyer du Personnel;4401430;None;430
+23-4410-SNA-B-R-000290;Accueil;4410401;None;401
+23-4410-SNA-B-R-000310;Bureau Prélèvement 1;4410110;None;110
+23-4410-SNA-B-R-000320;Bureau Prélèvement 2;4410110;None;110
+23-4410-SNA-B-R-000330;Salle des prélèvements;4410110;None;110
+23-4410-SNA-B-R-000340;Stock Foyer;4410110;None;110
+23-4410-SNA-B-R-000350;Foyer Donneur;4410110;None;110
+23-4410-SNA-B-R-000360;Circulation 1;4410401;None;401
+23-4410-SNA-B-R-000370;Circulation 2;4410401;None;401
+23-4410-SNA-B-R-000380;Vestiaire Femmes;4410401;None;401
+23-4410-SNA-B-R-000390;Vestiaire Hommes;4410401;None;401
+23-4410-SNA-B-R-000400;WC 3;4410401;None;401
+23-4410-SNA-B-R-000410;Local Ménage;4410401;None;401
+23-4410-SNA-B-R-000420;Local DP;4410401;None;401
+23-4410-SNA-B-R-000430;Local DASRI;4410430;None;430
+23-4410-SNA-B-R-000440;Chambre froide + 4°C Distr/IH;4410151;None;151
+23-4410-SNA-B-R-000450;Local transit +22°C;4410151;None;151
+23-4410-SNA-B-R-000460;Circulation 4;4410401;None;401
+23-4410-SNA-B-R-000470;Collectes - encadrage navette;4410111;None;111
+23-4410-SNA-B-R-000480;Garage;4410401;None;401
+23-4412;ZONE ANALYTIQUE DE SAINT-NAZAIRE;4499400;None;400
+23-4412-000;ZONE D'ATTENTE DE VENTILATION EQUIPEMENT;4499400;None;400
+23-4412-SNA;Site de St Nazaire;4412401;None;401
+23-4412-SNA-B;Batiment B;4412401;None;401
+23-4412-SNA-B-R;Rez de chaussée;4412401;None;401
+23-4412-SNA-B-R-000010;SAS entrée + Circulation 4;4412430;None;430
+23-4412-SNA-B-R-000030;Secrétariat accueil;4412110;None;110
+23-4412-SNA-B-R-000040;Attente Donneurs;4412110;None;110
+23-4412-SNA-B-R-000050;Sanitaire public et patients;4412110;None;110
+23-4412-SNA-B-R-000060;Stockage secrétariat;4412110;None;110
+23-4412-SNA-B-R-000070;Sas 1;4412430;None;430
+23-4412-SNA-B-R-000080;Salle de Repos du Personnel;4412430;None;430
+23-4412-SNA-B-R-000090;Stock IH;4412151;None;151
+23-4412-SNA-B-R-000100;Circultation 3;4412430;None;430
+23-4412-SNA-B-R-000110;Bureau entretien patient;4412110;None;110
+23-4412-SNA-B-R-000120;Sanitaire du personnel;4412430;None;430
+23-4412-SNA-B-R-000130;Sanitaire du personnel;4412430;None;430
+23-4412-SNA-B-R-000140;Sanitaire du personnel;4412430;None;430
+23-4412-SNA-B-R-000150;Local technique informatique;4412430;None;430
+23-4412-SNA-B-R-000160;Salle de Réunion;4412430;None;430
+23-4412-SNA-B-R-000170;Bureau directeur;4412413;None;413
+23-4412-SNA-B-R-000180;Bureau Correspondante Administratif;4412413;None;413
+23-4412-SNA-B-R-000190;Bureau Biologiste;4412151;None;151
+23-4412-SNA-B-R-000200;Bureau Assistant(e) Technique;4412151;None;151
+23-4412-SNA-B-R-000210;Bureau biologique;4412151;None;151
+23-4412-SNA-B-R-000220;Laboratoire IH - distribution;4412154;None;154
+23-4412-SNA-B-R-000230;Sas ext int;4412151;None;151
+23-4412-SNA-B-R-000240;Départ Pneumatique;4412151;None;151
+23-4412-SNA-B-R-000250;Sas chambre de garde;4412154;None;154
+23-4412-SNA-B-R-000260;Salle de bain chambre de garde;4412151;None;151
+23-4412-SNA-B-R-000270;Chambre de garde;4412151;None;151
+23-4412-SNA-B-R-000280;Salle PC Collectes;4412110;None;110
+23-4412-SNA-B-R-000290;Attente Donneurs;4412110;None;110
+23-4412-SNA-B-R-000310;Bureau entretien donneurs;4412110;None;110
+23-4412-SNA-B-R-000320;Bureau médecin;4412110;None;110
+23-4412-SNA-B-R-000330;Salle de prélèvement (donneurs);4412110;None;110
+23-4412-SNA-B-R-000340;Stock alimentaire;4412430;None;430
+23-4412-SNA-B-R-000350;Salle à manger donneurs;4412110;None;110
+23-4412-SNA-B-R-000360;Circulation 1;4412430;None;430
+23-4412-SNA-B-R-000370;Circulation 2;4412430;None;430
+23-4412-SNA-B-R-000380;Vestiaires personnels/sanitaires Femmes;4412430;None;430
+23-4412-SNA-B-R-000390;Vestiaires personnels/sanitaires Hommes;4412430;None;430
+23-4412-SNA-B-R-000400;Sanitaires patient avec vidoir;4412110;None;110
+23-4412-SNA-B-R-000410;Local Ménage;4412430;None;430
+23-4412-SNA-B-R-000420;Bureau DP;4412418;None;418
+23-4412-SNA-B-R-000430;Stockage DASRI;4412430;None;430
+23-4412-SNA-B-R-000440;Chambre froide + 4°C Distr/IH;4412151;None;151
+23-4412-SNA-B-R-000450;Chambre froide (18° 24°);4412110;None;110
+23-4412-SNA-B-R-000460;Entrée Personnel Arrière;4412430;None;430
+23-4412-SNA-B-R-000470;Stockage préparation collecte;4412110;None;110
+23-4412-SNA-B-R-000480;Garage;4412430;None;430
+23-4421;ZONE ANALYTIQUE DE NANTES-NORD;4499400;None;400
+23-4421-000;ZONE D'ATTENTE DE VENTILATION EQUIPEMENT;4499400;None;400
+23-4421-NTN;Site de Laennec, hopital Nord;4421401;None;401
+23-4421-NTN-A;Batiment A;4421401;None;401
+23-4421-NTN-A-R;Rez de Chaussée;4421401;None;401
+23-4421-NTN-A-R-000010;Sas;4421401;None;430
+23-4421-NTN-A-R-000020;Distribution produit sanguin;4421151;None;151
+23-4421-NTN-A-R-000030;Laverie;4421401;None;430
+23-4421-NTN-A-R-000040;Vestiaires;4421401;None;430
+23-4421-NTN-A-R-000050;Bureau;4421154;None;154
+23-4421-NTN-A-R-000060;Couloir;4421401;None;430
+23-4421-NTN-A-R-000070;Local Informatique;4421401;None;430
+23-4421-NTN-A-R-000080;Laboratoire IH;4421154;None;154
+23-4423;ZONE ANALYTIQUE DE NANTES-SKYLINE;4423401;None;401
+23-4423-000;ZONE D'ATTENTE DE VENTILATION EQUIPEMENT;4423401;None;401
+23-4423-NTS;"Bureau ""Skyline"" Nantes";4423401;None;401
+23-4423-NTS-A;"Bureau ""Skyline"" Nantes";4423401;None;401
+23-4423-NTS-A-6;"Bureau ""Skyline"" Nantes 6ème étage";4423401;None;401
+23-4423-NTS-A-6-000010;Bureau Assistants Achats 6.3;4423431;None;431
+23-4423-NTS-A-6-000020;Bureau Responsable Achats 6.1;4423431;None;431
+23-4423-NTS-A-6-000030;Bureau ACS Service Financier 7.2;4423419;None;419
+23-4423-NTS-A-6-000040;Bureau ACS Factures 7.3;4423419;None;419
+23-4423-NTS-A-6-000050;Responsable SF-AC 7.1;4423419;None;419
+23-4423-NTS-A-6-000060;Bureau Responsable Assurance Qualité 4.1;4423450;None;450
+23-4423-NTS-A-6-000070;Qualité Sécurité 4.2;4423450;None;450
+23-4423-NTS-A-6-000080;Direction Internationnal;4423411;None;411
+23-4423-NTS-A-6-000090;Bureau Secrétaire Général 1.6;4423411;None;411
+23-4423-NTS-A-6-000100;Bureau Directeur 1.1;4423411;None;411
+23-4423-NTS-A-6-000110;Bureau Assistants Direction 1.2;4423411;None;411
+23-4423-NTS-A-6-000120;Espace Accueil 0.1;4423430;None;430
+23-4423-NTS-A-6-000130;Bureau Dir. Adjoint et Dir. Laboratoire;4423411;None;411
+23-4423-NTS-A-6-000140;Bureau Direction 5.2;4423431;None;431
+23-4423-NTS-A-6-000150;Facturation 5.1;4423431;None;431
+23-4423-NTS-A-6-000160;Bureau Responsable Facturation 3.1;4499431;None;431
+23-4423-NTS-A-6-000170;Bureau Assistants Communication 3.3;4499412;None;401
+23-4423-NTS-A-6-000180;Responsable Com & Mkt 3.2;4499114;None;114
+23-4423-NTS-A-6-000190;Bureau Assistants 4.2;4423430;None;430
+23-4423-NTS-A-6-000200;Bureau Ressources Humaines 2.2;4423415;None;415
+23-4423-NTS-A-6-000210;Bureau Responsable Ressources Humaines;4423415;None;415
+23-4423-NTS-A-6-000220;Bureau Contrôle de Gestion 1.5;4423411;None;413
+23-4423-NTS-A-6-000230;Espace Détente 0.2;4423430;None;430
+23-4423-NTS-A-6-000240;Salle de Réunion 0.8 accès Salle Info;4423430;None;430
+23-4423-NTS-A-6-000250;Salle de Réunion 0.9;4423430;None;430
+23-4423-NTS-A-6-000260;Espace Repro 3.5;4423430;None;430
+23-4423-NTS-A-6-000270;Salle de Réunion 30 personnes;4423430;None;430
+23-4423-NTS-A-6-000280;Salle de Réunion 6 personnes Sud 0.7;4423430;None;430
+23-4423-NTS-A-6-000290;Espace Repro 7.4;4423430;None;430
+23-4423-NTS-A-6-000300;Local Archives 0.3a;4423430;None;430
+23-4423-NTS-A-6-000310;Local Ménage 0.5;4423430;None;430
+23-4423-NTS-A-6-000320;Local Informatique SUD;4423420;None;420
+23-4423-NTS-A-6-000330;Local Informatique NORD;4423420;None;420
+23-4423-NTS-A-6-000340;Local courrier 0.3b;4423430;None;430
+23-4424-000;Zone de Ventilation;4424401;None;401
+23-4424-REZ;Plate-Forme Logistique de Rezé;4424401;None;401
+23-4424-REZ-A;PLR - Bâtiment A;4424401;None;401
+23-4424-REZ-A-R;PLR - Rez de chaussée;4424401;None;401
+23-4424-REZ-A-R-000010;Local Informatique;4424420;None;420
+23-4424-REZ-A-R-000020;Bureau Collecte;4424111;None;110
+23-4424-REZ-A-R-000030;Dégagement Circulation Collecte;4424111;None;110
+23-4424-REZ-A-R-000040;Préparation Collecte;4424111;None;110
+23-4424-REZ-A-R-000050;Départ Collecte;4424111;None;110
+23-4424-REZ-A-R-000060;SAS Réception / Départ Collecte;4424431;None;431
+23-4424-REZ-A-R-000070;Cafetéria;4424431;None;431
+23-4424-REZ-A-R-000080;Douche;4424431;None;431
+23-4424-REZ-A-R-000090;Sanitaire Hommes;4424431;None;431
+23-4424-REZ-A-R-000100;Sanitaire Femmes;4424431;None;431
+23-4424-REZ-A-R-000110;Vestiaires Femmes;4424431;None;431
+23-4424-REZ-A-R-000120;Vestiaires Hommes;4424431;None;431
+23-4424-REZ-A-R-000130;Local Ménage;4424431;None;431
+23-4424-REZ-A-R-000140;Bureau Magasinier;4424431;None;431
+23-4424-REZ-A-R-000150;Stockage Picking;4424111;None;110
+23-4424-REZ-A-R-000160;Stockage Paletier;4424431;None;431
+23-4424-REZ-A-R-000170;SAS Réception / Magasin;4424431;None;431
+23-4424-REZ-A-R-000180;Réception Magasin;4424431;None;431
+23-4424-REZ-A-R-000190;Dégagement Circulation Magasin;4424431;None;431
+23-4424-REZ-A-R-000200;Expédition Magasin;4424431;None;431
+23-4424-REZ-A-R-000210;Local Technique;4424430;None;430
+23-4902;ZONE ANALYTIQUE D'ANGERS;4499400;None;400
+23-4902-000;ZONE D'ATTENTE DE VENTILATION EQUIPEMENT;4499400;None;400
+23-4902-ANG;Site d'Angers;4902401;None;401
+23-4902-ANG-A;Batiment A;4902401;None;401
+23-4902-ANG-A-1;1er étage;4902401;None;401
+23-4902-ANG-A-1-000010;Palier 2;4902430;None;430
+23-4902-ANG-A-1-000020;Couloir UIC;4902430;None;430
+23-4902-ANG-A-1-000030;Bureau responsable CSM;4902242;None;242
+23-4902-ANG-A-1-000040;Couloir bureau IRP;4902430;None;430
+23-4902-ANG-A-1-000050;local vacant ex archives;4902430;None;430
+23-4902-ANG-A-1-000060;Bureau IRP;4902418;None;418
+23-4902-ANG-A-1-000070;ex zone wc non utilisée;4902430;None;430
+23-4902-ANG-A-1-000080;Couloir UIC;4902242;None;242
+23-4902-ANG-A-1-000090;bureau cadre technique;4902242;None;242
+23-4902-ANG-A-1-000100;bureau médecin responsable;4902242;None;242
+23-4902-ANG-A-1-000110;bureau secrétariat;4902242;None;242
+23-4902-ANG-A-1-000120;bureau technicienne;4902242;None;242
+23-4902-ANG-A-1-000130;bureau informaticien;4902420;None;420
+23-4902-ANG-A-1-000140;Salle informatique;4902420;None;420
+23-4902-ANG-A-1-000150;salle serveurs Inf principale;4902420;None;420
+23-4902-ANG-A-1-000160;couloir ASG;4902430;None;430
+23-4902-ANG-A-1-000170;sanitaire F ASG;4902430;None;430
+23-4902-ANG-A-1-000180;sanitaire H ASG;4902430;None;430
+23-4902-ANG-A-1-000190;couloir ASG;4902430;None;430
+23-4902-ANG-A-1-000200;secrétariat qualité;4401450;None;450
+23-4902-ANG-A-1-000210;cor admin + bureau As sociale (2 bureaux;4902413;None;413
+23-4902-ANG-A-1-000220;responsable QSE;4902450;None;450
+23-4902-ANG-A-1-000230;technicien de maintenance;4902432;None;432
+23-4902-ANG-A-1-000240;salle de réunion Chantal Donnet;4902430;None;430
+23-4902-ANG-A-1-000245;Salle Chantal Donnet;4902413;None;413
+23-4902-ANG-A-1-000250;espace lavabo salle de réunion;4902430;None;430
+23-4902-ANG-A-1-000260;secrétariat D°+ hemo région et locale;4902413;None;413
+23-4902-ANG-A-1-000265;espace lavabo bureau sec hémo;4902430;None;430
+23-4902-ANG-A-1-000270;couloir ASG;4902430;None;430
+23-4902-ANG-A-1-000280;Amphithéatre;4902430;None;430
+23-4902-ANG-A-1-000290;Local technique amphi;4902430;None;430
+23-4902-ANG-A-1-000300;sanitaire F D°;4902430;None;430
+23-4902-ANG-A-1-000310;bureau Directeur de site;4902413;None;413
+23-4902-ANG-A-1-000315;Direction;4902413;None;413
+23-4902-ANG-A-1-000320;espace lavabo bureau direction site;4902413;None;413
+23-4902-ANG-A-1-000330;Secrétariat de direction;4902120;None;120
+23-4902-ANG-A-1-000340;sanitaire H D°;4902430;None;430
+23-4902-ANG-A-1-000350;salle repas encadrement;4902430;None;430
+23-4902-ANG-A-1-000355;Bureau de Travail;4902430;None;430
+23-4902-ANG-A-1-000360;hall étage;4902430;None;430
+23-4902-ANG-A-1-000370;Bureau resp distri;4902151;None;151
+23-4902-ANG-A-1-000375;Bureau Biologiste QBD;4902120;None;120
+23-4902-ANG-A-1-000380;Local informatique 2;4902420;None;420
+23-4902-ANG-A-1-000390;Accueil comptoir;4902401;None;401
+23-4902-ANG-A-1-000395;stockage 1 (hall);4902120;None;120
+23-4902-ANG-A-1-000400;Local technique;4902401;None;401
+23-4902-ANG-A-1-000405;Local DASRI;4902120;None;120
+23-4902-ANG-A-1-000410;palier escalier etage;4902430;None;430
+23-4902-ANG-A-1-000420;SAS direction;4902401;None;401
+23-4902-ANG-A-1-000425;directeur adjoint (bureau 4);4902120;None;120
+23-4902-ANG-A-1-000430;Direction;4902413;None;413
+23-4902-ANG-A-1-000435;Directeur adjoint (bureau 2);4902120;None;120
+23-4902-ANG-A-1-000440;Sanitaires direction;4902401;None;401
+23-4902-ANG-A-1-000445;Directeur QBD (bureau 1);4902120;None;120
+23-4902-ANG-A-1-000450;Salle de réunion C.Donnet;4902401;None;401
+23-4902-ANG-A-1-000455;secrétariat QBD;4902120;None;120
+23-4902-ANG-A-1-000460;Couloir;4902120;None;120
+23-4902-ANG-A-1-000465;circulation vestiaires;4902120;None;120
+23-4902-ANG-A-1-000470;Bureau et stockage DGV;4902120;None;120
+23-4902-ANG-A-1-000475;vestiaires H QBD;4902120;None;120
+23-4902-ANG-A-1-000480;SAS pré amplification;4902120;None;120
+23-4902-ANG-A-1-000485;Vestiaires  Femmes QBD;4902120;None;120
+23-4902-ANG-A-1-000490;Salle pré amplification;4902120;None;120
+23-4902-ANG-A-1-000500;SAS Tampon;4902120;None;120
+23-4902-ANG-A-1-000505;Rangement;4902120;None;120
+23-4902-ANG-A-1-000510;Salle post amplification;4902120;None;120
+23-4902-ANG-A-1-000515;couloir zone administrative;4902120;None;120
+23-4902-ANG-A-1-000520;SAS sortie Post amplification;4902120;None;120
+23-4902-ANG-A-1-000525;Bureau cadres techniques;4902120;None;120
+23-4902-ANG-A-1-000530;Chambre noire;4902120;None;120
+23-4902-ANG-A-1-000535;Bureau assistants techniques;4902120;None;120
+23-4902-ANG-A-1-000540;Vestiaires;4902401;None;401
+23-4902-ANG-A-1-000545;sanitaire F QBD;4902120;None;120
+23-4902-ANG-A-1-000550;Douche vestiaire;4902401;None;401
+23-4902-ANG-A-1-000555;sanitaire H QBD;4902120;None;120
+23-4902-ANG-A-1-000560;WC 1 vestiaires;4902401;None;401
+23-4902-ANG-A-1-000565;Laboratoire de Contrôle Sérologie;4902122;None;122
+23-4902-ANG-A-1-000570;WC 2 vestiaires;4902401;None;401
+23-4902-ANG-A-1-000575;Laboratoire de Sérologie;4902122;None;122
+23-4902-ANG-A-1-000580;WC 3 vestiaires;4902401;None;401
+23-4902-ANG-A-1-000585;chambre froide poséidon;4902122;None;122
+23-4902-ANG-A-1-000590;Salle rangement;4902401;None;401
+23-4902-ANG-A-1-000595;Stockage 2;4902120;None;120
+23-4902-ANG-A-1-000600;Gaine technique 1;4902401;None;401
+23-4902-ANG-A-1-000610;Stockage 3;4902120;None;120
+23-4902-ANG-A-1-000615;chambre froide aphrodite;4902120;None;120
+23-4902-ANG-A-1-000620;Local 1;4902120;None;120
+23-4902-ANG-A-1-000625;chambre froide Hermes;4902120;None;120
+23-4902-ANG-A-1-000630;Local 2;4902401;None;401
+23-4902-ANG-A-1-000635;SAS thérapie cellulaire;4902242;None;242
+23-4902-ANG-A-1-000640;Chambre froide réactifs;4902120;None;120
+23-4902-ANG-A-1-000645;Salle Thérapie Cellulaire;4902242;None;242
+23-4902-ANG-A-1-000650;Chambre froide stockage tubes;4902120;None;120
+23-4902-ANG-A-1-000655;DGV1;4902123;None;123
+23-4902-ANG-A-1-000660;Chambre froide 2;4902120;None;120
+23-4902-ANG-A-1-000665;SAS Salle Azote;4902401;None;401
+23-4902-ANG-A-1-000670;Stockage libre;4902120;None;120
+23-4902-ANG-A-1-000675;Salle Azote;4902401;None;401
+23-4902-ANG-A-1-000680;sas habillage personnel;4902242;None;242
+23-4902-ANG-A-1-000685;Laboratoire d'Hematologie;4902121;None;121
+23-4902-ANG-A-1-000690;Salle thérapie cellulaire;4902242;None;242
+23-4902-ANG-A-1-000695;Laboratoire IHD;4902121;None;121
+23-4902-ANG-A-1-000700;sas d'entrée salle d'azote;4902242;None;242
+23-4902-ANG-A-1-000705;DGV2;4902123;None;123
+23-4902-ANG-A-1-000710;Salle azote;4902242;None;242
+23-4902-ANG-A-1-000715;Laverie;4902125;None;120
+23-4902-ANG-A-1-000720;Couloir 7;4902401;None;401
+23-4902-ANG-A-1-000725;Couloir 4;4902401;None;401
+23-4902-ANG-A-1-000730;IDH phenos étendus;4902121;None;121
+23-4902-ANG-A-1-000735;Stockage 4;4902120;None;120
+23-4902-ANG-A-1-000740;Local Photocopies fax;4902430;None;430
+23-4902-ANG-A-1-000745;chambre froide Terra;4902120;None;120
+23-4902-ANG-A-1-000750;Stockage cartes;4902121;None;121
+23-4902-ANG-A-1-000755;ascenseur préau /QBD;4902430;None;430
+23-4902-ANG-A-1-000760;Biothèque;4902253;None;253
+23-4902-ANG-A-1-000765;chambre froide Gaia;4902120;None;120
+23-4902-ANG-A-1-000770;Préparation Biothèque;4902253;None;253
+23-4902-ANG-A-1-000775;Laboratoire Pré-Analytique;4902125;None;124
+23-4902-ANG-A-1-000780;Local pré-PCR;4902253;None;253
+23-4902-ANG-A-1-000790;Salle Azote n°2;4902200;None;200
+23-4902-ANG-A-1-000800;Consommables ATH BTI;4902242;None;242
+23-4902-ANG-A-1-000810;Chambre froide Réactifs;4902120;None;120
+23-4902-ANG-A-1-000820;Sanitaires;4902401;None;401
+23-4902-ANG-A-1-000830;Bureau assistants techniques;4902120;None;120
+23-4902-ANG-A-1-000840;Laboratoire prè-analytique;4902120;None;120
+23-4902-ANG-A-1-000850;Local centri QDB;4902120;None;120
+23-4902-ANG-A-1-000860;IH donneurs;4902121;None;121
+23-4902-ANG-A-1-000870;Laboratoire hématologie;4902121;None;121
+23-4902-ANG-A-1-000880;Laboratoire DMT;4902122;None;122
+23-4902-ANG-A-R;Rez de chaussée;4902401;None;401
+23-4902-ANG-A-R-000010;SAS entrée principale;4902430;None;430
+23-4902-ANG-A-R-000020;Hall d'accueil don/visit/couloir;4902110;None;110
+23-4902-ANG-A-R-000030;Hall d'escalier - palier RDC;4902430;None;430
+23-4902-ANG-A-R-000040;Bureau consult médecin PRL;4902110;None;110
+23-4902-ANG-A-R-000050;Bureau relance DSB;4902110;None;110
+23-4902-ANG-A-R-000060;Salle de prélèvement DSB;4902110;None;110
+23-4902-ANG-A-R-000070;salle IDE;4902110;None;110
+23-4902-ANG-A-R-000080;Bureau IDE;4902110;None;110
+23-4902-ANG-A-R-000090;Sanitaires donneurs F;4902110;None;110
+23-4902-ANG-A-R-000100;Sanitaires donneurs H;4902110;None;110
+23-4902-ANG-A-R-000110;Stockage PRL;4902110;None;110
+23-4902-ANG-A-R-000120;Vestiaire hommes;4902430;None;430
+23-4902-ANG-A-R-000130;Vestiaire femmes;4902430;None;430
+23-4902-ANG-A-R-000140;Bureau Medecin Responsable IH;4902154;None;154
+23-4902-ANG-A-R-000150;wc centre de santé;4902220;None;221
+23-4902-ANG-A-R-000160;Centre de Santé;4902220;None;221
+23-4902-ANG-A-R-000170;Bureau médecin PRLV et IDE;4902110;None;110
+23-4902-ANG-A-R-000180;Bureau Cadre Technique PRL;4902110;None;110
+23-4902-ANG-A-R-000190;Caféteria des DSB;4902110;None;110
+23-4902-ANG-A-R-000200;Centre de Santé;4902220;None;221
+23-4902-ANG-A-R-000210;Patio extérieur;4902430;None;430
+23-4902-ANG-A-R-000220;Hall d'entrée du Personnel;4902430;None;430
+23-4902-ANG-A-R-000230;Circulation commune;4902430;None;430
+23-4902-ANG-A-R-000240;Salle de restauration du personnel;4902430;None;430
+23-4902-ANG-A-R-000250;Salle de restauration du personnel - Cui;4902430;None;430
+23-4902-ANG-A-R-000260;Sanitaires F;4902430;None;430
+23-4902-ANG-A-R-000270;Sanitaires H;4902430;None;430
+23-4902-ANG-A-R-000280;Local Ménage;4902430;None;430
+23-4902-ANG-A-R-000290;laboratoire HLA stockage;4902213;None;213
+23-4902-ANG-A-R-000300;Laboratoire HLA;4902213;None;213
+23-4902-ANG-A-R-000310;SAS laboratoire HLA;4902213;None;213
+23-4902-ANG-A-R-000320;Laboratoire HLA extraction;4902213;None;213
+23-4902-ANG-A-R-000330;Laboratoire HLA post Pcr;4902213;None;213
+23-4902-ANG-A-R-000340;Laboratoire HLA pre Pcr;4902213;None;213
+23-4902-ANG-A-R-000350;Couloir IH;4902154;None;154
+23-4902-ANG-A-R-000360;Bureau secrétariat HLA;4902213;None;213
+23-4902-ANG-A-R-000370;Bureau cadre technique IH;4902154;None;154
+23-4902-ANG-A-R-000380;Local rangement IH;4902154;None;154
+23-4902-ANG-A-R-000390;CF réactif +4°C;4902154;None;154
+23-4902-ANG-A-R-000400;CF IHR - 30°C;4902154;None;154
+23-4902-ANG-A-R-000410;stockage IH et HLA (1/3 HLA);4902430;None;430
+23-4902-ANG-A-R-000420;Laboratoire IH;4902154;None;154
+23-4902-ANG-A-R-000430;Local centrifugeuse IHR;4902154;None;154
+23-4902-ANG-A-R-000440;Laboratoire IHR secrétariat;4902154;None;154
+23-4902-ANG-A-R-000450;bureau sec IHR;4902154;None;154
+23-4902-ANG-A-R-000460;Irradiateur;4401132;None;132
+23-4902-ANG-A-R-000470;Hall d'entrée DIS;4902151;None;151
+23-4902-ANG-A-R-000480;Chambre de garde;4902151;None;151
+23-4902-ANG-A-R-000490;salle de bain chbre de garde;4902151;None;151
+23-4902-ANG-A-R-000500;laboratoire  distribution 1;4902151;None;151
+23-4902-ANG-A-R-000510;CF +4°C distri Kardex;4902151;None;151
+23-4902-ANG-A-R-000520;sas chambre froide +4°C kardex;4902151;None;151
+23-4902-ANG-A-R-000530;Laboratoire Distribution 2;4902151;None;151
+23-4902-ANG-A-R-000540;local distribution réserves;4902151;None;151
+23-4902-ANG-A-R-000550;Laboratoire Distribution 3;4902151;None;151
+23-4902-ANG-A-R-000560;chambre froide  sas +4° C DIS;4902151;None;151
+23-4902-ANG-A-R-000570;chambre froide -30°C DIS;4902151;None;151
+23-4902-ANG-A-R-000580;Local transit +4°C;4902110;None;110
+23-4902-ANG-A-R-000590;palier escalier rdc;4902430;None;430
+23-4902-ANG-A-R-000600;circulation commune rdc;4902430;None;430
+23-4902-ANG-A-R-000610;Chambre froide +4 IHR 1;4902154;None;154
+23-4902-ANG-A-R-000620;Chambre T°C ambiante IHR 2;4902154;None;154
+23-4902-ANG-A-R-000630;bureau Médecin responsable Dis;4902151;None;151
+23-4902-ANG-A-R-000640;bureau cadre technique DIS;4902151;None;151
+23-4902-ANG-A-R-000650;Bureau responsable HLA;4902213;None;213
+23-4902-ANG-A-R-000660;Bureau responsable PRL;4902110;None;110
+23-4902-ANG-A-R-000670;circulation commune rdc;4902430;None;430
+23-4902-ANG-A-R-000680;Local transit +22°C;4902110;None;110
+23-4902-ANG-A-R-000690;Patio extérieur;4902430;None;430
+23-4902-ANG-A-R-000700;Local fumeurs;4902430;None;430
+23-4902-ANG-A-R-000710;Laboratoire Biothèque;4902253;None;160
+23-4902-ANG-A-R-000720;Secrétariat biothèque;4902253;None;160
+23-4902-ANG-A-R-000730;Bureau départ collectes;4902110;None;110
+23-4902-ANG-A-R-000740;Secrétariat DSB;4902110;None;110
+23-4902-ANG-A-R-000750;Circulation;4902110;None;110
+23-4902-ANG-A-R-000760;loc annexe cafétéria DSB;4902110;None;110
+23-4902-ANG-A-R-000770;Réserves Cafétéria DSB;4902110;None;110
+23-4902-ANG-A-R-000780;Local chauffeurs approvisionnement colle;4902110;None;110
+23-4902-ANG-A-R-000790;Machinerie ascenseur 1;4902430;None;430
+23-4902-ANG-A-R-000800;Ascenseur handicapés THYSSEN;4902430;None;430
+23-4902-ANG-A-R-000810;Ascenseur monte-charge;4902430;None;430
+23-4902-ANG-A-R-000820;Escalier extérieur;4902430;None;430
+23-4902-ANG-A-R-000830;Parking;4902401;None;401
+23-4902-ANG-A-R-000840;Navettes QBD;4902120;None;120
+23-4902-ANG-A-R-000850;Ascenseur OTIS;4902430;None;430
+23-4902-ANG-A-R-000860;Local azote liquide;4902242;None;242
+23-4902-ANG-A-S;Sous sol;4902401;None;401
+23-4902-ANG-A-S-000010;Couloir magasin;4902431;None;431
+23-4902-ANG-A-S-000020;Magasin;4902431;None;431
+23-4902-ANG-A-S-000030;Vestiaire;4902430;None;430
+23-4902-ANG-A-S-000040;Magasin;4902431;None;431
+23-4902-ANG-A-S-000050;Magasin;4902431;None;431
+23-4902-ANG-A-S-000060;Prod eau osmosée;4902120;None;120
+23-4902-ANG-A-S-000070;Laverie;4902430;None;430
+23-4902-ANG-A-S-000080;couloir;4902430;None;430
+23-4902-ANG-A-S-000090;Local ménage;4902430;None;430
+23-4902-ANG-A-S-000100;Escalier;4902430;None;430
+23-4902-ANG-A-S-000110;Vestiaire & sanitaires;4902430;None;430
+23-4902-ANG-A-S-000120;local électrique + ascenseur;4902430;None;430
+23-4902-ANG-A-S-000130;couloir accès onduleur/archives;4902430;None;430
+23-4902-ANG-A-S-000140;Compresseur/local maintenance;4902430;None;430
+23-4902-ANG-A-S-000150;Stockage  archives;4902430;None;430
+23-4902-ANG-A-S-000160;Local onduleur;4902430;None;430
+23-4902-ANG-A-S-000170;Couloir secondaire;4902401;None;401
+23-4902-ANG-A-S-000180;Local gaz;4902430;None;430
+23-4902-ANG-A-S-000190;Local TGBT;4401430;None;430
+23-4902-ANG-A-S-000200;Local groupe électrogène;4902430;None;430
+23-4902-ANG-A-S-000210;Palier escalier ext TGBT;4902430;None;430
+23-4902-ANG-A-S-000220;Circulation et stockage tampon;4902430;None;430
+23-4902-ANG-A-S-000230;Local produits chimiques;4902431;None;431
+23-4902-ANG-A-S-000240;Local stockage;4902431;None;431
+23-4902-ANG-A-S-000250;local grillagé pour dasri;4902430;None;430
+23-4902-ANG-A-S-000260;Local dasri (retour collectes);4902430;None;430
+23-4902-ANG-A-S-000270;Parking;4902401;None;401
+23-4902-ANG-A-S-000280;palier accès escalier accueil;4902430;None;430
+23-4902-ANG-A-S-000290;palier accès escalier accueil;4902430;None;430
+23-4902-ANG-A-T;Terrasse;4902401;None;401
+23-4902-ANG-A-T-000010;Palier 1;4902430;None;430
+23-4902-ANG-A-T-000020;Local ventilation;4902430;None;430
+23-4902-ANG-A-T-000030;Machinerie ascenseur 2;4902430;None;430
+23-4902-ANG-A-T-000040;Chaufferie;4902430;None;430
+23-4902-ANG-H;Centre hospitalier;4902221;None;221
+23-5302;ZONE ANALYTIQUE DE LAVAL;4499400;None;400
+23-5302-000;ZONE D'ATTENTE DE VENTILATION EQUIPEMENT;4499400;None;400
+23-5302-LAV;Site de Laval;5302401;None;401
+23-5302-LAV-A;Batiment A;5302110;None;110
+23-5302-LAV-A-R;Rez de Chaussée;5302401;None;401
+23-5302-LAV-A-R-000010;Entrée visiteurs;5302430;None;430
+23-5302-LAV-A-R-000020;Accueil donneur distribution;5302430;None;430
+23-5302-LAV-A-R-000025;Guichet IHE-DEL;5302151;None;151
+23-5302-LAV-A-R-000030;Local technique compresseur;5302430;None;430
+23-5302-LAV-A-R-000040;Enceinte stockage -25 et 20-24;5302151;None;151
+23-5302-LAV-A-R-000050;Chambre froide +4°;5302151;None;151
+23-5302-LAV-A-R-000060;Vestiaires;5302430;None;430
+23-5302-LAV-A-R-000070;Dégagement vestiaire ménage;5302430;None;430
+23-5302-LAV-A-R-000080;Chambre de garde;5302151;None;151
+23-5302-LAV-A-R-000090;Sanitaire de garde;5302151;None;151
+23-5302-LAV-A-R-000100;Bureau biologiste;5302151;None;151
+23-5302-LAV-A-R-000110;Labo IHE et service DEL;5302154;None;154
+23-5302-LAV-A-R-000120;Secrétariat;5302114;None;114
+23-5302-LAV-A-R-000130;Bureau CMT;5302110;None;110
+23-5302-LAV-A-R-000140;Bureau responsable PRL;5302110;None;110
+23-5302-LAV-A-R-000150;Sanitaires personnel;5302430;None;430
+23-5302-LAV-A-R-000160;Couloir avec placard PRL;5302110;None;110
+23-5302-LAV-A-R-000170;Stockage PRL et départ collecte mobile;5302110;None;110
+23-5302-LAV-A-R-000180;Sanitaires prersonnel;5302430;None;430
+23-5302-LAV-A-R-000190;Salle du personnel;5302430;None;430
+23-5302-LAV-A-R-000200;Salle visio conférence;5302430;None;430
+23-5302-LAV-A-R-000210;Rangement;5302110;None;110
+23-5302-LAV-A-R-000220;Archives;5302430;None;430
+23-5302-LAV-A-R-000230;SAS Navette (N'appartient pas à l'EFS);4499440;None;440
+23-5302-LAV-A-R-000240;Salle navette 20-24°C;5302154;None;154
+23-5302-LAV-A-R-000250;Chambre positive +4° Transfert;5302154;None;154
+23-5302-LAV-A-R-000260;Chambre négative -25° transfert;5302154;None;154
+23-5302-LAV-A-R-000270;Salle navette température ambiante;5302110;None;110
+23-5302-LAV-A-S;Sous sol;5302430;None;430
+23-5302-LAV-A-S-000010;Local stockage collecte - Réserve;5302401;None;431
+23-5303-LAV;Site de Laval / Maison du Don;5303401;None;401
+23-5303-LAV-A-R-000010;Zone Commune Prélèvements;5303110;None;110
+23-5303-LAV-A-R-000020;Bureau entretien pré don;5303110;None;110
+23-5303-LAV-A-R-000030;Bureau CMT/ médecin;5303110;None;110
+23-5303-LAV-A-R-000040;Dégagements;5303110;None;110
+23-5303-LAV-A-R-000050;Réserve consommable;5303110;None;110
+23-5303-LAV-A-R-000060;Local Informatique;5303430;None;430
+23-5303-LAV-A-R-000070;Vestiaires Femmes;5303110;None;110
+23-5303-LAV-A-R-000080;Vestiaires Hommes;5303110;None;110
+23-5303-LAV-A-R-000090;Local déchets/local ménage;5303430;None;430
+23-5303-LAV-A-R-000100;Sanitaires Femmes;5303110;None;110
+23-5303-LAV-A-R-000110;Sanitaires Hommes;5303110;None;110
+23-7202;ZONE ANALYTIQUE DU MANS;4499400;None;400
+23-7202-000;ZONE D'ATTENTE DE VENTILATION EQUIPEMENT;4499400;None;400
+23-7202-LMS;Site du Mans;7202401;None;401
+23-7202-LMS-A;Batiment A;7202401;None;401
+23-7202-LMS-A-R;Rez de chaussée;7202401;None;401
+23-7202-LMS-A-R-000010;Entrée principale;7202110;None;110
+23-7202-LMS-A-R-000020;SAS distribution;7202151;None;151
+23-7202-LMS-A-R-000030;Accueil attente donneurs /patients/Visit;7202110;None;110
+23-7202-LMS-A-R-000040;Accueil donneurs / patients / visiteurs;7202110;None;110
+23-7202-LMS-A-R-000050;Distribution des produits sanguins;7202151;None;151
+23-7202-LMS-A-R-000060;Chambre froide kardex / Stockage CGR;7202151;None;151
+23-7202-LMS-A-R-000070;Décongélation plasma;7202151;None;151
+23-7202-LMS-A-R-000080;Phoning / affranchissement / secrétariat;7202110;None;110
+23-7202-LMS-A-R-000090;Collation des donneurs/patients;7202110;None;110
+23-7202-LMS-A-R-000100;Collation des donneurs/patients;7202110;None;110
+23-7202-LMS-A-R-000110;WC Donneurs / patients;7202110;None;110
+23-7202-LMS-A-R-000120;WC Personnels PRL;7202110;None;110
+23-7202-LMS-A-R-000130;B. responsable prélèvement;7202110;None;110
+23-7202-LMS-A-R-000135;Couloir;7202110;None;110
+23-7202-LMS-A-R-000140;B. cadre médicotechnique prélèvement;7202110;None;110
+23-7202-LMS-A-R-000145;Responsable Médecin Secteur;7202110;None;110
+23-7202-LMS-A-R-000150;Prélèvement;7202110;None;110
+23-7202-LMS-A-R-000155;Organisation des collectes mobiles;7202110;None;110
+23-7202-LMS-A-R-000160;Prélèvement aphérèse plasma/plaquettes;7202110;None;110
+23-7202-LMS-A-R-000165;Appel des donneurs;7202114;None;114
+23-7202-LMS-A-R-000170;Bureau infirmier;7202110;None;110
+23-7202-LMS-A-R-000180;Bureau IDE salle aphérèse;7202110;None;110
+23-7202-LMS-A-R-000190;Centre de soins;7202221;None;221
+23-7202-LMS-A-R-000200;Cabinet médical;7202110;None;110
+23-7202-LMS-A-R-000210;Local technique 1;7202430;None;430
+23-7202-LMS-A-R-000220;Ascenseur 1;7202401;None;401
+23-7202-LMS-A-R-000230;Stockage produits entretien/hygiène;7202430;None;430
+23-7202-LMS-A-R-000240;Couloir + Couloir principal;7202430;None;430
+23-7202-LMS-A-R-000250;Resp distri hémovigilance;7202151;None;151
+23-7202-LMS-A-R-000260;Chambre de garde;7202154;None;154
+23-7202-LMS-A-R-000270;Sanitaires Chambre de garde;7202154;None;154
+23-7202-LMS-A-R-000280;B. directeur de site;7202413;None;413
+23-7202-LMS-A-R-000290;Correspondant administratif;7202413;None;413
+23-7202-LMS-A-R-000300;Local technique 2;7202430;None;430
+23-7202-LMS-A-R-000310;Bureau pour les personnels des sites ext;7202430;None;430
+23-7202-LMS-A-R-000320;Salle informatique;7202420;None;420
+23-7202-LMS-A-R-000330;Local climatisé;7202151;None;151
+23-7202-LMS-A-R-000340;Chambre froide +4°C;7202154;None;154
+23-7202-LMS-A-R-000350;Chambre froide -30°C;7202151;None;151
+23-7202-LMS-A-R-000360;Assistante matériovigilance;7202153;None;153
+23-7202-LMS-A-R-000370;Local collecte;7202110;None;110
+23-7202-LMS-A-R-000380;Resp métrologie;7202141;None;141
+23-7202-LMS-A-R-000390;Magasin 1;7202431;None;431
+23-7202-LMS-A-R-000400;Archives n°3;7202430;None;430
+23-7202-LMS-A-R-000410;Archives n°4;7202151;None;151
+23-7202-LMS-A-R-000420;Stockage prélèvement;7202110;None;110
+23-7202-LMS-A-R-000430;Bureau délégué personnel;7202418;None;418
+23-7202-LMS-A-R-000440;SAS garage;7202430;None;430
+23-7202-LMS-A-R-000450;Garage;7202110;None;110
+23-7202-LMS-A-R-000460;Local poubelle;7202430;None;430
+23-7202-LMS-A-R-000470;Magasin 2;7202431;None;431
+23-7202-LMS-A-R-000480;Salle de réunion;7202430;None;430
+23-7202-LMS-A-R-000490;Salle détente personnel;7202430;None;430
+23-7202-LMS-A-R-000500;Vestiaires hommes;7202430;None;430
+23-7202-LMS-A-R-000510;Douche hommes;7202430;None;430
+23-7202-LMS-A-R-000520;Sanitaires hommes + wc Hommes;7202430;None;430
+23-7202-LMS-A-R-000530;Vestiaires femmes;7202430;None;430
+23-7202-LMS-A-R-000540;Douche femmes;7202430;None;430
+23-7202-LMS-A-R-000550;Sanitaires femmes + WC Femmes;7202430;None;430
+23-7202-LMS-A-R-000560;Local technique 3;7202430;None;430
+23-7202-LMS-A-R-000570;Laboratoire métrologie;7202141;None;141
+23-7202-LMS-A-R-000580;Laboratoire Métrologie;7202141;None;141
+23-7202-LMS-A-R-000590;Local réception métrologie;7202141;None;141
+23-7202-LMS-A-R-000600;Bureaux laboratoire métrologie;7202141;None;141
+23-7202-LMS-A-R-000610;Ascenseur 2;7202401;None;401
+23-7202-LMS-A-R-000620;Escaliers;7202401;None;401
+23-7202-LMS-A-R-000630;B. Responsable laboratoire IHE;7202154;None;154
+23-7202-LMS-A-R-000640;Bureau Assistants Techniques IHE/DIS;7202154;None;154
+23-7202-LMS-A-R-000650;B. Personnel IHE;7202154;None;154
+23-7202-LMS-A-R-000660;Laboratoire IHC;7202154;None;154
+23-7202-LMS-A-R-000670;Bureau Biologiste;7202154;None;154
+23-7202-LMS-A-S;Sous sol;7202401;None;401
+23-7202-LMS-A-S-000010;Local onduleur;7202430;None;430
+23-8502;ZONE ANALYTIQUE DE LA ROCHE SUR YON;4499400;None;400
+23-8502-000;ZONE D'ATTENTE DE VENTILATION EQUIPEMENT;4499400;None;400
+23-8502-LRY;Site de La Roche sur Yon;8502401;None;401
+23-8502-LRY-A;Batiment A;8502401;None;401
+23-8502-LRY-A-R;Rez de chaussée;8502401;None;401
+23-8502-LRY-A-R-000010;SAS Entrée;8502430;None;430
+23-8502-LRY-A-R-000015;Hall d'Entrée;8502430;None;430
+23-8502-LRY-A-R-000020;Hall d'accueil donneurs;8502110;None;110
+23-8502-LRY-A-R-000025;Responsable Qualité LBM;8502154;None;154
+23-8502-LRY-A-R-000030;Secrétariat relance/CSM/collecte;8502110;None;110
+23-8502-LRY-A-R-000040;Bureau Médecins de PRL;8502110;None;110
+23-8502-LRY-A-R-000050;Local informatique;8502430;None;430
+23-8502-LRY-A-R-000060;Bureau Responsable prélèvement;8502110;None;110
+23-8502-LRY-A-R-000070;Bureau AT/secrétariat collecte/Plateform;8502114;None;114
+23-8502-LRY-A-R-000080;B. correspondant administratif;8502413;None;413
+23-8502-LRY-A-R-000090;Bureau directeur de site;8502413;None;413
+23-8502-LRY-A-R-000100;Salle de réunion;8502430;None;430
+23-8502-LRY-A-R-000110;Salle de détente du personnel;8502430;None;430
+23-8502-LRY-A-R-000120;Local incendie 1;8502430;None;430
+23-8502-LRY-A-R-000130;Couloir Nord;8502430;None;430
+23-8502-LRY-A-R-000140;Ascenseur;8502430;None;430
+23-8502-LRY-A-R-000150;Escalier principal;8502430;None;430
+23-8502-LRY-A-R-000160;Laboratoire Biothèque;8502160;None;160
+23-8502-LRY-A-R-000170;Laboratoire IHC;8502154;None;154
+23-8502-LRY-A-R-000180;Sanitaire Homme 1;8502430;None;430
+23-8502-LRY-A-R-000190;Gaine technique 4;8502430;None;430
+23-8502-LRY-A-R-000200;Local petit matériel;8502153;None;153
+23-8502-LRY-A-R-000210;Sanitaire Femme 1;8502430;None;430
+23-8502-LRY-A-R-000220;Local réception navette;8502151;None;151
+23-8502-LRY-A-R-000230;Laverie;8502430;None;430
+23-8502-LRY-A-R-000240;Chambre froide +4°C N°1 (KARDEX);8502151;None;151
+23-8502-LRY-A-R-000260;Local de distribution;8502151;None;151
+23-8502-LRY-A-R-000270;Chambre froide +4°C N°2;8502151;None;151
+23-8502-LRY-A-R-000280;Couloir Sud;8502430;None;430
+23-8502-LRY-A-R-000290;Débarras;8502430;None;430
+23-8502-LRY-A-R-000300;TGBT;8502430;None;430
+23-8502-LRY-A-R-000310;Local incendie 2;8502430;None;430
+23-8502-LRY-A-R-000320;Sec médical des laboratoires;8502151;None;151
+23-8502-LRY-A-R-000330;Bureau assistant technique;8502151;None;151
+23-8502-LRY-A-R-000340;Bureau Medecin biologiste;8502154;None;154
+23-8502-LRY-A-R-000350;Chambre de garde;8502151;None;151
+23-8502-LRY-A-R-000360;Douche;8502154;None;154
+23-8502-LRY-A-R-000370;Sanitaire Femme 2;8502430;None;430
+23-8502-LRY-A-R-000380;Locale incendie 3;8502430;None;430
+23-8502-LRY-A-R-000390;Sanitaire Donneurs;8502110;None;110
+23-8502-LRY-A-R-000400;Bureau Médecin Biologiste;8502151;None;151
+23-8502-LRY-A-R-000410;Bureau médical;8502110;None;110
+23-8502-LRY-A-R-000420;Salle de restauration;8502110;None;110
+23-8502-LRY-A-R-000430;Reserve alimentaire;8502110;None;110
+23-8502-LRY-A-R-000440;Gaine technique 5;8502430;None;430
+23-8502-LRY-A-R-000450;Salle de prélèvement + circulations;8502110;None;110
+23-8502-LRY-A-R-000460;Local infirmières;8502110;None;110
+23-8502-LRY-A-R-000470;Local consommable;8502110;None;110
+23-8502-LRY-A-S;Sous sol;8502401;None;401
+23-8502-LRY-A-S-000010;Couloir Sous sol;8502430;None;430
+23-8502-LRY-A-S-000020;Local déchets;8502430;None;430
+23-8502-LRY-A-S-000030;Quai de chargement;8502151;None;151
+23-8502-LRY-A-S-000040;Ascenseur;8502430;None;430
+23-8502-LRY-A-S-000050;Petit Garage;8502430;None;430
+23-8502-LRY-A-S-000060;Gaine technique 1;8502430;None;430
+23-8502-LRY-A-S-000070;Vestiaire Homme;8502430;None;430
+23-8502-LRY-A-S-000080;B. Technicien de maintenance;8502430;None;430
+23-8502-LRY-A-S-000090;Salle départ collecte;8502110;None;110
+23-8502-LRY-A-S-000100;Archive N°3;8502430;None;430
+23-8502-LRY-A-S-000110;Bureau DP et assistante sociale;8502418;None;418
+23-8502-LRY-A-S-000120;Vestiaire Femme;8502430;None;430
+23-8502-LRY-A-S-000130;TGBT sous-sol;8502430;None;430
+23-8502-LRY-A-S-000140;Gaine technique 3;8502430;None;430
+23-8502-LRY-A-S-000150;Local compresseurs CF;8502430;None;430
+23-8502-LRY-A-S-000160;Local affiche;4499430;None;430
+23-8502-LRY-A-S-000170;Salle stockage UIC;8502160;None;160
+23-8502-LRY-A-S-000180;Stockage blouses;4499430;None;430
+23-8502-LRY-A-S-000190;Chambre froide -30°C N°1;8502160;None;160
+23-8502-LRY-A-S-000200;Local stockage et ménage;8502430;None;430
+23-8502-LRY-A-S-000210;Sanitaire sous sol;8502430;None;430
+23-8502-LRY-A-S-000220;Grand garage;8502401;None;401
+23-8502-LRY-A-S-000230;Local Velo;8502401;None;401
+23-8502-LRY-A-S-000240;Salle de réunion sous sol;8502430;None;430
+23-8502-LRY-A-S-000250;Archive sous sol;8502154;None;154
+23-8502-LRY-A-S-000260;Chaufferie;8502430;None;430
+23-8502-LRY-A-S-000270;Magasin;4499430;None;430
+23-8502-LRY-A-S-000280;Zone de préparation collecte;8502110;None;110
+23-9991;A sortir suite à inventaire;4499400;None;400
+23-9999;En attente fin d'inventaire;4499400;None;400
+29;Atlantic Bio GMP;4411300;None;300
+29-0000;MISE AU REBUT;4411300;None;300
+29-4411;ZONE ANALYTIQUE SAINT HERBLAIN;4411300;None;300
+29-4411-SSH;SITE DE SAINT HERBLAIN;4411300;None;300
+29-4411-SSH-A;BATIMENT A;4411300;None;300
+29-4411-SSH-A-0;NIVEAU 0;4411300;None;300
+29-4411-SSH-A-0-000001;local entretien;4411300;None;300
+29-4411-SSH-A-0-000002;vestiaire ville homme;4411300;None;300
+29-4411-SSH-A-0-000003;vestiaire ville femme;4411300;None;300
+29-4411-SSH-A-0-000004;archives;4411300;None;300
+29-4411-SSH-A-0-000005;salle de détente;4411300;None;300
+29-4411-SSH-A-0-000006;salle de réunion;4411300;None;300
+29-4411-SSH-A-0-000007;bureau 5- Directeur;4411300;None;300
+29-4411-SSH-A-0-000008;Bureau 4- Responsable contrôle qualité;4411300;None;300
+29-4411-SSH-A-0-000009;Bureau 3- Techniciens;4411300;None;300
+29-4411-SSH-A-0-000010;Bureau 2- Responsable production;4411300;None;300
+29-4411-SSH-A-0-000011;Bureau 1- Accueil;4411300;None;300
+29-4411-SSH-A-0-000012;hall;4411300;None;300
+29-4411-SSH-A-0-000013;sanitaire handicapé;4411300;None;300
+29-4411-SSH-A-0-000014;sanitaire homme;4411300;None;300
+29-4411-SSH-A-0-000015;sanitaire femme;4411300;None;300
+29-4411-SSH-A-0-000016;préparation des expéditions;4411300;None;300
+29-4411-SSH-A-0-000017;patio;4411300;None;300
+29-4411-SSH-A-0-100005;DETENTE;4411300;None;300
+29-4411-SSH-A-0-100018;Vestiaires Sanitaires Douches;4411300;None;300
+29-4411-SSH-A-0-100019;OPEN SPACE a;4411300;None;300
+29-4411-SSH-A-0-100020;OPEN SPACE b;4411300;None;300
+29-4411-SSH-A-0-100021;RECEPT. - EXPEDIT.;4411300;None;300
+29-4411-SSH-A-0-100022;OPEN SPACE c;4411300;None;300
+29-4411-SSH-A-0-100023;BUREAU DOUBLE a;4411300;None;300
+29-4411-SSH-A-0-100024;BUREAU DOUBLE b;4411300;None;300
+29-4411-SSH-A-0-100025;OPEN SPACE d;4411300;None;300
+29-4411-SSH-A-0-100026;CIRCULATION DE VILLE;4411300;None;300
+29-4411-SSH-A-0-100027;ARCHIVES ITC;4411300;None;300
+29-4411-SSH-A-0-100028;STOCKAGE ITC;4411300;None;300
+29-4411-SSH-A-0-100029;BUREAU SIMPLE;4411300;None;300
+29-4411-SSH-B;BATIMENT B;4411300;None;300
+29-4411-SSH-B-0;NIVEAU 0;4411300;None;300
+29-4411-SSH-B-0-000001;local effluents;4411300;None;300
+29-4411-SSH-B-0-000002;local traitement eau;4411300;None;300
+29-4411-SSH-B-0-000003;azote matière libérée;4411300;None;300
+29-4411-SSH-B-0-000004;azote matiere quarantaine;4411300;None;300
+29-4411-SSH-B-0-000005;circulation;4411300;None;300
+29-4411-SSH-B-0-000006;zone échantillonage;4411300;None;300
+29-4411-SSH-B-0-000007;réception gros volumes;4411300;None;300
+29-4411-SSH-B-0-000008;Stockage matières premières quarantaine;4411300;None;300
+29-4411-SSH-B-0-000009;Stockage matières premières libérée;4411300;None;300
+29-4411-SSH-B-0-000010;chambre froide matières première libérée;4411300;None;300
+29-4411-SSH-B-0-000011;chambre froide matières première 40ène;4411300;None;300
+29-4411-SSH-B-0-000012;local DASRI;4411300;None;300
+29-4411-SSH-B-0-000013;local bouteille gaz;4411300;None;300
+29-4411-SSH-B-0-000014;auvent;4411300;None;300
+29-4411-SSH-B-0-000015;local poubelle;4411300;None;300
+29-4411-SSH-B-0-000016;transfo EDF;4411300;None;300
+29-4411-SSH-B-0-100001;SAS CRYOGENIE;4411242;None;300
+29-4411-SSH-B-0-100002;SALLE CRYOGENIE;4411242;None;300
+29-4411-SSH-C;BATIMENT C;4411300;None;300
+29-4411-SSH-C-0;NIVEAU 0;4411300;None;300
+29-4411-SSH-C-0-000001;SAS femme CQ;4411300;None;300
+29-4411-SSH-C-0-000002;SAS homme CQ;4411300;None;300
+29-4411-SSH-C-0-000003;SAS CQ matériel et produits;4411300;None;300
+29-4411-SSH-C-0-000004;local entretien CQ;4411300;None;300
+29-4411-SSH-C-0-000005;circulation;4411300;None;300
+29-4411-SSH-C-0-000006;chambre froide CQ;4411300;None;300
+29-4411-SSH-C-0-000007;stock réactifs CQ;4411300;None;300
+29-4411-SSH-C-0-000008;laverie;4411300;None;300
+29-4411-SSH-C-0-000009;local autoclave - déchets;4411300;None;300
+29-4411-SSH-C-0-000010;Salle PCR 1;4411300;None;300
+29-4411-SSH-C-0-000011;Salle PCR 2;4411300;None;300
+29-4411-SSH-C-0-000012;laboratoire biologie moléculaire;4411300;None;300
+29-4411-SSH-C-0-000013;analyse environnement 1;4411300;None;300
+29-4411-SSH-C-0-000014;analyse environnement 2;4411300;None;300
+29-4411-SSH-C-0-000015;analyse environnement 3;4411300;None;300
+29-4411-SSH-C-0-000016;salle culture cellulaire CQ1;4411300;None;300
+29-4411-SSH-C-0-000017;salle culture cellulaire CQ2;4411300;None;300
+29-4411-SSH-C-0-000018;salle culture cellulaire CQ3;4411300;None;300
+29-4411-SSH-C-0-000019;accès L3 CQ SAS 1;4411300;None;300
+29-4411-SSH-C-0-000020;accès L3 CQ SAS 2;4411300;None;300
+29-4411-SSH-C-0-000021;L3 CQ;4411300;None;300
+29-4411-SSH-C-0-100022;ACCES PERSONNEL;4411140;None;300
+29-4411-SSH-C-0-100023;Accès Matériel CQ;4411140;None;300
+29-4411-SSH-C-0-100024;PCR THERMOCYCLEUR;4411140;None;300
+29-4411-SSH-C-0-100025;PCR ADN;4411140;None;300
+29-4411-SSH-C-0-100026;PCR MIX;4411140;None;300
+29-4411-SSH-C-0-100027;PCR EXTRACTION;4411140;None;300
+29-4411-SSH-C-0-100028;LABORATOIRE DE BASE;4411140;None;300
+29-4411-SSH-C-0-100029;CIRCULATION QC;4411140;None;300
+29-4411-SSH-D;BATIMENT D;4411300;None;300
+29-4411-SSH-D-0;NIVEAU 0;4411300;None;300
+29-4411-SSH-D-0-000001;vestiaire femme;4411300;None;300
+29-4411-SSH-D-0-000002;vestiaire homme;4411300;None;300
+29-4411-SSH-D-0-000003;réserve de proximité;4411300;None;300
+29-4411-SSH-D-0-000004;accès matériel principal;4411300;None;300
+29-4411-SSH-D-0-000005;stock produits finis;4411300;None;300
+29-4411-SSH-D-0-000006;stock contrôle qualité;4411300;None;300
+29-4411-SSH-D-0-000007;entretien production;4411300;None;300
+29-4411-SSH-D-0-000008;circulation propre;4411300;None;300
+29-4411-SSH-D-0-000009;circulation sale;4411300;None;300
+29-4411-SSH-D-0-000010;suite de production 1;4411300;None;300
+29-4411-SSH-D-0-000010-A;SAS personnel 1/1;4411300;None;300
+29-4411-SSH-D-0-000010-B;SAS personnel 1/2 (propre);4411300;None;300
+29-4411-SSH-D-0-000010-C;accès matériel 1;4411300;None;300
+29-4411-SSH-D-0-000010-D;couloir circulation propre;4411300;None;300
+29-4411-SSH-D-0-000010-E;SALLE 1.1;4411300;None;300
+29-4411-SSH-D-0-000010-F;SALLE 1.2;4411300;None;300
+29-4411-SSH-D-0-000010-G;SALLE 1.3;4411300;None;300
+29-4411-SSH-D-0-000010-H;SALLE 1.4;4411300;None;300
+29-4411-SSH-D-0-000010-I;SALLE 1.5;4411300;None;300
+29-4411-SSH-D-0-000010-J;circulation sale;4411300;None;300
+29-4411-SSH-D-0-000010-K;SAS déchets 1;4411300;None;300
+29-4411-SSH-D-0-000011;Suite de Production 2;4411300;None;300
+29-4411-SSH-D-0-000011-A;SAS personnel 2/1;4411300;None;300
+29-4411-SSH-D-0-000011-B;SAS personnel 2/2 (propre);4411300;None;300
+29-4411-SSH-D-0-000011-C;accès matériel 2;4411300;None;300
+29-4411-SSH-D-0-000011-D;couloir circulation propre;4411300;None;300
+29-4411-SSH-D-0-000011-E;SALLE 2.1;4411300;None;300
+29-4411-SSH-D-0-000011-F;SALLE 2.2;4411300;None;300
+29-4411-SSH-D-0-000011-G;SALLE 2.3;4411300;None;300
+29-4411-SSH-D-0-000011-H;SALLE 2.4;4411300;None;300
+29-4411-SSH-D-0-000011-I;SALLE 2.5;4411300;None;300
+29-4411-SSH-D-0-000011-J;circulation sale;4411300;None;300
+29-4411-SSH-D-0-000011-K;SAS déchets 2;4411300;None;300
+29-4411-SSH-D-0-000012;Suite de Production 3;4411300;None;300
+29-4411-SSH-D-0-000012-A;SAS personnel 3/1;4411300;None;300
+29-4411-SSH-D-0-000012-B;SAS personnel 3/2 (propre);4411300;None;300
+29-4411-SSH-D-0-000012-C;accès matériel 3;4411300;None;300
+29-4411-SSH-D-0-000012-D;couloir circulation propre;4411300;None;300
+29-4411-SSH-D-0-000012-E;SALLE 3.1;4411300;None;300
+29-4411-SSH-D-0-000012-F;SALLE 3.2;4411300;None;300
+29-4411-SSH-D-0-000012-G;SALLE 3.3;4411300;None;300
+29-4411-SSH-D-0-000012-H;SALLE 3.4;4411300;None;300
+29-4411-SSH-D-0-000012-I;SALLE 3.5;4411300;None;300
+29-4411-SSH-D-0-000012-J;circulation sale;4411300;None;300
+29-4411-SSH-D-0-100001-I;SAS PERSONNEL ITC;4411242;None;300
+29-4411-SSH-D-0-100001-R;SAS PERSONNEL 1RA;4411242;None;300
+29-4411-SSH-D-0-100002-I;SAS MATERIEL ITC;4411242;None;300
+29-4411-SSH-D-0-100002-R;SAS PERSONNEL 2RA;4411242;None;300
+29-4411-SSH-D-0-100003-I;CIRCULATION D1/D2;4411242;None;300
+29-4411-SSH-D-0-100003-R;SAS MATERIEL RA;4411242;None;300
+29-4411-SSH-D-0-100004-I;BOX A;4411242;None;300
+29-4411-SSH-D-0-100004-R;REPARTITION ASEPTIQUE;4411242;None;300
+29-4411-SSH-D-0-100005-I;BOX B;4411242;None;300
+29-4411-SSH-D-0-100005-R;SAS DECHETS RA;4411242;None;300
+29-4411-SSH-D-0-100006-I;SALLE TECHNIQUE ITC;4411242;None;300
+29-4411-SSH-D-0-100007-I;BOX C;4411242;None;300
+29-4411-SSH-D-0-100008-I;PROTOCOLE;4411242;None;300
+29-4411-SSH-D-0-100009-I;PREPARATION TAMPONS;4411242;None;300
+29-4411-SSH-D-0-100010;Accès Personnel Homme;4411300;None;300
+29-4411-SSH-D-0-100010-I;SAS DECHETS ITC;4411242;None;300
+29-4411-SSH-D-0-100011;Accès Personnel Femme;4411300;None;300
+29-4411-SSH-D-0-100012;Accès Matériel;4411300;None;300
+29-4411-SSH-D-0-100013;CIRCULATION PROPRE 2;4411300;None;300
+29-4411-SSH-D-0-100014;CIRCULATION PROPRE 3;4411300;None;300
+29-4411-SSH-D-0-100015;RANGEMENT;4411242;None;300
+29-4411-SSH-D-0-100017;CIRCULATION DECHETS;4411300;None;300
+29-4411-SSH-D-0-100018;SAS EVACUATION DECHETS;4411300;None;300
+29-4411-SSH-D-0-100019;SAS PERSONNEL COULOIR DECHETS;4411300;None;300
+29-4411-SSH-E;BATIMENT E;4411300;None;300
+29-4411-SSH-E-0;NIVEAU 0;4411300;None;300
+29-4411-SSH-E-0-000001-A;local compresseur;4411300;None;300
+29-4411-SSH-E-0-000001-B;zone technique CTA;4411300;None;300
+29-4411-SSH-E-0-000002-A;local informatique;4411300;None;300
+29-4411-SSH-E-0-000003-A;local TGBT;4411300;None;300
+29-4411-SSH-E-0-000004-A;local chaudière;4411300;None;300
+29-4411-SSH-F;EXTERIEUR;4411300;None;300
+29-4411-SSH-F-1;TOITURE;4411300;None;300
+29-9991;A sortir suite à inventaire;4411300;None;300
+29-9999;En attente fin d'inventaire;4411300;None;300

@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainDeclaration_Incertitudes</class>
+ <widget class="QMainWindow" name="MainDeclaration_Incertitudes">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1370</width>
+    <height>1093</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Declaration_Incertitudes</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1350</width>
+         <height>1052</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;t'(t(t''(t('&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTabBar::tab {
+   font-size: 12px;
+font-weight: bold;
+min-width: 50ex;
+ padding: 3px
+
+}</string>
+          </property>
+          <property name="tabShape">
+           <enum>QTabWidget::Triangular</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <widget class="QWidget" name="Recapitulatif">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <attribute name="title">
+            <string>Menu Principal</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>39</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel{
+background-color: rgb(170, 255, 255);
+border: 1px solid Black;
+border-radius: 5px;}</string>
+              </property>
+              <property name="text">
+               <string>Recapitulatif des Declarations</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tableWidget">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>9</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="cursor" stdset="0">
+               <cursorShape>ArrowCursor</cursorShape>
+              </property>
+              <property name="mouseTracking">
+               <bool>true</bool>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::ActionsContextMenu</enum>
+              </property>
+              <property name="whatsThis">
+               <string extracomment="freeghrehtzh"/>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="showGrid">
+               <bool>true</bool>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::SolidLine</enum>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="cornerButtonEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="rowCount">
+               <number>0</number>
+              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>120</number>
+              </attribute>
+              <attribute name="horizontalHeaderHighlightSections">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>32</number>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>ID_Declaration</string>
+               </property>
+               <property name="font">
+                <font>
+                 <family>MS Shell Dlg 2</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Date</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Type de Declaration</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Archivage</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Commentaire</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>u_final k=1</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Saisie">
+           <attribute name="title">
+            <string>Données / Saisie</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <layout class="QFormLayout" name="formLayout_4">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_10">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>ID Declaration</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit_id_decla">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="dateEdit">
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+              <property name="currentSectionIndex">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QComboBox" name="comboBox_type_declaration">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>*</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>MEILLEURES_LIQUIDE</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>MEILLEURES_BGF</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COURANTES_LIQUIDE</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COURANTES_BGF</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COURANTES_AIR</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>COURANTES_SITE</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <layout class="QFormLayout" name="formLayout_2">
+                  <property name="fieldGrowthPolicy">
+                   <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_5">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Selection Etalon(s)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="pushButton_select_etalons">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_4">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Selection CE</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QPushButton" name="pushButton_select_CE">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QTableWidget" name="tableWidget_recap_select_etalons">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <column>
+                     <property name="text">
+                      <string>Date</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>N°Certificat</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>Nom_Etalon</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QFormLayout" name="formLayout_3">
+                  <property name="fieldGrowthPolicy">
+                   <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_6">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Generateur(s)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="pushButton_select_generateurs">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_8">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Caracterisation</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QPushButton" name="pushButton_select_caract">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QTableWidget" name="tableWidget_recap_caracterisation">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <column>
+                     <property name="text">
+                      <string>Date</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>ID_Caracterisation</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>Nom_Generateur</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Commentaires :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSplitter" name="splitter">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <widget class="QTextEdit" name="textEdit_commentaire">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="autoFormatting">
+                <set>QTextEdit::AutoBulletList</set>
+               </property>
+               <property name="tabStopWidth">
+                <number>80</number>
+               </property>
+              </widget>
+              <widget class="QTableWidget" name="tableWidget_incertitudes">
+               <row>
+                <property name="text">
+                 <string>Etalonnage_Etalon</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Erreur_Modelisation_Etalon</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Resolution_Etalon</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Derive_etalon</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Fuite_Thermique_Etalon</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Autoechauffement</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Temp_Ambiante_Etalon</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Stabilite_Generateur</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Homogeneite_generateur</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Moyens de caracterisation</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Rayonnement</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Resolution_Chaine_Cliente</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Fuite_Thermique_Chaine_Cliente</string>
+                </property>
+               </row>
+               <column>
+                <property name="text">
+                 <string>Valeur</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Coefficient diviseur</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>u (k = 1)</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>u²</string>
+                </property>
+               </column>
+               <item row="0" column="1">
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </item>
+               <item row="1" column="1">
+                <property name="text">
+                 <string>√3</string>
+                </property>
+               </item>
+               <item row="2" column="0">
+                <property name="text">
+                 <string>0.001</string>
+                </property>
+               </item>
+               <item row="2" column="1">
+                <property name="text">
+                 <string>2*√3</string>
+                </property>
+               </item>
+               <item row="2" column="2">
+                <property name="text">
+                 <string>0.000288675135</string>
+                </property>
+               </item>
+               <item row="2" column="3">
+                <property name="text">
+                 <string>0.000000083333333567268225</string>
+                </property>
+               </item>
+               <item row="3" column="0">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </item>
+               <item row="3" column="1">
+                <property name="text">
+                 <string>√3</string>
+                </property>
+               </item>
+               <item row="3" column="2">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </item>
+               <item row="3" column="3">
+                <property name="text">
+                 <string>0.000225333333332</string>
+                </property>
+               </item>
+               <item row="4" column="1">
+                <property name="text">
+                 <string>√3</string>
+                </property>
+               </item>
+               <item row="5" column="1">
+                <property name="text">
+                 <string>√3</string>
+                </property>
+               </item>
+               <item row="6" column="0">
+                <property name="text">
+                 <string>0.006</string>
+                </property>
+               </item>
+               <item row="6" column="1">
+                <property name="text">
+                 <string>2*√3</string>
+                </property>
+               </item>
+               <item row="6" column="2">
+                <property name="text">
+                 <string>0.001732050808</string>
+                </property>
+               </item>
+               <item row="6" column="3">
+                <property name="text">
+                 <string>0.000003000000001493452864</string>
+                </property>
+               </item>
+               <item row="7" column="1">
+                <property name="text">
+                 <string>2*√3</string>
+                </property>
+               </item>
+               <item row="8" column="1">
+                <property name="text">
+                 <string>√3</string>
+                </property>
+               </item>
+               <item row="9" column="1">
+                <property name="text">
+                 <string>/</string>
+                </property>
+               </item>
+               <item row="10" column="1">
+                <property name="text">
+                 <string>√3</string>
+                </property>
+               </item>
+               <item row="11" column="1">
+                <property name="text">
+                 <string>2*√3</string>
+                </property>
+               </item>
+               <item row="12" column="1">
+                <property name="text">
+                 <string>√3</string>
+                </property>
+               </item>
+              </widget>
+              <widget class="QWidget" name="layoutWidget">
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QFormLayout" name="formLayout">
+                  <property name="fieldGrowthPolicy">
+                   <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                  </property>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Somme u² </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="lineEdit_u2"/>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_2">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>u final</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLineEdit" name="lineEdit_u"/>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_3">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>U final( k=2 )</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="lineEdit_U"/>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_11">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Etalon et Generateur :</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QFormLayout" name="formLayout_5">
+                  <property name="fieldGrowthPolicy">
+                   <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                  </property>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_12">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Somme u² </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="lineEdit_u2_client"/>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_13">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>u declaration</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLineEdit" name="lineEdit_u_client"/>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="label_14">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>U declaration( k=2 )</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLineEdit" name="lineEdit_U_client"/>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_15">
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Total</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Graphique">
+           <attribute name="title">
+            <string>Graphique</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetMinAndMaxSize</enum>
+              </property>
+             </layout>
+            </item>
+            <item>
+             <widget class="matplotlibWidget" name="graphique" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1370</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuRapport">
+    <property name="title">
+     <string>Rapport</string>
+    </property>
+    <addaction name="actionEditer_une_rapport"/>
+   </widget>
+   <widget class="QMenu" name="menuSauvegarde">
+    <property name="title">
+     <string>Sauvegarde</string>
+    </property>
+    <addaction name="actionEnregistrement"/>
+    <addaction name="actionMise_jour"/>
+    <addaction name="actionArchivage"/>
+   </widget>
+   <addaction name="menuRapport"/>
+   <addaction name="menuSauvegarde"/>
+  </widget>
+  <action name="actionNouvelle_caracterisation_enceinte">
+   <property name="text">
+    <string>Nouvelle caracterisation</string>
+   </property>
+  </action>
+  <action name="actionModifier_caracterisation_enceinte">
+   <property name="text">
+    <string>Modifier caracterisation</string>
+   </property>
+  </action>
+  <action name="actionVisualiser_caracterisation_enceinte">
+   <property name="text">
+    <string>Visualiser caracterisation</string>
+   </property>
+  </action>
+  <action name="actionNouvelle_caracterisation_bain">
+   <property name="text">
+    <string>Nouvelle caracterisation</string>
+   </property>
+  </action>
+  <action name="actionVisualiser_caracterisation_bain">
+   <property name="text">
+    <string>Visualiser caracterisation</string>
+   </property>
+  </action>
+  <action name="actionModifier_caracterisation_bain">
+   <property name="text">
+    <string>Modifier caracterisation</string>
+   </property>
+  </action>
+  <action name="actionNouvelle_caracterisation_four">
+   <property name="text">
+    <string>Nouvelle caracterisation</string>
+   </property>
+  </action>
+  <action name="actionModifier_caracterisation_four">
+   <property name="text">
+    <string>Modifier caracterisation</string>
+   </property>
+  </action>
+  <action name="actionVisualiser_caracterisation_four">
+   <property name="text">
+    <string>Visualiser caracterisation</string>
+   </property>
+  </action>
+  <action name="actionEditer_une_rapport">
+   <property name="text">
+    <string>Editer une rapport</string>
+   </property>
+  </action>
+  <action name="actionEnregistrement">
+   <property name="text">
+    <string>Enregistrement</string>
+   </property>
+  </action>
+  <action name="actionMise_jour">
+   <property name="text">
+    <string>Mise à jour</string>
+   </property>
+  </action>
+  <action name="actionArchivage">
+   <property name="text">
+    <string>Archivage</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>matplotlibWidget</class>
+   <extends>QWidget</extends>
+   <header>GUI/matplotlibwidgetFile</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
