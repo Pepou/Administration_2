@@ -21,8 +21,8 @@ class RapportEtalonnage:
         self.path = os.path.abspath("C:/Labo_Temp/AppData/")
         
         if type_ce == "'COFRAC'" or type_ce == "COFRAC":
-            self.ce = os.path.abspath("AppData/Documents/model_ce_cofrac.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
-            self.cv = os.path.abspath("AppData/Documents/model_cv_cofrac.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
+            self.ce = os.path.abspath("Modules/Labo_Temp/AppData/Documents/model_ce_cofrac.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
+            self.cv = os.path.abspath("Modules/Labo_Temp.AppData/Documents/model_cv_cofrac.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
             #on copie le ce et cv afin de pas les ecraser
             shutil.copy2(self.ce,self.path )
             shutil.copy2(self.cv, self.path)
@@ -31,8 +31,8 @@ class RapportEtalonnage:
             self.cv_travail = os.path.abspath(self.path+"/model_cv_cofrac.docx")
             
         else:
-            self.ce = os.path.abspath("AppData/Documents/model_ce.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
-            self.cv = os.path.abspath("AppData/Documents/model_cv.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
+            self.ce = os.path.abspath("Modules/Labo_Temp/AppData/Documents/model_ce.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
+            self.cv = os.path.abspath("Modules/Labo_Temp/AppData/Documents/model_cv.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
             #on copie le ce et cv afin de pas les ecraser
             shutil.copy2(self.ce,self.path )
             shutil.copy2(self.cv, self.path)
@@ -272,6 +272,8 @@ class RapportEtalonnage:
         
 
         doc.Bookmarks("n_mode_operatoire").Range.Text = donnees["n_mode_operatoire"]
+        doc.Bookmarks("type_erreur").Range.Text = donnees["type_erreur"]
+        
                 
                 #preparation donnees generateurs
         #preparation donnees generateurs
@@ -590,6 +592,7 @@ class RapportEtalonnage:
         doc.Bookmarks("milieu").Range.Text = donnees["milieu"]
         
         doc.Bookmarks("n_mode_operatoire").Range.Text = donnees["n_mode_operatoire"]
+        doc.Bookmarks("type_erreur").Range.Text = donnees["type_erreur"]
                 
                 #preparation donnees generateurs
 

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Travail\EFS\Travail accreditation\SQ\Developpement Informatique\Afficheurs\Afficheur-V0.2\GUI\select_afficheur.ui'
+# Form implementation generated from reading ui file 'C:\Developpement Informatique\Python\Administration\Modules\Afficheurs\GUI\select_afficheur.ui'
 #
-# Created: Wed Mar 18 15:28:48 2015
-#      by: PyQt4 UI code generator 4.11.3
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -35,9 +34,9 @@ class Ui_Modification_afficheur(object):
         self.gridLayout = QtGui.QGridLayout()
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.hboxlayout = QtGui.QHBoxLayout()
-        self.hboxlayout.setSpacing(6)
         self.hboxlayout.setSizeConstraint(QtGui.QLayout.SetMinimumSize)
         self.hboxlayout.setMargin(0)
+        self.hboxlayout.setSpacing(6)
         self.hboxlayout.setObjectName(_fromUtf8("hboxlayout"))
         spacerItem = QtGui.QSpacerItem(131, 31, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
         self.hboxlayout.addItem(spacerItem)

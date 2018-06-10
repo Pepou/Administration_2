@@ -185,6 +185,8 @@ class Ui_MainWindow(object):
         self.actionServices_Client.setObjectName(_fromUtf8("actionServices_Client"))
         self.actionCartographie = QtGui.QAction(MainWindow)
         self.actionCartographie.setObjectName(_fromUtf8("actionCartographie"))
+        self.actionReception_Expedition = QtGui.QAction(MainWindow)
+        self.actionReception_Expedition.setObjectName(_fromUtf8("actionReception_Expedition"))
         self.menuTemperature.addAction(self.actionLaboTemp)
         self.menuTemperature.addAction(self.actionSynchronisation_enregisteurs)
         self.menuTemperature.addAction(self.actionCaracterisation_Generateurs)
@@ -204,6 +206,8 @@ class Ui_MainWindow(object):
         self.menuClients.addAction(self.actionCreation_2)
         self.menuClients.addAction(self.menuModification.menuAction())
         self.menuClients.addAction(self.actionRecherche_2)
+        self.menuInterventions.addAction(self.actionReception_Expedition)
+        self.menuInterventions.addSeparator()
         self.menuInterventions.addAction(self.actionCreer)
         self.menuInterventions.addAction(self.actionModifier)
         self.menuBase_de_Donnees.addAction(self.actionConsultation)
@@ -270,6 +274,7 @@ class Ui_MainWindow(object):
         self.actionSite_Client.setText(_translate("MainWindow", "Site Client", None))
         self.actionServices_Client.setText(_translate("MainWindow", "Services Client", None))
         self.actionCartographie.setText(_translate("MainWindow", "Cartographie", None))
+        self.actionReception_Expedition.setText(_translate("MainWindow", "Reception_Expedition", None))
 
 from GUI.qtableview_donnees import Tableview_donnees_fichier
 

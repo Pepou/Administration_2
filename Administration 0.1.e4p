@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project Administration 0.1 -->
-<!-- Saved: 2018-05-18, 19:11:38 -->
+<!-- Saved: 2018-06-05, 11:10:13 -->
 <!-- Copyright (C) 2018 F.Cariou, francois.cariou@efs.sante.fr -->
 <Project version="5.1">
   <Language>fr_FR</Language>
@@ -39,44 +39,6 @@
     <Source>GUI/Instrument/Ui_Creation_Instruments.py</Source>
     <Source>GUI/Instrument/__init__.py</Source>
     <Source>GUI/Instrument/extendedcombo.py</Source>
-    <Source>Modules/Afficheurs/afficheur v1.3.py</Source>
-    <Source>Modules/Afficheurs/Icones_rc.py</Source>
-    <Source>Modules/Afficheurs/__init__.py</Source>
-    <Source>Modules/Afficheurs/GUI/afficheurs.py</Source>
-    <Source>Modules/Afficheurs/GUI/connexion2.py</Source>
-    <Source>Modules/Afficheurs/GUI/creation_afficheur.py</Source>
-    <Source>Modules/Afficheurs/GUI/creation_emt.py</Source>
-    <Source>Modules/Afficheurs/GUI/extendedcombo.py</Source>
-    <Source>Modules/Afficheurs/GUI/modification_afficheur.py</Source>
-    <Source>Modules/Afficheurs/GUI/select_afficheur.py</Source>
-    <Source>Modules/Afficheurs/GUI/Ui_afficheurs.py</Source>
-    <Source>Modules/Afficheurs/GUI/Ui_connexion2.py</Source>
-    <Source>Modules/Afficheurs/GUI/Ui_creation_afficheur.py</Source>
-    <Source>Modules/Afficheurs/GUI/Ui_creation_emt.py</Source>
-    <Source>Modules/Afficheurs/GUI/Ui_select_afficheur.py</Source>
-    <Source>Modules/Afficheurs/GUI/__init__.py</Source>
-    <Source>Modules/Afficheurs/Package/AccesBdd.py</Source>
-    <Source>Modules/Afficheurs/Package/RapportAfficheur.py</Source>
-    <Source>Modules/Afficheurs/Package/__init__.py</Source>
-    <Source>Modules/Labo_Temp/LaboTemp 2.2.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Combobox_referentiel.py</Source>
-    <Source>Modules/Labo_Temp/IHM/connexion2.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Menu.py</Source>
-    <Source>Modules/Labo_Temp/IHM/resume_onglet_resultat.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Saisie_etalonnage.py</Source>
-    <Source>Modules/Labo_Temp/IHM/saisie_instrument.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Ui_Combobox_referentiel.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Ui_connexion2.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Ui_Menu.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Ui_resume_onglet_resultat.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Ui_Saisie_etalonnage.py</Source>
-    <Source>Modules/Labo_Temp/IHM/Ui_saisie_instrument.py</Source>
-    <Source>Modules/Labo_Temp/Package/fonctions.py</Source>
-    <Source>Modules/Labo_Temp/Package/GestionBdd.py</Source>
-    <Source>Modules/Labo_Temp/Package/OngletConformite.py</Source>
-    <Source>Modules/Labo_Temp/Package/RapportEtalonnage.py</Source>
-    <Source>Modules/Labo_Temp/Package/RapportSaisie.py</Source>
-    <Source>Modules/Labo_Temp/Package/__init__.py</Source>
     <Source>Modules/Synchronisation/GUI/Affichage_graphique.py</Source>
     <Source>Modules/Synchronisation/GUI/connexion2.py</Source>
     <Source>Modules/Synchronisation/GUI/Exploitation_enregistreurs.py</Source>
@@ -176,25 +138,82 @@
     <Source>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.py</Source>
     <Source>Modules/Cartographie/GUI/Visu_Modif/Ui_Interface_Centrales_Visu_Modif.py</Source>
     <Source>Modules/Cartographie/GUI/Visu_Modif/__init__.py</Source>
+    <Source>Modules/Cartographie/GUI/Annule_Remplace/Ui_Interface_Centrales_Annule_Remplace.py</Source>
+    <Source>Modules/Cartographie/GUI/Annule_Remplace/Interface_Centrales_Annule_Remplace.py</Source>
+    <Source>Modules/Afficheurs/afficheur v1.4.py</Source>
+    <Source>Modules/Afficheurs/Icones_rc.py</Source>
+    <Source>Modules/Afficheurs/__init__.py</Source>
+    <Source>Modules/Afficheurs/GUI/afficheurs.py</Source>
+    <Source>Modules/Afficheurs/GUI/connexion2.py</Source>
+    <Source>Modules/Afficheurs/GUI/creation_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/creation_emt.py</Source>
+    <Source>Modules/Afficheurs/GUI/extendedcombo.py</Source>
+    <Source>Modules/Afficheurs/GUI/modification_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/select_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_afficheurs.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_creation_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_creation_emt.py</Source>
+    <Source>Modules/Afficheurs/GUI/Ui_select_afficheur.py</Source>
+    <Source>Modules/Afficheurs/GUI/__init__.py</Source>
+    <Source>Modules/Afficheurs/Package/AccesBdd.py</Source>
+    <Source>Modules/Afficheurs/Package/RapportAfficheur.py</Source>
+    <Source>Modules/Afficheurs/Package/__init__.py</Source>
+    <Source>Modules/Labo_Temp/LaboTemp 2.3.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Combobox_referentiel.py</Source>
+    <Source>Modules/Labo_Temp/IHM/connexion2.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Menu.py</Source>
+    <Source>Modules/Labo_Temp/IHM/resume_onglet_resultat.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Saisie_etalonnage.py</Source>
+    <Source>Modules/Labo_Temp/IHM/saisie_instrument.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Textedit_Saisie_donnees.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_Combobox_referentiel.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_connexion2.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_Menu.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_resume_onglet_resultat.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_Saisie_etalonnage.py</Source>
+    <Source>Modules/Labo_Temp/IHM/Ui_saisie_instrument.py</Source>
+    <Source>Modules/Labo_Temp/Package/fonctions.py</Source>
+    <Source>Modules/Labo_Temp/Package/GestionBdd.py</Source>
+    <Source>Modules/Labo_Temp/Package/OngletConformite.py</Source>
+    <Source>Modules/Labo_Temp/Package/RapportEtalonnage.py</Source>
+    <Source>Modules/Labo_Temp/Package/RapportSaisie.py</Source>
+    <Source>Modules/Labo_Temp/Package/__init__.py</Source>
+    <Source>Modules/Cartographie/GUI/extendedlineedit.py</Source>
+    <Source>Modules/Reception_expedition/Icones_rc.py</Source>
+    <Source>Modules/Reception_expedition/Reception_expedition 0.4.py</Source>
+    <Source>Modules/Reception_expedition/__init__.py</Source>
+    <Source>Modules/Reception_expedition/GUI/connexion2.py</Source>
+    <Source>Modules/Reception_expedition/GUI/extendedcombo.py</Source>
+    <Source>Modules/Reception_expedition/GUI/extendedlineedit.py</Source>
+    <Source>Modules/Reception_expedition/GUI/qtableview_donnees.py</Source>
+    <Source>Modules/Reception_expedition/GUI/Reception_Expedition.py</Source>
+    <Source>Modules/Reception_expedition/GUI/Ui_connexion2.py</Source>
+    <Source>Modules/Reception_expedition/GUI/Ui_Reception_Expedition.py</Source>
+    <Source>Modules/Reception_expedition/GUI/__init__.py</Source>
+    <Source>Modules/Reception_expedition/Package/AccesBdd.py</Source>
+    <Source>Modules/Reception_expedition/Package/__init__.py</Source>
+    <Source>Modules/Reception_expedition/BondeReception/GUI/BonReception.py</Source>
+    <Source>Modules/Reception_expedition/BondeReception/GUI/extendedcombo.py</Source>
+    <Source>Modules/Reception_expedition/BondeReception/GUI/Ui_BonReception.py</Source>
+    <Source>Modules/Reception_expedition/BondeReception/GUI/__init__.py</Source>
+    <Source>Modules/Reception_expedition/BondeLivraison/GUI/BonLivraison.py</Source>
+    <Source>Modules/Reception_expedition/BondeLivraison/GUI/extendedcombo.py</Source>
+    <Source>Modules/Reception_expedition/BondeLivraison/GUI/Ui_BonLivraison.py</Source>
+    <Source>Modules/Reception_expedition/BondeLivraison/GUI/__init__.py</Source>
+    <Source>Modules/Reception_expedition/BondeLivraison/Package/AccesBdd.py</Source>
+    <Source>Modules/Reception_expedition/BondeLivraison/Package/Export_excel.py</Source>
+    <Source>Modules/Reception_expedition/BondeLivraison/Package/__init__.py</Source>
+    <Source>Modules/Reception_expedition/BondeReception/Package/AccesBdd.py</Source>
+    <Source>Modules/Reception_expedition/BondeReception/Package/Export_excel.py</Source>
+    <Source>Modules/Reception_expedition/BondeReception/Package/__init__.py</Source>
   </Sources>
   <Forms>
     <Form>GUI/connexion2.ui</Form>
     <Form>GUI/Main_Administration.ui</Form>
     <Form>GUI/Instrument/Creation_Instruments.ui</Form>
-    <Form>Modules/Afficheurs/GUI/afficheurs.ui</Form>
-    <Form>Modules/Afficheurs/GUI/connexion2.ui</Form>
-    <Form>Modules/Afficheurs/GUI/creation_afficheur.ui</Form>
-    <Form>Modules/Afficheurs/GUI/creation_emt.ui</Form>
-    <Form>Modules/Afficheurs/GUI/select_afficheur.ui</Form>
     <Form>Modules/Indicateurs/GUI/connexion2.ui</Form>
     <Form>Modules/Indicateurs/GUI/Indicateurs.ui</Form>
-    <Form>Modules/Labo_Temp/IHM/Combobox_referentiel.ui</Form>
-    <Form>Modules/Labo_Temp/IHM/connexion2.ui</Form>
-    <Form>Modules/Labo_Temp/IHM/Menu.ui</Form>
-    <Form>Modules/Labo_Temp/IHM/resume_onglet_resultat.ui</Form>
-    <Form>Modules/Labo_Temp/IHM/Saisie_etalonnage.ui</Form>
-    <Form>Modules/Labo_Temp/IHM/Saisie_etalonnage_test.ui</Form>
-    <Form>Modules/Labo_Temp/IHM/saisie_instrument.ui</Form>
     <Form>GUI/Clients/Creation_Client.ui</Form>
     <Form>GUI/Clients/Modification_Entite_Client.ui</Form>
     <Form>GUI/Clients/Modification_Site_Client.ui</Form>
@@ -220,6 +239,23 @@
     <Form>Modules/Synchronisation/GUI/Gestion_centrales.ui</Form>
     <Form>Modules/Cartographie/GUI/Main_Carto.ui</Form>
     <Form>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.ui</Form>
+    <Form>Modules/Cartographie/GUI/Annule_Remplace/Interface_Centrales_Annule_Remplace.ui</Form>
+    <Form>Modules/Afficheurs/GUI/afficheurs.ui</Form>
+    <Form>Modules/Afficheurs/GUI/connexion2.ui</Form>
+    <Form>Modules/Afficheurs/GUI/creation_afficheur.ui</Form>
+    <Form>Modules/Afficheurs/GUI/creation_emt.ui</Form>
+    <Form>Modules/Afficheurs/GUI/select_afficheur.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/Combobox_referentiel.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/connexion2.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/Menu.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/resume_onglet_resultat.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/Saisie_etalonnage.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/Saisie_etalonnage_test.ui</Form>
+    <Form>Modules/Labo_Temp/IHM/saisie_instrument.ui</Form>
+    <Form>Modules/Reception_expedition/GUI/connexion2.ui</Form>
+    <Form>Modules/Reception_expedition/GUI/Reception_Expedition.ui</Form>
+    <Form>Modules/Reception_expedition/BondeLivraison/GUI/BonLivraison.ui</Form>
+    <Form>Modules/Reception_expedition/BondeReception/GUI/BonReception.ui</Form>
   </Forms>
   <Translations/>
   <Resources>

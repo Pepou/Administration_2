@@ -1,10 +1,12 @@
 from PyQt4.QtCore import  Qt,  pyqtSignal
-from PyQt4.QtGui import  QTableWidget
+from PyQt4.QtGui import  QTableWidget, QMenu
 #import sys
 #import pandas as pd
 class TableWidget_Recap(QTableWidget):
     
-    ligne_clic= pyqtSignal(int)
+    ligne_clic = pyqtSignal(int)
+    annule_et_remplace = pyqtSignal(int)
+    nouvelle = pyqtSignal()
     
     def __init__(self, parent=None):
         super(TableWidget_Recap, self).__init__(parent)
@@ -13,18 +15,46 @@ class TableWidget_Recap(QTableWidget):
     def mouseDoubleClickEvent(self, event):
         """gestion du copier coller dans le tableau homogeneite"""
         
-        print(event)
+#        print(event)
        
         if event.button() == Qt.LeftButton:
 
-            print("o putain tu sais programme toi")
-            items_tableView = self.selectedIndexes()
-            print(str(self.currentRow()))
+#            print("o putain tu sais programme toi")
+#            items_tableView = self.selectedIndexes()
+#            print(str(self.currentRow()))
             
             self.ligne_clic.emit(self.currentRow())
-#
-#        clavier = event.key()
-#
-#        if items_tableView !=None:
-#            if clavier == 67 :
-#                self.copySelection()
+    
+    def mousePressEvent(self, event):
+#        print(event.pos())
+#        print("pipe")
+        if event.button() == Qt.RightButton:
+
+            ligne = self.itemAt(event.pos()).row()
+            self.selectRow(ligne)
+            
+            menu = QMenu(self)
+#            menu.setTitle("Menu")
+#            menu.addSeparator ()
+            nouvelle = menu.addAction("Nouvelle Cartographie")
+            modification = menu.addAction("Visualisation/Modification Cartographie")
+            annule = menu.addAction("Annule et Remplace Cartographie")
+            action = menu.exec_(event.globalPos())
+            
+            
+            if action == annule:                
+                self.annule_et_remplace.emit(ligne)
+            elif action == modification:
+                self.ligne_clic.emit(ligne)
+            elif action == nouvelle:                
+                self.nouvelle.emit()
+            
+        elif event.button() == Qt.LeftButton:
+            ligne = self.itemAt(event.pos()).row()
+            
+            self.selectRow(ligne)
+
+            
+            
+            
+            

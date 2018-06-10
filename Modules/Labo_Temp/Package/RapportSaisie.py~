@@ -40,7 +40,7 @@ class RapportSaisie():
     
                 nom_onglet = "Pt N°{}__ Temp consigne {}°C".format((i), donnees[0]["temp_consigne"][i-1])
     
-                cell = onglet_model.Range("A1:V32")
+                cell = onglet_model.Range("A1:V33")
                 cell.Copy()
                 
                 classeur.Sheets.Add()

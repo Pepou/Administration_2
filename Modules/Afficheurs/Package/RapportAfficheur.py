@@ -7,6 +7,7 @@ import numpy
 import shutil
 
 import time
+import json
 
 
 class RapportAfficheur:
@@ -14,18 +15,30 @@ class RapportAfficheur:
    
     def __init__(self, type_rapport) :
         
+        
+        with open("config_bdd.json") as json_file:
+            config_bdd = json.load(json_file)        
+        site = config_bdd["site"]
+        
+        if site == "LMS":
+            fichier_ce = "Modules/Afficheurs/AppData/Documents/LMS/model_ce.docx"
+            fichier_rapport_qualif = "Modules/Afficheurs/AppData/Documents/LMS/model_rapport de qualification.docx"
+        elif site == "ORLS":
+            fichier_ce = "Modules/Afficheurs/AppData/Documents/ORLS/model_ce.docx"
+            fichier_rapport_qualif = "Modules/Afficheurs/AppData/Documents/ORLS/model_rapport de qualification.docx"
+            
        #On recupere les chemins des documents :
-        self.path = os.path.abspath("AppData/")           
+        self.path = os.path.abspath("Modules/Afficheurs/AppData/")           
 
         if type_rapport == "Certificat d'étalonnage":    
-            self.ce = os.path.abspath("AppData/Documents/model_ce.docx") #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
+            self.ce = os.path.abspath(fichier_ce) #permet de recuperer le chemin absolu du fichier le test ne marche pas sinon
             shutil.copy2(self.ce,self.path )
-            self.ce_travail = os.path.abspath("AppData/model_ce.docx")
+            self.ce_travail = os.path.abspath("Modules/Afficheurs/AppData/model_ce.docx")
             
         elif type_rapport == "Rapport de qualification":
-            self.ce = os.path.abspath("AppData/Documents/model_rapport de qualification.docx")
-            shutil.copy2(self.ce,self.path )
-            self.ce_travail = os.path.abspath("AppData/model_rapport de qualification.docx")
+            self.ce = os.path.abspath(fichier_rapport_qualif)
+            shutil.copy2(self.ce,self.path)
+            self.ce_travail = os.path.abspath("Modules/Afficheurs/AppData/model_rapport de qualification.docx")
             
         #on copie le ce afin de pas l'ecraser
 #        shutil.copy2(self.ce,self.path )

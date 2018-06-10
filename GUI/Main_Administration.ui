@@ -232,6 +232,8 @@
      <property name="title">
       <string>Interventions</string>
      </property>
+     <addaction name="actionReception_Expedition"/>
+     <addaction name="separator"/>
      <addaction name="actionCreer"/>
      <addaction name="actionModifier"/>
     </widget>
@@ -372,6 +374,11 @@
   <action name="actionCartographie">
    <property name="text">
     <string>Cartographie</string>
+   </property>
+  </action>
+  <action name="actionReception_Expedition">
+   <property name="text">
+    <string>Reception_Expedition</string>
    </property>
   </action>
  </widget>

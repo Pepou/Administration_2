@@ -94,15 +94,13 @@
     </layout>
    </item>
   </layout>
-  <zorder>layoutWidget</zorder>
-  <zorder>comboBox</zorder>
   <zorder></zorder>
  </widget>
  <customwidgets>
   <customwidget>
    <class>ExtendedCombo</class>
    <extends>QComboBox</extends>
-   <header>extendedcombo</header>
+   <header>Modules.Afficheurs.GUI.extendedcombo</header>
   </customwidget>
  </customwidgets>
  <resources/>

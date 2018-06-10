@@ -192,15 +192,12 @@ class Modification_Instrument(QDialog, Ui_Modification_Instrument):
                     
             except :                
                 pass
-#                QMessageBox.critical(self, 
-#                    self.trUtf8("Client"), 
-#                    self.trUtf8("La mise a jour n'a pu etre realisée"))
+                QMessageBox.critical(self, 
+                    self.trUtf8("Client"), 
+                    self.trUtf8("La mise a jour n'a pu etre realisée"))
         
 
         self.class_instrument.update_instruments(list_dictionnaire)        
-        
-
-        
 
                 
         if self.tableWidget.rowCount()== 0 :

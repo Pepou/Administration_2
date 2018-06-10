@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Travail\EFS\Travail accreditation\SQ\Developpement Informatique\Afficheur-V0.1\GUI\creation_emt.ui'
+# Form implementation generated from reading ui file 'C:\Developpement Informatique\Python\Afficheurs\Afficheur-V1.4\GUI\creation_emt.ui'
 #
-# Created: Tue Mar 10 16:47:34 2015
-#      by: PyQt4 UI code generator 4.11.3
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -60,6 +59,7 @@ class Ui_Creation_emt(object):
         self.comboBox_designation = QtGui.QComboBox(Creation_emt)
         self.comboBox_designation.setEditable(False)
         self.comboBox_designation.setObjectName(_fromUtf8("comboBox_designation"))
+        self.comboBox_designation.addItem(_fromUtf8(""))
         self.comboBox_designation.addItem(_fromUtf8(""))
         self.comboBox_designation.addItem(_fromUtf8(""))
         self.comboBox_designation.addItem(_fromUtf8(""))
@@ -202,10 +202,11 @@ class Ui_Creation_emt(object):
         Creation_emt.setWindowTitle(_translate("Creation_emt", "Creation EMT", None))
         self.label.setText(_translate("Creation_emt", "Nom Referentiel", None))
         self.label_2.setText(_translate("Creation_emt", "Instruments concernes", None))
-        self.comboBox_designation.setItemText(0, _translate("Creation_emt", "Sonde alarme température", None))
-        self.comboBox_designation.setItemText(1, _translate("Creation_emt", "Afficheur de température", None))
-        self.comboBox_designation.setItemText(2, _translate("Creation_emt", "Afficheur de temps", None))
-        self.comboBox_designation.setItemText(3, _translate("Creation_emt", "Afficheur de vitesse", None))
+        self.comboBox_designation.setItemText(0, _translate("Creation_emt", "TÉMOIN D\'ENVIRONNEMENT", None))
+        self.comboBox_designation.setItemText(1, _translate("Creation_emt", "SONDE ALARME TEMPÉRATURE", None))
+        self.comboBox_designation.setItemText(2, _translate("Creation_emt", "AFFICHEUR DE TEMPÉRATURE", None))
+        self.comboBox_designation.setItemText(3, _translate("Creation_emt", "AFFICHEUR DE TEMPS", None))
+        self.comboBox_designation.setItemText(4, _translate("Creation_emt", "AFFICHEUR DE VITESSE", None))
         self.label_3.setText(_translate("Creation_emt", "Type d\'erreur", None))
         self.comboBox_type_erreur.setItemText(0, _translate("Creation_emt", "Erreur d\'indication", None))
         self.label_4.setText(_translate("Creation_emt", "Commentaire referentiel", None))

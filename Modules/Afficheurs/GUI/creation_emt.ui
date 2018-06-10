@@ -77,22 +77,27 @@
        </property>
        <item>
         <property name="text">
-         <string>Sonde alarme température</string>
+         <string>TÉMOIN D'ENVIRONNEMENT</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Afficheur de température</string>
+         <string>SONDE ALARME TEMPÉRATURE</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Afficheur de temps</string>
+         <string>AFFICHEUR DE TEMPÉRATURE</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Afficheur de vitesse</string>
+         <string>AFFICHEUR DE TEMPS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>AFFICHEUR DE VITESSE</string>
         </property>
        </item>
       </widget>

@@ -11,14 +11,18 @@ class GestionBdd:
     def __init__(self, nom):
         '''Constructeur de la classe'''
         
-#        # fichier config bdd :
+        # fichier config bdd :
         with open("config_bdd.json") as json_file:
             config_bdd = json.load(json_file)
+#            print(config_bdd)
 
-#        self.path_bdd = os.path.abspath("BDD/saisie_etal_temp_test.db")
-        self.nombdd = config_bdd["name_bdd"]#"Test_Labo_Temp"# #Labo_Metro_Test_4"#
-        self.adresse_ip = config_bdd["adresse_bdd"]
-        self.port_bdd = int(config_bdd["port_bdd"])
+        
+        self.nombdd = config_bdd["name_bdd"] #Labo_Metro_Prod"#"Test_carac_generateurs"#"Labo_Metro_Prod"# #
+        self.adressebdd = config_bdd["adresse_bdd"]#"10.42.1.74" #"localhost"  #"10.42.1.74"          
+        self.portbdd = int(config_bdd["port_bdd"])
+        
+        self.path_bdd = os.path.abspath("BDD/saisie_etal_temp_test.db")
+#         = "Labo_Metro_Prod"#"Test_Labo_Temp"# #Labo_Metro_Test_4"#
         self.nom = nom
 #        self.model = QtSql.QSqlTableModel()
     
@@ -26,8 +30,8 @@ class GestionBdd:
         '''Fonction a utiliser lors de la premiere connexion du logiciel'''
         
         type_bdd = QtSql.QSqlDatabase.addDatabase('QPSQL')
-        type_bdd.setHostName(self.adresse_ip)#('localhost') #('10.42.1.74')            # 
-        type_bdd.setPort(self.port_bdd)
+        type_bdd.setHostName(self.adressebdd)#('localhost') #('10.42.1.74')            # 
+        type_bdd.setPort(self.portbdd)
         type_bdd.setDatabaseName(self.nombdd)
         type_bdd.setUserName(login) 
         type_bdd.setPassword(password)
@@ -48,7 +52,7 @@ class GestionBdd:
     def remove_connexion_database(self):
         db = QtSql.QSqlDatabase()
         db.close()
-#        db.removeDatabase(self.path_bdd)
+        db.removeDatabase(self.path_bdd)
         
     def gestion_combobox_onglet_config(self):
         '''Fonction qui va chercher l'ensemble des instruments dans la base et renvoi une list
@@ -87,7 +91,8 @@ class GestionBdd:
         query = QtSql.QSqlQuery()
 
         requete =str("""SELECT "IDENTIFICATION" FROM "INSTRUMENTS" """\
-                            +"""WHERE "DOMAINE_MESURE" = 'Température' AND "TYPE" != 'Generateur de Temperature' """\
+                            +"""WHERE "DOMAINE_MESURE" = 'Température' OR "DOMAINE_MESURE" = 'TEMPÉRATURE' """\
+                            +"""AND "TYPE" != 'Generateur de Temperature' """\
                             +"""AND "DESIGNATION" != 'Afficheur de température' """\
                             +"""AND "DESIGNATION" != 'Sonde alarme température' ORDER BY "IDENTIFICATION";""")
         
@@ -415,7 +420,8 @@ class GestionBdd:
     def recherche_client(self, code_client):
         '''fonction qui va chercher les données du client'''
         query = QtSql.QSqlQuery()
-        requete =str("""SELECT "SOCIETE", "ADRESSE", "CODE_POSTAL", "VILLE" FROM "CLIENTS" WHERE "CODE_CLIENT" = {};""".format(code_client))
+        requete =str("""SELECT "SOCIETE", "ADRESSE", "CODE_POSTAL", "VILLE" FROM "CLIENTS" WHERE "CODE_CLIENT" = {};""".format(str(code_client)))
+#        print(requete)
         query.exec_(requete)
         
 #        print("requete recherche_client {}".format(requete))
@@ -438,7 +444,7 @@ class GestionBdd:
             n_sap =  query.value(0)
         
         if n_sap is None  :
-            requete =str("""SELECT "N_INVENTAIRE" FROM "PARC_SAP" WHERE "N_SERIE_FABRICANT" = '{}';""".format(n_serie))
+            requete =str("""SELECT "N_INVENTAIRE" FROM "PARC_SAP" WHERE "N_SERIE_FABRICANT" = {};""".format(n_serie))
             query.exec_(requete) 
             while query.next() :
                 n_sap =  query.value(0)
@@ -887,11 +893,23 @@ class GestionBdd:
         query.exec_(requete) 
                 
         while query.next() : 
-                referentiel_emt = query.value(0)
+            referentiel_emt = query.value(0)
                 
         query.finish()
         return referentiel_emt
         
+    def recherche_type_erreur_ref_emt(self, id_referentiel_conformite):
+        query = QtSql.QSqlQuery()
+        requete = """SELECT "TYPE_ERREUR" FROM "REFERENTIEL_CONFORMITE" WHERE "ID_REFERENTIEL" = {} ;""".format(id_referentiel_conformite)
+        query.exec_(requete) 
+                
+        while query.next() : 
+            type_erreur = query.value(0)
+                
+        query.finish()
+        return type_erreur
+    
+    
     def recherche_id_ref_emt(self, nom_referentiel_conformite):
         query = QtSql.QSqlQuery()
         requete = """SELECT "ID_REFERENTIEL" FROM "REFERENTIEL_CONFORMITE" WHERE "REFERENTIEL" = '{}' ;""".format(nom_referentiel_conformite)
@@ -1041,7 +1059,7 @@ class GestionBdd:
         #Acces bdd
         query = QtSql.QSqlQuery()
         
-        requete = str("""SELECT "REFERENTIEL" FROM "REFERENTIEL_CONFORMITE" WHERE "DESIGNATION" = 'Chaine de mesure Temperature' ORDER BY "ID_REFERENTIEL";""")
+        requete = str("""SELECT "REFERENTIEL" FROM "REFERENTIEL_CONFORMITE" WHERE ("DESIGNATION" = 'Chaine de mesure Temperature' AND "ARCHIVAGE" = 'FALSE') ORDER BY "ID_REFERENTIEL";""")
         
         query.exec_(requete) 
         
@@ -1396,6 +1414,18 @@ class GestionBdd:
             
             cv["conformite"] = conclusion
             cv["referentiel_emt"] = nom_ref
+            
+            
+            requete = """SELECT "TYPE_ERREUR" FROM "REFERENTIEL_CONFORMITE" WHERE "ID_REFERENTIEL" = {} ;""".format(id_ref)
+            query.exec_(requete) 
+                    
+            while query.next() : 
+                type_erreur = query.value(0)
+                    
+            query.finish()
+            
+            cv["type_erreur"] = type_erreur
+            
             
             query.finish()
             return cv

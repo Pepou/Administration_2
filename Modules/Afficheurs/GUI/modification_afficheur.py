@@ -24,12 +24,16 @@ class Modification_afficheur(QDialog, Ui_Creation_afficheur):
         self.setupUi(self)
         self.setWindowTitle("Modification Afficheur")
         
+        self.id_afficheur = afficheur[0]
+        
         self.comboBox_code_client.addItems(code_client)
         self.comboBox_constructeur.addItems(constructeurs)
         self.comboBox_affectation.addItems(service)
         self.comboBox_designation_litterale.addItem("None")
         self.comboBox_ref_constructeur.addItem("None")
         self.radioButton_manuelle.setChecked(True)
+        
+        print(afficheur)
         self.lineEdit_identification.setText(afficheur[1])
         
         #reaffectation combobox
@@ -57,29 +61,29 @@ class Modification_afficheur(QDialog, Ui_Creation_afficheur):
         else:
             self.comboBox_designation_litterale.setCurrentIndex(id_designation_litt)
             
-        id_constructeur = self.comboBox_constructeur.findText(afficheur[9])
+        id_constructeur = self.comboBox_constructeur.findText(afficheur[8])
         self.comboBox_constructeur.setCurrentIndex(id_constructeur)
         
-        id_ref_constructeur = self.comboBox_ref_constructeur.findText(afficheur[10])
+        id_ref_constructeur = self.comboBox_ref_constructeur.findText(afficheur[9])
         if id_ref_constructeur == -1:
-            self.comboBox_ref_constructeur.addItem(afficheur[10])
-            id_ref_constructeur = self.comboBox_ref_constructeur.findText(afficheur[10])
+            self.comboBox_ref_constructeur.addItem(afficheur[9])
+            id_ref_constructeur = self.comboBox_ref_constructeur.findText(afficheur[9])
             self.comboBox_ref_constructeur.setCurrentIndex(id_ref_constructeur)
         else:
             self.comboBox_ref_constructeur.setCurrentIndex(id_ref_constructeur)
 
         
         
-        self.lineEdit_resolution.setText(str(afficheur[12]))
+        self.lineEdit_resolution.setText(str(afficheur[11]))
         
-        id_affectation = self.comboBox_affectation.findText(afficheur[13])
+        id_affectation = self.comboBox_affectation.findText(afficheur[12])
         self.comboBox_affectation.setCurrentIndex(id_affectation)
         
-        self.textEdit_sous_affectation.setText(str(afficheur[14]))
+        self.textEdit_sous_affectation.setText(str(afficheur[13]))
         
-        self.lineEdit_nserie.setText(str(afficheur[16]))
+        self.lineEdit_nserie.setText(str(afficheur[15]))
         
-        self.lineEdit_nsap.setText(str(afficheur[17]))
+        self.lineEdit_nsap.setText(str(afficheur[16]))
         
     @pyqtSlot()
     def on_buttonBox_accepted(self):
@@ -88,10 +92,11 @@ class Modification_afficheur(QDialog, Ui_Creation_afficheur):
         """
 
         afficheur = {}
+        afficheur["ID_INSTRUM"]= self.id_afficheur
         afficheur["IDENTIFICATION"] = self.lineEdit_identification.text()
         afficheur["CODE"] = self.comboBox_code_client.currentText()
         afficheur["DOMAINE_MESURE"] = self.comboBox_domaine_mesure.currentText()
-        afficheur["FAMILLE"] = self.comboBox_famille.currentText()
+        afficheur["FAMILLE"] = self.comboBox_famille.currentText().upper()
         afficheur["DESIGNATION"] = self.comboBox_designation.currentText()
         afficheur["TYPE"] = self.comboBox_type.currentText()
         afficheur["DESIGNATION_LITTERALE"] = self.comboBox_designation_litterale.currentText()

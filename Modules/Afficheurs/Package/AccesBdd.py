@@ -2,9 +2,12 @@
 from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.engine import create_engine
-
+from sqlalchemy.ext.automap import automap_base
 import numpy as np
-
+import pandas as pd
+import itertools
+from PyQt4.QtGui import QMessageBox
+from PyQt4 import QtGui
 class AccesBdd():
     '''class gerant la bdd'''
     
@@ -18,8 +21,11 @@ class AccesBdd():
 #        self.password = password
            
             #création de l'"engine"
-        self.engine = engine #create_engine("postgresql+psycopg2://{}:{}@{}:{}/{}".format(self.login, self.password, self.adressebdd, self.portbdd, self.namebdd)) 
-        self.meta = meta      
+            
+        Base = automap_base()
+        
+        self.engine =  engine
+        self.meta = meta        
         self.meta.reflect(bind=self.engine)
         self.polynome_correction = Table('POLYNOME_CORRECTION', self.meta)
         self.connection = self.engine.connect()
@@ -27,16 +33,53 @@ class AccesBdd():
         self.session = Session.configure(bind=self.engine)
         
         
+        Base.prepare(engine, reflect=True)        
         
+        self.POLYNOME = Base.classes.POLYNOME_CORRECTION
+        self.TABLE_ETAL_POLY = Base.classes.POLYNOME_TABLE_ETALONNAGE
+        self.RESULTATS_ETAL_TEMP = Base.classes.ETALONNAGE_RESULTAT
+        
+        self.RESULT_AFFICHEUR = Base.classes.AFFICHEUR_CONTROLE_RESULTAT
+        self.ADMIN_AFFICHEUR = Base.classes.AFFICHEUR_CONTROLE_ADMINISTRATIF
+        self.ENTITE_CLIENT = Base.classes.ENTITE_CLIENT
+        self.CLIENT = Base.classes.CLIENTS
         
     def __del__(self):
         self.connection.close()
         
-    def recensement_afficheurs(self, type_afficheur, service, site):
+    
+    def recensement_sites(self, combobox):        
+               
+        Session = sessionmaker(bind= self.engine)
+        session = Session()
+#        
+        
+        try:
+            table = session.query(self.CLIENT.CODE_CLIENT).\
+                    join(self.ENTITE_CLIENT).\
+                    filter(self.ENTITE_CLIENT.ABREVIATION == "EFS_CPDL").all()
+            
+                       
+            code = set([x.CODE_CLIENT for x in table])
+    #        print(sites)
+            combobox.addItems(list(code))
+
+    #        session.close()
+#            return table
+#        
+        except Exception as e:
+            print(e)
+            session.rollback()
+#            yield None
+        finally:
+            session.close()
+        
+    
+    def recensement_afficheurs(self, type_afficheur, service, code_client):
         '''fct pour avoir l'ensemble des afficheurs du type : afficheur_type'''
         
         table = Table("INSTRUMENTS", self.meta)
-        ins = table.select().where(and_(table.c.DESIGNATION == type_afficheur, table.c.SITE == site))#, table.c.AFFECTATION == service))
+        ins = table.select().where(and_(or_(table.c.DESIGNATION == type_afficheur, table.c.DESIGNATION == type_afficheur.upper(), table.c.DESIGNATION == type_afficheur.capitalize()), table.c.CODE == code_client))#, table.c.AFFECTATION == service))
 
         result = self.connection.execute(ins)
         
@@ -49,10 +92,11 @@ class AccesBdd():
     def recensement_afficheurs_complet(self):
         '''recensement de tous les afficheurs'''
         table = Table("INSTRUMENTS", self.meta)
-        ins = table.select().where(or_(table.c.DESIGNATION == "Sonde alarme température",
-                                    table.c.DESIGNATION == "Afficheur de vitesse", 
-                                    table.c.DESIGNATION == "Afficheur de temps", 
-                                    table.c.DESIGNATION == "Afficheur de température"))
+        ins = table.select().where(or_(table.c.DESIGNATION == "Sonde alarme température",table.c.DESIGNATION == "SONDE ALARME TEMPÉRATURE", 
+                                    table.c.DESIGNATION == "Afficheur de vitesse", table.c.DESIGNATION == "AFFICHEUR DE VITESSE",
+                                    table.c.DESIGNATION == "Afficheur de temps", table.c.DESIGNATION == "AFFICHEUR DE TEMPS",
+                                    table.c.DESIGNATION == "Afficheur de température", table.c.DESIGNATION == "AFFICHEUR DE TEMPÉRATURE", 
+                                    table.c.DESIGNATION == "TÉMOIN D'ENVIRONNEMENT"))
 
         result = self.connection.execute(ins)
         
@@ -63,12 +107,12 @@ class AccesBdd():
         return  identification_afficheurs
         
         
-    def recensement_etalons(self, type_afficheur, service, site, designation_etalon):
+    def recensement_etalons(self, type_afficheur, service, code, designation_etalon):
         '''fct pour avoir l'ensemble des afficheurs du type : afficheur_type'''
         
         table = Table("INSTRUMENTS", self.meta)
 #        ins = table.select().where(and_(table.c.DOMAINE_MESURE == type_afficheur, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
-        ins = table.select().where(and_(table.c.DOMAINE_MESURE == type_afficheur)).order_by(table.c.ID_INSTRUM)#, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
+        ins = table.select().where(and_(table.c.DOMAINE_MESURE == type_afficheur, table.c.DESIGNATION == designation_etalon)).order_by(table.c.ID_INSTRUM)#, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
         
         result = self.connection.execute(ins)
         
@@ -128,9 +172,9 @@ class AccesBdd():
 #        print("identification {}".format(identification))
         table = Table("INSTRUMENTS", self.meta)
         ins = select([table.c.N_SERIE, table.c.CONSTRUCTEUR, table.c.TYPE, table.c.COMMENTAIRE, table.c.RESOLUTION,
-                        table.c.AFFECTATION, table.c.SITE]).where(table .c.IDENTIFICATION == identification)
+                        table.c.AFFECTATION, table.c.SITE, table.c.CODE, table.c.ID_INSTRUM]).where(table .c.IDENTIFICATION == identification)
         result = self.connection.execute(ins)    
-        
+#        print(f"result {result}")
         for ele in result:
 #            print("ele {}".format(ele))
             n_serie = ele[0]
@@ -140,7 +184,9 @@ class AccesBdd():
             resolution = ele[4]
             affectation = ele[5]
             site = ele[6]
-        return n_serie, constructeur, type, commentaire, resolution, affectation, site
+            code = ele[7]
+            id=ele[8]
+        return n_serie, constructeur, type, commentaire, resolution, affectation, site, code, id
     
     def caract_afficheur_modif(self, identification):
         '''fct qui recupere un n° serie , constructeur , type, en fct identification affcheur'''
@@ -226,7 +272,7 @@ class AccesBdd():
         #insertion dans table afficheur_controle admin
         donnees["DATE_CONTROLE"] = afficheur["date_etalonnage"]
         donnees["IDENTIFICATION"] = id_instrum
-        donnees["NOM_PROCEDURE"] = "PDL/PIL/SUR/MET/MO" + afficheur["n_mode_operatoire"]
+        donnees["NOM_PROCEDURE"] = "CPL/PIL/SUR/MET/MO" + afficheur["n_mode_operatoire"]
         donnees["NBR_PT"] = afficheur["nbr_pt_etalonnage"]
         donnees["TECHNICIEN"] = id_cmr
         donnees["ARCHIVAGE"] = False
@@ -279,7 +325,8 @@ class AccesBdd():
             prefix = "AFM"
         elif afficheur["designation"] == "Afficheur de vitesse":
             prefix = "AFV"            
-        
+        elif afficheur["designation"] == "Temoin d'environnement":
+            prefix = "TEV"  
         
         donnees["NUM_DOC"] = prefix + afficheur["num_doc_provisoire"]+"_"+ str(n_saisie)
 #        print("n ce {}".format(donnees["NUM_DOC"]))
@@ -430,6 +477,49 @@ class AccesBdd():
         
         return donnees_poly_table_etal
         
+    
+    
+    def etendue_mesure_etalon(self, num_ce):
+        """fcontion qui va calculer l'etendue de msuere de l'etalon dans les table polynome_correction
+        tableetalpoly,temperature resultat"""
+#        self.POLYNOME = Base.classes.POLYNOME_CORRECTION
+#        self.TABLE_ETAL_POLY = Base.classes.POLYNOME_TABLE_ETALONNAGE
+#        self.RESULTATS_ETAL_TEMP = Base.classes.ETALONNAGE_RESULTAT
+        
+#        print(num_ce)
+        try:
+            Session = sessionmaker(bind= self.engine)
+            session = Session()
+    #        try:
+            id_poly = session.query(self.POLYNOME).filter(self.POLYNOME.NUM_CERTIFICAT == num_ce).first().ID_POLYNOME
+            #on regarde si presence d'une table etalon dans Polynome_table_etalonnage
+            table_etalonnage = session.query(self.TABLE_ETAL_POLY).filter(self.TABLE_ETAL_POLY.ID_POLYNOME == id_poly).all()
+            
+            if table_etalonnage:
+    #                print(f"table etal {table_etalonnage}")
+                resultat_etal = session.query(self.TABLE_ETAL_POLY.MOYENNE_ETALON_CORRI).filter(self.TABLE_ETAL_POLY.ID_POLYNOME == id_poly)
+                resultat_etal_pandas = pd.read_sql(resultat_etal.statement, session.bind) 
+#                print(resultat_etal_pandas)
+                min = resultat_etal_pandas.min()
+                max = resultat_etal_pandas.max()
+#                print(f" min  {min} max {max}")
+            else:
+                
+                resultat_etal = session.query(self.RESULTATS_ETAL_TEMP.MOYENNE_ETAL_C).filter(self.RESULTATS_ETAL_TEMP.NUM_ETAL == num_ce)
+                resultat_etal_pandas = pd.read_sql(resultat_etal.statement, session.bind) 
+#                print(resultat_etal_pandas)
+                min = resultat_etal_pandas.min()
+                max = resultat_etal_pandas.max()
+#                print(f" min  {min} max {max}")
+                
+            return min, max
+        except Exception as e:
+            print(e)
+            session.rollback()
+            
+        finally:
+            session.close()
+#    
     def incertitude_etalonnage_temperature(self, identification_etalon, numero_ce):
         '''fct permettant de recupere l'incertitude max d'etalonnage'''
         
@@ -569,14 +659,32 @@ class AccesBdd():
         
     def recuperation_code_client(self):
         '''recupere l'ensemble des codes (appartenant à efs_pl clients dans la table client '''
-        table = Table("CLIENTS", self.meta)
-        ins = select([table.c.CODE_CLIENT]).where(or_(table.c.SOCIETE.contains("EFS PAYS DE LA LOIRE"), table.c.SOCIETE.contains("ATLANTIC BIO GMP"))).order_by(table.c.ID_CLIENTS)
-        result = self.connection.execute(ins)    
-        code_client = []
-        for ele in result:
-            code_client.append(ele[0])
+        Session = sessionmaker(bind= self.engine)
+        session = Session()
+#        
+        
+        try:
+            table = session.query(self.CLIENT.CODE_CLIENT).\
+                    join(self.ENTITE_CLIENT).\
+                    filter(self.ENTITE_CLIENT.ABREVIATION == "EFS_CPDL").all()
+            
+                       
+            code = set([x.CODE_CLIENT for x in table])
+    #        print(sites)
+#            combobox.addItems(list(code))
+
+    #        session.close()
+#            return table
+            return list(code)
+            
+        except Exception as e:
+            print(e)
+            session.rollback()
+#            yield None
+        finally:
+            session.close()
                 
-        return code_client
+        
         
     def recuperation_constructeurs(self):
         '''recupere les constructeurs de la table instrument'''
@@ -610,69 +718,87 @@ class AccesBdd():
     def insertion_afficheur(self, afficheur):
         '''fct pour inserer dans la table instruments '''
         
-        #recuperation du site : 
-        if afficheur ["CODE"] == "ABG__-44":
-            afficheur["SITE"] = "ST Herblain"
-            abreviation = "ABG"            
-        elif afficheur ["CODE"] == "EFS  -53":
-            afficheur["SITE"] = "LAV"
-            abreviation = "LAV"
-        elif afficheur ["CODE"] == "EFS  -72":
-            afficheur["SITE"] = "LMS"   
-            abreviation = "LMS"             
-        elif afficheur ["CODE"] == "EFS  -85":
-            afficheur["SITE"] = "LRY"
-            abreviation = "LRY"         
-        elif afficheur ["CODE"] == "EFSNA-44":
-            afficheur["SITE"] = "SNA"
-            abreviation = "SNA" 
-        elif afficheur ["CODE"] == "EFS  -49":
-            afficheur["SITE"] = "ANG"
-            abreviation = "ANG"
-        elif afficheur ["CODE"] == "EFS  -44":
-            afficheur["SITE"] = "Nantes" 
-            abreviation = "NTS"                    
-        elif afficheur ["CODE"] == "EFSNO-44":
-            afficheur["SITE"] = "NTSNO"
-            abreviation = "NTSNO"
-        #creation racine de l'afficheur        
-        if afficheur["DESIGNATION"] == "Sonde alarme température":
-            suffixe = "SAT" + "-" + abreviation
-        elif afficheur["DESIGNATION"] == "Afficheur de température":
-            suffixe = "AFT" + "-" + abreviation
-        elif afficheur["DESIGNATION"] == "Afficheur de temps":
-            suffixe = "AFM" + "-" + abreviation
-        elif afficheur["DESIGNATION"] == "Afficheur de vitesse":
-            suffixe = "AFV" + "-" + abreviation
-
-        #creation identification afficheur si afficheur["IDENTIFICATION] == "":
-        
-        if afficheur["IDENTIFICATION"] == "":
-            table = Table("INSTRUMENTS", self.meta)
-            ins = select([table.c.IDENTIFICATION]).where(table.c.IDENTIFICATION.contains(suffixe)).order_by(table.c.ID_INSTRUM)
-            result = self.connection.execute(ins)
-            
-            resultat_afficheur =[]
-            for ele in result:
-#                print(ele)
-                resultat_afficheur.append(ele[0])
-#            print(resultat_afficheur)
-            if len(resultat_afficheur)>= 1:
-                num_afficheur = str(np.amax([int(x[len(x)-4:len(x)]) for x in resultat_afficheur]) + 1).rjust(4, '0')
-            else:
-                num_afficheur = str(1).rjust(4, '0')
-#            print("nbr instrument {}".format(num_afficheur.rjust(4, '0')))
-            
-            afficheur["IDENTIFICATION"] = suffixe + "-" + num_afficheur
-
-
-        table = Table("INSTRUMENTS", self.meta)
-        ins = table.insert()
-        result = self.connection.execute(ins, afficheur)
         
         
-        return afficheur["IDENTIFICATION"]
+        
+        
+        Session = sessionmaker(bind= self.engine)
+        session = Session()
+#        
+        
+        try:
+            abreviation = session.query(self.CLIENT.PREFIXE_POSTE_TECH_SAP).\
+                                      filter(self.CLIENT.CODE_CLIENT == afficheur ["CODE"]).first()[0][-3:]
+                
+    #        print(abreviation)
     
+    #        
+    #        except:
+    #            session.rollback()
+    ##            yield None
+    #        finally:
+    #            session.close()
+            
+            
+    
+            #creation racine de l'afficheur        
+            if afficheur["DESIGNATION"] == "Sonde alarme température":
+                suffixe = "SAT" + "-" + abreviation
+            elif afficheur["DESIGNATION"] == "Afficheur de température":
+                suffixe = "AFT" + "-" + abreviation
+            elif afficheur["DESIGNATION"] == "Afficheur de temps":
+                suffixe = "AFM" + "-" + abreviation
+            elif afficheur["DESIGNATION"] == "Afficheur de vitesse":
+                suffixe = "AFV" + "-" + abreviation
+    
+            #creation identification afficheur si afficheur["IDENTIFICATION] == "":
+            
+            if afficheur["IDENTIFICATION"] == "":
+                table = Table("INSTRUMENTS", self.meta)
+                ins = select([table.c.IDENTIFICATION]).where(table.c.IDENTIFICATION.contains(suffixe)).order_by(table.c.ID_INSTRUM)
+                result = self.connection.execute(ins)
+                
+                resultat_afficheur =[]
+                for ele in result:
+    #                print(ele)
+                    resultat_afficheur.append(ele[0])
+    #            print(resultat_afficheur)
+                if len(resultat_afficheur)>= 1:
+                    num_afficheur = str(np.amax([int(x[len(x)-4:len(x)]) for x in resultat_afficheur]) + 1).rjust(4, '0')
+                else:
+                    num_afficheur = str(1).rjust(4, '0')
+    #            print("nbr instrument {}".format(num_afficheur.rjust(4, '0')))
+                
+                afficheur["IDENTIFICATION"] = suffixe + "-" + num_afficheur
+    
+    
+            table = Table("INSTRUMENTS", self.meta)
+            ins = table.insert()
+            result = self.connection.execute(ins, afficheur)
+            
+            
+            return afficheur["IDENTIFICATION"]
+        except Exception as e:
+            res = QMessageBox.critical(
+                None,
+                "Attention",
+                f"""Creation impossible erreur : {e}""")
+            
+#            msg = QMessageBox()
+#            msg.setIcon(QMessageBox.warning)
+#        
+#            msg.setText("This is a message box")
+#            msg.setInformativeText("La création n'a pu etre effectuée")
+#            msg.setWindowTitle("Attention")
+#            res.show()
+#            QMessageBox.warning(self, 
+#                            "Attention", 
+#                            "La création n'a pu etre effectuée") 
+                            
+            session.rollback()
+
+        finally:
+            session.close()
     
     def recuperation_n_ce_actif(self):  
         '''fct qui recupere dans la table afficheur_controle_administratif les n°ce non archivé'''
@@ -965,24 +1091,95 @@ class AccesBdd():
         
     def mise_a_jour_afficheur(self, afficheur):
         
-        #recuperation du site : 
-        if afficheur ["CODE"] == "ABG__-44":
-            afficheur["SITE"] = "ST Herblain"                      
-        elif afficheur ["CODE"] == "EFS  -53":
-            afficheur["SITE"] = "LAV"            
-        elif afficheur ["CODE"] == "EFS  -72":
-            afficheur["SITE"] = "LMS"                       
-        elif afficheur ["CODE"] == "EFS  -85":
-            afficheur["SITE"] = "LRY"                   
-        elif afficheur ["CODE"] == "EFSNA-44":
-            afficheur["SITE"] = "SNA"            
-        elif afficheur ["CODE"] == "EFS  -49":
-            afficheur["SITE"] = "ANG"            
-        elif afficheur ["CODE"] == "EFS  -44":
-            afficheur["SITE"] = "Nantes"                                
-        elif afficheur ["CODE"] == "EFSNO-44":
-            afficheur["SITE"] = "NTSNO"
+        
+        Session = sessionmaker(bind= self.engine)
+        session = Session()
+#        
+        
+        try:
+            afficheur["SITE"] = session.query(self.CLIENT.VILLE).\
+                                      filter(self.CLIENT.CODE_CLIENT == afficheur ["CODE"]).first()[0]
+
             
-        table = Table("INSTRUMENTS", self.meta)
-        ins = table.update(table.c.IDENTIFICATION == afficheur["IDENTIFICATION"])
-        result = self.connection.execute(ins, afficheur)
+            table = Table("INSTRUMENTS", self.meta)
+            ins = table.update(table.c.ID_INSTRUM == afficheur["ID_INSTRUM"])
+            self.connection.execute(ins, afficheur)
+
+        except Exception as e:
+            print(e)
+            session.rollback()
+
+        finally:
+            session.close()
+
+
+
+    def resultats_prestations_afficheur(self, id_afficheur):
+        """recupere l'ensemble des valeurs de la table afficheur resultat en fct id afficheur"""
+#        print(id_afficheur)
+#       self.RESULT_AFFICHEUR = Base.classes.AFFICHEUR_CONTROLE_RESULTAT
+#        self.ADMIN_AFFICHEUR = Base.classes.AFFICHEUR_CONTROLE_ADMINISTRATIF
+        
+#        df = pd.DataFrame(columns=['MOYENNE_ETALON_C', 'MOYENNE_AFFICHEUR', 'MOYENNE_CORRECTION','U', 'DATE_CONTROLE' ])
+#        print(num_ce)
+        Session = sessionmaker(bind= self.engine)
+        session = Session()
+        try:
+            list_id = session.query(self.ADMIN_AFFICHEUR.ID_AFFICHEUR_ADMINISTRATIF).\
+                    filter(self.ADMIN_AFFICHEUR.IDENTIFICATION == id_afficheur).\
+                    order_by(self.ADMIN_AFFICHEUR.ID_AFFICHEUR_ADMINISTRATIF).all()
+                    
+#            print(list_id)
+            
+            if list_id:
+                list_pandas = []
+                for id in list_id:
+                    id_admin = id[0]
+                    date_ctrl = session.query(self.ADMIN_AFFICHEUR.DATE_CONTROLE).filter(self.ADMIN_AFFICHEUR.ID_AFFICHEUR_ADMINISTRATIF==id_admin).first()
+                    num_certificat = session.query(self.ADMIN_AFFICHEUR.NUM_DOC).filter(self.ADMIN_AFFICHEUR.ID_AFFICHEUR_ADMINISTRATIF==id_admin).first()
+                    commentaire = session.query(self.ADMIN_AFFICHEUR.COMMENTAIRE_RESULTATS).filter(self.ADMIN_AFFICHEUR.ID_AFFICHEUR_ADMINISTRATIF==id_admin).first()
+    #                print(num_certificat)
+                    resultat = session.query(self.RESULT_AFFICHEUR.MOYENNE_ETALON_C, 
+                                            self.RESULT_AFFICHEUR.MOYENNE_AFFICHEUR, 
+                                            self.RESULT_AFFICHEUR.MOYENNE_CORRECTION, 
+                                            self.RESULT_AFFICHEUR.U).filter(self.RESULT_AFFICHEUR.ID_AFF_CTRL_ADMIN == id_admin)
+                    
+                    resultat_pandas = pd.read_sql(resultat.statement, session.bind)
+    #                print(len(resultat_pandas.index)) 
+                    resultat_pandas.insert(0, 'DATE_CONTROLE', list(itertools.repeat(date_ctrl[0], len(resultat_pandas.index))))
+    #                print(resultat_pandas)
+                    resultat_pandas.insert(1, 'N_CERTIFICAT', list(itertools.repeat(num_certificat[0], len(resultat_pandas.index))))
+    #                print(resultat_pandas)
+    #                print(commentaire)
+                    resultat_pandas["COMMENTAIRE_RESULTATS"] = commentaire[0]
+        #            resultat_pandas["DATE_CONTROLE"] = date_ctrl
+    #                print(resultat_pandas)
+                
+                    list_pandas.append(resultat_pandas)
+                
+                result = pd.concat(list_pandas)
+    #            print(result)
+                new_index =[x for x in range(len(result))]
+    #                print(new_index)
+                result.index = new_index
+    #                print(result)
+                return result
+            else:
+                return None
+
+        except Exception as e:
+            print(e)
+            session.rollback()
+            return None
+        finally:
+            session.close()
+
+
+
+
+
+
+
+
+
+

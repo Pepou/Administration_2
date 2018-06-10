@@ -24,7 +24,7 @@ from Modules.Consultation.GUI.Consultation_bdd import Consultation_Bdd
 from Modules.Declaration_incertitudes.GUI.Main_Declaration_Incertitudes import MainDeclaration_Incertitudes
 
 from Modules.Polynome.GUI.polynome import Polynome
-from Modules.Cartographie.GUI.Interface_Centrales import  Exploitation_Centrales
+
 from Modules.Cartographie.GUI.Main_Carto import Cartographie
 
 from GUI.Instrument.Creation_Instruments import Creation_Instrument
@@ -33,6 +33,8 @@ from GUI.Instrument.Modification_Instrument import Modification_Instrument
 from GUI.Clients.Creation_Client import Creation_Client
 from GUI.Clients.Modification_Entite_Client import Modification_Entite_Client
 from GUI.Clients.Modification_Site_Client import Modification_Site_Client
+
+from Modules.Reception_expedition.GUI.Reception_Expedition import ReceptionExpedition
 
 import pendulum
 import warnings
@@ -219,8 +221,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
     
     
-        
-    
+    @pyqtSlot()    
+    def on_actionReception_Expedition_triggered(self):
+        self.reception_expedition = ReceptionExpedition(self.engine)
+        self.reception_expedition.showMaximized()
+        self.close()
     
     @pyqtSlot()
     def on_actionModification_2_triggered(self):

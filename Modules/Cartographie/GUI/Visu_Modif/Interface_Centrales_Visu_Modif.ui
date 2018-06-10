@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Exploitation_Centrales</class>
- <widget class="QMainWindow" name="Exploitation_Centrales">
+ <class>Exploitation_Centrales_Visu_Modif</class>
+ <widget class="QMainWindow" name="Exploitation_Centrales_Visu_Modif">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>948</width>
-    <height>797</height>
+    <height>860</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Exploitation Centrales  Visu Modif</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel {
+
+font:  10pt  &quot;Calibrii&quot; ;
+font-weight: bold
+
+ }</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_18">
@@ -84,35 +92,45 @@
             <item row="0" column="1">
              <widget class="ExtendedLine" name="lineEdit_enceinte"/>
             </item>
-            <item row="1" column="0">
+            <item row="2" column="0">
              <widget class="QLabel" name="label_33">
               <property name="text">
                <string>Constructeur</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="1">
+            <item row="2" column="1">
              <widget class="QLineEdit" name="lineEdit_constructeur"/>
             </item>
-            <item row="2" column="0">
+            <item row="3" column="0">
              <widget class="QLabel" name="label_34">
               <property name="text">
                <string>Model</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
+            <item row="3" column="1">
              <widget class="QLineEdit" name="lineEdit_model"/>
             </item>
-            <item row="3" column="0">
+            <item row="4" column="0">
              <widget class="QLabel" name="label_35">
               <property name="text">
                <string>N_Serie</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
+            <item row="4" column="1">
              <widget class="QLineEdit" name="lineEdit_n_serie"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_45">
+              <property name="text">
+               <string>Designation Litterale</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="ExtendedLine" name="lineEdit_designation_litt"/>
             </item>
            </layout>
           </item>
@@ -216,45 +234,142 @@
          </widget>
         </item>
         <item>
-         <layout class="QGridLayout" name="gridLayout_8">
+         <layout class="QFormLayout" name="formLayout_4">
           <item row="0" column="0">
            <widget class="QLabel" name="label_28">
+            <property name="font">
+             <font>
+              <family>Calibrii</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>Application</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="comboBox_application">
-            <property name="enabled">
-             <bool>true</bool>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_26">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-            <property name="editable">
-             <bool>true</bool>
+            <property name="font">
+             <font>
+              <family>Calibrii</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
             </property>
-            <item>
-             <property name="text">
-              <string>Conservation CGR</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Conservation Plaquettes</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Conservation Réactifs</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Conservation Plasmas</string>
-             </property>
-            </item>
+            <property name="text">
+             <string>Temperature 
+Consigne</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
            </widget>
           </item>
-          <item row="1" column="0" colspan="2">
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_31">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibrii</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Responsable Mesures</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_27">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibrii</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Condition Désirée
+(Temperature cible)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QComboBox" name="comboBox_application">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>Conservation CGR</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Conservation Plaquettes</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Conservation Réactifs</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Conservation Plasmas</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="1">
            <layout class="QGridLayout" name="gridLayout_2">
             <property name="horizontalSpacing">
              <number>4</number>
@@ -262,64 +377,35 @@
             <property name="verticalSpacing">
              <number>0</number>
             </property>
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_27">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>Condition Désirée
-(Temperature cible)</string>
-              </property>
-             </widget>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QLineEdit" name="lineEdit_condition_des">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_40">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>°C</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item row="0" column="3">
-             <widget class="QLabel" name="label_20">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>EMT</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <spacer name="horizontalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>16</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="0" column="6">
-             <widget class="QLineEdit" name="lineEdit_consigne">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="4">
-             <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -402,74 +488,102 @@
                 </property>
                </widget>
               </item>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
              </layout>
             </item>
-            <item row="0" column="5">
-             <widget class="QLabel" name="label_26">
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_20">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="font">
+               <font>
+                <family>Calibrii</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
-               <string>Temperature 
-Consigne</string>
+               <string>EMT</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
              </widget>
             </item>
-            <item row="0" column="2">
-             <layout class="QHBoxLayout" name="horizontalLayout">
+           </layout>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_15">
+            <item>
+             <widget class="QLineEdit" name="lineEdit_consigne">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_type_consigne">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <item>
-               <widget class="QLineEdit" name="lineEdit_condition_des">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
+               <property name="text">
+                <string>°C</string>
+               </property>
               </item>
               <item>
-               <widget class="QLabel" name="label_40">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>°C</string>
-                </property>
-               </widget>
+               <property name="text">
+                <string>*</string>
+               </property>
               </item>
-             </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_31">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>Responsable Mesures</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
+          <item row="3" column="1">
            <widget class="QComboBox" name="comboBox_responsable_mesure">
             <property name="enabled">
              <bool>true</bool>
             </property>
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -844,7 +958,7 @@ Consigne</string>
               <item>
                <widget class="QLabel" name="label_42">
                 <property name="text">
-                 <string>Acceleration des sonde</string>
+                 <string>Acceleration des sondes</string>
                 </property>
                </widget>
               </item>
@@ -1072,8 +1186,10 @@ en régime établi dans l'espace de travail) : Hθ </string>
              <widget class="QLabel" name="label_21">
               <property name="font">
                <font>
+                <family>Calibrii</family>
                 <pointsize>10</pointsize>
                 <weight>75</weight>
+                <italic>false</italic>
                 <bold>true</bold>
                </font>
               </property>
@@ -1233,35 +1349,53 @@ en régime établi dans l'espace de travail) : Hθ </string>
        <attribute name="title">
         <string>Simulation</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_7">
-        <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_25">
+        <item>
          <layout class="QVBoxLayout" name="verticalLayout_16">
           <item>
-           <widget class="QCommandLinkButton" name="commandLinkButton_affiche_donnees_simulation">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>Afficher donnees</string>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <item>
+             <widget class="QCommandLinkButton" name="commandLinkButton_affiche_donnees_simulation">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Afficher donnees</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_46">
+              <property name="text">
+               <string>Resultats Simulation</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
           <item>
-           <widget class="Tableview_donnees_fichier" name="tableView_donnees_fichier_2">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <item>
+             <widget class="Tableview_donnees_fichier" name="tableView_donnees_fichier_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Tableview_resultats" name="tableView_resultats_simu"/>
+            </item>
+           </layout>
           </item>
          </layout>
         </item>
-        <item row="1" column="0">
+        <item>
          <layout class="QVBoxLayout" name="verticalLayout_15">
           <item>
            <widget class="matplotlibWidget" name="graph_zoom_2" native="true">
@@ -1291,7 +1425,7 @@ en régime établi dans l'espace de travail) : Hθ </string>
           </item>
          </layout>
         </item>
-        <item row="2" column="0">
+        <item>
          <layout class="QVBoxLayout" name="verticalLayout_17">
           <item>
            <widget class="QLabel" name="label_32">
@@ -1344,10 +1478,15 @@ en régime établi dans l'espace de travail) : Hθ </string>
    </attribute>
    <addaction name="separator"/>
    <addaction name="actionSauvegarder"/>
+   <addaction name="actionRapport_Carto"/>
   </widget>
   <action name="actionRapport_Carto">
+   <property name="icon">
+    <iconset resource="../../../../GUI/Clients/icones.qrc">
+     <normaloff>:/Sauvegarde/6niXan9cB.png</normaloff>:/Sauvegarde/6niXan9cB.png</iconset>
+   </property>
    <property name="text">
-    <string>Export Rapport +Annexe</string>
+    <string>Impression Rapport</string>
    </property>
   </action>
   <action name="actionSauvegarder">

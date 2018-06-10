@@ -272,6 +272,8 @@ class RapportEtalonnage:
         
 
         doc.Bookmarks("n_mode_operatoire").Range.Text = donnees["n_mode_operatoire"]
+        doc.Bookmarks("type_erreur").Range.Text = donnees["type_erreur"]
+        
                 
                 #preparation donnees generateurs
         #preparation donnees generateurs
@@ -590,6 +592,7 @@ class RapportEtalonnage:
         doc.Bookmarks("milieu").Range.Text = donnees["milieu"]
         
         doc.Bookmarks("n_mode_operatoire").Range.Text = donnees["n_mode_operatoire"]
+        doc.Bookmarks("type_erreur").Range.Text = donnees["type_erreur"]
                 
                 #preparation donnees generateurs
 

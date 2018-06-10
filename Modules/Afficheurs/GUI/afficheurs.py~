@@ -4,7 +4,7 @@
 Module implementing Afficheurs.
 """
 
-from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QMainWindow
 from PyQt4 import QtGui
 from PyQt4 import QtCore
@@ -17,17 +17,17 @@ from Modules.Afficheurs.Package.AccesBdd import AccesBdd
 from Modules.Afficheurs.Package.RapportAfficheur import RapportAfficheur
 import decimal
 import numpy as np
-from GUI.creation_emt import Creation_emt
-from GUI.creation_afficheur import Creation_afficheur
-from GUI.select_afficheur import Select_afficheur
-from GUI.modification_afficheur import Modification_afficheur
+from Modules.Afficheurs.GUI.creation_emt import Creation_emt
+from Modules.Afficheurs.GUI.creation_afficheur import Creation_afficheur
+from Modules.Afficheurs.GUI.select_afficheur import Select_afficheur
+from Modules.Afficheurs.GUI.modification_afficheur import Modification_afficheur
 from PyQt4.QtCore import SIGNAL
 
 class Afficheurs(QMainWindow, Ui_MainWindow):
     """
     Class documentation goes here.
     """
-    def __init__(self, engine, meta, parent=None):
+    def __init__(self,engine, meta,  parent=None):
         """
         Constructor
         
@@ -49,12 +49,14 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
             self.onglet[3-i].setEnabled(False)
            
         #bdd
-        self.engine = engine
-        self.meta = meta
         self.db = AccesBdd(engine, meta)
-        
         list_cmr = self.db.recensement_cmr()
         list_cmr.sort()
+        list_cmr.insert(0, "*")
+        
+        #site
+        self.db.recensement_sites(self.comboBox_code_client)
+        
         
         #insertion combobox
         
@@ -101,103 +103,108 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
     @pyqtSlot(str)
     def on_comboBox_famille_afficheur_activated(self, p0):
         """
-        lors de la selection d'une famille d'afficheurs on va chercher topute
+        lors de la selection d'une famille d'afficheurs on va chercher toute
         cette famille dans la base et on tire par rapport au site du cmr
         """
-
-        nom_cmr = self.comboBox_cmr.currentText().split() #list avec nom et prenom
-        
-        type_afficheur = str(self.comboBox_famille_afficheur.currentText())
-        referentiel = self.db.recensement_referentiel_emt(type_afficheur)
-        
-        #nettoyage combobox emt
-        self.comboBox_EMT.clear()
-        self.comboBox_EMT_2.clear()
-        self.comboBox_EMT_3.clear()
-        self.lineEdit_site.clear()
-        self.lineEdit_service.clear()
-        self.lineEdit_constructeur.clear()
-        self.lineEdit_type.clear()
-        self.textEdit_n_serie.clear()
-        self.textEdit_renseignement_complementaire.clear()
-        self.textEdit_commentaire.clear()
-        
-        
-        
-#        #recherche domaine de mesure pour etalons
-        if type_afficheur == "Sonde alarme température" or type_afficheur == "Afficheur de température":
-            domaine_mesure = "Température"
-            designation_etalon = "Chaîne de mesure de température"
-#            self.comboBox_EMT.addItems(self.EMT_temperature)
-#            self.comboBox_EMT_2.addItems(self.EMT_temperature)
-#            self.comboBox_EMT_3.addItems(self.EMT_temperature)
-#
-        elif type_afficheur == "Afficheur de temps":
-            domaine_mesure = "Temps-Fréquence"
-            designation_etalon = "Chronomètre/minuterie de travail"
-#            self.comboBox_EMT.addItems(self.EMT_temps)
-#            self.comboBox_EMT_2.addItems(self.EMT_temps)
-#            self.comboBox_EMT_3.addItems(self.EMT_temps)            
-#            
-        elif type_afficheur == "Afficheur de vitesse":
-            domaine_mesure = "Vitesse"
-            designation_etalon = "Tachymetre Optique"
-        nom_ref = [x[0] for x in referentiel]
-        self.comboBox_EMT.addItems(nom_ref)
-        self.comboBox_EMT_2.addItems(nom_ref)
-        self.comboBox_EMT_3.addItems(nom_ref)
+        try:
+            self.comboBox_identification.clear()
+            nom_cmr = self.comboBox_cmr.currentText().split() #list avec nom et prenom
             
-        #tri des afficheurs/etalons
-        service_site = self.db.recuperation_site_service_cmr(nom_cmr[0], nom_cmr[1])
-        
-        if service_site[0]not in ["LMS", "SNA", "ANG", "LRY", "LAV", "ST Herblain"]:           
+            type_afficheur = str(self.comboBox_famille_afficheur.currentText())
+            referentiel = self.db.recensement_referentiel_emt(type_afficheur)
             
-            afficheurs_nts = self.db.recensement_afficheurs(type_afficheur, "*", "Nantes")            
-            afficheurs_nts_nord = self.db.recensement_afficheurs(type_afficheur, "*", "NTSNO")
-            afficheurs = list(set(afficheurs_nts+afficheurs_nts_nord))
-        
-            etalons_nts = self.db.recensement_etalons(domaine_mesure, "*", "Nantes", designation_etalon)
-            etalons_nts_nord = self.db.recensement_etalons(domaine_mesure, "*", "NTSNO", designation_etalon)
-            etalons = list(set( etalons_nts + etalons_nts_nord))
-        
-        else:
-            afficheurs = self.db.recensement_afficheurs(type_afficheur, "*", service_site[0])
-            etalons = self.db.recensement_etalons(domaine_mesure, "*", service_site[0], designation_etalon)
-        
-        
-        if type_afficheur == "Afficheur de vitesse":
-            etalons = self.db.recensement_etalons_vitesse(designation_etalon)
-        
-        afficheurs.sort()
-        etalons.sort()
-        
-        self.comboBox_identification.clear()
-        self.comboBox_ident_etalon.clear()
-        
-        self.comboBox_identification.installEventFilter(self)
-        model = QStandardItemModel()
-
-        for i,word in enumerate(afficheurs):
-            item = QStandardItem(word)
-            model.setItem(i, 0, item)
-
-        self.comboBox_identification.setModel(model)
-        self.comboBox_identification.setModelColumn(0)
-        
-        self.comboBox_ident_etalon.installEventFilter(self)
-        model = QStandardItemModel()
-
-        for i,word in enumerate(etalons):
-            item = QStandardItem(word)
-            model.setItem(i, 0, item)
-
-        self.comboBox_ident_etalon.setModel(model)
-        self.comboBox_ident_etalon.setModelColumn(0)
-        
-#        self.comboBox_identification.addItems(afficheurs)
-#        self.comboBox_ident_etalon.addItems(etalons)        
-
+            #nettoyage combobox emt
+            self.comboBox_EMT.clear()
+            self.comboBox_EMT_2.clear()
+            self.comboBox_EMT_3.clear()
+    #        self.lineEdit_site.clear()
+            self.lineEdit_service.clear()
+            self.lineEdit_constructeur.clear()
+            self.lineEdit_type.clear()
+            self.textEdit_n_serie.clear()
+            self.textEdit_renseignement_complementaire.clear()
+            self.textEdit_commentaire.clear()
             
+            
+            
+    #        #recherche domaine de mesure pour etalons
+            if type_afficheur in["Sonde alarme température" ,  "SONDE ALARME TEMPÉRATURE", "Afficheur de température", "AFFICHEUR DE TEMPÉRATURE", "TÉMOIN D'ENVIRONNEMENT", "Temoin d'environnement", "Témoin d'environnement" ]  :
+                domaine_mesure = "Température"
+                designation_etalon = "Chaîne de mesure de température"
+    #            self.comboBox_EMT.addItems(self.EMT_temperature)
+    #            self.comboBox_EMT_2.addItems(self.EMT_temperature)
+    #            self.comboBox_EMT_3.addItems(self.EMT_temperature)
+    #
+            elif type_afficheur == "Afficheur de temps":
+                domaine_mesure = "Temps-Fréquence"
+                designation_etalon = "Chronomètre/minuterie de travail"
+    #            self.comboBox_EMT.addItems(self.EMT_temps)
+    #            self.comboBox_EMT_2.addItems(self.EMT_temps)
+    #            self.comboBox_EMT_3.addItems(self.EMT_temps)            
+    #            
+            elif type_afficheur == "Afficheur de vitesse":
+                domaine_mesure = "Vitesse"
+                designation_etalon = "Tachymetre Optique"
+            nom_ref = [x[0] for x in referentiel]
+            self.comboBox_EMT.addItems(nom_ref)
+            self.comboBox_EMT_2.addItems(nom_ref)
+            self.comboBox_EMT_3.addItems(nom_ref)
+                
+            #tri des afficheurs/etalons
+    #        service_site = self.db.recuperation_site_service_cmr(nom_cmr[0], nom_cmr[1])
+            code = self.comboBox_code_client.currentText()
+    #        if service_site[0]not in ["LMS", "SNA", "ANG", "LRY", "LAV", "ST Herblain"]:           
+    #            
+    #            afficheurs_nts = self.db.recensement_afficheurs(type_afficheur, "*", "Nantes")            
+    #            afficheurs_nts_nord = self.db.recensement_afficheurs(type_afficheur, "*", "NTSNO")
+    #            afficheurs = list(set(afficheurs_nts+afficheurs_nts_nord))
+    #        
+    #            etalons_nts = self.db.recensement_etalons(domaine_mesure, "*", "Nantes", designation_etalon)
+    #            etalons_nts_nord = self.db.recensement_etalons(domaine_mesure, "*", "NTSNO", designation_etalon)
+    #            etalons = list(set( etalons_nts + etalons_nts_nord))
+    #        
+    #        else:
+    #            afficheurs = self.db.recensement_afficheurs(type_afficheur, "*", service_site[0])
+    #            etalons = self.db.recensement_etalons(domaine_mesure, "*", service_site[0], designation_etalon)
+    #        
+    #        
+    #        if type_afficheur == "Afficheur de vitesse":
+    #            etalons = self.db.recensement_etalons_vitesse(designation_etalon)
+#            print(f"designation etal {designation_etalon}")
+            afficheurs = self.db.recensement_afficheurs(type_afficheur, "*", code)
+            etalons = self.db.recensement_etalons(domaine_mesure, "*", code, designation_etalon)
+            
+            afficheurs.sort()
+            etalons.sort()
+            
+            self.comboBox_identification.clear()
+            self.comboBox_ident_etalon.clear()
+            
+            self.comboBox_identification.installEventFilter(self)
+            model = QStandardItemModel()
+    
+            for i,word in enumerate(afficheurs):
+                item = QStandardItem(word)
+                model.setItem(i, 0, item)
+    
+            self.comboBox_identification.setModel(model)
+            self.comboBox_identification.setModelColumn(0)
+            
+            self.comboBox_ident_etalon.installEventFilter(self)
+            model = QStandardItemModel()
+    
+            for i,word in enumerate(etalons):
+                item = QStandardItem(word)
+                model.setItem(i, 0, item)
+    
+            self.comboBox_ident_etalon.setModel(model)
+            self.comboBox_ident_etalon.setModelColumn(0)
+            
+    #        self.comboBox_identification.addItems(afficheurs)
+    #        self.comboBox_ident_etalon.addItems(etalons)        
+
+        except:
+            pass    
     
     @pyqtSlot(int)
     def on_comboBox_identification_activated(self, index):
@@ -207,13 +214,13 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         # TODO: not implemented yet
                 #Recherche n°serie 
         identification = self.comboBox_identification.currentText()
-        
+#        print(f"identification ds combobox {identification}")
         caract_afficheur = self.db.caract_afficheur(identification)
         n_serie = caract_afficheur[0]
         constructeur = caract_afficheur[1]
         type = caract_afficheur[2]
         renseignement_complementaire = caract_afficheur[3]
-        self.lineEdit_site.setText(caract_afficheur[6])
+#        self.lineEdit_site.setText(caract_afficheur[6])
         self.lineEdit_service.setText(caract_afficheur[5])        
 
         
@@ -228,7 +235,53 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         
         self.textEdit_renseignement_complementaire.clear()
         self.textEdit_renseignement_complementaire.append(renseignement_complementaire)
-    
+        
+        #racapitulatif de toutes les prestations sur l'afficheurs
+        result = self.db.resultats_prestations_afficheur(caract_afficheur[8])
+        
+#        print(result)
+        self.tableWidget_recap_prestation.setColumnCount(0)
+        self.tableWidget_recap_prestation.setRowCount(0)
+#        self.tableWidget_recap_prestation.setHorizontalHeaderLabels (list(result))
+        
+        try:
+            colonne = 0
+            for column_name in list(result):
+                self.tableWidget_recap_prestation.insertColumn(colonne)
+                item = QtGui.QTableWidgetItem(str(column_name))
+                self.tableWidget_recap_prestation.setHorizontalHeaderItem(colonne, item)            
+                colonne +=1
+            
+            for ligne in range(len(result)):
+                self.tableWidget_recap_prestation.insertRow(ligne)
+                
+                date = QtGui.QTableWidgetItem(str(result["DATE_CONTROLE"][ligne]))
+                self.tableWidget_recap_prestation.setItem(ligne, 0, date)
+                
+                N_CERTIFICAT = QtGui.QTableWidgetItem(str(result["N_CERTIFICAT"][ligne]))
+                self.tableWidget_recap_prestation.setItem(ligne, 1, N_CERTIFICAT)
+                
+                MOYENNE_ETALON_C = QtGui.QTableWidgetItem(str(result["MOYENNE_ETALON_C"][ligne]))
+                self.tableWidget_recap_prestation.setItem(ligne, 2, MOYENNE_ETALON_C)
+                
+                MOYENNE_AFFICHEUR = QtGui.QTableWidgetItem(str(result["MOYENNE_AFFICHEUR"][ligne]))
+                self.tableWidget_recap_prestation.setItem(ligne, 3, MOYENNE_AFFICHEUR)
+                
+                MOYENNE_CORRECTION = QtGui.QTableWidgetItem(str(result["MOYENNE_CORRECTION"][ligne]))
+                self.tableWidget_recap_prestation.setItem(ligne, 4, MOYENNE_CORRECTION)
+                
+                U = QtGui.QTableWidgetItem(str(result["U"][ligne]))
+                self.tableWidget_recap_prestation.setItem(ligne, 5, U)
+                
+                COMMENTAIRE_RESULTATS = QtGui.QTableWidgetItem(str(result["COMMENTAIRE_RESULTATS"][ligne]))
+                self.tableWidget_recap_prestation.setItem(ligne, 6, COMMENTAIRE_RESULTATS)
+                
+                
+            self.tableWidget_recap_prestation.resizeColumnsToContents()
+        except:
+            pass
+#        print("fini ici")
+            
     @pyqtSlot(int)
     def on_spinBox_valueChanged(self, p0):
         """
@@ -268,7 +321,7 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         """
         fct qui va chercher les donnees du poly selectionne sur le combobox
         """
-
+        self.lineEdit_etendu.clear()
         ce_select = self.comboBox_ce_etal.currentText()
 #        print(ce_select)
 
@@ -283,7 +336,23 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         self.coeff_c_poly_etalon = donnee_poly[0][5]
 
 
-
+        #etendue de mesure de l'etalon:
+        etendue = self.db.etendue_mesure_etalon(n_ce) #tupple (min,max)
+#        print(etendue)
+        if etendue:
+            if self.comboBox_famille_afficheur.currentText() in  ["Temoin d'environnement", "Sonde alarme température", "Afficheur de température" ]:
+                phrase_etendue = str("min : "+ str(int(etendue[0]))+"°C"+"  max : "+str(int(etendue[1]))+"°C")
+                
+            elif self.comboBox_famille_afficheur.currentText() in  ["Afficheur de temps"]:
+                phrase_etendue = str("min : "+ str(int(etendue[0]))+"s"+"  max : "+str(int(etendue[1]))+"s")
+            
+            elif self.comboBox_famille_afficheur.currentText() in  ["Afficheur de vitesse"]:
+                phrase_etendue = str("min : "+ str(int(etendue[0]))+"Tour/min"+"  max : "+str(int(etendue[1]))+"Tour/min")
+        else:
+            phrase_etendue = "NA"
+        self.lineEdit_etendu.setText(phrase_etendue)
+        
+        
         #preparation des spinbox resolution
         identification = self.comboBox_identification.currentText()
         
@@ -949,6 +1018,7 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
             
                 afficheur["type_rapport"] = self.comboBox_type_rapport.currentText()
                 afficheur["annule_remplace"] = self.n_ce_annule_remplace
+                
                 afficheur["n_certificat"] = self.db.sauvegarde_table_afficheur_ctrl_admin(afficheur)            
                 
                 QMessageBox.information(self, 
@@ -1048,7 +1118,7 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         Slot documentation goes here.
         """
 
-        self.lineEdit_site.clear()
+#        self.lineEdit_site.clear()
         self.lineEdit_service.clear()
         
 
@@ -1095,7 +1165,7 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         service.sort()
         
         self.creation_afficheur = Creation_afficheur(code_client, constructeurs, service)
-        self.connect(self.creation_afficheur, SIGNAL("fermeturecreationafficheur(PyQt_PyObject)"), self.gestion_nouveau_afficheur)
+        self.creation_afficheur.signal_Creation_aff.connect(self.gestion_nouveau_afficheur)
         
         self.creation_afficheur.setWindowModality(QtCore.Qt.ApplicationModal)
         self.creation_afficheur.show()
@@ -1105,13 +1175,15 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
     def gestion_nouveau_afficheur(self, afficheur):
         '''fct qui gere l'insertion dans la bdd d'un nouvelle afficheur
         recupere son nom et l'affiche dans un qmessagebox'''
-        
-        reference_new_afficheur = self.db.insertion_afficheur(afficheur)
+#        print(f"creation afficheur : {afficheur}")
+        try:
+            reference_new_afficheur = self.db.insertion_afficheur(afficheur)
            
-        QMessageBox.information(self, 
-                    self.trUtf8("N°afficheur créé"), 
-                    self.trUtf8(reference_new_afficheur))
-    
+            QMessageBox.information(self, 
+                        self.trUtf8("N°afficheur créé"), 
+                        self.trUtf8(reference_new_afficheur))
+        except:
+            pass
     @pyqtSlot()
     def on_actionModification_de_saisie_triggered(self):
         """
@@ -1213,10 +1285,10 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         afficheur["operateur"] = self.comboBox_cmr.currentText()
         
           
-        if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température":
-            afficheur["n_mode_operatoire"] = "/006"
+        if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température" or self.comboBox_famille_afficheur.currentText() == "Temoin d'environnement":
+            afficheur["n_mode_operatoire"] = "/012"
         else:
-            afficheur["n_mode_operatoire"] = "/002"
+            afficheur["n_mode_operatoire"] = "/011"
 
         afficheur["etalon"] = self.comboBox_ident_etalon.currentText()
         afficheur["ce_etalon"] = self.comboBox_ce_etal.currentText()
@@ -1272,26 +1344,39 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
     def reaffectation_donnees_saisie(self, saisie):
         '''fct permettant de reaffecter les donnees recuperees dans la bdd'''
                 #reaffectation : 
-#        print(saisie)
 
-#        print("cmr{}".format(saisie["nom_cmr"]))
+
+        code_afficheur = self.db.caract_afficheur(saisie["identification_afficheur"])[7]
+        index_code = self.comboBox_code_client.findText(code_afficheur)
+        self.comboBox_code_client.setCurrentIndex(index_code)
+        
+        
+        
+        index_famille = self.comboBox_famille_afficheur.findText(saisie["famille_afficheur"], Qt.MatchContains)
+#        print(f"index {index_famille}")
+        self.comboBox_famille_afficheur.setCurrentIndex(index_famille)
+        
+        self.on_comboBox_code_client_currentIndexChanged(index_code)
+
         index_cmr = self.comboBox_cmr.findText(saisie["nom_cmr"])
 #        print("id cmr {}".format(index_cmr))
         self.comboBox_cmr.setCurrentIndex(index_cmr)
         self.on_comboBox_cmr_activated(saisie["nom_cmr"])
         
-#        print("famille aff combobox {}".format(saisie["famille_afficheur"]))
-        index_famille_afficheur = self.comboBox_famille_afficheur.findText(saisie["famille_afficheur"])
-#        print("id famille combobox {}".format(index_famille_afficheur))        
-        self.comboBox_famille_afficheur.setCurrentIndex(index_famille_afficheur)
-        self.on_comboBox_famille_afficheur_activated(saisie["famille_afficheur"])
+
+#        index_famille_afficheur = self.comboBox_famille_afficheur.findText(saisie["famille_afficheur"], Qt.MatchContains)   
+#        self.comboBox_famille_afficheur.setCurrentIndex(index_famille_afficheur)
+
+        #Reaffectation du code client et de la famille de l'afficheur sinon tout est vide :
         
-#        print("nom aff combobox {}".format(saisie["identification_afficheur"]))
+
         index_afficheur = self.comboBox_identification.findText(saisie["identification_afficheur"])
-#        print("id aff combobox {}".format(index_afficheur))
-        
+#        print(index_afficheur)
         self.comboBox_identification.setCurrentIndex(index_afficheur)
         self.on_comboBox_identification_activated(index_afficheur)
+        
+        #gestion reaffectation donnees de l'afficheur:
+        
         
         self.dateEdit.setDate(saisie["date_etalonnage"])
         
@@ -1420,7 +1505,7 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         for ele in list_combobox_emt:
             ele.clear()
         
-        list_lineedit = [self.lineEdit_moyenne_etalon, self.lineEdit_moyenne_etalon_2, 
+        list_lineedit = [self.lineEdit_moyenne_etalon, self.lineEdit_etendu, self.lineEdit_moyenne_etalon_2, 
                             self.lineEdit_moyenne_etalon_3, self.lineEdit_moyenne_etalon_arrondie, 
                             self.lineEdit_moyenne_etalon_2_arrondie, self.lineEdit_moyenne_etalon_3_arrondie, 
                             self.lineEdit_moyenne_afficheur, self.lineEdit_moyenne_afficheur_2, self.lineEdit_moyenne_afficheur_3, 
@@ -1439,10 +1524,10 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         
         #gestion onglet conf 
         self.comboBox_type_rapport.setCurrentIndex(0)
-        self.comboBox_cmr.setCurrentIndex(0)
+#        self.comboBox_cmr.setCurrentIndex(0)
         self.comboBox_famille_afficheur.setCurrentIndex(0)
         
-        list_onglet_conf = [self.comboBox_identification, self.lineEdit_site, self.lineEdit_service, self.lineEdit_constructeur, self.lineEdit_type, 
+        list_onglet_conf = [self.comboBox_identification, self.lineEdit_service, self.lineEdit_constructeur, self.lineEdit_type, 
                             self.textEdit_n_serie, self.textEdit_renseignement_complementaire, 
                             self.textEdit_commentaire, self.comboBox_ident_etalon, self.comboBox_ce_etal]
                             
@@ -1685,11 +1770,10 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
             if self.comboBox_type_rapport.currentText() == "*":
                 QMessageBox.warning(self, 
                             self.trUtf8("Attention"), 
-                            self.trUtf8("Merci de selectionner \n un type de rapport de mesure.")) 
+                            self.trUtf8("Merci de selectionner \n un type de rapport de mesure."))   
     
     
-    
-            if self.lineEdit_site.text() == ""  or self.lineEdit_service.text() == "" :
+            if self.lineEdit_service.text() == "" :
                  QMessageBox.warning(self, 
                             self.trUtf8("Attention"), 
                             self.trUtf8("Merci de selectionner \n un afficheur.")) 
@@ -1698,4 +1782,30 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
                 QMessageBox.warning(self, 
                             self.trUtf8("Attention"), 
                             self.trUtf8("Merci de selectionner \n un etalon et/ou son CE.")) 
+                            
+            if self.comboBox_cmr.currentText() == "*":
+                QMessageBox.warning(self, 
+                            self.trUtf8("Attention"), 
+                            self.trUtf8("Merci de selectionner \n un Correspondant")) 
+    
+    @pyqtSlot(str)
+    def on_comboBox_code_client_currentIndexChanged(self, p0):
+        """
+        Slot documentation goes here.
+        """
+        famille = self.comboBox_famille_afficheur.currentText()
+        self.on_comboBox_famille_afficheur_activated(famille)
+        self.comboBox_cmr.setCurrentIndex(0)
+
+
+
+
+
+
+
+
+
+
+
+
 

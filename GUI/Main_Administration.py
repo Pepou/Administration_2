@@ -34,6 +34,8 @@ from GUI.Clients.Creation_Client import Creation_Client
 from GUI.Clients.Modification_Entite_Client import Modification_Entite_Client
 from GUI.Clients.Modification_Site_Client import Modification_Site_Client
 
+from Modules.Reception_expedition.GUI.Reception_Expedition import ReceptionExpedition
+
 import pendulum
 import warnings
 import numpy as np
@@ -219,8 +221,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
     
     
+    @pyqtSlot()    
+    def on_actionReception_Expedition_triggered(self):
+        self.reception_expedition = ReceptionExpedition(self.engine)
+        self.reception_expedition.showMaximized()
         
-    
     
     @pyqtSlot()
     def on_actionModification_2_triggered(self):

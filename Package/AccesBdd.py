@@ -77,13 +77,10 @@ class Instrument():
         """permet la mise à jour des instruments"""
         Session = sessionmaker(bind= self.engine)
         session = Session()
+#        print(list_dictionnaire)
 #        try:
         try:
-#        for ele in self.INSTRUMENTS.__table__.columns.keys():
-#
-#            print(ele)
-        
-#        print(session.query(self.INSTRUMENTS).column_descriptions)
+
             for ele in list_dictionnaire:
     #            print(ele)
                 instrum_a_modif = session.query(self.INSTRUMENTS).get(ele["ID_INSTRUM"])
@@ -109,7 +106,7 @@ class Instrument():
                 instrum_a_modif.STATUT = ele["STATUT"]
                 instrum_a_modif.COMMENTAIRE = ele["COMMENTAIRE"]
                 
-#                print(ele["PERIODICITE_QUANTITE"])
+    #                print(ele["PERIODICITE_QUANTITE"])
                 if ele["PERIODICITE_QUANTITE"] and ele["PERIODICITE_QUANTITE"] != "None" and ele["PERIODICITE_QUANTITE"] != "nan":
                     instrum_a_modif.PERIODICITE_QUANTITE = int(float(ele["PERIODICITE_QUANTITE"]))
                 else:
@@ -126,7 +123,9 @@ class Instrument():
                     instrum_a_modif.INSTRUMENT_LIE = False
                 
                 if ele["REF_INSTRUMENT"] and ele["REF_INSTRUMENT"]!= "None" and ele["REF_INSTRUMENT"] != "nan":
-                    instrum_a_modif.REF_INSTRUMENT = int(float(ele["REF_INSTRUMENT"]))
+                    id_instrum_lie = session.query(self.INSTRUMENTS.ID_INSTRUM).filter(self.INSTRUMENTS.IDENTIFICATION == ele["REF_INSTRUMENT"]).first()[0]
+                    print(id_instrum_lie)
+                    instrum_a_modif.REF_INSTRUMENT = int(float(id_instrum_lie))
                 else:
                     instrum_a_modif.REF_INSTRUMENT = None
                             
@@ -134,11 +133,14 @@ class Instrument():
                 
             session.commit()
 
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
 #                yield None
         finally:
             session.close()
+            print("erreur lors de la modification")
+            
     
     def creation_instrum_unique(self, new_instrum):
         """fct qui insert un nouvelle in instrumen
@@ -155,9 +157,9 @@ class Instrument():
             try:
                 self.connection.execute(i, new_instrum)
                 trans.commit()
-            except:            
+            except Exception as e:            
                 trans.rollback()
-                print(f"une erreur s'est produite lors de la creation de l'instrument: {new_instrum}")
+                print(f"une erreur s'est produite lors de la creation de l'instrument: {new_instrum} \n erreur : {e}")
             finally:
                 self.session.close()
         else:
@@ -186,9 +188,9 @@ class Instrument():
                 self.connection.execute(i, list_a_passer)
                 trans.commit()
                 self.session.close()
-            except:            
+            except Exception as e:            
                 trans.rollback()
-                print(f"une erreur s'est produite lors de la creation des instruments: {list_a_passer}")
+                print(f"une erreur s'est produite lors de la creation des instruments: {list_a_passer} \n erreur : {e}")
             finally:
                 self.session.close()
         else:
@@ -216,7 +218,8 @@ class Secteur_exploitation():
         try:
                 a = session.query(self.SEC_EXPLOIT).filter(self.SEC_EXPLOIT.SEX == num_secteur_exploit).first()
                 yield a.RESPONSABLE
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
 #                yield None
         finally:
@@ -238,7 +241,8 @@ class Secteur_exploitation():
 
             return list_retourne
         
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
 
         finally:
@@ -281,7 +285,8 @@ class Poste_tech_sap():
     #        print(list_retourne)
             return list_retourne
         
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
         finally:
             session.close()
@@ -299,7 +304,8 @@ class Poste_tech_sap():
     #        print(nom.DESIGNATION)
             yield nom.DESIGNATION
             
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
         finally:
             session.close()
@@ -352,7 +358,8 @@ class Intervention():
 #            self.session.close()
             return receptions
         
-        except:
+        except Exception as e:
+            print(e)
             self.session.rollback()
 #            yield None
         finally:
@@ -397,7 +404,8 @@ class Client():
     #        session.close()
             return table_entite_client
         
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
 #            yield None
         finally:
@@ -418,7 +426,8 @@ class Client():
 
             return table_site_client
         
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
 #            yield None
         finally:
@@ -439,7 +448,8 @@ class Client():
         
 #        session.close()
             return table_services_client       
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
 #            yield None
         finally:
@@ -457,7 +467,8 @@ class Client():
             session.commit()
 #            session.close()
         
-        except :
+        except Exception as e:
+            print(e)
             session.rollback()
 #            session.close()
         
@@ -477,11 +488,11 @@ class Client():
             session.commit()
 #            session.close()
                 
-        except:
+        except Exception as e:
             session.rollback()
             QMessageBox.critical(self, 
                     self.trUtf8("Client"), 
-                    self.trUtf8("La mise a jour n'a pu etre realisée"))
+                    self.trUtf8("La mise a jour n'a pu etre realisée. Erreur {e}"))
         finally:
             session.close()
         
@@ -505,8 +516,8 @@ class Client():
             session.add(new_site)
             session.commit()
             
-        except :
-            print("une erreur s'est produite lors de l'ajout d'un site")
+        except Exception as e:
+            print("une erreur s'est produite lors de l'ajout d'un site. Erreur {e}")
             session.rollback()
 #            session.close()
         
@@ -524,8 +535,8 @@ class Client():
             session.query(self.SERVICE).filter(self.SERVICE.ID_SERVICE == id).update(donnees_en_dic)
             session.commit()
 
-        except :
-            print("une erreur s'est produite lors de la mise à jour du service")
+        except Exception as e:
+            print("une erreur s'est produite lors de la mise à jour du service.\n erreur {e}")
             session.rollback()
         
         finally:
@@ -551,8 +562,8 @@ class Client():
             session.add(new_service)
             session.commit()
             
-        except :
-            print("une erreur s'est produite lors de l'ajout d'un service")
+        except Exception as e:
+            print("une erreur s'est produite lors de l'ajout d'un service.\n Erreur {e}")
             session.rollback()
 #            session.close()
         
@@ -631,7 +642,8 @@ class Client():
             
             session.commit()
 #            session.close()
-        except :
+        except Execption as e:
+            print(e)
             session.rollback()
 #            session.close()
         
@@ -664,7 +676,8 @@ class Client():
         
         
         
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
 #            yield None
         finally:
@@ -687,7 +700,8 @@ class Client():
     #            print(nom.CODE_CLIENT)
                 yield code[0]
         
-        except:
+        except Exception as e:
+            print(e) 
             session.rollback()
         finally:
             session.close()

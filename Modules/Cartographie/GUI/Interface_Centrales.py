@@ -4,7 +4,7 @@
 Module implementing Exploitation_Centrales.
 """
 
-from PyQt4.QtCore import pyqtSlot, SIGNAL, QDate
+from PyQt4.QtCore import pyqtSlot, SIGNAL, QDate, pyqtSignal
 from PyQt4.QtGui import QMainWindow, QFileDialog, QTableWidgetItem, QComboBox, QMessageBox
 
 from .Ui_Interface_Centrales import Ui_Exploitation_Centrales
@@ -29,6 +29,9 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
     """
     Class documentation goes here.
     """
+    
+    fermeture_reouverture = pyqtSignal()
+    
     def __init__(self, engine, parent=None):
         """
         Constructor        
@@ -48,7 +51,13 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         
         self.annexe_simulation = False
         
-        
+        self.lineEdit_consigne.setStyleSheet(
+                """QLineEdit { background-color: red }""")
+                
+        self.lineEdit_enceinte.setStyleSheet(
+                """QLineEdit { background-color: red }""")
+#        
+#        comboBox_responsable_mesure
     
     def demarrage(self):
         """gere les donnees necessaire à l'ouverture"""
@@ -69,9 +78,11 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         self.dateEdit.setDate(date_du_jour)
 
         #Parc des enceintes:
-        self.parc = self.db.parc_enceintes()
-
-        self.lineEdit_enceinte.mise_a_jour_completerList([x.IDENTIFICATION for x in self.parc])
+#        self.parc = self.db.parc_enceintes()
+#
+#        self.lineEdit_enceinte.mise_a_jour_completerList([x.IDENTIFICATION for x in self.parc])
+#
+#        self.lineEdit_designation_litt.mise_a_jour_completerList([x.DESIGNATION_LITTERALE for x in self.parc])
 #        self.tableView_donnees_fichier.installEventFilters(self) 
 
         #cmr
@@ -91,9 +102,14 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         Slot documentation goes here.
         """
         # TODO: not implemented yet
-        fichier =QFileDialog.getOpenFileNames(self, "Choisir le fichier de donnees", "y:/1.METROLOGIE/1EBRO-1 FD5/")
+        fichier =QFileDialog.getOpenFileNames(self, "Choisir le fichier de donnees", "Y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/3-CARTOS-SIMULATION")
         
-        if fichier:            
+        if fichier:
+            
+            self.graph_total.canvas.ax.clear()
+            self.graph_total.canvas.draw()
+            self.graph_zoom.canvas.ax.clear()
+            self.graph_zoom.canvas.draw()
 
             if self.comboBox_centrale.currentText()== "EBI 10-T":
                 self.df = pd.read_excel(fichier[0], 0, 0)
@@ -483,7 +499,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         
         for i  in range(0, len(index_result)):
             
-            y=float(result.loc[index_result[i]]["Moyenne"])
+            y = float(result.loc[index_result[i]]["Moyenne"])
             err = float(result.loc[index_result[i]]["U_mj"])
 
             self.graph_resultat.canvas.ax.margins(0.04, 0.06) 
@@ -495,13 +511,14 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 valeur_haute = temp_desiree + emt
                 valeur_basse = temp_desiree - emt
                 
-                if ( y + err ) < valeur_haute and ( y + err ) > valeur_basse:
+                if ( y + err ) < valeur_haute and ( y - err ) > valeur_basse:
                     conforme = True
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute or y< valeur_basse:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) >= valeur_haute or ( y + err ) <= valeur_basse:
+                
+                elif ( y + err ) >= valeur_haute or ( y - err ) <= valeur_basse:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
                     
@@ -556,7 +573,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         else:
             self.textEdit_conclusion_generale.setPlainText("Enceinte Conforme")
             
-        if valeur_haute and valeur_basse:
+        if (valeur_haute and valeur_basse) or (valeur_haute and valeur_basse == 0) or (valeur_haute == 0 and valeur_basse ):
             self.graph_resultat.canvas.ax.plot(list(range(len(index_result))), list(repeat(valeur_haute, len(index_result))), 
                                                             color='red',  linewidth=2)
             self.graph_resultat.canvas.ax.plot(list(range(len(index_result))), list(repeat(valeur_basse, len(index_result))),
@@ -597,11 +614,13 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
 #        print("sr 2(1-1/n) {}".format(sr2_1_1div_n))
         
         # 1/N-1∑(Xmj-Xair)2
+#        print(f"""{len(result["Voie"])}""")
+#        print(f""" test sur : {len(result["Voie"])-1}""")
         un_N_un_somme_xmj_xair2 = (1/(len(result["Voie"])-1))*somme_xmj_xair_2
 #        print("1/N-1∑(Xmj-Xair)2 {}".format(un_N_un_somme_xmj_xair2))
 
        #sR
-        sR = sr2_1_1div_n + un_N_un_somme_xmj_xair2
+        sR = np.sqrt(sr2_1_1div_n + un_N_un_somme_xmj_xair2)
 #        print("sR {}".format(sR))
         
         sR2 = np.power(sR, 2)
@@ -639,13 +658,16 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         self.lineEdit_capteur_stab.setText(str(index_sonde))
         
         #delta consigne
-        if self.lineEdit_consigne.text():
-            consigne = float(self.lineEdit_consigne.text())
+        if self.comboBox_type_consigne.currentText() != "*":
+            if self.lineEdit_consigne.text():
+                consigne = float(self.lineEdit_consigne.text())
+            else:
+                consigne = 0
+            ecart = consigne - teta_air
+            ecart_round = np.around(ecart, decimals=2)
+            self.lineEdit_ecart_consigne.setText(str(ecart_round))
         else:
-            consigne = 0
-        ecart = consigne - teta_air
-        ecart_round = np.around(ecart, decimals=2)
-        self.lineEdit_ecart_consigne.setText(str(ecart_round))
+            self.lineEdit_ecart_consigne.setText("Na")
 #        nom_sonde = 
         for ele in result.index:
             if ele not in list(self.copy_data):
@@ -667,7 +689,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                             "DONNEES":self.copy_data,
                             "CORRECTION_DONNEES" : correction_donnees ,  
                             "INDEX_DEBUT": index_deb, 
-                            "INDEX_FIN": index_fin, 
+                            "INDEX_FIN": index_fin -1, #permet de tenir compte du rajout +1 pour les calculs sinon la derniere valeur n'est pas pris en compte c'est une liste
                             "RESULTATS": result, 
                             "LIEU": self.lineEdit_affectation.text(), 
                             "ENCEINTE": self.lineEdit_enceinte.text(),  
@@ -768,8 +790,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
             self.comboBox_fin_zone_2.clear()
             
             self.copy_data = self.df.copy() #permet de ne pas toucher aux valeurs de bases pour reaffectation
-            
-    
+
             if self.radioButton_correction_non.isChecked():
                 #Donnnees non corrigees:            
                 if self.comboBox_centrale.currentText()== "EBI 10-T":
@@ -797,20 +818,24 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
             self.copy_data.replace({"," : ".", " ":"", "  ":"", "    ":"" }, 
                                             regex = True, inplace=True)
                                             
-    #        print("replace {}".format(self.copy_data))
-            self.tableView_donnees_fichier.remplir(self.copy_data)
-    
-            dates = [str(date) for date in self.copy_data["Date"]]
-    
+#            print("replace {}".format(self.copy_data))
+            if len(list(self.copy_data)):
+                self.tableView_donnees_fichier.remplir(self.copy_data)
+        
+                dates = [str(date) for date in self.copy_data["Date"]]
+
+                self.comboBox_debut_zone.addItems(dates)
+                self.comboBox_fin_zone.addItems(dates)        
+                self.comboBox_debut_zone_2.addItems(dates)
+                self.comboBox_fin_zone_2.addItems(dates)
+        
+                self.plot_graph_total(self.copy_data)
+            else:
+                QMessageBox.critical(self, 
+                    self.trUtf8("Selection"), 
+                    self.trUtf8("vous n'avez pas selectionné de sondes"))
             
             
-            
-            self.comboBox_debut_zone.addItems(dates)
-            self.comboBox_fin_zone.addItems(dates)        
-            self.comboBox_debut_zone_2.addItems(dates)
-            self.comboBox_fin_zone_2.addItems(dates)
-    
-            self.plot_graph_total(self.copy_data)
             
         except AttributeError:
             pass   
@@ -851,22 +876,33 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
     def appli_correction(self, mesure_brute):
         """fct utilise par la dtataframe pour corriger les donnees qui recupere le polynome dans le tableau  tableWidget_sondes_centrale en fct de la position de la sonde 
         et retourne la valeur corrigée a integrer dans la dtataframe copy"""
-
-        if mesure_brute.name !="Date":
+#        print(mesure_brute.name)
+        if mesure_brute.name !="Date" :
             for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
                 pos = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()
-    #                            print("pos {}".format(pos))
-                if pos == mesure_brute.name:                
-                    coeff_a = float(self.tableWidget_sondes_centrale.item(ligne, 3).text())
-                    coeff_b = float(self.tableWidget_sondes_centrale.item(ligne, 4).text())
-                    coeff_c = float(self.tableWidget_sondes_centrale.item(ligne, 5).text())
-                
-                    poly=(coeff_a, coeff_b, coeff_c)
-            
-            
-            mesure_corrigee = mesure_brute + poly[0]* np.power(mesure_brute, 2) + poly[1] * mesure_brute + poly[2]  
+                try:
+                    if pos == mesure_brute.name and self.tableWidget_sondes_centrale.item(ligne, 2).text() != "*":                
+                        coeff_a = float(self.tableWidget_sondes_centrale.item(ligne, 3).text())
+                        coeff_b = float(self.tableWidget_sondes_centrale.item(ligne, 4).text())
+                        coeff_c = float(self.tableWidget_sondes_centrale.item(ligne, 5).text())
+                    
+                        poly=(coeff_a, coeff_b, coeff_c)
+                except:
+#                    print("except correction")
+                    if pos == mesure_brute.name and self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText() != "*":                
+                        coeff_a = float(self.tableWidget_sondes_centrale.item(ligne, 3).text())
+                        coeff_b = float(self.tableWidget_sondes_centrale.item(ligne, 4).text())
+                        coeff_c = float(self.tableWidget_sondes_centrale.item(ligne, 5).text())
+                    
+                        poly=(coeff_a, coeff_b, coeff_c)
 
-            return mesure_corrigee
+                
+            try:
+                mesure_corrigee = mesure_brute + poly[0]* np.power(mesure_brute, 2) + poly[1] * mesure_brute + poly[2]  
+
+                return mesure_corrigee
+            except:
+                return mesure_brute
         else:
             return mesure_brute
     
@@ -895,15 +931,16 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 pass
         dict_new_column_name["Numéro de série"] = "Date"
         
-
+        self.copy_data.drop([x for x in list(self.copy_data) if x not in dict_new_column_name.keys()],
+                            axis=1,inplace=True)
         self.copy_data.rename(columns= dict_new_column_name, inplace=True)
         
         
-        list_pos = ["*","HAD", "HAG", "HPD", "HPG", "CENTRE", "BAD", "BAG", "BPD"
-                    ,"BPG", "CA","CB", "CD", "CG", "CH", "CP"]
-        for clef in self.copy_data.keys():
-            if clef not in list_pos and clef !="Date":
-                self.copy_data.drop(clef,axis = 1,  inplace=True)             
+#        list_pos = ["*","HAD", "HAG", "HPD", "HPG", "CENTRE", "BAD", "BAG", "BPD"
+#                    ,"BPG", "CA","CB", "CD", "CG", "CH", "CP"]
+#        for clef in self.copy_data.keys():
+#            if clef not in list_pos and clef !="Date":
+#                self.copy_data.drop(clef,axis = 1,  inplace=True)             
                 
         def date_ebro(d):
             """convertie les dates du fichier ebro en datetime attention à minuit le format change"""
@@ -942,7 +979,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
             if self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText() != "*"  :
                 if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*":
-
+    
                     nom_sonde_carto = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()
                     nom_sonde_fichier = self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText()
                     dict_new_column_name[nom_sonde_fichier]  =   nom_sonde_carto
@@ -951,11 +988,18 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                                                              axis =1, inplace=True)    #where 1 is the axis number (0 for rows and 1 for columns.)
             else:
                 pass
+        
 
-#        print(dict_new_column_name)
+        
         dict_new_column_name["Date"] = "Date"
-
+        
+        
+        self.copy_data.drop([x for x in list(self.copy_data) if x not in dict_new_column_name.keys()],
+                            axis=1,inplace=True)
+        
         self.copy_data.rename(columns= dict_new_column_name, inplace=True)
+        
+        
         
 #        print("copy data {}".format(self.copy_data))
     
@@ -988,6 +1032,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         
         #gestion enceinte:
         administratif["ident_enceinte"]= self.lineEdit_enceinte.text()
+        administratif["design_litt"] = self.lineEdit_designation_litt.text()
         administratif["constructeur_enceinte"]= self.lineEdit_constructeur.text()
         administratif["model_enceinte"]= self.lineEdit_model.text()
         administratif["nserie_enceinte"]= self.lineEdit_n_serie.text()
@@ -1012,20 +1057,23 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         #gestion application
         administratif["application"] = self.comboBox_application.currentText()
         administratif["emt_processus"] = self.comboBox_emt.currentText()
-        try:
-            administratif["condition_desiree"] = float(self.lineEdit_condition_des.text())
-        except:
-            QMessageBox.critical(self, 
-                    self.trUtf8("Condition désirée"), 
-                    self.trUtf8("La condition désirée saisie est incorrect"))
+#        try:
+#            float(self.lineEdit_condition_des.text())
+        administratif["condition_desiree"] = self.lineEdit_condition_des.text()
+#        except:
+#            QMessageBox.critical(self, 
+#                    self.trUtf8("Condition désirée"), 
+#                    self.trUtf8("La condition désirée saisie est incorrect"))
         administratif["signe_EMT"] = self.comboBox_signe_emt.currentText()
-        try:
-            administratif["temp_consign"] = float(self.lineEdit_consigne.text())
+#        try:
+#            float(self.lineEdit_consigne.text())
+        administratif["temp_consign"] = self.lineEdit_consigne.text()
+        administratif["type_consign"] = self.comboBox_type_consigne.currentText()
         
-        except:
-            QMessageBox.critical(self, 
-                    self.trUtf8("Temperature de consigne"), 
-                    self.trUtf8("La temperature de consigne saisie est incorrect"))
+#        except:
+#            QMessageBox.critical(self, 
+#                    self.trUtf8("Temperature de consigne"), 
+#                    self.trUtf8("La temperature de consigne saisie est incorrect"))
         
         #gestion donnees à envoyer au rapport:
         nom_centrale = self.comboBox_nom_centrale.currentText()
@@ -1036,22 +1084,52 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         
         tableau_sondes_centrale = []
         for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
-            if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and self.tableWidget_sondes_centrale.item(ligne, 2):
-                nom_voie = self.tableWidget_sondes_centrale.item(ligne, 0).text()
-                emplacement = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()                
-                nom_fichier = self.tableWidget_sondes_centrale.item(ligne, 2).text()              
-                
-                u_etal = decimal.Decimal(str(self.tableWidget_sondes_centrale.item(ligne, 6).text()))\
-                                    .quantize(decimal.Decimal(str(0.01)),rounding = decimal.ROUND_UP)
+            if not self.tableWidget_sondes_centrale.cellWidget(ligne, 2):
+                if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" \
+                    and self.tableWidget_sondes_centrale.item(ligne, 2): ###### probleme pour centrale et EBEOR vs DATALOG
                                     
-                n_ce = self.tableWidget_sondes_centrale.item(ligne, 7).text()
-                date_etal = self.tableWidget_sondes_centrale.item(ligne, 8).text()
-                
-                resolution = self.tableWidget_sondes_centrale.item(ligne, 9).text()
-                derive = self.tableWidget_sondes_centrale.item(ligne, 10).text()
-                
-                tableau_sondes_centrale.append([nom_voie, emplacement,nom_fichier, 
-                                                u_etal, n_ce, date_etal,  resolution, derive])
+                    nom_voie = self.tableWidget_sondes_centrale.item(ligne, 0).text()
+                    emplacement = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()                
+                    try:
+                        nom_fichier = self.tableWidget_sondes_centrale.item(ligne, 2).text()              
+                    except:
+                        nom_fichier =self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText()
+                        
+                    u_etal = decimal.Decimal(str(self.tableWidget_sondes_centrale.item(ligne, 6).text()))\
+                                        .quantize(decimal.Decimal(str(0.01)),rounding = decimal.ROUND_UP)
+                                        
+                    n_ce = self.tableWidget_sondes_centrale.item(ligne, 7).text()
+                    date_etal = self.tableWidget_sondes_centrale.item(ligne, 8).text()
+                    
+                    resolution = self.tableWidget_sondes_centrale.item(ligne, 9).text()
+                    derive = self.tableWidget_sondes_centrale.item(ligne, 10).text()
+                    
+                    tableau_sondes_centrale.append([nom_voie, emplacement,nom_fichier, 
+                                                    u_etal, n_ce, date_etal,  resolution, derive])
+            else:
+                if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" \
+                    and self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText() !="*": ###### probleme pour centrale et EBEOR vs DATALOG
+                                    
+                    nom_voie = self.tableWidget_sondes_centrale.item(ligne, 0).text()
+                    emplacement = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()                
+                    try:
+                        nom_fichier = self.tableWidget_sondes_centrale.item(ligne, 2).text()              
+                    except:
+                        nom_fichier =self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText()
+                        
+                    u_etal = decimal.Decimal(str(self.tableWidget_sondes_centrale.item(ligne, 6).text()))\
+                                        .quantize(decimal.Decimal(str(0.01)),rounding = decimal.ROUND_UP)
+                                        
+                    n_ce = self.tableWidget_sondes_centrale.item(ligne, 7).text()
+                    date_etal = self.tableWidget_sondes_centrale.item(ligne, 8).text()
+                    
+                    resolution = self.tableWidget_sondes_centrale.item(ligne, 9).text()
+                    derive = self.tableWidget_sondes_centrale.item(ligne, 10).text()
+                    
+                    tableau_sondes_centrale.append([nom_voie, emplacement,nom_fichier, 
+                                                    u_etal, n_ce, date_etal,  resolution, derive])
+                 
+#        print(f"tableau avant bdd {tableau_sondes_centrale}")
         
         administratif["tableau_centrale"] = tableau_sondes_centrale
         sauvegarde["administratif"] = administratif
@@ -1078,7 +1156,11 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         
         resultat["temp_air"] = self.lineEdit_teta_air.text()
         resultat["U_temp_air"] = self.lineEdit_U_air.text()
-        resultat["ecart_consigne"] = self.lineEdit_ecart_consigne.text()
+        if self.lineEdit_ecart_consigne.text() != "Na":
+            resultat["ecart_consigne"] = self.lineEdit_ecart_consigne.text()
+        else:
+            resultat["ecart_consigne"] = None
+            
         resultat["moy_max"] = self.lineEdit_moy_max.text()
         resultat["moy_min"] = self.lineEdit_moy_min.text()
         resultat["homogeneite"] = self.lineEdit_homogeneite.text()
@@ -1150,7 +1232,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         """
         Slot documentation goes here.
         """
-        print("coucou")
+#        print("coucou")
 #        print("index combobox {}".format( self.comboBox_fin_zone.currentIndex()))
         try:
             index_combo= self.comboBox_fin_zone.currentIndex()
@@ -1162,7 +1244,10 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 self.nettoyage_onglet_simu()
                 index_debut = self.comboBox_debut_zone.currentIndex()
 #                debut_date_time = datetime.strptime(debut, '%Y-%m-%d %H:%M:%S')
-                index_fin = self.comboBox_fin_zone.currentIndex() + 1
+                index_fin = self.comboBox_fin_zone.currentIndex() + 1 #permet de prendre en compte la derniier valeur selectionnee dans les calculs car c'est une liste
+#                print(index_fin)
+#                print(self.comboBox_fin_zone.currentText())
+#                print(self.copy_data)
 #                fin_date_time =datetime.strptime(fin, '%Y-%m-%d %H:%M:%S')
                 self.tupple_index = (index_debut, index_fin)
                 self.resultats(self.tupple_index)
@@ -1338,7 +1423,13 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                                         delta_round, resolution, derive, U_etal_round, u_cj, u_mj, U_mj_round,  
                                         moyenne_plus_U_mj, moyenne_moins_U_mj)
 
-                
+        #Affichage de result
+        
+        self.tableView_resultats_simu.remplir(result)
+        
+        
+        
+        
         #gestion  conformite graph et declaration: pass       
         try:
             temp_desiree = float(self.lineEdit_condition_des.text())
@@ -1424,45 +1515,109 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         self.graph_resultat_2.canvas.ax.set_xticklabels(index_result)
         self.graph_resultat_2.canvas.draw()
     
+    @pyqtSlot(str)
+    def on_lineEdit_designation_litt_textChanged(self, designat_lit):
+        """permet de faire une recherche dans la base directement avec la saisie de l'utilisateur"""
+
+        enceintes = self.db.recherche_enceintes_par_saisie_designat_litt(designat_lit)
+        self.lineEdit_designation_litt.completer_list([x.DESIGNATION_LITTERALE for x in next(enceintes)])
+    
+    @pyqtSlot(str)
+    def on_lineEdit_enceinte_textChanged(self, enceinte):
+        """permet de faire une recherche dans la base directement avec la saisie de l'utilisateur"""
+
+        enceintes = self.db.recherche_enceintes_par_saisie(enceinte)
+        self.lineEdit_enceinte.completer_list([x.IDENTIFICATION for x in next(enceintes)])
+
+
+    
     @pyqtSlot()
     def on_lineEdit_enceinte_returnPressed(self):
         """
         Slot documentation goes here.
         """
         try:
+            self.lineEdit_enceinte.setStyleSheet(
+                """QLineEdit { background-color: white }""")
+                
             enceinte = self.lineEdit_enceinte.text()
             
-            constructeur = [x.CONSTRUCTEUR for x in self.parc if x.IDENTIFICATION == enceinte][0]
+#            recupe_donnees_enceinte = self.db.recup_enceinte_par_ident()
+            
+            designation_litt = next(self.db.recup_designation_litt_par_ident(enceinte))
+            self.lineEdit_designation_litt.setText(designation_litt)
+            
+            constructeur = next(self.db.recup_constructeur_par_ident(enceinte))
             self.lineEdit_constructeur.setText(constructeur)
             
-            model = [x.REFERENCE_CONSTRUCTEUR for x in self.parc if x.IDENTIFICATION == enceinte][0]
+            model = next(self.db.recup_ref_constructeur_par_ident(enceinte))
             self.lineEdit_model.setText(model)
             
-            n_serie = [x.N_SERIE for x in self.parc if x.IDENTIFICATION == enceinte][0]
+            n_serie = next(self.db.recup_n_serie_par_ident(enceinte))
             self.lineEdit_n_serie.setText(n_serie)
             
-            code_client = [x.CODE for x in self.parc if x.IDENTIFICATION == enceinte][0]
+            code_client = next(self.db.recup_code_par_ident(enceinte))
             self.lineEdit_code.setText(code_client)
             
-            site = [x.SITE for x in self.parc if x.IDENTIFICATION == enceinte][0]
+            site = next(self.db.recup_site_par_ident(enceinte))
             self.lineEdit_site.setText(site)
             
-            localisation = [x.LOCALISATION for x in self.parc if x.IDENTIFICATION == enceinte][0]
+            localisation = next(self.db.recup_localisation_par_ident(enceinte))
             self.lineEdit_localisation.setText(localisation)
             
-            affectation = [x.AFFECTATION for x in self.parc if x.IDENTIFICATION == enceinte][0]
+            affectation = next(self.db.recup_affect_par_ident(enceinte))
             self.lineEdit_affectation.setText(affectation)
             
             
-            sous_affectation = [x.SOUS_AFFECTATION for x in self.parc if x.IDENTIFICATION == enceinte][0]
+            sous_affectation = next(self.db.recup_sous_affect_par_ident(enceinte))
             self.lineEdit_sous_affect.setText(sous_affectation)
         
-        except IndexError:
+        except (IndexError, StopIteration):
             QMessageBox.critical(self, 
                     self.trUtf8("Selection"), 
-                    self.trUtf8("L'enceinte selectionnée est inconnue /n Merci de modifier votre selection"))
+                    self.trUtf8("L'enceinte selectionnée est inconnue \n Merci de modifier votre selection"))
             
+            self.lineEdit_enceinte.setStyleSheet(
+                """QLineEdit { background-color: red }""")
+    @pyqtSlot()
+    def on_lineEdit_designation_litt_returnPressed(self):
+        """
+        Slot documentation goes here.
+        """
+        try:
+#            print(f" test {self.lineEdit_enceinte.text()}")
+            self.lineEdit_designation_litt.setStyleSheet(
+                """QLineEdit { background-color: white }""")
+            designation_litt = self.lineEdit_designation_litt.text()
             
+            enceinte = next(self.db.recherche_ident_enceinte_par_saisie_designat_litt(designation_litt))
+            self.lineEdit_enceinte.setText(enceinte)
+            
+            self.on_lineEdit_enceinte_returnPressed()
+            
+
+        
+        except (IndexError, StopIteration):
+            QMessageBox.critical(self, 
+                    self.trUtf8("Selection"), 
+                    self.trUtf8("L'enceinte selectionnée est inconnue \n Merci de modifier votre selection"))
+        
+            self.lineEdit_designation_litt.setStyleSheet(
+                """QLineEdit { background-color: red }""")
+    
+    @pyqtSlot(str)
+    def on_comboBox_application_currentTextChanged(self, p0):
+    
+        application = p0
+#        print("coucuoc")
+        
+        if application != "Conservation CGR":
+
+            
+            self.tab_simu.setEnabled(False)
+            self.nettoyage_onglet_simu()
+    
+    
     @pyqtSlot(str)
     def on_comboBox_application_currentIndexChanged(self, p0):
         """
@@ -1530,30 +1685,40 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
     
     @pyqtSlot(str)
     def on_lineEdit_condition_des_textChanged(self, p0):
-        
-        try:
-            float(self.lineEdit_condition_des.text())
-            if self.tupple_index:
-                self.resultats(self.tupple_index)
+        if self.lineEdit_condition_des.text()!="-":
+            try:
+                float(self.lineEdit_condition_des.text())
+                self.lineEdit_condition_des.setStyleSheet(
+                """QLineEdit { background-color: white }""")
                 
-        except ValueError:
-            QMessageBox.critical(self, 
-                    self.trUtf8("Condition Désirée"), 
-                    self.trUtf8("La valeur de la condition désirée saisie n'est pas conforme"))
+                if self.tupple_index:
+                    self.resultats(self.tupple_index)
+                    
+            except ValueError:
+                QMessageBox.critical(self, 
+                        self.trUtf8("Condition Désirée"), 
+                        self.trUtf8("La valeur de la condition désirée saisie n'est pas conforme"))
+                self.lineEdit_condition_des.setStyleSheet(
+                """QLineEdit { background-color: red }""")
+                
     @pyqtSlot(str)
     def on_lineEdit_consigne_textChanged(self, p0):
         
-        try:
-            float(self.lineEdit_consigne.text())
-#            if self.tupple_index:
-#                self.resultats(self.tupple_index)
-                
-        except ValueError:
-            QMessageBox.critical(self, 
-                    self.trUtf8("Température de Consigne"), 
-                    self.trUtf8("La valeur de la température de consigne saisie n'est pas conforme"))
+        if self.lineEdit_consigne.text() !="-":
+            try:
+                float(self.lineEdit_consigne.text())
+    #            if self.tupple_index:
+    #                self.resultats(self.tupple_index)
+                self.lineEdit_consigne.setStyleSheet(
+                """QLineEdit { background-color: white }""")
                     
-                    
+            except ValueError:
+                QMessageBox.critical(self, 
+                        self.trUtf8("Température de Consigne"), 
+                        self.trUtf8("La valeur de la température de consigne saisie n'est pas conforme"))
+                        
+                self.lineEdit_consigne.setStyleSheet(
+                """QLineEdit { background-color: red }""")
                     
     def nettoyage_onglet_simu(self):
         """ fonction qui efface l'onglet simulation"""
@@ -1561,6 +1726,10 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         self.annexe_simulation = False
 #        try:
         self.tableView_donnees_fichier_2.remplir(pd.DataFrame())
+        #Affichage de result
+        
+        self.tableView_resultats_simu.remplir(pd.DataFrame())
+        
 #        except:
 #            pass
 #        try:
@@ -1586,24 +1755,55 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
             carto_bdd = Carto_BDD(self.engine)
             sauvegarde["administratif"]["num_rapport"] = carto_bdd.insertion_nvlle_carto(sauvegarde)
             
-            res = QMessageBox.question(
-                self,
-                self.trUtf8("Rapport"),
-                self.trUtf8("""Voulez vous exporter un rapport de cartographie"""),
-                QMessageBox.StandardButtons(
-                    QMessageBox.No |
-                    QMessageBox.Yes))
-            if  res == QMessageBox.Yes:
-                try:
-#                    sauvegarde = self.donnees_rapport()
-                    
-                    file = QFileDialog.getSaveFileName(None ,  "Selectionner le dossier de sauvegarde de l'annexe", "y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/3-CARTOS-SIMULATION", '*.pdf' )
             
-                    if file !="":            
-            #            annexe = Rapport(file)
-            #            annexe.annexe(self.sauvegarde)
+            if not(issubclass(type(sauvegarde["administratif"]["num_rapport"]), BaseException)): # permet de tester si le retunr fct n'est pas une erreur
+                QMessageBox.information(
+                    self,
+                    self.trUtf8("Numero Cartographie"),
+                    self.trUtf8(f"""Le numero de la cartographie est {sauvegarde["administratif"]["num_rapport"]}"""))
+    
+                
+                res = QMessageBox.question(
+                    self,
+                    self.trUtf8("Rapport"),
+                    self.trUtf8("""Voulez vous exporter un rapport de cartographie"""),
+                    QMessageBox.StandardButtons(
+                        QMessageBox.No |
+                        QMessageBox.Yes))
+                if  res == QMessageBox.Yes:
+                    try:
+    #                    sauvegarde = self.donnees_rapport()
                         
-                        rapport = Rapport(file)
-                        rapport.rapport_carto(sauvegarde)
-                except AttributeError:
-                    pass
+    #                    file = QFileDialog.getSaveFileName(None ,  "Selectionner le dossier de sauvegarde de l'annexe", "y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/3-CARTOS-SIMULATION", '*.pdf' )
+                        file = str(QFileDialog.getExistingDirectory(self, "Choisir le repertoire de sauvegarde",
+                                                "y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/3-CARTOS-SIMULATION/",
+                                                QFileDialog.ShowDirsOnly))
+                        if file !="":            
+        
+                            nom = file +"/"+ sauvegarde["administratif"]["num_rapport"]
+                        try:
+                            rapport = Rapport(nom)
+                            rapport.rapport_carto(sauvegarde)
+                            self.close()
+                        except Exception as e:                        
+                            QMessageBox.critical(self,
+                            self.tr("Rapport"), 
+                                self.tr(f"Le rapport n'a pu etre sauvé : {e}"))
+                            pass
+                    except AttributeError:
+                        pass
+
+                self.nettoyage_gui()
+            else:
+                QMessageBox.critical(
+                    self,
+                    self.trUtf8("Enregistrement Cartographie"),
+                    self.trUtf8(f"""La cartographie n'a pu etre sauvée dans la base {sauvegarde["administratif"]["num_rapport"]}"""))
+        
+    def nettoyage_gui(self):
+        """fct qui efface toutes les onglets et se met sur l'onglet 1"""
+        self.close()
+        self.fermeture_reouverture.emit()
+
+#        
+        

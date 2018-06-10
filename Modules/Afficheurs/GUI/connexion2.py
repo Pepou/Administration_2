@@ -11,7 +11,11 @@ from GUI.afficheurs import Afficheurs
 from GUI.Ui_connexion2 import Ui_MainWindow
 from PyQt4.QtCore import * 
 from PyQt4.QtGui import * 
+import json
 
+from sqlalchemy import *
+from sqlalchemy.orm import *
+from sqlalchemy.engine import create_engine
 
 class Connexion(QMainWindow, Ui_MainWindow):
     """
@@ -29,6 +33,16 @@ class Connexion(QMainWindow, Ui_MainWindow):
         #connection
         self.password.returnPressed.connect(self.buttonBox_2.accepted)
         
+                # fichier config bdd :
+        with open("config_bdd.json") as json_file:
+            config_bdd = json.load(json_file)
+#            print(config_bdd)
+
+        
+        self.namebdd = config_bdd["name_bdd"] #Labo_Metro_Prod"#"Test_carac_generateurs"#"Labo_Metro_Prod"# #
+        self.adressebdd = config_bdd["adresse_bdd"]#"10.42.1.74" #"localhost"  #"10.42.1.74"          
+        self.portbdd = config_bdd["port_bdd"]
+        
     @pyqtSlot()
     def on_buttonBox_2_accepted(self):
         """
@@ -38,9 +52,12 @@ class Connexion(QMainWindow, Ui_MainWindow):
 #        try:
         login = self.login.text()
         password = self.password.text()
+        
+        self.engine = create_engine("postgresql+psycopg2://{}:{}@{}:{}/{}".format(login, password, self.adressebdd, self.portbdd, self.namebdd)) 
+        self.meta = MetaData() 
 
         self.close()
-        self.afficheurs = Afficheurs(login, password)
+        self.afficheurs = Afficheurs(self.engine, self.meta)
         self.afficheurs.showMaximized()
         self.close()            
         

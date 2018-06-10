@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Travail\EFS\Travail accreditation\SQ\Developpement Informatique\Afficheurs\Afficheur-V0.2\GUI\creation_afficheur.ui'
+# Form implementation generated from reading ui file 'C:\Developpement Informatique\Python\Afficheurs\Afficheur-V1.4\GUI\creation_afficheur.ui'
 #
-# Created: Fri Mar 20 14:20:20 2015
-#      by: PyQt4 UI code generator 4.11.3
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -27,7 +26,7 @@ class Ui_Creation_afficheur(object):
     def setupUi(self, Creation_afficheur):
         Creation_afficheur.setObjectName(_fromUtf8("Creation_afficheur"))
         Creation_afficheur.setWindowModality(QtCore.Qt.WindowModal)
-        Creation_afficheur.resize(642, 487)
+        Creation_afficheur.resize(812, 487)
         Creation_afficheur.setSizeGripEnabled(True)
         Creation_afficheur.setModal(False)
         self.verticalLayout_2 = QtGui.QVBoxLayout(Creation_afficheur)
@@ -50,10 +49,12 @@ class Ui_Creation_afficheur(object):
         self.gridLayout_2 = QtGui.QGridLayout(self.groupBox)
         self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
         self.radioButton_automatique = QtGui.QRadioButton(self.groupBox)
-        self.radioButton_automatique.setChecked(True)
+        self.radioButton_automatique.setCheckable(False)
+        self.radioButton_automatique.setChecked(False)
         self.radioButton_automatique.setObjectName(_fromUtf8("radioButton_automatique"))
         self.gridLayout_2.addWidget(self.radioButton_automatique, 0, 0, 1, 1)
         self.radioButton_manuelle = QtGui.QRadioButton(self.groupBox)
+        self.radioButton_manuelle.setChecked(True)
         self.radioButton_manuelle.setObjectName(_fromUtf8("radioButton_manuelle"))
         self.gridLayout_2.addWidget(self.radioButton_manuelle, 0, 1, 1, 1)
         self.verticalLayout.addWidget(self.groupBox)
@@ -75,7 +76,7 @@ class Ui_Creation_afficheur(object):
         self.label_13.setObjectName(_fromUtf8("label_13"))
         self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.label_13)
         self.lineEdit_identification = QtGui.QLineEdit(Creation_afficheur)
-        self.lineEdit_identification.setEnabled(False)
+        self.lineEdit_identification.setEnabled(True)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(1)
@@ -152,6 +153,8 @@ class Ui_Creation_afficheur(object):
         self.comboBox_famille.setSizePolicy(sizePolicy)
         self.comboBox_famille.setObjectName(_fromUtf8("comboBox_famille"))
         self.comboBox_famille.addItem(_fromUtf8(""))
+        self.comboBox_famille.addItem(_fromUtf8(""))
+        self.comboBox_famille.addItem(_fromUtf8(""))
         self.formLayout.setWidget(3, QtGui.QFormLayout.FieldRole, self.comboBox_famille)
         self.label_4 = QtGui.QLabel(Creation_afficheur)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Expanding)
@@ -174,6 +177,7 @@ class Ui_Creation_afficheur(object):
         sizePolicy.setHeightForWidth(self.comboBox_designation.sizePolicy().hasHeightForWidth())
         self.comboBox_designation.setSizePolicy(sizePolicy)
         self.comboBox_designation.setObjectName(_fromUtf8("comboBox_designation"))
+        self.comboBox_designation.addItem(_fromUtf8(""))
         self.comboBox_designation.addItem(_fromUtf8(""))
         self.comboBox_designation.addItem(_fromUtf8(""))
         self.comboBox_designation.addItem(_fromUtf8(""))
@@ -402,16 +406,19 @@ class Ui_Creation_afficheur(object):
         self.label_13.setText(_translate("Creation_afficheur", "Identification", None))
         self.label.setText(_translate("Creation_afficheur", "Code client", None))
         self.label_2.setText(_translate("Creation_afficheur", "Domaine de mesure", None))
-        self.comboBox_domaine_mesure.setItemText(0, _translate("Creation_afficheur", "Température", None))
-        self.comboBox_domaine_mesure.setItemText(1, _translate("Creation_afficheur", "Temps-Fréquence", None))
-        self.comboBox_domaine_mesure.setItemText(2, _translate("Creation_afficheur", "Vitesse", None))
+        self.comboBox_domaine_mesure.setItemText(0, _translate("Creation_afficheur", "TEMPÉRATURE", None))
+        self.comboBox_domaine_mesure.setItemText(1, _translate("Creation_afficheur", "TEMPS-FRÉQUENCE", None))
+        self.comboBox_domaine_mesure.setItemText(2, _translate("Creation_afficheur", "VITESSE", None))
         self.label_3.setText(_translate("Creation_afficheur", "Famille", None))
-        self.comboBox_famille.setItemText(0, _translate("Creation_afficheur", "Variable", None))
+        self.comboBox_famille.setItemText(0, _translate("Creation_afficheur", "MESURE POLYVAL (T°C)", None))
+        self.comboBox_famille.setItemText(1, _translate("Creation_afficheur", "MESURE DU TEMPS", None))
+        self.comboBox_famille.setItemText(2, _translate("Creation_afficheur", "MESURE DE LA VITESSE", None))
         self.label_4.setText(_translate("Creation_afficheur", "Désignation", None))
-        self.comboBox_designation.setItemText(0, _translate("Creation_afficheur", "Sonde alarme température", None))
-        self.comboBox_designation.setItemText(1, _translate("Creation_afficheur", "Afficheur de température", None))
-        self.comboBox_designation.setItemText(2, _translate("Creation_afficheur", "Afficheur de temps", None))
-        self.comboBox_designation.setItemText(3, _translate("Creation_afficheur", "Afficheur de vitesse", None))
+        self.comboBox_designation.setItemText(0, _translate("Creation_afficheur", "TÉMOIN D\'ENVIRONNEMENT", None))
+        self.comboBox_designation.setItemText(1, _translate("Creation_afficheur", "SONDE ALARME TEMPÉRATURE", None))
+        self.comboBox_designation.setItemText(2, _translate("Creation_afficheur", "AFFICHEUR DE TEMPÉRATURE", None))
+        self.comboBox_designation.setItemText(3, _translate("Creation_afficheur", "AFFICHEUR DE TEMPS", None))
+        self.comboBox_designation.setItemText(4, _translate("Creation_afficheur", "AFFICHEUR DE VITESSE", None))
         self.label_5.setText(_translate("Creation_afficheur", "Type", None))
         self.comboBox_type.setItemText(0, _translate("Creation_afficheur", "/", None))
         self.comboBox_type.setItemText(1, _translate("Creation_afficheur", "Thermistance", None))

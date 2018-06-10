@@ -25,7 +25,7 @@ except AttributeError:
 class Ui_Cartographie(object):
     def setupUi(self, Cartographie):
         Cartographie.setObjectName(_fromUtf8("Cartographie"))
-        Cartographie.resize(800, 600)
+        Cartographie.resize(1488, 600)
         self.centralWidget = QtGui.QWidget(Cartographie)
         self.centralWidget.setObjectName(_fromUtf8("centralWidget"))
         self.gridLayout = QtGui.QGridLayout(self.centralWidget)
@@ -160,7 +160,7 @@ class Ui_Cartographie(object):
         self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
         Cartographie.setCentralWidget(self.centralWidget)
         self.menuBar = QtGui.QMenuBar(Cartographie)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 1488, 21))
         self.menuBar.setObjectName(_fromUtf8("menuBar"))
         self.menuNouvelle_Cartographie = QtGui.QMenu(self.menuBar)
         self.menuNouvelle_Cartographie.setObjectName(_fromUtf8("menuNouvelle_Cartographie"))
@@ -171,8 +171,10 @@ class Ui_Cartographie(object):
         self.actionModifier_une_cartographie.setObjectName(_fromUtf8("actionModifier_une_cartographie"))
         self.actionAnnule_et_Remplace = QtGui.QAction(Cartographie)
         self.actionAnnule_et_Remplace.setObjectName(_fromUtf8("actionAnnule_et_Remplace"))
+        self.actionModifier = QtGui.QAction(Cartographie)
+        self.actionModifier.setObjectName(_fromUtf8("actionModifier"))
         self.menuNouvelle_Cartographie.addAction(self.actionNouvelle_Cartographie)
-        self.menuNouvelle_Cartographie.addAction(self.actionModifier_une_cartographie)
+        self.menuNouvelle_Cartographie.addAction(self.actionModifier)
         self.menuNouvelle_Cartographie.addAction(self.actionAnnule_et_Remplace)
         self.menuBar.addAction(self.menuNouvelle_Cartographie.menuAction())
 
@@ -206,13 +208,14 @@ class Ui_Cartographie(object):
         item = self.tableWidget_recap.horizontalHeaderItem(10)
         item.setText(_translate("Cartographie", "EMT", None))
         item = self.tableWidget_recap.horizontalHeaderItem(11)
-        item.setText(_translate("Cartographie", "Nouvelle colonne", None))
+        item.setText(_translate("Cartographie", "Simulation", None))
         item = self.tableWidget_recap.horizontalHeaderItem(12)
         item.setText(_translate("Cartographie", "Conformite", None))
         self.menuNouvelle_Cartographie.setTitle(_translate("Cartographie", "Menu", None))
         self.actionNouvelle_Cartographie.setText(_translate("Cartographie", "Nouvelle Cartographie", None))
         self.actionModifier_une_cartographie.setText(_translate("Cartographie", "Modifier une Cartographie", None))
         self.actionAnnule_et_Remplace.setText(_translate("Cartographie", "Annule et Remplace", None))
+        self.actionModifier.setText(_translate("Cartographie", "Modifier", None))
 
 from Modules.Cartographie.GUI.Tablewidget_Recap import TableWidget_Recap
 
