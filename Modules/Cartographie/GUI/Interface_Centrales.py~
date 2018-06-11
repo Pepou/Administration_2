@@ -415,7 +415,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
     def gestion_conformite(self, list_result_et_index_result):
         #gestion  conformite graph et declaration: pass
         
-        result = [0]       
+        result = list_result_et_index_result[0]       
         index_result = list_result_et_index_result[1]
        
         try:

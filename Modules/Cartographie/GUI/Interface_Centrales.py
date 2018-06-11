@@ -354,13 +354,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
 #        print("debut {}".format(index_deb))
         
         index_fin = value_tupple_index[1]
-        
-        thread_calcul = Calcul_Carto_Thread(self.copy_data[index_deb: index_fin], self.tableWidget_sondes_centrale)
-        thread_calcul.signalResultats_ok.connect(self.calcul_moyenne_air)
-        thread_calcul.signalIndexResultat.connect(self.gestion_conformite) 
-        
-        thread_calcul.start()
-        
+
         for clef in self.copy_data.keys():
 #            print(clef)
             if clef !="Date":
@@ -370,16 +364,34 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         xfmt= matplotlib.dates.DateFormatter('%y-%m-%d %H:%M:%S')
         self.graph_zoom.canvas.ax.xaxis.set_major_formatter(xfmt)
 
-
+#        labels = self.graph_zoom.canvas.ax.get_xticklabels()
+#        for label in labels:
+#            label.set_rotation(6)
         self.graph_zoom.canvas.draw()
 
+    
+        index = [key for key in self.copy_data.keys() if key != "Date"]
 
+        index_bis = ("HAD", "HAG", "HPD", "HPG", "CENTRE", "BAD", "BAG", "BPD"
+                            ,"BPG", "CA","CB", "CD", "CG", "CH", "CP")
+        
+        index_result = [ sonde for sonde in index_bis if sonde in index]
+
+        result = pd.DataFrame(index = index_result , columns = ["Voie","Moyenne", "Ecart Type", "Minimum", "Maximum"
+                                                                                    , "Delta", "Resolution", "Derive", "Etalonnage",
+                                                                                    "u_cj", "u_mj", "U_mj", 
+                                                                                    "θ + Umj", "θ - Umj"])
+#        print(self.copy_data[index_deb: index_fin].diff())
         vitesse_dict={}
         accelration_dict={}
         moyenne_pandas = pd.DataFrame(index = ["Vitesse", "Acceleration"])
         for nom in self.copy_data.keys():
             self.copy_data[nom].replace(["Err.02", "Err.06", "Err.13", "Err.72"], np.nan)
-
+            
+#            if nom == "BAG":
+#                print(self.copy_data[nom])
+#                for el in self.copy_data[nom]:
+#                    print(el)
 #            try:
             if nom != "Date":
 #                print(nom)
@@ -391,7 +403,60 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 moyenne_pandas[nom] = [np.mean(vitesse_dict[nom]), np.mean(accelration_dict[nom])]
 #                moyenne_dict[str(nom + "_"+"acceleration")]= 
                 
+#                print(test)
+                ####Calcul
+                moyenne = np.nanmean(self.copy_data[index_deb: index_fin][nom].astype(float).as_matrix(columns=None))
+                moyenne_round = np.around(moyenne, decimals = 2)
 
+                ecartype = np.nanstd(self.copy_data[index_deb: index_fin][nom].astype(float).as_matrix(columns=None), ddof = 1)
+                ecartype_round = np.around(ecartype, decimals = 2)
+                
+                min = np.nanmin(self.copy_data[index_deb: index_fin][nom].astype(float).as_matrix(columns=None))
+                min_round = np.around(min, decimals = 2)
+                
+                max = np.nanmax(self.copy_data[index_deb: index_fin][nom].astype(float).as_matrix(columns=None))
+                max_round = np.around(max, decimals = 2)
+                
+                delta = np.abs(max-min)
+                delta_round = np.around(delta, decimals = 2)
+                
+#                resolution = 0.01
+#                u_resolution =  resolution/(2*np.sqrt(3))
+#                
+#                derive = 0.15
+#                u_derive = derive/(np.sqrt(3))
+                
+                #etalonnage
+                for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
+                    if self.tableWidget_sondes_centrale.cellWidget (ligne,1).currentText() == nom:
+                        U_etal = float(self.tableWidget_sondes_centrale.item(ligne, 6).text())                        
+                        U_etal_round = float(decimal.Decimal(str(U_etal)).quantize(decimal.Decimal(str(0.01)),rounding = decimal.ROUND_UP))
+                        u_etal = U_etal/2
+                        
+                        resolution = float(self.tableWidget_sondes_centrale.item(ligne, 9).text())
+                        u_resolution =  resolution/(2*np.sqrt(3))
+                        
+                        derive = float(self.tableWidget_sondes_centrale.item(ligne, 10).text())
+                        u_derive = derive/(np.sqrt(3))
+                        
+                u_cj = np.sqrt(np.power(u_etal, 2) + np.power(u_resolution, 2) + np.power(u_derive, 2))
+                u_mj = np.sqrt(np.power(u_cj, 2) + np.power(ecartype, 2))
+                
+                U_mj = 2 * u_mj                
+                U_mj_round = decimal.Decimal(str(U_mj)).quantize(decimal.Decimal(str(resolution)),rounding = decimal.ROUND_UP)
+                
+                moyenne_plus_U_mj = moyenne_round + float(U_mj_round)
+#                print(moyenne_plus_U_mj)
+#                moyenne_plus_U_mj_round =  np.around(moyenne_plus_U_mj ,  decimals = 2)
+                
+                moyenne_moins_U_mj = moyenne_round - float(U_mj_round)
+#                moyenne_moins_U_mj_round =  np.around(moyenne_moins_U_mj ,  decimals = 2)
+                
+                result.loc[nom] = (nom, moyenne_round, ecartype_round, min_round, max_round, 
+                                        delta_round, resolution, derive, U_etal_round, u_cj, u_mj, U_mj_round,  
+                                        moyenne_plus_U_mj, moyenne_moins_U_mj)
+#        print(moyenne_pandas)
+#        print(accelration_dict)
         
         self.tableView_vitesse.remplir(pd.DataFrame(vitesse_dict))
         self.tableView_vitesse.resizeColumnsToContents()
@@ -409,14 +474,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
             self.graph_acceleration.canvas.ax.plot([x for x in range(len(accelration_dict[clef]))], accelration_dict[clef],'-',  label =clef, linewidth=1)
         self.graph_vitesse.canvas.draw()
         self.graph_acceleration.canvas.draw()
-        
-        
-        
-    def gestion_conformite(self, list_result_et_index_result):
         #gestion  conformite graph et declaration: pass
-        
-        result = list_result_et_index_result[0]       
-        index_result = list_result_et_index_result[1]
        
         try:
             temp_desiree = float(self.lineEdit_condition_des.text())
@@ -438,7 +496,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         
         self.graph_resultat.canvas.ax.clear()
 #        self.graph_resultat.draw()
-    
+        
         for i  in range(0, len(index_result)):
             
             y = float(result.loc[index_result[i]]["Moyenne"])
@@ -530,15 +588,6 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         self.graph_resultat.canvas.ax.set_xticks(np.array(np.arange(0, len(index_result), 1)))
         self.graph_resultat.canvas.ax.set_xticklabels(index_result)
         self.graph_resultat.canvas.draw()
-    
-    
-    def calcul_moyenne_air(self, result):
-        
-#        self.tupple_index = (index_deb, index_fin)
-        index_deb = self.tupple_index[0]
-        index_fin = self.tupple_index[1]
-        
-        
         
         #calcul moyenne air         
         max_u_cj = result["u_cj"].max()
@@ -579,7 +628,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         U_air = 2 * np.sqrt((sR2 + max_u_cj2))
         
 #        print("Uair {}".format(U_air))
-        U_air_round = decimal.Decimal(str(U_air)).quantize(decimal.Decimal(str(0.01)),rounding = decimal.ROUND_UP)
+        U_air_round = decimal.Decimal(str(U_air)).quantize(decimal.Decimal(str(resolution)),rounding = decimal.ROUND_UP)
 #        print("U_air arrondie {}".format(U_air_round))
         
         self.lineEdit_U_air.setText(str(U_air_round))
@@ -771,10 +820,6 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                                             
 #            print("replace {}".format(self.copy_data))
             if len(list(self.copy_data)):
-                
-                thread_graph = Affichage_graphThread(self.copy_data, self.graph_total)
-                thread_graph.start()
-                
                 self.tableView_donnees_fichier.remplir(self.copy_data)
         
                 dates = [str(date) for date in self.copy_data["Date"]]
@@ -783,11 +828,8 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 self.comboBox_fin_zone.addItems(dates)        
                 self.comboBox_debut_zone_2.addItems(dates)
                 self.comboBox_fin_zone_2.addItems(dates)
-                
-                
-                self.connect(self.graph_total.canvas, SIGNAL("zoom(PyQt_PyObject)"), self.plage_select_souris)
-                self.cursor = Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
-#                self.plot_graph_total(self.copy_data) #on met en place un thread?
+        
+                self.plot_graph_total(self.copy_data)
             else:
                 QMessageBox.critical(self, 
                     self.trUtf8("Selection"), 
@@ -798,30 +840,37 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         except AttributeError:
             pass   
 
-#    def plot_graph_total(self, dataframe):
-#        
-#        self.graph_total.canvas.ax.clear()
-#
-#        for clef in dataframe.keys():
-#          if clef !="Date": 
-#            self.graph_total.canvas.ax.plot(dataframe["Date"], dataframe[clef],'-',  label =clef, linewidth=1)
-#            self.graph_total.canvas.ax.legend(frameon=False, fontsize=10)
-#
-#        self.cursor = Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
-#            
-#        xfmt= matplotlib.dates.DateFormatter('%y-%m-%d %H:%M:%S')
-#        self.graph_total.canvas.ax.xaxis.set_major_formatter(xfmt)
-#
-#        labels = self.graph_total.canvas.ax.get_xticklabels()
-#        for label in labels:
-#            label.set_rotation(6)
-#
-#        self.graph_total.canvas.draw()
-#        
-##            Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
-#        
-#        
-#        self.connect(self.graph_total.canvas, SIGNAL("zoom(PyQt_PyObject)"), self.plage_select_souris)
+    def plot_graph_total(self, dataframe):
+        
+        self.graph_total.canvas.ax.clear()
+#        self.graph_total.draw()
+        
+#        print(dataframe["Date"])
+#        for ele in dataframe["Date"]:
+#            print(type(ele))
+#        dates = 
+#(dataframe["Date"])
+#        print(dates)
+        for clef in dataframe.keys():
+          if clef !="Date": 
+            self.graph_total.canvas.ax.plot(dataframe["Date"], dataframe[clef],'-',  label =clef, linewidth=1)
+            self.graph_total.canvas.ax.legend(frameon=False, fontsize=10)
+
+        self.cursor = Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
+            
+        xfmt= matplotlib.dates.DateFormatter('%y-%m-%d %H:%M:%S')
+        self.graph_total.canvas.ax.xaxis.set_major_formatter(xfmt)
+
+        labels = self.graph_total.canvas.ax.get_xticklabels()
+        for label in labels:
+            label.set_rotation(6)
+
+        self.graph_total.canvas.draw()
+        
+#            Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
+        
+        
+        self.connect(self.graph_total.canvas, SIGNAL("zoom(PyQt_PyObject)"), self.plage_select_souris)
     
     
     def appli_correction(self, mesure_brute):
