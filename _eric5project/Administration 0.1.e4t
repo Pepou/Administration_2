@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
 <!-- eric5 tasks file for project Administration 0.1 -->
-<!-- Saved: 2018-06-11, 11:03:23 -->
+<!-- Saved: 2018-06-11, 12:52:47 -->
 <Tasks version="5.1">
   <ProjectScanFilter></ProjectScanFilter>
   <Task priority="1" completed="False" type="1">
@@ -619,78 +619,6 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-05, 11:07:16</Created>
-    <Resource>
-      <Filename>GUI/Main_Administration.py</Filename>
-      <Linenumber>178</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-06-05, 11:07:16</Created>
-    <Resource>
-      <Filename>GUI/Main_Administration.py</Filename>
-      <Linenumber>235</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-06-05, 11:07:16</Created>
-    <Resource>
-      <Filename>GUI/Main_Administration.py</Filename>
-      <Linenumber>243</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-06-05, 11:07:16</Created>
-    <Resource>
-      <Filename>GUI/Main_Administration.py</Filename>
-      <Linenumber>251</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-06-05, 11:07:16</Created>
-    <Resource>
-      <Filename>GUI/Main_Administration.py</Filename>
-      <Linenumber>259</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-06-05, 11:07:16</Created>
-    <Resource>
-      <Filename>GUI/Main_Administration.py</Filename>
-      <Linenumber>267</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-06-05, 11:07:16</Created>
-    <Resource>
-      <Filename>GUI/Main_Administration.py</Filename>
-      <Linenumber>275</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-06-05, 11:07:16</Created>
-    <Resource>
-      <Filename>GUI/Main_Administration.py</Filename>
-      <Linenumber>283</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
     <Created>2018-06-05, 11:12:00</Created>
     <Resource>
       <Filename>Modules/Reception_expedition/BondeLivraison/GUI/BonLivraison.py</Filename>
@@ -772,7 +700,79 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-11, 11:03:20</Created>
+    <Created>2018-06-11, 12:30:48</Created>
+    <Resource>
+      <Filename>GUI/Main_Administration.py</Filename>
+      <Linenumber>178</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-11, 12:30:48</Created>
+    <Resource>
+      <Filename>GUI/Main_Administration.py</Filename>
+      <Linenumber>235</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-11, 12:30:48</Created>
+    <Resource>
+      <Filename>GUI/Main_Administration.py</Filename>
+      <Linenumber>243</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-11, 12:30:48</Created>
+    <Resource>
+      <Filename>GUI/Main_Administration.py</Filename>
+      <Linenumber>251</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-11, 12:30:48</Created>
+    <Resource>
+      <Filename>GUI/Main_Administration.py</Filename>
+      <Linenumber>259</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-11, 12:30:48</Created>
+    <Resource>
+      <Filename>GUI/Main_Administration.py</Filename>
+      <Linenumber>267</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-11, 12:30:48</Created>
+    <Resource>
+      <Filename>GUI/Main_Administration.py</Filename>
+      <Linenumber>275</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-11, 12:30:48</Created>
+    <Resource>
+      <Filename>GUI/Main_Administration.py</Filename>
+      <Linenumber>283</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-11, 12:52:44</Created>
     <Resource>
       <Filename>Modules/Cartographie/GUI/Interface_Centrales.py</Filename>
       <Linenumber>104</Linenumber>
