@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
 <!-- eric5 tasks file for project Administration 0.1 -->
-<!-- Saved: 2018-06-11, 10:25:07 -->
+<!-- Saved: 2018-06-11, 11:03:23 -->
 <Tasks version="5.1">
   <ProjectScanFilter></ProjectScanFilter>
   <Task priority="1" completed="False" type="1">
@@ -772,7 +772,7 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-08, 17:07:52</Created>
+    <Created>2018-06-11, 11:03:20</Created>
     <Resource>
       <Filename>Modules/Cartographie/GUI/Interface_Centrales.py</Filename>
       <Linenumber>104</Linenumber>

@@ -11,3 +11,5 @@ e4q
 *.py~
 Modules/Cartographie/Report/Rapport.py~
 *.pyc
+*.pyc
+*.py~

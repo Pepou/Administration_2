@@ -4,7 +4,7 @@
 Module implementing Exploitation_Centrales.
 """
 
-from PyQt4.QtCore import pyqtSlot, SIGNAL, QDate, pyqtSignal
+from PyQt4.QtCore import pyqtSlot, SIGNAL, QDate, pyqtSignal, QThread
 from PyQt4.QtGui import QMainWindow, QFileDialog, QTableWidgetItem, QComboBox, QMessageBox
 
 from .Ui_Interface_Centrales import Ui_Exploitation_Centrales
@@ -820,6 +820,10 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                                             
 #            print("replace {}".format(self.copy_data))
             if len(list(self.copy_data)):
+                
+                thread_graph = Affichage_graphThread(self.copy_data, self.graph_total)
+                thread_graph.start()
+                
                 self.tableView_donnees_fichier.remplir(self.copy_data)
         
                 dates = [str(date) for date in self.copy_data["Date"]]
@@ -828,8 +832,11 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 self.comboBox_fin_zone.addItems(dates)        
                 self.comboBox_debut_zone_2.addItems(dates)
                 self.comboBox_fin_zone_2.addItems(dates)
-        
-                self.plot_graph_total(self.copy_data)
+                
+                
+                self.connect(self.graph_total.canvas, SIGNAL("zoom(PyQt_PyObject)"), self.plage_select_souris)
+                self.cursor = Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
+#                self.plot_graph_total(self.copy_data) #on met en place un thread?
             else:
                 QMessageBox.critical(self, 
                     self.trUtf8("Selection"), 
@@ -840,37 +847,30 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         except AttributeError:
             pass   
 
-    def plot_graph_total(self, dataframe):
-        
-        self.graph_total.canvas.ax.clear()
-#        self.graph_total.draw()
-        
-#        print(dataframe["Date"])
-#        for ele in dataframe["Date"]:
-#            print(type(ele))
-#        dates = 
-#(dataframe["Date"])
-#        print(dates)
-        for clef in dataframe.keys():
-          if clef !="Date": 
-            self.graph_total.canvas.ax.plot(dataframe["Date"], dataframe[clef],'-',  label =clef, linewidth=1)
-            self.graph_total.canvas.ax.legend(frameon=False, fontsize=10)
-
-        self.cursor = Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
-            
-        xfmt= matplotlib.dates.DateFormatter('%y-%m-%d %H:%M:%S')
-        self.graph_total.canvas.ax.xaxis.set_major_formatter(xfmt)
-
-        labels = self.graph_total.canvas.ax.get_xticklabels()
-        for label in labels:
-            label.set_rotation(6)
-
-        self.graph_total.canvas.draw()
-        
-#            Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
-        
-        
-        self.connect(self.graph_total.canvas, SIGNAL("zoom(PyQt_PyObject)"), self.plage_select_souris)
+#    def plot_graph_total(self, dataframe):
+#        
+#        self.graph_total.canvas.ax.clear()
+#
+#        for clef in dataframe.keys():
+#          if clef !="Date": 
+#            self.graph_total.canvas.ax.plot(dataframe["Date"], dataframe[clef],'-',  label =clef, linewidth=1)
+#            self.graph_total.canvas.ax.legend(frameon=False, fontsize=10)
+#
+#        self.cursor = Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
+#            
+#        xfmt= matplotlib.dates.DateFormatter('%y-%m-%d %H:%M:%S')
+#        self.graph_total.canvas.ax.xaxis.set_major_formatter(xfmt)
+#
+#        labels = self.graph_total.canvas.ax.get_xticklabels()
+#        for label in labels:
+#            label.set_rotation(6)
+#
+#        self.graph_total.canvas.draw()
+#        
+##            Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
+#        
+#        
+#        self.connect(self.graph_total.canvas, SIGNAL("zoom(PyQt_PyObject)"), self.plage_select_souris)
     
     
     def appli_correction(self, mesure_brute):
@@ -1806,4 +1806,53 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         self.fermeture_reouverture.emit()
 
 #        
+        
+class Affichage_graphThread(QThread):
+
+    def __init__(self, dataframe, widget_graph):
+        QThread.__init__(self)
+        
+        
+        self.dataframe = dataframe
+        self.graph_total = widget_graph
+
+    def __del__(self):
+        self.wait()
+        
+        
+        
+    def run(self):        
+        
+        
+        self.graph_total.canvas.ax.clear()
+
+        for clef in self.dataframe.keys():
+          if clef !="Date": 
+            self.graph_total.canvas.ax.plot(self.dataframe["Date"], self.dataframe[clef],'-',  label =clef, linewidth=1)
+            self.graph_total.canvas.ax.legend(frameon=False, fontsize=10)
+
+#        self.cursor = Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
+            
+        xfmt= matplotlib.dates.DateFormatter('%y-%m-%d %H:%M:%S')
+        self.graph_total.canvas.ax.xaxis.set_major_formatter(xfmt)
+
+        labels = self.graph_total.canvas.ax.get_xticklabels()
+        for label in labels:
+            label.set_rotation(6)
+
+        self.graph_total.canvas.draw()
+        
+#            Cursor(self.graph_total.canvas.ax, useblit=True, color='red', linewidth=2)
+        
+        
+#        self.connect(self.graph_total.canvas, SIGNAL("zoom(PyQt_PyObject)"), self.plage_select_souris)
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
