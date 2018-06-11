@@ -10,3 +10,4 @@ e4q
 *.pyc
 *.py~
 Modules/Cartographie/Report/Rapport.py~
+*.pyc
