@@ -3,7 +3,7 @@
 """
 Module implementing Exploitation_Centrales_Annule_Remplace.
 """
-from PyQt4.QtCore import pyqtSlot, SIGNAL, QDate, Qt, pyqtSignal
+from PyQt4.QtCore import pyqtSlot, SIGNAL, QDate, Qt, pyqtSignal, QThread
 from PyQt4.QtGui import QMainWindow, QFileDialog, QTableWidgetItem, QComboBox, QMessageBox
 from Modules.Cartographie.Package.AccesBdd import AccesBdd, Carto_BDD
 from datetime import datetime
@@ -224,39 +224,31 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
         
         #Reaffectation des dataframes et visualisation des resultats
         
-        self.copy_data = pd.read_json(table_donnees.DONNEES, orient ='index')
-        self.copy_data.sort_index(inplace=True)
         
         
-        index = [key for key in self.copy_data.keys() ]
-
-        index_bis = ("Date","HAD", "HAG", "HPD", "HPG", "CENTRE", "BAD", "BAG", "BPD"
-                            ,"BPG", "CA","CB", "CD", "CG", "CH", "CP")
+#        self.copy_data=pd.DataFrame()
+        react_thread = Reaffect_Thread(table_donnees,table_resultats , table_admin)
         
-        index_result = [ sonde for sonde in index_bis if sonde in index]
-        self.copy_data =self.copy_data[index_result]
+        react_thread.signalCopy_data.connect(self.tableView_donnees_fichier.remplir)
+        react_thread.signalCopy_data.connect(self.plot_graph_total)
+        react_thread.signalCopy_data.connect(self.affecter_copy_data)
         
-        self.tableView_donnees_fichier.remplir(self.copy_data)
-    
-        dates = [str(date) for date in self.copy_data["Date"]]
-
-        self.comboBox_debut_zone.addItems(dates)
-        self.comboBox_fin_zone.addItems(dates)        
-        self.comboBox_debut_zone_2.addItems(dates)
-        self.comboBox_fin_zone_2.addItems(dates)
-
-        self.plot_graph_total(self.copy_data)
+        react_thread.signalDates.connect(self.comboBox_debut_zone.addItems)
+        react_thread.signalDates.connect(self.comboBox_fin_zone.addItems)
+        react_thread.signalDates.connect(self.comboBox_debut_zone_2.addItems)
+        react_thread.signalDates.connect(self.comboBox_fin_zone_2.addItems)
         
-        ###Resultats
-        self.comboBox_debut_zone.setCurrentIndex(table_resultats.INDEX_DEB)
-        self.comboBox_fin_zone.setCurrentIndex(table_resultats.INDEX_FIN)
+        react_thread.signalIndex_deb.connect(self.comboBox_debut_zone.setCurrentIndex)
+        react_thread.signalIndex_fin.connect(self.comboBox_fin_zone.setCurrentIndex)
+        react_thread.signalConseil.connect(self.textEdit_conseils.setText)
         
-        ###conseil        
-        self.textEdit_conseils.setText(table_resultats.CONSEIL)
+        react_thread.signalSimu.connect(self.on_commandLinkButton_affiche_donnees_simulation_clicked)
         
-        ###Simulation
-        if table_admin.SIMULATION:
-            self.on_commandLinkButton_affiche_donnees_simulation_clicked()
+        react_thread.start()
+        
+    def affecter_copy_data(self, copy_data):
+        """permet d'affecter la cte sur sel.copy_data depuis signal de la thread"""
+        self.copy_data = copy_data
         
         
     def closeEvent(self, event):
@@ -1904,4 +1896,60 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
                     self.trUtf8(f"""La cartographie n'a pu etre sauvée dans la base {sauvegarde["administratif"]["num_rapport"]}"""))
                     
                     
-                    
+class Reaffect_Thread (QThread):
+    
+    
+    signalCopy_data = pyqtSignal(pd.DataFrame)
+    signalDates = pyqtSignal(list)
+    
+    signalIndex_deb = pyqtSignal(int)
+    signalIndex_fin = pyqtSignal(int)
+    signalConseil = pyqtSignal(str)
+    signalSimu = pyqtSignal()
+    
+    def __init__(self, table_donnees,table_resultats , table_admin):
+        QThread.__init__(self)
+        
+        self.table_donnees = table_donnees
+        self.table_resultats = table_resultats
+        self.table_admin = table_admin
+        
+#        self.dataframe = dataframe
+#        self.graph_total = widget_graph
+
+    def __del__(self):
+        self.wait()
+        
+        
+        
+    def run(self): 
+        
+#        print("c'est parti")
+        copy_data = pd.read_json(self.table_donnees.DONNEES, orient ='index')
+        copy_data.sort_index(inplace=True)
+#        print(copy_data)
+        
+        index = [key for key in copy_data.keys() ]
+
+        index_bis = ("Date","HAD", "HAG", "HPD", "HPG", "CENTRE", "BAD", "BAG", "BPD"
+                            ,"BPG", "CA","CB", "CD", "CG", "CH", "CP")
+        
+        index_result = [ sonde for sonde in index_bis if sonde in index]
+        copy_data = copy_data[index_result]
+        
+        
+        self.signalCopy_data.emit(copy_data)
+#        
+        dates = [str(date) for date in copy_data["Date"]]
+#        print(dates)
+        self.signalDates.emit(dates)
+#        print(f"deb {self.table_resultats.INDEX_DEB} et {type(self.table_resultats.INDEX_DEB)} \n fin {self.table_resultats.INDEX_FIN}")
+        self.signalIndex_deb.emit(self.table_resultats.INDEX_DEB)
+        self.signalIndex_fin.emit(self.table_resultats.INDEX_FIN)
+        
+        ##conseil
+        self.signalConseil.emit(self.table_resultats.CONSEIL)
+        
+        ###Simulation
+        if self.table_admin.SIMULATION:
+            self.signalSimu.emit()

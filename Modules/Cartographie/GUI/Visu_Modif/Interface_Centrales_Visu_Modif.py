@@ -1977,7 +1977,7 @@ class Reaffect_Thread (QThread):
         dates = [str(date) for date in copy_data["Date"]]
 #        print(dates)
         self.signalDates.emit(dates)
-        print(f"deb {self.table_resultats.INDEX_DEB} et {type(self.table_resultats.INDEX_DEB)} \n fin {self.table_resultats.INDEX_FIN}")
+#        print(f"deb {self.table_resultats.INDEX_DEB} et {type(self.table_resultats.INDEX_DEB)} \n fin {self.table_resultats.INDEX_FIN}")
         self.signalIndex_deb.emit(self.table_resultats.INDEX_DEB)
         self.signalIndex_fin.emit(self.table_resultats.INDEX_FIN)
         

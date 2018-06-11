@@ -247,42 +247,10 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         react_thread.signalSimu.connect(self.on_commandLinkButton_affiche_donnees_simulation_clicked)
         
         react_thread.start()
-        
-##        self.copy_data = pd.read_json(table_donnees.DONNEES, orient ='index')
-##        self.copy_data.sort_index(inplace=True)
-##        
-##        
-##        index = [key for key in self.copy_data.keys() ]
-##
-##        index_bis = ("Date","HAD", "HAG", "HPD", "HPG", "CENTRE", "BAD", "BAG", "BPD"
-##                            ,"BPG", "CA","CB", "CD", "CG", "CH", "CP")
-##        
-##        index_result = [ sonde for sonde in index_bis if sonde in index]
-##        self.copy_data =self.copy_data[index_result]
-##        
-##        self.tableView_donnees_fichier.remplir(self.copy_data)
-    
-#        dates = [str(date) for date in self.copy_data["Date"]]
-#
-#        self.comboBox_debut_zone.addItems(dates)
-#        self.comboBox_fin_zone.addItems(dates)        
-#        self.comboBox_debut_zone_2.addItems(dates)
-#        self.comboBox_fin_zone_2.addItems(dates)
-#
-#        self.plot_graph_total(self.copy_data)
-#        
-        ###Resultats
-#        self.comboBox_debut_zone.setCurrentIndex(table_resultats.INDEX_DEB)
-#        self.comboBox_fin_zone.setCurrentIndex(table_resultats.INDEX_FIN)
-        
-        ###conseil        
-#        self.textEdit_conseils.setText(table_resultats.CONSEIL)
-        
-#        ###Simulation
-#        if table_admin.SIMULATION:
-#            self.on_commandLinkButton_affiche_donnees_simulation_clicked()
+
         
     def affecter_copy_data(self, copy_data):
+        """permet d'affecter la cte sur sel.copy_data depuis signal de la thread"""
         self.copy_data = copy_data
     
     def closeEvent(self, event):
