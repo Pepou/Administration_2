@@ -1284,6 +1284,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 index_fin = int(self.comboBox_fin_zone_2.currentIndex())
 
                 self.copy_data = self.copy_data.loc[index_deb:index_fin]
+                self.copy_data.reindex(index = [x for x in range(len(self.copy_data))])
                 
 #                print("test {}".format( self.copy_data))
 
@@ -1301,8 +1302,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 self.comboBox_debut_zone_2.addItems(dates)
                 self.comboBox_fin_zone_2.addItems(dates)
 
-        except IndexError :
-            
+        except IndexError :            
             pass
     
     @pyqtSlot()

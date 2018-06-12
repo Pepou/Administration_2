@@ -503,7 +503,8 @@ class Rapport():
                         for clef in donnees["annexe"]["DONNEES"] if clef !="Date" ]
         index_debut = donnees["annexe"]["INDEX_DEBUT"]        
         index_fin = donnees["annexe"]["INDEX_FIN"] + 1 #permet de tenir compte de la derniere valeur c'est une liste
-        
+        print(index_debut)
+        print(donnees["annexe"]["DONNEES"]["Date"])
         date_debut = donnees["annexe"]["DONNEES"]["Date"][index_debut].strftime("%d-%m-%Y %H:%M:%S") 
         date_fin = donnees["annexe"]["DONNEES"]["Date"][index_fin-1].strftime("%d-%m-%Y %H:%M:%S")  ###-1 pour afficher la valeur de fin reellement selectionnée
         nbr_mesure = len(donnees["annexe"]["DONNEES"][index_debut:index_fin]["Date"])

@@ -1396,6 +1396,7 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
                 index_fin = int(self.comboBox_fin_zone_2.currentIndex())
 
                 self.copy_data = self.copy_data.loc[index_deb:index_fin]
+                self.copy_data.reindex(index = [x for x in range(len(self.copy_data))])
                 
 #                print("test {}".format( self.copy_data))
 

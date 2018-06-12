@@ -512,7 +512,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         print("debut {}".format(index_deb))
         
         index_fin = value_tupple_index[1]
-        print(f"tests sur copydata {self.copy_data}")
+#        print(f"tests sur copydata {self.copy_data}")
         for clef in self.copy_data.keys():
 #            print(clef)
             if clef !="Date":
@@ -1407,6 +1407,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 index_fin = int(self.comboBox_fin_zone_2.currentIndex())
 
                 self.copy_data = self.copy_data.loc[index_deb:index_fin]
+                self.copy_data.reindex(index = [x for x in range(len(self.copy_data))])
                 
 #                print("test {}".format( self.copy_data))
 
@@ -1920,8 +1921,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                         rapport = Rapport(nom)
                         rapport.rapport_carto(sauvegarde)
                         self.close()
-                    except Exception as e:
-                        
+                    except Exception as e:                        
                         QMessageBox.critical(self,
                             self.tr("Rapport"), 
                                 self.tr(f"Le rapport n'a pu etre sauvé : {e}"))

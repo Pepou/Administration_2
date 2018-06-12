@@ -512,7 +512,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         print("debut {}".format(index_deb))
         
         index_fin = value_tupple_index[1]
-        print(f"tests sur copydata {self.copy_data}")
+#        print(f"tests sur copydata {self.copy_data}")
         for clef in self.copy_data.keys():
 #            print(clef)
             if clef !="Date":
@@ -1920,8 +1920,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                         rapport = Rapport(nom)
                         rapport.rapport_carto(sauvegarde)
                         self.close()
-                    except Exception as e:
-                        
+                    except Exception as e:                        
                         QMessageBox.critical(self,
                             self.tr("Rapport"), 
                                 self.tr(f"Le rapport n'a pu etre sauvé : {e}"))
@@ -1977,7 +1976,7 @@ class Reaffect_Thread (QThread):
         dates = [str(date) for date in copy_data["Date"]]
 #        print(dates)
         self.signalDates.emit(dates)
-        print(f"deb {self.table_resultats.INDEX_DEB} et {type(self.table_resultats.INDEX_DEB)} \n fin {self.table_resultats.INDEX_FIN}")
+#        print(f"deb {self.table_resultats.INDEX_DEB} et {type(self.table_resultats.INDEX_DEB)} \n fin {self.table_resultats.INDEX_FIN}")
         self.signalIndex_deb.emit(self.table_resultats.INDEX_DEB)
         self.signalIndex_fin.emit(self.table_resultats.INDEX_FIN)
         
