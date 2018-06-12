@@ -358,11 +358,11 @@ class Rapport():
         c.drawString(16.5*cm,25.7*cm,"+/- {}°C".format(U_air))
         
         c.drawString(1.7*cm,25.2*cm,"Ecart  consigne /mesure  ∆ co = θ co - θair ")
-        ecart_consigne = resultat["ecart_consigne"]
-        if ecart_consigne != "Na":
+        ecart_consigne = resultat["ecart_consigne"]                
+        if administratif["type_consign"] != "*":
             c.drawString(16.5*cm,25.2*cm,"{}°C".format(ecart_consigne))
         else:
-            c.drawString(16.5*cm,25.2*cm,"{}".format(ecart_consigne))
+            c.drawString(16.5*cm,25.2*cm,"Na")
             
         c.drawString(1.7*cm,24.7*cm,"Moyenne maximum de la température en régime établi")
         moy_max = resultat["moy_max"]
