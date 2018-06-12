@@ -509,7 +509,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         self.graph_zoom.canvas.ax.clear()
 #        self.graph_zoom.draw()
         index_deb = value_tupple_index[0]
-        print("debut {}".format(index_deb))
+#        print("debut {}".format(index_deb))
         
         index_fin = value_tupple_index[1]
 #        print(f"tests sur copydata {self.copy_data}")
@@ -1358,10 +1358,12 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         """
         Slot documentation goes here.
         """
+#        print(f" p0 {p0}")
 #        print("coucou")
 #        print("index combobox {}".format( self.comboBox_fin_zone.currentIndex()))
         try:
             index_combo= self.comboBox_fin_zone.currentIndex()
+#            print(f" index combo {index_combo}")
             if index_combo == 0 or index_combo == -1:
                 raise IndexError
 #                print(self.comboBox_fin_zone.currentText())
@@ -1962,7 +1964,7 @@ class Reaffect_Thread (QThread):
         copy_data = pd.read_json(self.table_donnees.DONNEES, orient ='index')
         copy_data.sort_index(inplace=True)
 #        print(copy_data)
-        
+#        print(copy_data.iloc[430])
         index = [key for key in copy_data.keys() ]
 
         index_bis = ("Date","HAD", "HAG", "HPD", "HPG", "CENTRE", "BAD", "BAG", "BPD"
