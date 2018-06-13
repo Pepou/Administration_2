@@ -1436,9 +1436,9 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         self.annexe_simulation = True
         
         index_deb = self.tupple_index[0]
-        print(index_deb)
+#        print(index_deb)
         index_fin = self.tupple_index[1]
-        print(index_fin)
+#        print(index_fin)
  
         self.dict_simulation = OrderedDict()
         
@@ -1456,8 +1456,8 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                     list_donnees_simul.append(valeur)
             self.dict_simulation[donnees.name]=list_donnees_simul
 
-        print(self.copy_data)
-        print(self.copy_data.index.tolist())
+#        print(self.copy_data)
+#        print(self.copy_data.index.tolist())
         for colonne in list(self.copy_data):
             if colonne !="Date":
                 calcul_simulation_bis(self.copy_data[colonne][index_deb:index_fin])

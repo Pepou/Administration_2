@@ -700,13 +700,13 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 valeur_haute = None
 #                print(( y + err ))
                 valeur_basse = temp_desiree - emt
-                if ( y - err ) > valeur_basse:
+                if ( y - err ) >= valeur_basse:
                     conforme = True
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y< valeur_basse:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y - err ) <= valeur_basse:
+                elif ( y - err ) < valeur_basse:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
             
