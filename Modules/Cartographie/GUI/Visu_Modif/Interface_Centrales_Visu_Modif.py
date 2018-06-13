@@ -670,31 +670,29 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 valeur_haute = float(temp_desiree + emt)
                 valeur_basse = float(temp_desiree - emt)
 
-                if float( y + err ) < valeur_haute and float( y - err ) > valeur_basse:
+                if ( y + err ) <= valeur_haute and ( y - err ) >= valeur_basse:
                     conforme = True
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute or y< valeur_basse:
                     conforme = False
-                    resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")                  
-                
+                    resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")          
                     
-                elif ( y + err ) >= valeur_haute or ( y - err ) <= valeur_basse:
+                elif ( y + err ) > valeur_haute or ( y - err ) < valeur_basse:
                     conforme = False
-                    resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
-                    
+                    resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")                   
                 
                 
                     
             elif self.comboBox_signe_emt.currentText() == "+":
                 valeur_haute = temp_desiree + emt
                 valeur_basse = None
-                if ( y + err ) < valeur_haute :
+                if ( y + err ) <= valeur_haute :
                     conforme = True
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) >= valeur_haute :
+                elif ( y + err ) > valeur_haute :
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
                 
@@ -702,13 +700,13 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 valeur_haute = None
 #                print(( y + err ))
                 valeur_basse = temp_desiree - emt
-                if ( y - err ) > valeur_basse:
+                if ( y - err ) >= valeur_basse:
                     conforme = True
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y< valeur_basse:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y - err ) <= valeur_basse:
+                elif ( y - err ) < valeur_basse:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
             

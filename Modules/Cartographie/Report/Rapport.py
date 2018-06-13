@@ -651,7 +651,7 @@ class Rapport():
         
         c.setFont("Arial-Bold", 10)
         text_ob = c.beginText(2.2*cm,25*cm)
-        objet_remarques = "Evolution de la température simulée d'un CGR en fonction de la témperature de l'air de chaque capteur \n dans l'enceinte (en régime établi):"
+        objet_remarques = "Evolution de la température simulée d'un CGR en fonction de la température de l'air de chaque capteur \n dans l'enceinte (en régime établi):"
         text_ob.textLines(objet_remarques)
         c.drawText(text_ob)
         

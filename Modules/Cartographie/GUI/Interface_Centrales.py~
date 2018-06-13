@@ -511,27 +511,27 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 valeur_haute = temp_desiree + emt
                 valeur_basse = temp_desiree - emt
                 
-                if ( y + err ) < valeur_haute and ( y - err ) > valeur_basse:
+                if ( y + err ) <= valeur_haute and ( y - err ) >= valeur_basse:
                     conforme = True
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute or y< valeur_basse:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
                 
-                elif ( y + err ) >= valeur_haute or ( y - err ) <= valeur_basse:
+                elif ( y + err ) > valeur_haute or ( y - err ) < valeur_basse:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
                     
             elif self.comboBox_signe_emt.currentText() == "+":
                 valeur_haute = temp_desiree + emt
                 valeur_basse = None
-                if ( y + err ) < valeur_haute :
+                if ( y + err ) <= valeur_haute :
                     conforme = True
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute:
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) >= valeur_haute :
+                elif ( y + err ) > valeur_haute :
                     conforme = False
                     resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
                 
@@ -783,66 +783,66 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         """
         Slot documentation goes here.
         """
-#        try:
-        pd.options.mode.chained_assignment = None
-        
-        self.comboBox_debut_zone.clear()
-        self.comboBox_fin_zone.clear()        
-        self.comboBox_debut_zone_2.clear()
-        self.comboBox_fin_zone_2.clear()
-        print(self.df)
-#            self.copy_data = pd.DataFrame()
-        self.copy_data = self.df.copy() #permet de ne pas toucher aux valeurs de bases pour reaffectation
-#            self.copy_data.is_copy= False
-
-        if self.radioButton_correction_non.isChecked():
-            #Donnnees non corrigees:            
-            if self.comboBox_centrale.currentText()== "EBI 10-T":
-                self.mise_en_forme_ebro()    
-
-            elif self.comboBox_centrale.currentText()== "FD5-15" or self.comboBox_centrale.currentText() == "SA32":
-                self.mise_en_forme_fd5()
-
-        
-        else: #donnees à corriger
-            if self.comboBox_centrale.currentText()== "EBI 10-T":
-                self.mise_en_forme_ebro()     
-                    
-            elif self.comboBox_centrale.currentText()== "FD5-15" or  self.comboBox_centrale.currentText() == "SA32":                
-                self.mise_en_forme_fd5()
-
-            self.copy_data = self.copy_data.apply(self.appli_correction,  axis=0)
-#        false_values = ["Err.02", "Err.06", "Err.12", "Err.13"]
-
-
-#        self.copy_data[self.copy_data.str.contains("Err"), na=False)] #=np.nan 
-        self.copy_data.replace(to_replace = "Err?", value =np.nan, regex= True, inplace = True)
-
-
-        self.copy_data.replace({"," : ".", " ":"", "  ":"", "    ":"" }, 
-                                        regex = True, inplace=True)
-                                        
-#            print("replace {}".format(self.copy_data))
-        if len(list(self.copy_data)):
-            self.tableView_donnees_fichier.remplir(self.copy_data)
+        try:
+            pd.options.mode.chained_assignment = None
+            
+            self.comboBox_debut_zone.clear()
+            self.comboBox_fin_zone.clear()        
+            self.comboBox_debut_zone_2.clear()
+            self.comboBox_fin_zone_2.clear()
+    #        print(self.df)
+    #            self.copy_data = pd.DataFrame()
+            self.copy_data = self.df.copy() #permet de ne pas toucher aux valeurs de bases pour reaffectation
+    #            self.copy_data.is_copy= False
     
-            dates = [str(date) for date in self.copy_data["Date"]]
-
-            self.comboBox_debut_zone.addItems(dates)
-            self.comboBox_fin_zone.addItems(dates)        
-            self.comboBox_debut_zone_2.addItems(dates)
-            self.comboBox_fin_zone_2.addItems(dates)
+            if self.radioButton_correction_non.isChecked():
+                #Donnnees non corrigees:            
+                if self.comboBox_centrale.currentText()== "EBI 10-T":
+                    self.mise_en_forme_ebro()    
     
-            self.plot_graph_total(self.copy_data)
-        else:
-            QMessageBox.critical(self, 
-                self.trUtf8("Selection"), 
-                self.trUtf8("vous n'avez pas selectionné de sondes"))
+                elif self.comboBox_centrale.currentText()== "FD5-15" or self.comboBox_centrale.currentText() == "SA32":
+                    self.mise_en_forme_fd5()
+    
+            
+            else: #donnees à corriger
+                if self.comboBox_centrale.currentText()== "EBI 10-T":
+                    self.mise_en_forme_ebro()     
+                        
+                elif self.comboBox_centrale.currentText()== "FD5-15" or  self.comboBox_centrale.currentText() == "SA32":                
+                    self.mise_en_forme_fd5()
+    
+                self.copy_data = self.copy_data.apply(self.appli_correction,  axis=0)
+    #        false_values = ["Err.02", "Err.06", "Err.12", "Err.13"]
+    
+    
+    #        self.copy_data[self.copy_data.str.contains("Err"), na=False)] #=np.nan 
+            self.copy_data.replace(to_replace = "Err?", value =np.nan, regex= True, inplace = True)
+    
+    
+            self.copy_data.replace({"," : ".", " ":"", "  ":"", "    ":"" }, 
+                                            regex = True, inplace=True)
+                                            
+    #            print("replace {}".format(self.copy_data))
+            if len(list(self.copy_data)):
+                self.tableView_donnees_fichier.remplir(self.copy_data)
+        
+                dates = [str(date) for date in self.copy_data["Date"]]
+    
+                self.comboBox_debut_zone.addItems(dates)
+                self.comboBox_fin_zone.addItems(dates)        
+                self.comboBox_debut_zone_2.addItems(dates)
+                self.comboBox_fin_zone_2.addItems(dates)
+        
+                self.plot_graph_total(self.copy_data)
+            else:
+                QMessageBox.critical(self, 
+                    self.trUtf8("Selection"), 
+                    self.trUtf8("vous n'avez pas selectionné de sondes"))
         
             
             
-#        except AttributeError:
-#            pass   
+        except AttributeError:
+            pass   
 
     def plot_graph_total(self, dataframe):
         
