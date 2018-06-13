@@ -946,6 +946,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         Slot documentation goes here.
         """
         try:
+            pd.options.mode.chained_assignment = None
             self.comboBox_debut_zone.clear()
             self.comboBox_fin_zone.clear()        
             self.comboBox_debut_zone_2.clear()
@@ -1117,12 +1118,12 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
 #        print(self.copy_data)
         self.copy_data = self.copy_data.dropna()
         
-        new_index = [x for x in range(len(self.copy_data))]
+#        new_index = [x for x in range(len(self.copy_data))]
 #        print(new_index)
         self.copy_data.reset_index(inplace = True)
-        self.copy_data.drop("index",axis = 1,  inplace=True)         
+#        self.copy_data.drop("index",axis = 1,  inplace=True)         
 #        print("reset_index {}".format(self.copy_data))
-        self.copy_data.reindex(new_index)
+#        self.copy_data.reindex(new_index)
 #        print("reindex {}".format(self.copy_data))
 #                
                 
@@ -1409,7 +1410,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 index_fin = int(self.comboBox_fin_zone_2.currentIndex())
 
                 self.copy_data = self.copy_data.loc[index_deb:index_fin]
-                self.copy_data.reindex(index = [x for x in range(len(self.copy_data))])
+                self.copy_data.reset_index(inplace = True)
                 
 #                print("test {}".format( self.copy_data))
 
@@ -1440,7 +1441,9 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         self.annexe_simulation = True
         
         index_deb = self.tupple_index[0]
+        print(index_deb)
         index_fin = self.tupple_index[1]
+        print(index_fin)
  
         self.dict_simulation = OrderedDict()
         
@@ -1458,7 +1461,8 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                     list_donnees_simul.append(valeur)
             self.dict_simulation[donnees.name]=list_donnees_simul
 
-        
+        print(self.copy_data)
+        print(self.copy_data.index.tolist())
         for colonne in list(self.copy_data):
             if colonne !="Date":
                 calcul_simulation_bis(self.copy_data[colonne][index_deb:index_fin])

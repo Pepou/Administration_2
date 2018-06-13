@@ -784,12 +784,16 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         Slot documentation goes here.
         """
         try:
+            pd.options.mode.chained_assignment = None
+            
             self.comboBox_debut_zone.clear()
             self.comboBox_fin_zone.clear()        
             self.comboBox_debut_zone_2.clear()
             self.comboBox_fin_zone_2.clear()
             
+#            self.copy_data = pd.DataFrame()
             self.copy_data = self.df.copy() #permet de ne pas toucher aux valeurs de bases pour reaffectation
+#            self.copy_data.is_copy= False
 
             if self.radioButton_correction_non.isChecked():
                 #Donnnees non corrigees:            
@@ -958,12 +962,12 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
 #        print(self.copy_data)
         self.copy_data = self.copy_data.dropna()
         
-        new_index = [x for x in range(len(self.copy_data))]
+#        new_index = [x for x in range(len(self.copy_data))]
 #        print(new_index)
         self.copy_data.reset_index(inplace = True)
-        self.copy_data.drop("index",axis = 1,  inplace=True)         
-#        print("reset_index {}".format(self.copy_data))
-        self.copy_data.reindex(new_index)
+#        self.copy_data.drop("index",axis = 1,  inplace=True)         
+##        print("reset_index {}".format(self.copy_data))
+#        self.copy_data.reindex(new_index)
 #        print("reindex {}".format(self.copy_data))
 #                
                 
@@ -1284,9 +1288,21 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 index_fin = int(self.comboBox_fin_zone_2.currentIndex())
 
                 self.copy_data = self.copy_data.loc[index_deb:index_fin]
-                self.copy_data.reindex(index = [x for x in range(len(self.copy_data))])
                 
-#                print("test {}".format( self.copy_data))
+#                new_index = [x for x in range(len(self.copy_data))]
+
+                self.copy_data.reset_index(inplace = True)
+#                print(f"reset {self.copy_data.index.tolist()}")
+#                self.copy_data.drop("index",axis = 1,  inplace=True)
+#                print(f"drop {self.copy_data.index.tolist()}")
+#
+#                self.copy_data.reindex(new_index)
+                
+
+                
+#                print("redecoupe {}".format( self.copy_data))
+#                print(f"nex index {self.copy_data.index.tolist()}")
+                
 
                 self.plot_graph_total(self.copy_data)
                 

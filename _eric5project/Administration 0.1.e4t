@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
 <!-- eric5 tasks file for project Administration 0.1 -->
-<!-- Saved: 2018-06-12, 18:28:36 -->
+<!-- Saved: 2018-06-13, 11:16:12 -->
 <Tasks version="5.1">
   <ProjectScanFilter></ProjectScanFilter>
   <Task priority="1" completed="False" type="1">
@@ -754,7 +754,16 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-12, 18:06:02</Created>
+    <Created>2018-06-13, 11:14:52</Created>
+    <Resource>
+      <Filename>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.py</Filename>
+      <Linenumber>267</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-06-13, 11:16:08</Created>
     <Resource>
       <Filename>Modules/Cartographie/GUI/Interface_Centrales.py</Filename>
       <Linenumber>104</Linenumber>
@@ -763,19 +772,10 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-12, 18:07:06</Created>
+    <Created>2018-06-13, 11:16:09</Created>
     <Resource>
       <Filename>Modules/Cartographie/GUI/Annule_Remplace/Interface_Centrales_Annule_Remplace.py</Filename>
       <Linenumber>265</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-06-12, 18:28:33</Created>
-    <Resource>
-      <Filename>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.py</Filename>
-      <Linenumber>267</Linenumber>
     </Resource>
   </Task>
 </Tasks>
