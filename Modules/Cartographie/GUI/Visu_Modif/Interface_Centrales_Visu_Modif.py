@@ -1118,13 +1118,8 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
 #        print(self.copy_data)
         self.copy_data = self.copy_data.dropna()
         
-#        new_index = [x for x in range(len(self.copy_data))]
-#        print(new_index)
         self.copy_data.reset_index(inplace = True)
-#        self.copy_data.drop("index",axis = 1,  inplace=True)         
-#        print("reset_index {}".format(self.copy_data))
-#        self.copy_data.reindex(new_index)
-#        print("reindex {}".format(self.copy_data))
+        self.copy_data.drop("index",axis = 1,  inplace=True)
 #                
                 
     def mise_en_forme_fd5(self):
@@ -1410,7 +1405,9 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 index_fin = int(self.comboBox_fin_zone_2.currentIndex())
 
                 self.copy_data = self.copy_data.loc[index_deb:index_fin]
+                
                 self.copy_data.reset_index(inplace = True)
+                self.copy_data.drop("index",axis = 1,  inplace=True)
                 
 #                print("test {}".format( self.copy_data))
 

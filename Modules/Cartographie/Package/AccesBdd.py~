@@ -225,7 +225,7 @@ class AccesBdd():
         designation_litt = session.query(self.INSTRUMENTS.DESIGNATION_LITTERALE) \
                     .filter(self.INSTRUMENTS.IDENTIFICATION == ident)\
                     .first()[0]
-        print(designation_litt)
+#        print(designation_litt)
         yield designation_litt
         session.close()
         

@@ -1410,7 +1410,9 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 index_fin = int(self.comboBox_fin_zone_2.currentIndex())
 
                 self.copy_data = self.copy_data.loc[index_deb:index_fin]
-                self.copy_data.reindex(index = [x for x in range(len(self.copy_data))])
+                
+                self.copy_data.reset_index(inplace = True)
+                self.copy_data.drop("index",axis = 1,  inplace=True)
                 
 #                print("test {}".format( self.copy_data))
 

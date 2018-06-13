@@ -790,11 +790,11 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
             self.comboBox_fin_zone.clear()        
             self.comboBox_debut_zone_2.clear()
             self.comboBox_fin_zone_2.clear()
-            
-#            self.copy_data = pd.DataFrame()
+    #        print(self.df)
+    #            self.copy_data = pd.DataFrame()
             self.copy_data = self.df.copy() #permet de ne pas toucher aux valeurs de bases pour reaffectation
-#            self.copy_data.is_copy= False
-
+    #            self.copy_data.is_copy= False
+    
             if self.radioButton_correction_non.isChecked():
                 #Donnnees non corrigees:            
                 if self.comboBox_centrale.currentText()== "EBI 10-T":
@@ -822,12 +822,12 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
             self.copy_data.replace({"," : ".", " ":"", "  ":"", "    ":"" }, 
                                             regex = True, inplace=True)
                                             
-#            print("replace {}".format(self.copy_data))
+    #            print("replace {}".format(self.copy_data))
             if len(list(self.copy_data)):
                 self.tableView_donnees_fichier.remplir(self.copy_data)
         
                 dates = [str(date) for date in self.copy_data["Date"]]
-
+    
                 self.comboBox_debut_zone.addItems(dates)
                 self.comboBox_fin_zone.addItems(dates)        
                 self.comboBox_debut_zone_2.addItems(dates)
@@ -838,7 +838,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 QMessageBox.critical(self, 
                     self.trUtf8("Selection"), 
                     self.trUtf8("vous n'avez pas selectionné de sondes"))
-            
+        
             
             
         except AttributeError:
@@ -965,11 +965,11 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
 #        new_index = [x for x in range(len(self.copy_data))]
 #        print(new_index)
         self.copy_data.reset_index(inplace = True)
-#        self.copy_data.drop("index",axis = 1,  inplace=True)         
+        self.copy_data.drop("index",axis = 1,  inplace=True)         
 ##        print("reset_index {}".format(self.copy_data))
 #        self.copy_data.reindex(new_index)
 #        print("reindex {}".format(self.copy_data))
-#                
+#        print(self.copy_data.index.tolist())
                 
     def mise_en_forme_fd5(self):
         """met les donnees de selfcopy en forme"""
@@ -1276,32 +1276,23 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         """
         permet de reduire la zone totale
         """
+
         try:
             index_combo=self.comboBox_fin_zone_2.currentIndex()
             if index_combo == 0:
                 raise IndexError
         
             else:
-                
-
+              
                 index_deb = int(self.comboBox_debut_zone_2.currentIndex())
                 index_fin = int(self.comboBox_fin_zone_2.currentIndex())
 
                 self.copy_data = self.copy_data.loc[index_deb:index_fin]
                 
-#                new_index = [x for x in range(len(self.copy_data))]
 
                 self.copy_data.reset_index(inplace = True)
-#                print(f"reset {self.copy_data.index.tolist()}")
-#                self.copy_data.drop("index",axis = 1,  inplace=True)
-#                print(f"drop {self.copy_data.index.tolist()}")
-#
-#                self.copy_data.reindex(new_index)
-                
+                self.copy_data.drop("index",axis = 1,  inplace=True)
 
-                
-#                print("redecoupe {}".format( self.copy_data))
-#                print(f"nex index {self.copy_data.index.tolist()}")
                 
 
                 self.plot_graph_total(self.copy_data)

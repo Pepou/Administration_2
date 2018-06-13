@@ -222,13 +222,19 @@ class AccesBdd():
     def recup_designation_litt_par_ident(self, ident):
         Session = sessionmaker(bind= self.engine)
         session = Session()
-        designation_litt = session.query(self.INSTRUMENTS.DESIGNATION_LITTERALE) \
-                    .filter(self.INSTRUMENTS.IDENTIFICATION == ident)\
-                    .first()[0]
-#        print(designation_litt)
-        yield designation_litt
-        session.close()
-        
+        try:
+            designation_litt = session.query(self.INSTRUMENTS.DESIGNATION_LITTERALE) \
+                        .filter(self.INSTRUMENTS.IDENTIFICATION == ident)\
+                        .first()[0]
+    #        print(designation_litt)
+            yield designation_litt
+#            session.close()
+        except Exception as e:
+            print(e)
+            session.rollback()
+#                yield None
+        finally:
+            session.close()
     def recup_constructeur_par_ident(self, ident):
         Session = sessionmaker(bind= self.engine)
         session = Session()
