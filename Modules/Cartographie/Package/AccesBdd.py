@@ -463,7 +463,8 @@ class Carto_BDD():
                                                     POSITION_STAB = donnees["resultats"]["position_stab"], 
                                                     CONFORMITE_CAPTEUR = donnees["resultats"]["tableau_conformite_par_capteur"], 
                                                     CONFORMITE_GLOBAL = enceinte_conforme, 
-                                                    CONSEIL = donnees["resultats"]["conseils"])
+                                                    CONSEIL = donnees["resultats"]["conseils"], 
+                                                    OBJET_REMARQUE = ["resultats"]["objet_remarques"])
                 session.add(new_resultat)
                 session.flush()
     #                if donnees["simulation"]["simulation"]:
@@ -603,6 +604,7 @@ class Carto_BDD():
                 modif_table_resultat.CONFORMITE_CAPTEUR = donnees["resultats"]["tableau_conformite_par_capteur"] 
                 modif_table_resultat.CONFORMITE_GLOBAL = enceinte_conforme 
                 modif_table_resultat.CONSEIL = donnees["resultats"]["conseils"]
+                modif_table_resultat.OBJET_REMARQUE = ["resultats"]["objet_remarques"]
     #                session.add(new_resultat)
                 
                 session.flush()
@@ -712,7 +714,7 @@ class Carto_BDD():
                                                     CONFORMITE_CAPTEUR = donnees["resultats"]["tableau_conformite_par_capteur"], 
                                                     CONFORMITE_GLOBAL = enceinte_conforme, 
                                                     CONSEIL = donnees["resultats"]["conseils"], 
-                                                    )
+                                                    OBJET_REMARQUE = ["resultats"]["objet_remarques"])
                 session.add(new_resultat)
                 session.flush()
     #                if donnees["simulation"]["simulation"]:

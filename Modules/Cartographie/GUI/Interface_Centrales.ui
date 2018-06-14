@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>948</width>
-    <height>873</height>
+    <height>838</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,8 +39,7 @@ font-weight: bold
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-</string>
+       <string notr="true"/>
       </property>
       <property name="currentIndex">
        <number>0</number>
@@ -1321,172 +1320,201 @@ en régime établi dans l'espace de travail) : Hθ </string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_14">
         <item>
-         <widget class="QSplitter" name="splitter_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_21">
+            <property name="font">
+             <font>
+              <family>Calibrii</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="text">
+             <string>Conclusion</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="matplotlibWidget" name="graph_resultat" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinAndMaxSize</enum>
           </property>
-          <widget class="QWidget" name="layoutWidget">
-           <layout class="QVBoxLayout" name="verticalLayout_9">
-            <item>
-             <widget class="QLabel" name="label_21">
-              <property name="font">
-               <font>
-                <family>Calibrii</family>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <italic>false</italic>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string>Conclusion</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="matplotlibWidget" name="graph_resultat" native="true">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="layoutWidget">
-           <layout class="QVBoxLayout" name="verticalLayout_10">
-            <item>
-             <widget class="QLabel" name="label_22">
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string>Objet et Remarques</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QTextEdit" name="textEdit_objet_remarques">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="layoutWidget">
-           <layout class="QVBoxLayout" name="verticalLayout_11">
-            <item>
-             <widget class="QLabel" name="label_23">
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string>Jugement de conformité par capteur :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QTableWidget" name="tableWidget_conf_par_capteur">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <column>
-               <property name="text">
-                <string>Capteurs 1-4</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Capteur 5-8</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Capteurs 9-12</string>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Capteurs &gt;=13</string>
-               </property>
-              </column>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="layoutWidget">
-           <layout class="QVBoxLayout" name="verticalLayout_12">
-            <item>
-             <widget class="QLabel" name="label_24">
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string>Conclusion générale :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QTextEdit" name="textEdit_conclusion_generale">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="layoutWidget">
-           <layout class="QVBoxLayout" name="verticalLayout_13">
-            <item>
-             <widget class="QLabel" name="label_25">
-              <property name="frameShape">
-               <enum>QFrame::Box</enum>
-              </property>
-              <property name="text">
-               <string>Conseils métrologiques :</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QTextEdit" name="textEdit_conseils">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
+          <item>
+           <widget class="QLabel" name="label_22">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="text">
+             <string>Objet et Remarques</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEdit_objet_remarques">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetNoConstraint</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_23">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="text">
+             <string>Jugement de conformité par capteur :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tableWidget_conf_par_capteur">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <column>
+             <property name="text">
+              <string>Capteurs 1-4</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Capteur 5-8</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Capteurs 9-12</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Capteurs &gt;=13</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_24">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="text">
+             <string>Conclusion générale :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEdit_conclusion_generale">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetFixedSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_25">
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="text">
+             <string>Conseils métrologiques :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textEdit_conseils">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>

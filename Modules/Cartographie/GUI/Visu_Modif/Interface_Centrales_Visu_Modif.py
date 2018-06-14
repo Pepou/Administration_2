@@ -243,6 +243,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         react_thread.signalIndex_deb.connect(self.comboBox_debut_zone.setCurrentIndex)
         react_thread.signalIndex_fin.connect(self.comboBox_fin_zone.setCurrentIndex)
         react_thread.signalConseil.connect(self.textEdit_conseils.setText)
+        react_thread.signalObjet_Remarque.connect(self.textEdit_objet_remarques.setText)
         
         react_thread.signalSimu.connect(self.on_commandLinkButton_affiche_donnees_simulation_clicked)
         
@@ -1941,6 +1942,7 @@ class Reaffect_Thread (QThread):
     signalIndex_fin = pyqtSignal(int)
     signalConseil = pyqtSignal(str)
     signalSimu = pyqtSignal()
+    signalObjet_Remarque = pyqtSignal(str)
     
     def __init__(self, table_donnees,table_resultats , table_admin):
         QThread.__init__(self)
@@ -1983,6 +1985,8 @@ class Reaffect_Thread (QThread):
         self.signalIndex_fin.emit(self.table_resultats.INDEX_FIN)
         
         ##conseil
+        
+        self.signalObjet_Remarque.emit(self.table_resultats.OBJET_REMARQUE)                         
         self.signalConseil.emit(self.table_resultats.CONSEIL)
         
         ###Simulation

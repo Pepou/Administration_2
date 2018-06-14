@@ -230,7 +230,7 @@ class Rapport():
         
         signe = administratif["signe_EMT"]
         if float(emt_processus) != 0:
-            c.drawString(13*cm,24.2*cm,"EMT processus : {} {}".format(signe, emt_processus))
+            c.drawString(13*cm,24.2*cm,"EMT processus : {} {} °C".format(signe, emt_processus))
         else:
             c.drawString(13*cm,24.2*cm,"EMT processus : na")
         
