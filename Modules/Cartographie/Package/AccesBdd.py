@@ -447,8 +447,8 @@ class Carto_BDD():
                 
                 session.add(new_donnees)
                 session.flush()
-                print(f"""deb {donnees["annexe"]["INDEX_DEBUT"]} type : {type(donnees["annexe"]["INDEX_DEBUT"])}  
-                                    fin {donnees["annexe"]["INDEX_FIN"]} type {type(donnees["annexe"]["INDEX_FIN"])}""")
+#                print(f"""deb {donnees["annexe"]["INDEX_DEBUT"]} type : {type(donnees["annexe"]["INDEX_DEBUT"])}  
+#                                    fin {donnees["annexe"]["INDEX_FIN"]} type {type(donnees["annexe"]["INDEX_FIN"])}""")
                 
                 new_resultat = self.CARTO_RESULTAT(ID_CARTO_ADMIN = new_carto.ID_CARTO,
                                                     RESULTAT = donnees["annexe"]["RESULTATS"].to_json(orient='index'), 
