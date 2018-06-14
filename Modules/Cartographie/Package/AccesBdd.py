@@ -396,7 +396,7 @@ class Carto_BDD():
                 else:
                     enceinte_conforme = True
                 #Table admin
-#                print(donnees["administratif"])
+    #                print(donnees["administratif"])
                 new_carto = self.ADMIN_CARTO(IDENT_ENCEINTE = donnees["administratif"]["ident_enceinte"], 
                                             DATE_REALISATION = donnees["annexe"]["DATE"].toString(Qt.ISODate) , 
                                             ID_OPERATEUR = id_operateur, 
@@ -421,7 +421,7 @@ class Carto_BDD():
     #            print(donnees["administratif"]["tableau_centrale"])
                 conf_sonde = []
                 for sonde in donnees["administratif"]["tableau_centrale"]:
-#                    print(f"sonde {sonde}")
+    #                    print(f"sonde {sonde}")
                     new_sonde = self.CARTO_CENTRALE(
                                         ID_CARTO_ADMIN = new_carto.ID_CARTO , 
                                         IDENT_SONDE = sonde[0], 
@@ -433,7 +433,7 @@ class Carto_BDD():
                                         RESOLUTION = (sonde[6]), 
                                         DERIVE = sonde[7])
                     conf_sonde.append(new_sonde)
-#                print(f"envoi bdd {conf_sonde}")
+    #                print(f"envoi bdd {conf_sonde}")
                 session.add_all(conf_sonde)
     #            session.flush()
                 
@@ -447,7 +447,8 @@ class Carto_BDD():
                 
                 session.add(new_donnees)
                 session.flush()
-                
+                print(f"""deb {donnees["annexe"]["INDEX_DEBUT"]} type : {type(donnees["annexe"]["INDEX_DEBUT"])}  
+                                    fin {donnees["annexe"]["INDEX_FIN"]} type {type(donnees["annexe"]["INDEX_FIN"])}""")
                 
                 new_resultat = self.CARTO_RESULTAT(ID_CARTO_ADMIN = new_carto.ID_CARTO,
                                                     RESULTAT = donnees["annexe"]["RESULTATS"].to_json(orient='index'), 
@@ -464,7 +465,7 @@ class Carto_BDD():
                                                     CONFORMITE_CAPTEUR = donnees["resultats"]["tableau_conformite_par_capteur"], 
                                                     CONFORMITE_GLOBAL = enceinte_conforme, 
                                                     CONSEIL = donnees["resultats"]["conseils"], 
-                                                    OBJET_REMARQUE = ["resultats"]["objet_remarques"])
+                                                    OBJET_REMARQUE = donnees["resultats"]["objet_remarques"])
                 session.add(new_resultat)
                 session.flush()
     #                if donnees["simulation"]["simulation"]:
@@ -604,7 +605,7 @@ class Carto_BDD():
                 modif_table_resultat.CONFORMITE_CAPTEUR = donnees["resultats"]["tableau_conformite_par_capteur"] 
                 modif_table_resultat.CONFORMITE_GLOBAL = enceinte_conforme 
                 modif_table_resultat.CONSEIL = donnees["resultats"]["conseils"]
-                modif_table_resultat.OBJET_REMARQUE = ["resultats"]["objet_remarques"]
+                modif_table_resultat.OBJET_REMARQUE = donnees["resultats"]["objet_remarques"]
     #                session.add(new_resultat)
                 
                 session.flush()
