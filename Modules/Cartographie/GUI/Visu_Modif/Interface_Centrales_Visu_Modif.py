@@ -1624,10 +1624,10 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
             
         if False in list_conf_sonde:
             self.textEdit_conclusion_generale_2.setPlainText("La simulation de la température à coeur est non conforme")
-            self.textEdit_conclusion_generale("Enceinte non Conforme. La simulation de la température à cœur du CGR est non conforme")
+            self.textEdit_conclusion_generale.setPlainText("Enceinte non Conforme. La simulation de la température à cœur du CGR est non conforme")
         else:
             self.textEdit_conclusion_generale_2.setPlainText("La simulation de la température à coeur est conforme")
-            self.textEdit_conclusion_generale("Enceinte NON-CONFORME dans l'air . La simulation de la température à cœur du CGR est CONFORME")
+            self.textEdit_conclusion_generale.setPlainText("Enceinte NON-CONFORME dans l'air . La simulation de la température à cœur du CGR est CONFORME")
             
         
         self.graph_resultat_2.canvas.ax.plot(list(range(len(index_result))), list(repeat(valeur_haute, len(index_result))), 
