@@ -391,7 +391,9 @@ class Carto_BDD():
             try:
                 id_operateur = session.query(self.CMR.ID_CMR).filter(self.CMR.NOM == donnees["administratif"]["responsable_mesure"].split()[0], self.CMR.PRENOM == donnees["administratif"]["responsable_mesure"].split()[1]).first()[0]
                 
-                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme":
+                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme"\
+                    or donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme.\
+                            La simulation de la température à cœur du CGR est non conforme":
                     enceinte_conforme = False
                 else:
                     enceinte_conforme = True
@@ -526,7 +528,9 @@ class Carto_BDD():
                 
                 id_carto = session.query(self.ADMIN_CARTO.ID_CARTO).filter(self.ADMIN_CARTO.NUM_RAPPORT == donnees["administratif"]["num_rapport"]).first()[0]
            
-                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme":
+                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme"\
+                    or donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme.\
+                            La simulation de la température à cœur du CGR est non conforme":
                     enceinte_conforme = False
                 else:
                     enceinte_conforme = True
@@ -647,7 +651,9 @@ class Carto_BDD():
             try:
                 id_operateur = session.query(self.CMR.ID_CMR).filter(self.CMR.NOM == donnees["administratif"]["responsable_mesure"].split()[0], self.CMR.PRENOM == donnees["administratif"]["responsable_mesure"].split()[1]).first()[0]
                 
-                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme":
+                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme"\
+                    or donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme.\
+                            La simulation de la température à cœur du CGR est non conforme":
                     enceinte_conforme = False
                 else:
                     enceinte_conforme = True
