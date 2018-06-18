@@ -1,1 +1,1 @@
-{"_commentaire":"Parametres BDD attention site = LMS ou ORLS","adresse_bdd" : "10.42.1.74","port_bdd": "5434","name_bdd": "Valid_carto","site":"LMS"}
+{"_commentaire":"Parametres BDD attention site = LMS ou ORLS","adresse_bdd" : "10.42.1.74","port_bdd": "5434","name_bdd": "Labo_Metro_Prod","site":"LMS"}

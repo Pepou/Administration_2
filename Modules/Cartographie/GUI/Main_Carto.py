@@ -41,6 +41,7 @@ class Cartographie(QMainWindow, Ui_Cartographie):
         
     def remplir_tableau_recap(self):
         """fct qui remplie le tableau apres avoir recuperer dans la bdd la table admin"""
+        self.tableWidget_recap.setRowCount(0)
         list_tableau = self.carto_bdd.table_admin_entier()
 
         for ligne_a_remplir in reversed(list_tableau):

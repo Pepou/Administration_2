@@ -382,7 +382,7 @@ class Carto_BDD():
                 annee_n_1 = annee-1
                 nbr_carto = len(session.query(self.ADMIN_CARTO).filter(self.ADMIN_CARTO.DATE_REALISATION <= str(str(annee)+"-12-31"), self.ADMIN_CARTO.DATE_REALISATION > str(str(annee_n_1)+"-12-31")).all())
                 if nbr_carto:
-                    num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(nbr_carto)
+                    num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(nbr_carto+1)
                 else:
                     num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(1)                  
                           
@@ -642,7 +642,7 @@ class Carto_BDD():
 #                print()
                 
                 if nbr_carto:
-                    num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(nbr_carto)+" Annule et Remplace "+donnees["administratif"]["num_rapport"]
+                    num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(nbr_carto+1)+" Annule et Remplace "+donnees["administratif"]["num_rapport"]
                 else:
                     num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(1)+" Annule et Remplace "+donnees["administratif"]["num_rapport"]                  
                           

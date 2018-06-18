@@ -382,7 +382,7 @@ class Carto_BDD():
                 annee_n_1 = annee-1
                 nbr_carto = len(session.query(self.ADMIN_CARTO).filter(self.ADMIN_CARTO.DATE_REALISATION <= str(str(annee)+"-12-31"), self.ADMIN_CARTO.DATE_REALISATION > str(str(annee_n_1)+"-12-31")).all())
                 if nbr_carto:
-                    num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(nbr_carto)
+                    num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(nbr_carto+1)
                 else:
                     num_rapport = "TC_"+donnees["annexe"]["DATE"].toString('yyyyMM')+"_"+str(1)                  
                           
@@ -651,7 +651,9 @@ class Carto_BDD():
             try:
                 id_operateur = session.query(self.CMR.ID_CMR).filter(self.CMR.NOM == donnees["administratif"]["responsable_mesure"].split()[0], self.CMR.PRENOM == donnees["administratif"]["responsable_mesure"].split()[1]).first()[0]
                 
-                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme":
+                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme"\
+                    or donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme.\
+                            La simulation de la température à cœur du CGR est non conforme":
                     enceinte_conforme = False
                 else:
                     enceinte_conforme = True

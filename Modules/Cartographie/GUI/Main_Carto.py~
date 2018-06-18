@@ -52,8 +52,7 @@ class Cartographie(QMainWindow, Ui_Cartographie):
                 colonne += 1
     
     def carto_select(self, ligne):
-        """fct appelee par le signal double click"""
-        
+        """fct appelee par le signal double click"""        
         n_ce = self.tableWidget_recap.item(ligne,4 ).text() 
         self.visu_modif_carto = Exploitation_Centrales_Visu_Modif(self.engine, n_ce)
         self.visu_modif_carto.fermeture.connect(self.remplir_tableau_recap)

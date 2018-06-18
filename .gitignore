@@ -15,3 +15,6 @@ Modules/Cartographie/Report/Rapport.py~
 *.py~
 *.py~
 *.py~
+*.e4q
+_eric5project/Administration 0.1.e4q
+*.e4t
