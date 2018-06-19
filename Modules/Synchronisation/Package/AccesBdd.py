@@ -2,7 +2,7 @@
 from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.engine import create_engine
-
+from sqlalchemy import func
 
 class AccesBdd():
     '''class gerant la bdd'''
@@ -73,7 +73,7 @@ class AccesBdd():
     def return_instrum_waranet(self):
         
         table = Table("INSTRUMENTS", self.meta)
-        ins = select([table.c.IDENTIFICATION, table.c.N_SERIE]).where(table.c.CONSTRUCTEUR == "Waranet")
+        ins = select([table.c.IDENTIFICATION, table.c.N_SERIE]).where(func.lower(table.c.CONSTRUCTEUR) == func.lower("Waranet"))
         waranet = self.connection.execute(ins).fetchall()          
    
         
@@ -83,7 +83,7 @@ class AccesBdd():
     def return_instrum_progesplus(self):
         
         table = Table("INSTRUMENTS", self.meta)
-        ins = select([table.c.IDENTIFICATION, table.c.N_SERIE]).where(table.c.CONSTRUCTEUR == "Proges plus")
+        ins = select([table.c.IDENTIFICATION, table.c.N_SERIE]).where(func.lower(table.c.CONSTRUCTEUR) == func.lower("Proges plus"))
         progesplus = self.connection.execute(ins).fetchall()          
    
         

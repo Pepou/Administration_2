@@ -2,21 +2,21 @@
 from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.engine import create_engine
-
+from sqlalchemy import func
 
 class AccesBdd():
     '''class gerant la bdd'''
     
-    def __init__(self, login, password):
-        self.namebdd = "Labo_Metro_Prod"#"Labo_Metro_Test_3"#"Labo_Metro_Prod"# #
-        self.adressebdd = "10.42.1.74" #"localhost"  #"10.42.1.74"          
-        self.portbdd = "5434"
-        self.login = login
-        self.password = password
+    def __init__(self, engine, meta):
+#        self.namebdd = "Labo_Metro_Prod"#"Labo_Metro_Test_3"#"Labo_Metro_Prod"# #
+#        self.adressebdd = "10.42.1.74" #"localhost"  #"10.42.1.74"          
+#        self.portbdd = "5434"
+#        self.login = login
+#        self.password = password
            
             #création de l'"engine"
-        self.engine = create_engine("postgresql+psycopg2://{}:{}@{}:{}/{}".format(self.login, self.password, self.adressebdd, self.portbdd, self.namebdd)) 
-        self.meta = MetaData()        
+        self.engine = engine #create_engine("postgresql+psycopg2://{}:{}@{}:{}/{}".format(self.login, self.password, self.adressebdd, self.portbdd, self.namebdd)) 
+        self.meta = meta        
         self.meta.reflect(bind=self.engine)
         self.polynome_correction = Table('POLYNOME_CORRECTION', self.meta)
         self.connection = self.engine.connect()
@@ -73,7 +73,7 @@ class AccesBdd():
     def return_instrum_waranet(self):
         
         table = Table("INSTRUMENTS", self.meta)
-        ins = select([table.c.IDENTIFICATION, table.c.N_SERIE]).where(table.c.CONSTRUCTEUR == "Waranet")
+        ins = select([table.c.IDENTIFICATION, table.c.N_SERIE]).where(func.lower(table.c.CONSTRUCTEUR) == func.lower("Waranet"))
         waranet = self.connection.execute(ins).fetchall()          
    
         

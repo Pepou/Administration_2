@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project Administration 0.1 -->
-<!-- Saved: 2018-06-05, 11:10:13 -->
+<!-- Saved: 2018-06-19, 13:04:16 -->
 <!-- Copyright (C) 2018 F.Cariou, francois.cariou@efs.sante.fr -->
 <Project version="5.1">
   <Language>fr_FR</Language>
@@ -207,6 +207,11 @@
     <Source>Modules/Reception_expedition/BondeReception/Package/AccesBdd.py</Source>
     <Source>Modules/Reception_expedition/BondeReception/Package/Export_excel.py</Source>
     <Source>Modules/Reception_expedition/BondeReception/Package/__init__.py</Source>
+    <Source>Modules/Synchronisation/Axis_x_Time.py</Source>
+    <Source>Modules/Synchronisation/customPlot.py</Source>
+    <Source>Modules/Synchronisation/GestionsFichiersEnregistreurs.py</Source>
+    <Source>Modules/Synchronisation/Synchronisation v0.5.py</Source>
+    <Source>Modules/Synchronisation/__init__.py</Source>
   </Sources>
   <Forms>
     <Form>GUI/connexion2.ui</Form>
