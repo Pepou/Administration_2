@@ -3,6 +3,7 @@ from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.engine import create_engine
 from sqlalchemy.ext.automap import automap_base
+from sqlalchemy import func
 import numpy as np
 import pandas as pd
 import itertools
@@ -1167,7 +1168,8 @@ class AccesBdd():
             else:
                 return None
 
-        except:
+        except Exception as e:
+            print(e)
             session.rollback()
             return None
         finally:

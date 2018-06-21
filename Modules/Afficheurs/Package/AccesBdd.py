@@ -3,6 +3,7 @@ from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.engine import create_engine
 from sqlalchemy.ext.automap import automap_base
+from sqlalchemy import func
 import numpy as np
 import pandas as pd
 import itertools
@@ -141,7 +142,7 @@ class AccesBdd():
         
         table = Table("REFERENTIEL_CONFORMITE", self.meta)
         ins = select([table.c.REFERENTIEL, table.c.COMMENTAIRE_REFERENTIEL, table.c.ERREUR_TERME_CST, 
-                        table.c.ERREUR_TERME_VAR, table.c.ERREUR_UNITE]).where(table.c.DESIGNATION == designation_afficheur).order_by(table.c.ID_REFERENTIEL)
+                        table.c.ERREUR_TERME_VAR, table.c.ERREUR_UNITE]).where(func.lower(table.c.DESIGNATION) == func.lower(designation_afficheur)).order_by(table.c.ID_REFERENTIEL)
 
         result = self.connection.execute(ins)
         
