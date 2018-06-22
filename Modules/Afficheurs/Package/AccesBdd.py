@@ -113,7 +113,9 @@ class AccesBdd():
         
         table = Table("INSTRUMENTS", self.meta)
 #        ins = table.select().where(and_(table.c.DOMAINE_MESURE == type_afficheur, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
-        ins = table.select().where(and_(table.c.DOMAINE_MESURE == type_afficheur, table.c.DESIGNATION == designation_etalon)).order_by(table.c.ID_INSTRUM)#, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
+        ins = table.select().where(and_(func.lower(table.c.DOMAINE_MESURE) == func.lower(type_afficheur),
+                                        func.lower(table.c.DESIGNATION) == func.lower(designation_etalon)))\
+                                        .order_by(table.c.ID_INSTRUM)#, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
         
         result = self.connection.execute(ins)
         
