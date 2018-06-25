@@ -371,68 +371,69 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         fct qui calcul valeur corrigée de l'etalon si on ecrit dans la colonne etal brute
         """       
         #gestion donnees etalon brute
-        try:
-            colonne = self.tableWidget.currentColumn()
-            ligne = self.tableWidget.currentRow()
-          
-            if colonne == 0:                
-                valeur_etal_brute = decimal.Decimal(self.tableWidget.item(ligne, 0).text())
-                
-                if self.ordre_poly_etalon == 1:                
-                    correction = self.coeff_a_poly_etalon*valeur_etal_brute + self.coeff_b_poly_etalon
-                                            
-                elif self.ordre_poly_etalon == 2:
-                    correction = self.coeff_a_poly_etalon*(valeur_etal_brute * valeur_etal_brute)\
-                                        + self.coeff_b_poly_etalon * valeur_etal_brute + self.coeff_c_poly_etalon
-                
-                valeur_etal_corri = valeur_etal_brute + correction 
-    
-          
-                #on reaffect les lignes et colonnes de reference afin d'eviter une boucle infinie
-                self.ecriture_tableau(self.tableWidget, ligne, 1, valeur_etal_corri, 'white')
-                
-                self.calculs(self.tableWidget, self.lineEdit_moyenne_etalon, self.lineEdit_moyenne_etalon_arrondie, 
-                        self.lineEdit_moyenne_afficheur, self.lineEdit_moyenne_afficheur_arrondie, 
-                        self.lineEdit_correction, self.lineEdit_correction_arrondie, 
-                        self.lineEdit_ecartype, self.lineEdit_incertitude, self.lineEdit_incertitude_arrondie, 
-                        self.doubleSpinBox_resolution)
-                            
-                self.conformite(self.comboBox_EMT, self.lineEdit_correction, 
-                                self.lineEdit_incertitude, self.lineEdit_conformite, 
-                                self.doubleSpinBox_resolution, self.lineEdit_moyenne_etalon, 
-                                self.textEdit_commentaire_conformite, self.lineEdit_valeur_emt)
-                
-            elif colonne == 2:                
-                string_valeur_afficheur = self.tableWidget.item(ligne, 2).text()
-                self.ecriture_tableau(self.tableWidget, ligne, 2, string_valeur_afficheur, 'white')
-                
-                decimal.Decimal(self.tableWidget.item(ligne, 2).text()) # permet de detecter erreur de saisie tru except
-                
-                self.calculs(self.tableWidget, self.lineEdit_moyenne_etalon, self.lineEdit_moyenne_etalon_arrondie, 
-                        self.lineEdit_moyenne_afficheur, self.lineEdit_moyenne_afficheur_arrondie, 
-                        self.lineEdit_correction, self.lineEdit_correction_arrondie, 
-                        self.lineEdit_ecartype, self.lineEdit_incertitude, self.lineEdit_incertitude_arrondie, 
-                        self.doubleSpinBox_resolution)
-                            
-                self.conformite(self.comboBox_EMT, self.lineEdit_correction, self.lineEdit_incertitude, 
-                                self.lineEdit_conformite, self.doubleSpinBox_resolution, 
-                                self.lineEdit_moyenne_etalon, self.textEdit_commentaire_conformite, self.lineEdit_valeur_emt)            
+#        try:
+        colonne = self.tableWidget.currentColumn()
+        ligne = self.tableWidget.currentRow()
+      
+        if colonne == 0:                
+            valeur_etal_brute = decimal.Decimal(self.tableWidget.item(ligne, 0).text())
             
-            else:
-                pass                        
-
+            if self.ordre_poly_etalon == 1:                
+                correction = self.coeff_a_poly_etalon*valeur_etal_brute + self.coeff_b_poly_etalon
+                                        
+            elif self.ordre_poly_etalon == 2:
+                correction = self.coeff_a_poly_etalon*(valeur_etal_brute * valeur_etal_brute)\
+                                    + self.coeff_b_poly_etalon * valeur_etal_brute + self.coeff_c_poly_etalon
             
-        except decimal.InvalidOperation:            
-            if colonne == 0:                
-                self.ecriture_tableau(self.tableWidget, ligne, 1, "Erreur de Saisie donnees etalon brute", 'red')            
-            elif colonne == 2:
-                self.ecriture_tableau(self.tableWidget, ligne, colonne, string_valeur_afficheur, 'red')
+            valeur_etal_corri = valeur_etal_brute + correction 
+            print(f"correction {correction}")
 
+      
+            #on reaffect les lignes et colonnes de reference afin d'eviter une boucle infinie
+            self.ecriture_tableau(self.tableWidget, ligne, 1, valeur_etal_corri, 'white')
+            
             self.calculs(self.tableWidget, self.lineEdit_moyenne_etalon, self.lineEdit_moyenne_etalon_arrondie, 
                     self.lineEdit_moyenne_afficheur, self.lineEdit_moyenne_afficheur_arrondie, 
                     self.lineEdit_correction, self.lineEdit_correction_arrondie, 
                     self.lineEdit_ecartype, self.lineEdit_incertitude, self.lineEdit_incertitude_arrondie, 
-                    self.doubleSpinBox_resolution) 
+                    self.doubleSpinBox_resolution)
+                        
+            self.conformite(self.comboBox_EMT, self.lineEdit_correction, 
+                            self.lineEdit_incertitude, self.lineEdit_conformite, 
+                            self.doubleSpinBox_resolution, self.lineEdit_moyenne_etalon, 
+                            self.textEdit_commentaire_conformite, self.lineEdit_valeur_emt)
+            
+        elif colonne == 2:                
+            string_valeur_afficheur = self.tableWidget.item(ligne, 2).text()
+            self.ecriture_tableau(self.tableWidget, ligne, 2, string_valeur_afficheur, 'white')
+            
+            decimal.Decimal(self.tableWidget.item(ligne, 2).text()) # permet de detecter erreur de saisie tru except
+            
+            self.calculs(self.tableWidget, self.lineEdit_moyenne_etalon, self.lineEdit_moyenne_etalon_arrondie, 
+                    self.lineEdit_moyenne_afficheur, self.lineEdit_moyenne_afficheur_arrondie, 
+                    self.lineEdit_correction, self.lineEdit_correction_arrondie, 
+                    self.lineEdit_ecartype, self.lineEdit_incertitude, self.lineEdit_incertitude_arrondie, 
+                    self.doubleSpinBox_resolution)
+                        
+            self.conformite(self.comboBox_EMT, self.lineEdit_correction, self.lineEdit_incertitude, 
+                            self.lineEdit_conformite, self.doubleSpinBox_resolution, 
+                            self.lineEdit_moyenne_etalon, self.textEdit_commentaire_conformite, self.lineEdit_valeur_emt)            
+        
+        else:
+            pass                        
+
+            
+#        except decimal.InvalidOperation:            
+#            if colonne == 0:                
+#                self.ecriture_tableau(self.tableWidget, ligne, 1, "Erreur de Saisie donnees etalon brute", 'red')            
+#            elif colonne == 2:
+#                self.ecriture_tableau(self.tableWidget, ligne, colonne, string_valeur_afficheur, 'red')
+#
+#            self.calculs(self.tableWidget, self.lineEdit_moyenne_etalon, self.lineEdit_moyenne_etalon_arrondie, 
+#                    self.lineEdit_moyenne_afficheur, self.lineEdit_moyenne_afficheur_arrondie, 
+#                    self.lineEdit_correction, self.lineEdit_correction_arrondie, 
+#                    self.lineEdit_ecartype, self.lineEdit_incertitude, self.lineEdit_incertitude_arrondie, 
+#                    self.doubleSpinBox_resolution) 
                 
     
     
@@ -693,7 +694,10 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
             #Incertitudes:
                 #SAT#
                 ####################################################################################################c
-            if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température" or self.comboBox_famille_afficheur.currentText() == "Afficheur de température":
+            if self.comboBox_famille_afficheur.currentText() in ["Sonde alarme température" ,  "SONDE ALARME TEMPÉRATURE", 
+                                                                "Afficheur de température", "AFFICHEUR DE TEMPÉRATURE", 
+                                                                "TÉMOIN D'ENVIRONNEMENT", "Temoin d'environnement", 
+                                                                "Témoin d'environnement" ]:
                     #etalon
                     ############################################
                         #uetalonnage
@@ -1287,7 +1291,7 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         afficheur["operateur"] = self.comboBox_cmr.currentText()
         
           
-        if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température" or self.comboBox_famille_afficheur.currentText() == "Temoin d'environnement":
+        if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température" or self.comboBox_famille_afficheur.currentText() == "Témoin d'environnement":
             afficheur["n_mode_operatoire"] = "/012"
         else:
             afficheur["n_mode_operatoire"] = "/011"
