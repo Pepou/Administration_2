@@ -939,7 +939,10 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
             somme_u_correction_arrondie = decimal.Decimal(somme_u_correction).quantize(decimal.Decimal(resolution), rounding=decimal.ROUND_HALF_EVEN)
             
 
-            if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température" or self.comboBox_famille_afficheur.currentText() == "Afficheur de température":
+            if self.comboBox_famille_afficheur.currentText() in ["Sonde alarme température" ,  "SONDE ALARME TEMPÉRATURE", 
+                                                                    "Afficheur de température", "AFFICHEUR DE TEMPÉRATURE", 
+                                                                    "TÉMOIN D'ENVIRONNEMENT", "Temoin d'environnement", 
+                                                                    "Témoin d'environnement" ]:
                 nom_brute_emt = nom_comboBox_EMT.currentText()
                 commentaire = self.db.commentaire_referentiel(nom_brute_emt)
                 nom_commentaire_referentiel.append(commentaire)
@@ -1291,7 +1294,9 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         afficheur["operateur"] = self.comboBox_cmr.currentText()
         
           
-        if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température" or self.comboBox_famille_afficheur.currentText() == "Témoin d'environnement":
+        if self.comboBox_famille_afficheur.currentText() in ["Sonde alarme température" , "SONDE ALARME TEMPÉRATURE",
+                                                            "TÉMOIN D'ENVIRONNEMENT", "Temoin d'environnement", 
+                                                            "Témoin d'environnement" ]:
             afficheur["n_mode_operatoire"] = "/012"
         else:
             afficheur["n_mode_operatoire"] = "/011"

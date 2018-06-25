@@ -694,7 +694,10 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
             #Incertitudes:
                 #SAT#
                 ####################################################################################################c
-            if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température" or self.comboBox_famille_afficheur.currentText() == "Afficheur de température":
+            if self.comboBox_famille_afficheur.currentText() in ["Sonde alarme température" ,  "SONDE ALARME TEMPÉRATURE", 
+                                                                "Afficheur de température", "AFFICHEUR DE TEMPÉRATURE", 
+                                                                "TÉMOIN D'ENVIRONNEMENT", "Temoin d'environnement", 
+                                                                "Témoin d'environnement" ]:
                     #etalon
                     ############################################
                         #uetalonnage
@@ -936,7 +939,10 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
             somme_u_correction_arrondie = decimal.Decimal(somme_u_correction).quantize(decimal.Decimal(resolution), rounding=decimal.ROUND_HALF_EVEN)
             
 
-            if self.comboBox_famille_afficheur.currentText() == "Sonde alarme température" or self.comboBox_famille_afficheur.currentText() == "Afficheur de température":
+            if self.comboBox_famille_afficheur.currentText() in ["Sonde alarme température" ,  "SONDE ALARME TEMPÉRATURE", 
+                                                                    "Afficheur de température", "AFFICHEUR DE TEMPÉRATURE", 
+                                                                    "TÉMOIN D'ENVIRONNEMENT", "Temoin d'environnement", 
+                                                                    "Témoin d'environnement" ]:
                 nom_brute_emt = nom_comboBox_EMT.currentText()
                 commentaire = self.db.commentaire_referentiel(nom_brute_emt)
                 nom_commentaire_referentiel.append(commentaire)
