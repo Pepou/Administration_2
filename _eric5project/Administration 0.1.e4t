@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
 <!-- eric5 tasks file for project Administration 0.1 -->
-<!-- Saved: 2018-06-25, 11:22:41 -->
+<!-- Saved: 2018-06-25, 11:39:16 -->
 <Tasks version="5.1">
   <ProjectScanFilter></ProjectScanFilter>
   <Task priority="1" completed="False" type="1">
@@ -727,7 +727,7 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-25, 11:22:38</Created>
+    <Created>2018-06-25, 11:24:09</Created>
     <Resource>
       <Filename>Modules/Afficheurs/GUI/afficheurs.py</Filename>
       <Linenumber>214</Linenumber>
@@ -736,7 +736,7 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-25, 11:22:38</Created>
+    <Created>2018-06-25, 11:24:09</Created>
     <Resource>
       <Filename>Modules/Afficheurs/GUI/afficheurs.py</Filename>
       <Linenumber>445</Linenumber>
@@ -745,7 +745,7 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-25, 11:22:38</Created>
+    <Created>2018-06-25, 11:24:09</Created>
     <Resource>
       <Filename>Modules/Afficheurs/GUI/afficheurs.py</Filename>
       <Linenumber>520</Linenumber>
@@ -754,7 +754,7 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-25, 11:22:38</Created>
+    <Created>2018-06-25, 11:24:09</Created>
     <Resource>
       <Filename>Modules/Afficheurs/GUI/afficheurs.py</Filename>
       <Linenumber>1166</Linenumber>
@@ -763,7 +763,7 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-25, 11:22:38</Created>
+    <Created>2018-06-25, 11:24:09</Created>
     <Resource>
       <Filename>Modules/Afficheurs/GUI/afficheurs.py</Filename>
       <Linenumber>1234</Linenumber>
@@ -772,7 +772,7 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-06-25, 11:22:38</Created>
+    <Created>2018-06-25, 11:24:09</Created>
     <Resource>
       <Filename>Modules/Afficheurs/GUI/afficheurs.py</Filename>
       <Linenumber>1658</Linenumber>
