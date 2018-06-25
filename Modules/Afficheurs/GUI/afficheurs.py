@@ -339,8 +339,9 @@ class Afficheurs(QMainWindow, Ui_MainWindow):
         #etendue de mesure de l'etalon:
         etendue = self.db.etendue_mesure_etalon(n_ce) #tupple (min,max)
 #        print(etendue)
+#        print(self.comboBox_famille_afficheur.currentText())
         if etendue:
-            if self.comboBox_famille_afficheur.currentText() in  ["Temoin d'environnement", "Sonde alarme température", "Afficheur de température" ]:
+            if self.comboBox_famille_afficheur.currentText() in  ["Temoin d'environnement", "Sonde alarme température", "Afficheur de température", "Témoin d'environnement" ]:
                 phrase_etendue = str("min : "+ str(int(etendue[0]))+"°C"+"  max : "+str(int(etendue[1]))+"°C")
                 
             elif self.comboBox_famille_afficheur.currentText() in  ["Afficheur de temps"]:
