@@ -34,8 +34,6 @@ class TableWidget_Recap(QTableWidget):
             self.selectRow(ligne)
             
             menu = QMenu(self)
-#            menu.setTitle("Menu")
-#            menu.addSeparator ()
             nouvelle = menu.addAction("Nouvelle Cartographie")
             modification = menu.addAction("Visualisation/Modification Cartographie")
             annule = menu.addAction("Annule et Remplace Cartographie")
