@@ -628,7 +628,7 @@ class Carto_BDD():
         def insertion_carto_annule_remplace(self, donnees):
             Session = sessionmaker(bind= self.engine)
             session = Session()
-#            print(donnees)
+            print(donnees)
             #########################################################################################
             def num_rapport():
                 """fct pour generer le num carto"""
@@ -721,7 +721,7 @@ class Carto_BDD():
                                                     CONFORMITE_CAPTEUR = donnees["resultats"]["tableau_conformite_par_capteur"], 
                                                     CONFORMITE_GLOBAL = enceinte_conforme, 
                                                     CONSEIL = donnees["resultats"]["conseils"], 
-                                                    OBJET_REMARQUE = ["resultats"]["objet_remarques"])
+                                                    OBJET_REMARQUE = donnees["resultats"]["objet_remarques"])
                 session.add(new_resultat)
                 session.flush()
     #                if donnees["simulation"]["simulation"]:

@@ -83,7 +83,7 @@ class AccesBdd():
     def return_instrum_progesplus(self):
         
         table = Table("INSTRUMENTS", self.meta)
-        ins = select([table.c.IDENTIFICATION, table.c.N_SERIE]).where(table.c.CONSTRUCTEUR == "Proges plus")
+        ins = select([table.c.IDENTIFICATION, table.c.N_SERIE]).where(func.lower(table.c.CONSTRUCTEUR) == func.lower("Proges plus"))
         progesplus = self.connection.execute(ins).fetchall()          
    
         

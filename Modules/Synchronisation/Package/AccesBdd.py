@@ -109,16 +109,16 @@ class AccesBdd():
     def list_generateur(self):
         list_generateur = []
         table = Table("INSTRUMENTS", self.meta)
-        ins = select([table.c.IDENTIFICATION]).where(and_(table.c.DESIGNATION == 'Bain de Glace Fondante', table.c.ETAT_UTILISATION == 'En service'))#.order_by(table.c.IDENTIFICATION)
+        ins = select([table.c.IDENTIFICATION]).where(and_(table.c.DESIGNATION == 'Bain de Glace Fondante', table.c.ETAT_UTILISATION == 'En service')).order_by(table.c.ID_INSTRUM)
         
         bgf = [x[0] for x in self.connection.execute(ins).fetchall()]
         
-        ins = select([table.c.IDENTIFICATION]).where(and_(table.c.DESIGNATION == "Bain d'etalonnage", table.c.ETAT_UTILISATION == 'En service'))
+        ins = select([table.c.IDENTIFICATION]).where(and_(table.c.DESIGNATION == "Bain d'etalonnage", table.c.ETAT_UTILISATION == 'En service')).order_by(table.c.ID_INSTRUM)
         hart = [x[0]for x in self.connection.execute(ins).fetchall()]
         
         
         
-        ins = select([table.c.IDENTIFICATION]).where(and_(table.c.DESIGNATION == "Enceinte climatique", table.c.ETAT_UTILISATION == 'En service'))
+        ins = select([table.c.IDENTIFICATION]).where(and_(table.c.DESIGNATION == "Enceinte climatique", table.c.ETAT_UTILISATION == 'En service')).order_by(table.c.ID_INSTRUM)
         enceinte = [x[0] for x in self.connection.execute(ins).fetchall()]
         
 #        list_generateur.append(bgf)+hart+enceinte

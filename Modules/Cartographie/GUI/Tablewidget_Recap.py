@@ -37,8 +37,7 @@ class TableWidget_Recap(QTableWidget):
                 nouvelle = menu.addAction("Nouvelle Cartographie")
                 modification = menu.addAction("Visualisation/Modification Cartographie")
                 annule = menu.addAction("Annule et Remplace Cartographie")
-                action = menu.exec_(event.globalPos())
-                
+                action = menu.exec_(event.globalPos())                
                 
                 if action == annule:                
                     self.annule_et_remplace.emit(ligne)
@@ -46,14 +45,13 @@ class TableWidget_Recap(QTableWidget):
                     self.ligne_clic.emit(ligne)
                 elif action == nouvelle:                
                     self.nouvelle.emit()
+            
             except:
                 pass
                 
         elif event.button() == Qt.LeftButton:
-            try:
-            
-                ligne = self.itemAt(event.pos()).row()
-                
+            try:            
+                ligne = self.itemAt(event.pos()).row()                
                 self.selectRow(ligne)
             except:
                 pass
