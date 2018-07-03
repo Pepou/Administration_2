@@ -15,7 +15,7 @@ class RapportSaisie():
     def __init__(self):
         self.path = os.path.abspath("C:/Labo_Temp/AppData/")
         
-        self.feuille_saisie = os.path.abspath("AppData/Documents/RapportPolynome.xlsx")
+        self.feuille_saisie = os.path.abspath("Modules/Polynome/AppData/Documents/RapportPolynome.xlsx")
 #        self.nom_campagne = nom_campagne
         
         #Afin de pas ecarser le rappor vierge copie du fichier dans le repertoir appdata pour traitement
