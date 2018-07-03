@@ -116,18 +116,21 @@ class Instrument():
                 instrum_a_modif.PRESTATAIRE = ele["PRESTATAIRE"]
                 instrum_a_modif.ETAT_UTILISATION = ele["ETAT_UTILISATION"]
                 
-    #            print(ele["INSTRUMENT_LIE"])
-                if ele["INSTRUMENT_LIE"] and ele["INSTRUMENT_LIE"]!="None" and ele["INSTRUMENT_LIE"] != "nan":
-                    instrum_a_modif.INSTRUMENT_LIE = True
-                else:
+#                print(f""" instrum lie {ele["INSTRUMENT_LIE"]} type {type(ele["INSTRUMENT_LIE"])}""")
+                if ele["INSTRUMENT_LIE"]== "False":
+#                    print("coucu")
                     instrum_a_modif.INSTRUMENT_LIE = False
-                
-                if ele["REF_INSTRUMENT"] and ele["REF_INSTRUMENT"]!= "None" and ele["REF_INSTRUMENT"] != "nan":
-                    id_instrum_lie = session.query(self.INSTRUMENTS.ID_INSTRUM).filter(self.INSTRUMENTS.IDENTIFICATION == ele["REF_INSTRUMENT"]).first()[0]
-                    print(id_instrum_lie)
-                    instrum_a_modif.REF_INSTRUMENT = int(float(id_instrum_lie))
-                else:
                     instrum_a_modif.REF_INSTRUMENT = None
+                    
+                else:
+                    instrum_a_modif.INSTRUMENT_LIE = True
+                
+                    if ele["REF_INSTRUMENT"] and ele["REF_INSTRUMENT"]!= "None" and ele["REF_INSTRUMENT"] != "nan":
+                        id_instrum_lie = session.query(self.INSTRUMENTS.ID_INSTRUM).filter(self.INSTRUMENTS.IDENTIFICATION == ele["REF_INSTRUMENT"]).first()[0]
+    #                    print(id_instrum_lie)
+                        instrum_a_modif.REF_INSTRUMENT = int(float(id_instrum_lie))
+                    else:
+                        instrum_a_modif.REF_INSTRUMENT = None
                             
                 session.flush()
                 
@@ -139,7 +142,7 @@ class Instrument():
 #                yield None
         finally:
             session.close()
-            print("erreur lors de la modification")
+#            print("erreur lors de la modification")
             
     
     def creation_instrum_unique(self, new_instrum):
