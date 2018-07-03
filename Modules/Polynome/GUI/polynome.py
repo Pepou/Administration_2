@@ -795,7 +795,7 @@ class Polynome(QMainWindow, Ui_Polynome):
         """
         Slot documentation goes here.
         """
-        dossier = QFileDialog.getExistingDirectory(None ,  "Selectionner le dossier de sauvegarde des Rapports", 'y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/1-TEMPERATURE/')
+        dossier = QFileDialog.getExistingDirectory(None ,  "Selectionner le dossier de sauvegarde des Rapports", 'y:/1.METROLOGIE/MATERIEL/')
         if dossier !="":
             rapport_poly = RapportSaisie()
             
@@ -808,7 +808,7 @@ class Polynome(QMainWindow, Ui_Polynome):
             rapport_poly.mise_en_forme(dossier, donnees_instrument, donnees_etalonnage, donnees_poly, nom_fichier)
             
             #nettoyage du dossier
-            path =os.path.abspath("AppData/")          
+            path =os.path.abspath("C:/Labo_Temp/AppData/")          
             for ele in os.listdir(path):
                 path_total = str(path + "/"+str(ele))
                 

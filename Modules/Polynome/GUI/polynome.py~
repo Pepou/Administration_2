@@ -23,7 +23,7 @@ import decimal
 #from PyQt4.Qwt5 import *
 #from PyQt4.Qwt5.qplt import *
 #import PyQt4.Qwt5.iqt
-from Package.AccesBdd import AccesBdd
+from Modules.Polynome.Package.AccesBdd import AccesBdd
 import pyqtgraph as pg
 
 from operator import itemgetter
@@ -808,7 +808,7 @@ class Polynome(QMainWindow, Ui_Polynome):
             rapport_poly.mise_en_forme(dossier, donnees_instrument, donnees_etalonnage, donnees_poly, nom_fichier)
             
             #nettoyage du dossier
-            path =os.path.abspath("AppData/")          
+            path =os.path.abspath("C:/Labo_Temp/AppData/")          
             for ele in os.listdir(path):
                 path_total = str(path + "/"+str(ele))
                 
