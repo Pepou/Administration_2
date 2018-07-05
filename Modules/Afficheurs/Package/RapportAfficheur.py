@@ -87,7 +87,7 @@ class RapportAfficheur:
         doc.Bookmarks("designation").Range.Text = donnees["designation"]
         doc.Bookmarks("designation_2").Range.Text = donnees["designation"]
         
-        if donnees["designation"] == "Sonde alarme température" or donnees["designation"] == "Afficheur de température":
+        if donnees["designation"] in["Sonde alarme température" ,  "SONDE ALARME TEMPÉRATURE", "Afficheur de température", "AFFICHEUR DE TEMPÉRATURE", "TÉMOIN D'ENVIRONNEMENT", "Temoin d'environnement", "Témoin d'environnement" ]:
             unite = "°C"
         elif donnees["designation"] == "Afficheur de temps":
             unite = "s"
