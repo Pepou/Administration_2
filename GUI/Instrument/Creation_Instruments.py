@@ -160,6 +160,12 @@ class Creation_Instrument(QDialog, Ui_Creation_Instrument):
                                     dict_ligne[self.tableWidget.horizontalHeaderItem(num_colonne).text()] = int(self.tableWidget.item(num_ligne,num_colonne).text())
                                 except:
                                     dict_ligne[self.tableWidget.horizontalHeaderItem(num_colonne).text()] = None
+                            elif self.tableWidget.horizontalHeaderItem(num_colonne).text() == "INSTRUMENT_LIE":
+                                try:
+                                    dict_ligne[self.tableWidget.horizontalHeaderItem(num_colonne).text()] = True
+                                except:
+                                    dict_ligne[self.tableWidget.horizontalHeaderItem(num_colonne).text()] = False
+                                
                             else:
                                 dict_ligne[self.tableWidget.horizontalHeaderItem(num_colonne).text()] = self.tableWidget.item(num_ligne,num_colonne).text()
                             

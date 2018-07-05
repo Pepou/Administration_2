@@ -116,7 +116,7 @@ class Instrument():
                 instrum_a_modif.PRESTATAIRE = ele["PRESTATAIRE"]
                 instrum_a_modif.ETAT_UTILISATION = ele["ETAT_UTILISATION"]
                 
-                print(f""" instrum lie {ele["INSTRUMENT_LIE"]} type {type(ele["INSTRUMENT_LIE"])}""")
+#                print(f""" instrum lie {ele["INSTRUMENT_LIE"]} type {type(ele["INSTRUMENT_LIE"])}""")
                 if ele["INSTRUMENT_LIE"]== "False":
 #                    print("coucu")
                     instrum_a_modif.INSTRUMENT_LIE = False
@@ -534,6 +534,7 @@ class Client():
             session = Session()
     
             id = int(donnees_en_dic.pop("ID_SERVICE"))
+            print(f"id pour la base {id}")
 
             session.query(self.SERVICE).filter(self.SERVICE.ID_SERVICE == id).update(donnees_en_dic)
             session.commit()

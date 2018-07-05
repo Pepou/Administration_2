@@ -174,12 +174,13 @@ class Modification_Site_Client(QMainWindow, Ui_Modification_Site_Client):
         """
         Slot documentation goes here.
         """
-        if self.comboBox_archivage_service.currentIndex()==0:
+        if self.comboBox_archivage_service.currentIndex()== 0:
             archivage = False
         else:
             archivage = True
         
-        maj_service= {"ID_SERVICE" : self.table_services_client.iloc[self.id_service]["ID_SERVICE"], 
+        
+        maj_service= {"ID_SERVICE" : self.id_service, 
                     "NOM":self.lineEdit_service_nom.text().upper(), 
                     "ABREVIATION":self.lineEdit_service_abrev.text().upper(), 
                     "TELEPHONE":self.lineEdit_service_tel.text(), 

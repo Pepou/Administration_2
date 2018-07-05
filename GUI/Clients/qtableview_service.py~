@@ -17,6 +17,7 @@ class Tableview_donnees_fichier(QTableView):
         if event.button() == Qt.LeftButton:
             selection = self.selectedIndexes()
             row = selection[0].row() 
+            print(row)
             self.signalSelect_service.emit(row)
 
     def keyPressEvent(self, event):

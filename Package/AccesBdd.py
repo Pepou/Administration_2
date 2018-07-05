@@ -534,6 +534,7 @@ class Client():
             session = Session()
     
             id = int(donnees_en_dic.pop("ID_SERVICE"))
+#            print(f"id pour la base {id}")
 
             session.query(self.SERVICE).filter(self.SERVICE.ID_SERVICE == id).update(donnees_en_dic)
             session.commit()

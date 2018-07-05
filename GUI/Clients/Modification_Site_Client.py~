@@ -65,6 +65,7 @@ class Modification_Site_Client(QMainWindow, Ui_Modification_Site_Client):
         
         self.comboBox_select_client.addItems(self.table_entite_client["ABREVIATION"].tolist())
         self.comboBox_select_client.insertItem(0, "*")
+        self.comboBox_select_client.setCurrentIndex(0)
         #connexion signal click sur un service
         self.tableView_services.signalSelect_service.connect(self.reaffectation_service)
         
@@ -173,12 +174,14 @@ class Modification_Site_Client(QMainWindow, Ui_Modification_Site_Client):
         """
         Slot documentation goes here.
         """
-        if self.comboBox_archivage_service.currentIndex()==0:
+        if self.comboBox_archivage_service.currentIndex()== 0:
             archivage = False
         else:
             archivage = True
         
-        maj_service= {"ID_SERVICE" : self.table_services_client.iloc[self.id_service]["ID_SERVICE"], 
+        print(f"selid service {self.id_service}")
+        print(self.table_services_client.iloc[self.id_service]["ID_SERVICE"])
+        maj_service= {"ID_SERVICE" : self.id_service, 
                     "NOM":self.lineEdit_service_nom.text().upper(), 
                     "ABREVIATION":self.lineEdit_service_abrev.text().upper(), 
                     "TELEPHONE":self.lineEdit_service_tel.text(), 
