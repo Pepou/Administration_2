@@ -81,9 +81,10 @@ class Export_excel():
 
             
         #delais
-
-        designation =[x for x in delais.keys()]
+#        print(delais)
+        designation = list(set([x.upper() for x in delais.keys()]))
         designation.sort()
+#        print(designation)
         for ele in designation:
             if len(delais[ele]) !=0:
                 self.classeur.Sheets.Add()

@@ -1,9 +1,10 @@
 #-*- coding: utf-8 -*-
 from sqlalchemy import *
 from sqlalchemy.orm import *
-from sqlalchemy.engine import create_engine
+#from sqlalchemy.engine import create_engine
 import numpy as np
-from datetime import datetime
+#from datetime import datetime
+from sqlalchemy.ext.automap import automap_base
 
 class AccesBdd():
     '''class gerant la bdd'''
@@ -16,6 +17,9 @@ class AccesBdd():
 #        self.password = password
            
             #création de l'"engine"
+            
+        Base = automap_base()
+        
         self.engine = engine #create_engine("postgresql+psycopg2://{}:{}@{}:{}/{}".format(self.login, self.password, self.adressebdd, self.portbdd, self.namebdd)) 
         self.meta = meta        
 #        self.meta.reflect(bind=self.engine)
@@ -24,11 +28,39 @@ class AccesBdd():
         Session = sessionmaker(bind=self.engine)
         self.session = Session.configure(bind=self.engine)
         
+        Base.prepare(self.engine, reflect=True)        
+        
+        self.ENTITE_CLIENT = Base.classes.ENTITE_CLIENT
+        self.CLIENTS = Base.classes.CLIENTS
         
     def __del__(self):
         self.connection.close()
     
-
+    def recensement_entites_client(self):
+        """recupere toutes les entites"""
+        Session = sessionmaker(bind= self.engine)
+        session = Session()
+        
+        entites = session.query(self.ENTITE_CLIENT.ABREVIATION).order_by(self.ENTITE_CLIENT.ABREVIATION).all()
+        session.close()
+        return entites
+        print(entites)
+    
+    def recensement_sites_client(self, entite_client):
+        Session = sessionmaker(bind= self.engine)
+        session = Session()
+            
+#        try:              
+        result = session.query(self.CLIENTS.CODE_CLIENT).\
+                               join(self.ENTITE_CLIENT, self.CLIENTS.ID_ENT_CLIENT == self.ENTITE_CLIENT.ID_ENT_CLIENT )\
+                               .filter(self.ENTITE_CLIENT.ABREVIATION == entite_client)\
+                               .order_by(self.CLIENTS.CODE_CLIENT)\
+                               
+                               
+        print([x[0] for x in result.all()])
+        return [x[0] for x in result.all()] 
+    
+        
     def resencement_instrument(self):
         '''retourne tous les identifications des instruments dans une list'''
 
@@ -261,13 +293,13 @@ class AccesBdd():
 
         conformite =[]
         for ele in list_id_afficheur:
-            #print(ele[0])
+#            print(ele[0])
 
             table = Table("AFFICHEUR_CONTROLE_RESULTAT", self.meta)
             ins = select([table.c.CONFORMITE]).where(table.c.ID_AFF_CTRL_ADMIN == ele[0])
             resultat = self.connection.execute(ins).fetchone()
-        
-            conformite.append((ele[1], ele[2],resultat[0], ele[3]))
+            if resultat:
+                conformite.append((ele[1], ele[2],resultat[0], ele[3]))
 
         ctrl_afficheur = []
 
@@ -343,7 +375,7 @@ class AccesBdd():
     def indicateur_delais(self,date_debut, date_fin, parc_instruments ):
 #        print("parc instrum {}".format(parc_instruments))
 #        print("date debut {} date fin {}".format(date_debut, date_fin))
-        set_designation = set([x[2] for x in parc_instruments])
+        set_designation = set([x[2].upper() for x in parc_instruments])
 #        print(set_designation)
 
               #delais d'etalonnage : 
@@ -355,7 +387,7 @@ class AccesBdd():
                         or_(table.c.INTERVENTION == "Expedition" ,table.c.INTERVENTION == "Expédition" )))\
                         .order_by(table.c.ID_INTERVENTION)
         list_instruments_expedies = self.connection.execute(ins).fetchall()
-#        print("intrum expedie {}".format(list_instruments_expedies))
+        print("intrum expedie {}".format(list_instruments_expedies))
 #        list_recep_expe_delais = []
         indicateur_delais = {}
         
@@ -363,9 +395,9 @@ class AccesBdd():
             list_recep_expe_delais = []
 #            print(designation)
             
-            instrument_par_designation = [x[0] for x in parc_instruments if x[2] == designation]
+            instrument_par_designation = [x[0] for x in parc_instruments if x[2].upper() == designation]
             list_instruments_expedies_par_designation = [x for x in list_instruments_expedies if x[0] in instrument_par_designation]
-#            print(" designation {} parc {}".format(designation, list_instruments_expedies_par_designation))
+            print(" designation {} parc {}".format(designation, list_instruments_expedies_par_designation))
 
             for ele in list_instruments_expedies_par_designation:
                 
@@ -475,7 +507,7 @@ class AccesBdd():
             
 #        print("parc {}".format(parc_instruments))
         
-        set_designation = set([x[2] for x in parc_instruments])
+        set_designation = set([x[2].upper() for x in parc_instruments])
 
               #delais d'etalonnage : 
         
@@ -493,7 +525,7 @@ class AccesBdd():
         for designation in set_designation:
             list_recep_expe_delais = []
             
-            instrument_par_designation = [x[0] for x in parc_instruments if x[2] == designation]
+            instrument_par_designation = [x[0] for x in parc_instruments if x[2].upper() == designation]
             list_instruments_expedies_par_designation = [x for x in list_instruments_expedies if x[0] in instrument_par_designation]
             
 #            print("list_instrumenst expedies {}".format(list_instruments_expedies_par_designation))

@@ -11,7 +11,7 @@ from PyQt4.QtGui import QInputDialog
 from .Ui_Indicateurs import Ui_MainWindow
 from Modules.Indicateurs.Package.AccesBdd import AccesBdd
 from Modules.Indicateurs.Package.Export_excel import Export_excel
-
+import pendulum
 import numpy
 
 class Indicateur(QMainWindow, Ui_MainWindow):
@@ -37,8 +37,11 @@ class Indicateur(QMainWindow, Ui_MainWindow):
         self.tableWidget.setColumnWidth(1,600)
         
         #calendrier
-        date_du_jour = self.dateEdit_2.selectedDate()
-        self.dateEdit.setCurrentPage(date_du_jour.year(), (date_du_jour.month() - 3))
+        date_du_jour = pendulum.now('Europe/Paris')
+#        print(date_du_jour)
+        self.dateEdit_2.setSelectedDate (date_du_jour)
+#        date_du_jour = self.dateEdit_2.selectedDate()
+        self.dateEdit.setSelectedDate (date_du_jour.subtract(months = 3))
         
     @pyqtSlot(str)
     def on_comboBox_activated(self, p0):
@@ -63,66 +66,75 @@ class Indicateur(QMainWindow, Ui_MainWindow):
     def composition_parc_utilises(self):
         '''fct qui rappatrie et trie l'ensemble du parc de la base et renvoie un dictionnaire avec le nbr d'instrument pas designation
         '''
-        clients = ["Total","EFS_PL", "EFS_BRETAGNE", "EFS_NORMANDIE", "EFS_CA", "HORS_PDL"]
+        
+        clients = [x[0] for x in self.db.recensement_entites_client()]
+        
+        
         client_choisi = QInputDialog.getItem(self, 
                        self.trUtf8("Numero certificats"), 
                        self.trUtf8("Choisir un numero"),
                        clients)
-
-            #list des designations:
-        designations = list(set([ele[2] for ele in self.instruments]))
-        designations.sort()
-#        print(designations)
-            #Indicateurs:
-                #clients
-#        efs_pl =["ABG__-44"]
-        efs_pl = ["ABG__-44", "EFS  -53", "EFS  -72", "EFS  -85", 
-                    "EFSNA-44", "EFS  -49", "EFS  -44", "EFSNO-44"]
+        
+#        print(client_choisi)
+        if client_choisi:
+            
+            list_sites = self.db.recensement_sites_client(client_choisi[0])
+                #list des designations:
+            designations = list(set([ele[2].upper() for ele in self.instruments]))
+            designations.sort()
+#            print(self.instruments)
+                #Indicateurs:
+                    #clients
+    #        efs_pl =["ABG__-44"]
+#            efs_pl = ["ABG__-44", "EFS  -53", "EFS  -72", "EFS  -85", 
+#                        "EFSNA-44", "EFS  -49", "EFS  -44", "EFSNO-44"]
+#                        
+#            efs_bretagne = ["EFS  -35"]
+#            efs_normandie = ["EFS  -14"]
+#            efs_centre_atlantique = ["EFSCA-16", "EFSCA-18", "EFSCA-28", "EFSCA-36", 
+#                                    "EFSCA-37", "EFSCA-45", "EFSCA-79", "EFSCA-86", 
+#                                    "EFSRO-17", "EFSSA-17", "EFSCA-41"]
+#                                    
+#            total = efs_pl + efs_bretagne+ efs_normandie+ efs_centre_atlantique
+#            hors_pdl = efs_bretagne+ efs_normandie+ efs_centre_atlantique
+            
+                
+                    #parc designations:       
+          
+            
+    
+            for ele in reversed(designations):
+                
+                list_totale = [x[0] for x in self.instruments if x[2].upper() == ele and x[3] in  list_sites]
+                
+#                if client_choisi[0] == "Total" and client_choisi[1] == True:
+#                    list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  total]
+#                    
+#                elif client_choisi[0] == "EFS_PL" and client_choisi[1] == True:
+#                    list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  efs_pl]
+#                    
+#                elif client_choisi[0] == "EFS_BRETAGNE" and client_choisi[1] == True:
+#                    list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  efs_bretagne]
+#                    
+#                elif client_choisi[0] == "EFS_NORMANDIE" and client_choisi[1] == True:
+#                    list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  efs_normandie]
+#                    
+#                elif client_choisi[0] == "EFS_CA" and client_choisi[1] == True:
+#                    list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  efs_centre_atlantique]
+#                    
+#                elif client_choisi[0] == "HORS_PDL" and client_choisi[1] == True:
+#                    list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  hors_pdl]
                     
-        efs_bretagne = ["EFS  -35"]
-        efs_normandie = ["EFS  -14"]
-        efs_centre_atlantique = ["EFSCA-16", "EFSCA-18", "EFSCA-28", "EFSCA-36", 
-                                "EFSCA-37", "EFSCA-45", "EFSCA-79", "EFSCA-86", 
-                                "EFSRO-17", "EFSSA-17", "EFSCA-41"]
-                                
-        total = efs_pl + efs_bretagne+ efs_normandie+ efs_centre_atlantique
-        hors_pdl = efs_bretagne+ efs_normandie+ efs_centre_atlantique
-        
-            
-                #parc designations:       
-      
-        
-
-        for ele in reversed(designations):
-            
-            if client_choisi[0] == "Total" and client_choisi[1] == True:
-                list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  total]
-                
-            elif client_choisi[0] == "EFS_PL" and client_choisi[1] == True:
-                list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  efs_pl]
-                
-            elif client_choisi[0] == "EFS_BRETAGNE" and client_choisi[1] == True:
-                list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  efs_bretagne]
-                
-            elif client_choisi[0] == "EFS_NORMANDIE" and client_choisi[1] == True:
-                list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  efs_normandie]
-                
-            elif client_choisi[0] == "EFS_CA" and client_choisi[1] == True:
-                list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  efs_centre_atlantique]
-                
-            elif client_choisi[0] == "HORS_PDL" and client_choisi[1] == True:
-                list_totale =  [x[0] for x in self.instruments if x[2] == ele and x[3] in  hors_pdl]
-                
-                
-#            print(list_totale)
-            self.tableWidget.insertRow(0)
-                
-                
-            nbr_instrument  =len(list_totale)
-                
-                
-            self.tableWidget.setItem(0, 0, QtGui.QTableWidgetItem(str(str(ele) + " "+str(client_choisi[0]))))
-            self.tableWidget.setItem(0, 1, QtGui.QTableWidgetItem(str(nbr_instrument)))
+                    
+    #            print(list_totale)
+                self.tableWidget.insertRow(0)
+                    
+                    
+                nbr_instrument  =len(list_totale)
+                    
+                    
+                self.tableWidget.setItem(0, 0, QtGui.QTableWidgetItem(str(str(ele) + " "+str(client_choisi[0]))))
+                self.tableWidget.setItem(0, 1, QtGui.QTableWidgetItem(str(nbr_instrument)))
 
 
         
@@ -221,11 +233,12 @@ class Indicateur(QMainWindow, Ui_MainWindow):
         date_debut = self.dateEdit.selectedDate().toString('yyyy-MM-dd')
         date_fin = self.dateEdit_2.selectedDate().toString('yyyy-MM-dd')
 #        print(self.instruments)
-        parc_afficheur = [ele for ele in self.instruments if ele[2] == "Afficheur de temps" 
-                            or ele[2] == "Afficheur de température"  
-                            or ele[2] == "Afficheur de vitesse"
-                            or ele[2] == "Sonde alarme température"
-                            or ele[2] == "Sonde d'hygrométrie"]
+        parc_afficheur = [ele for ele in self.instruments if ele[2].upper() == "Afficheur de temps".upper() 
+                            or ele[2].upper() == "Afficheur de température".upper()  
+                            or ele[2].upper() == "Afficheur de vitesse".upper()
+                            or ele[2].upper() == "Sonde alarme température".upper()
+                            or ele[2].upper() == "Sonde d'hygrométrie".upper()
+                            or ele[2].upper()== "TÉMOIN D'ENVIRONNEMENT"]
                             
 #        print(parc_afficheur)
 #        identification_instruments_temperature = [ele[0] for ele in parc_temperature]
@@ -301,11 +314,12 @@ class Indicateur(QMainWindow, Ui_MainWindow):
         date_fin = self.dateEdit_2.selectedDate ().toString('yyyy-MM-dd')
         parc_temperature = [ele for ele in self.instruments if ele[1] == "Température" and  (ele[2] == "Enregistreur de température" or  ele[2] == "Chaîne de mesure de température")]
         
-        parc_afficheur = [ele for ele in self.instruments if ele[2] == "Afficheur de temps" 
-                            or ele[2] == "Afficheur de température"  
-                            or ele[2] == "Afficheur de vitesse"
-                            or ele[2] == "Sonde alarme température"
-                            or ele[2] == "Sonde d'hygrométrie"]
+        parc_afficheur = [ele for ele in self.instruments if ele[2].upper() == "Afficheur de temps".upper() 
+                            or ele[2].upper() == "Afficheur de température".upper()  
+                            or ele[2].upper() == "Afficheur de vitesse".upper()
+                            or ele[2].upper() == "Sonde alarme température".upper()
+                            or ele[2].upper() == "Sonde d'hygrométrie".upper()
+                            or ele[2].upper()== "TÉMOIN D'ENVIRONNEMENT"]
 #        print(parc_afficheur)
         
         temperature = self.db.instrument_temperature_etal(date_debut, date_fin)
@@ -338,7 +352,7 @@ class Indicateur(QMainWindow, Ui_MainWindow):
         delais = self.db.indicateur_delais(date_debut, date_fin,  self.instruments)
 #        
 #        print(delais)
-        set_designation = set([x[2] for x in self.instruments])
+        set_designation = set([x[2].upper() for x in self.instruments])
         for designation in set_designation:
             nbr_ligne_tableau = self.tableWidget.rowCount()
             
