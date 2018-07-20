@@ -113,7 +113,9 @@ class AccesBdd():
         
         table = Table("INSTRUMENTS", self.meta)
 #        ins = table.select().where(and_(table.c.DOMAINE_MESURE == type_afficheur, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
-        ins = table.select().where(and_(table.c.DOMAINE_MESURE == type_afficheur, table.c.DESIGNATION == designation_etalon)).order_by(table.c.ID_INSTRUM)#, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
+        ins = table.select().where(and_(func.lower(table.c.DOMAINE_MESURE) == func.lower(type_afficheur),
+                                        func.lower(table.c.DESIGNATION) == func.lower(designation_etalon)))\
+                                        .order_by(table.c.ID_INSTRUM)#, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
         
         result = self.connection.execute(ins)
         
@@ -318,13 +320,13 @@ class AccesBdd():
         
         
         #construction numero doc
-        if afficheur["designation"] == "Sonde alarme température":
+        if afficheur["designation"].upper() == "Sonde alarme température".upper():
             prefix = "SAT"
-        elif afficheur["designation"] == "Afficheur de température":
+        elif afficheur["designation"].upper() == "Afficheur de température".upper():
             prefix = "AFT"
-        elif afficheur["designation"] == "Afficheur de temps":
+        elif afficheur["designation"].upper() == "Afficheur de temps".upper():
             prefix = "AFM"
-        elif afficheur["designation"] == "Afficheur de vitesse":
+        elif afficheur["designation"].upper() == "Afficheur de vitesse".upper():
             prefix = "AFV"            
         elif afficheur["designation"] == "Temoin d'environnement":
             prefix = "TEV"  

@@ -51,12 +51,12 @@ class AccesBdd():
         table = Table("INTERVENTIONS", self.meta)
         ins = select([table.c.CODE_CLIENT, table.c.IDENTIFICATION]).where(and_(table.c.DATE_INTERVENTION == date_expedition, or_(table.c.INTERVENTION == "Expedition", table.c.INTERVENTION == "Expédition"))).order_by(table.c.ID_INTERVENTION.desc())
         result = self.connection.execute(ins)        
-        
+#        print(result)
         list_instruments = []
         list_expedition = []
         for ele in result:
             list_instruments.append(ele)
-        
+#        print(list_instruments)
         #recuperation type d'instruments_
         
         for instrument in list_instruments:
@@ -69,7 +69,10 @@ class AccesBdd():
             affectation = str(result[3])
             
             #recuperation du numero des rapport et de la date de celuici:
+            
+            
             if result != None:
+#                print(result[0])
                 if result[0] in ["Enregistreur de température", "Chaîne de mesure de température", "ENREGISTREUR DE TEMPÉRATURE", "CHAÎNE DE MESURE DE TEMPÉRATURE"] :
                     table  = Table("ETALONNAGE_TEMP_ADMINISTRATION", self.meta)
                     ins = select([table.c.NUM_DOCUMENT, table.c.DATE_ETAL]).where(table.c.IDENTIFICATION_INSTRUM == instrument[1]).order_by(table.c.ID_ETAL)
@@ -89,7 +92,13 @@ class AccesBdd():
                     if len (result) != 0:                  
                         list_expedition.append((date_expedition, instrument[0], instrument[1], result[len(result)-1][0], result[len(result)-1][1].strftime("%d-%m-%Y" ), site, affectation))
 
-                
+                elif result[0] in ["ENCEINTE CLIMATIQUE"]:
+                    table  = Table("CARTO_ADMINISTRATION", self.meta)
+                    ins = select([table.c.NUM_RAPPORT, table.c.DATE_REALISATION]).where(table.c.IDENT_ENCEINTE == instrument[1]).order_by(table.c.ID_CARTO)
+                    result = self.connection.execute(ins).fetchall()
+                    
+                    if len (result) != 0:                  
+                        list_expedition.append((date_expedition, instrument[0], instrument[1], result[len(result)-1][0], result[len(result)-1][1].strftime("%d-%m-%Y" ), site, affectation))
                 
         return list_expedition
             

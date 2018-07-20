@@ -37,10 +37,10 @@ class Bon_Livraison(QMainWindow, Ui_Bon_Livraison):
         self.db = AccesBdd(self.engine)
         liste_dates = self.db.recensement_dates_interventions()
 #        liste_dates.sort()
-#        print(liste_dates)
+        print(liste_dates)
         
         self.date_dernieres_expedition = liste_dates[len(liste_dates)-1]
-#        print(date_dernieres_expedition)
+        print(self.date_dernieres_expedition)
         
         self.affichage_instruments_expedies(self.date_dernieres_expedition)
         
@@ -86,6 +86,8 @@ class Bon_Livraison(QMainWindow, Ui_Bon_Livraison):
             self.tableWidget.removeRow(0)
         
         list_instruments_expedies = self.db.instruments_expedies(date)
+        
+        print(f"date {date} instrum exped {list_instruments_expedies}")
         for i in range(len(list_instruments_expedies)):
             self.tableWidget.insertRow(0)
         

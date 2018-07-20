@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project Administration 0.1 -->
-<!-- Saved: 2018-06-19, 13:04:16 -->
+<!-- Saved: 2018-07-18, 17:35:45 -->
 <!-- Copyright (C) 2018 F.Cariou, francois.cariou@efs.sante.fr -->
 <Project version="5.1">
   <Language>fr_FR</Language>
@@ -212,6 +212,20 @@
     <Source>Modules/Synchronisation/GestionsFichiersEnregistreurs.py</Source>
     <Source>Modules/Synchronisation/Synchronisation v0.5.py</Source>
     <Source>Modules/Synchronisation/__init__.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_Bain/Caracterisation_Bain.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_Bain/Caracterisation_Bain_maj_visualisation.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_Bain/Tablewidget_homogeneite.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_Bain/Ui_Caracterisation_Bain.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_Bain/Ui_Caracterisation_Bain_maj_visualisation.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_Bain/__init__.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_enceinte/Interface_caracterisation_enceinte.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_enceinte/Interface_modification_caracterisation_enceinte.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_enceinte/Interface_visualisation_caracterisation_enceinte.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_enceinte/Tablewidget_select_sondes_centrales.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_enceinte/Ui_Interface_caracterisation_enceinte.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_enceinte/Ui_Interface_modification_caracterisation_enceinte.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_enceinte/Ui_Interface_visualisation_caracterisation_enceinte.py</Source>
+    <Source>Modules/Caracterisation_generateurs_temperature/GUI/Caracterisation_enceinte/__init__.py</Source>
   </Sources>
   <Forms>
     <Form>GUI/connexion2.ui</Form>

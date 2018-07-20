@@ -320,15 +320,15 @@ class AccesBdd():
         
         
         #construction numero doc
-        if afficheur["designation"] == "Sonde alarme température":
+        if afficheur["designation"].upper() == "Sonde alarme température".upper():
             prefix = "SAT"
-        elif afficheur["designation"] == "Afficheur de température":
+        elif afficheur["designation"].upper() == "Afficheur de température".upper():
             prefix = "AFT"
-        elif afficheur["designation"] == "Afficheur de temps":
+        elif afficheur["designation"].upper() == "Afficheur de temps".upper():
             prefix = "AFM"
-        elif afficheur["designation"] == "Afficheur de vitesse":
+        elif afficheur["designation"].upper() == "Afficheur de vitesse".upper():
             prefix = "AFV"            
-        elif afficheur["designation"] == "Temoin d'environnement":
+        elif afficheur["designation"].upper() == "Témoin d'environnement".upper():
             prefix = "TEV"  
         
         donnees["NUM_DOC"] = prefix + afficheur["num_doc_provisoire"]+"_"+ str(n_saisie)

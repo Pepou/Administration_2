@@ -38,7 +38,7 @@ class Bon_Reception(QMainWindow, Ui_Bon_Reception):
         liste_dates = self.db.recensement_dates_interventions()
         
         self.date_dernieres_reception = liste_dates[len(liste_dates)-1]
-        print(self.date_dernieres_reception)
+#        print(self.date_dernieres_reception)
         
         self.affichage_instruments_expedies(self.date_dernieres_reception)
         
