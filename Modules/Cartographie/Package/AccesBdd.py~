@@ -648,92 +648,92 @@ class Carto_BDD():
                           
                 return num_rapport
             ##########################################################################################    
-#            try:
-            id_operateur = session.query(self.CMR.ID_CMR).filter(self.CMR.NOM == donnees["administratif"]["responsable_mesure"].split()[0], self.CMR.PRENOM == donnees["administratif"]["responsable_mesure"].split()[1]).first()[0]
-            
-            if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme"\
-                or donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme.\
-                        La simulation de la température à cœur du CGR est non conforme":
-                enceinte_conforme = False
-            else:
-                enceinte_conforme = True
-            #Table admin
-            new_carto = self.ADMIN_CARTO(IDENT_ENCEINTE = donnees["administratif"]["ident_enceinte"], 
-                                        DATE_REALISATION = donnees["annexe"]["DATE"].toString(Qt.ISODate) , 
-                                        ID_OPERATEUR = id_operateur, 
-                                        NUM_RAPPORT= num_rapport(), 
-                                        IDENT_CENTRALE= donnees["administratif"]["nom_centrale"], 
-                                        APPLICATION= donnees["administratif"]["application"], 
-                                        CONDITION_DESIREE= donnees["administratif"]["condition_desiree"], 
-                                        TEMP_CONSIGNE= (donnees["administratif"]["temp_consign"]), 
-                                        SIGNE_EMT= donnees["administratif"]["signe_EMT"], 
-                                        EMT = (donnees["administratif"]["emt_processus"]), 
-                                        SIMULATION = donnees["simulation"]["simulation"], 
-                                        CONFORMITE_GLOBALE = enceinte_conforme, 
-                                        MODEL_CENTRALE = donnees["administratif"]["model_centrale"])
-            
-    
-            session.add(new_carto)
-            session.flush()
-#                session.commit()
-
-            #table carto_sonde
-            conf_sonde = []
-            for sonde in donnees["administratif"]["tableau_centrale"]:
-                new_sonde = self.CARTO_CENTRALE(
-                                    ID_CARTO_ADMIN = new_carto.ID_CARTO , 
-                                    IDENT_SONDE = sonde[0], 
-                                    POSITION_SONDE = sonde[1], 
-                                    NOM_SONDE_FICHIER = sonde[2], 
-                                    U_ETAL = (sonde[3]), 
-                                    DATE_ETAL = sonde[5], 
-                                    N_CE = sonde[4], 
-                                    RESOLUTION = (sonde[6]), 
-                                    DERIVE = (sonde[7]))
-                conf_sonde.append(new_sonde)
-            session.add_all(conf_sonde)
+            try:
+                id_operateur = session.query(self.CMR.ID_CMR).filter(self.CMR.NOM == donnees["administratif"]["responsable_mesure"].split()[0], self.CMR.PRENOM == donnees["administratif"]["responsable_mesure"].split()[1]).first()[0]
+                
+                if donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme"\
+                    or donnees["resultats"]["conclusion_generale"] == "Enceinte non Conforme.\
+                            La simulation de la température à cœur du CGR est non conforme":
+                    enceinte_conforme = False
+                else:
+                    enceinte_conforme = True
+                #Table admin
+                new_carto = self.ADMIN_CARTO(IDENT_ENCEINTE = donnees["administratif"]["ident_enceinte"], 
+                                            DATE_REALISATION = donnees["annexe"]["DATE"].toString(Qt.ISODate) , 
+                                            ID_OPERATEUR = id_operateur, 
+                                            NUM_RAPPORT= num_rapport(), 
+                                            IDENT_CENTRALE= donnees["administratif"]["nom_centrale"], 
+                                            APPLICATION= donnees["administratif"]["application"], 
+                                            CONDITION_DESIREE= donnees["administratif"]["condition_desiree"], 
+                                            TEMP_CONSIGNE= (donnees["administratif"]["temp_consign"]), 
+                                            SIGNE_EMT= donnees["administratif"]["signe_EMT"], 
+                                            EMT = (donnees["administratif"]["emt_processus"]), 
+                                            SIMULATION = donnees["simulation"]["simulation"], 
+                                            CONFORMITE_GLOBALE = enceinte_conforme, 
+                                            MODEL_CENTRALE = donnees["administratif"]["model_centrale"])
+                
         
+                session.add(new_carto)
+                session.flush()
+    #                session.commit()
+    
+                #table carto_sonde
+                conf_sonde = []
+                for sonde in donnees["administratif"]["tableau_centrale"]:
+                    new_sonde = self.CARTO_CENTRALE(
+                                        ID_CARTO_ADMIN = new_carto.ID_CARTO , 
+                                        IDENT_SONDE = sonde[0], 
+                                        POSITION_SONDE = sonde[1], 
+                                        NOM_SONDE_FICHIER = sonde[2], 
+                                        U_ETAL = (sonde[3]), 
+                                        DATE_ETAL = sonde[5], 
+                                        N_CE = sonde[4], 
+                                        RESOLUTION = (sonde[6]), 
+                                        DERIVE = (sonde[7]))
+                    conf_sonde.append(new_sonde)
+                session.add_all(conf_sonde)
             
-            #table donnees
-
-            
-            new_donnees = self.CARTO_DONNEES(ID_CARTO_ADMIN = new_carto.ID_CARTO, 
-                                            CORRECTION_DONNEES = donnees["annexe"]["CORRECTION_DONNEES"], 
-                                            DONNEES = donnees["annexe"]["DONNEES"].to_json(orient='index',date_format ='iso')) 
-                                            
-            
-            session.add(new_donnees)
-            session.flush()
-            
-            
-            new_resultat = self.CARTO_RESULTAT(ID_CARTO_ADMIN = new_carto.ID_CARTO,
-                                                RESULTAT = donnees["annexe"]["RESULTATS"].to_json(orient='index'), 
-                                                INDEX_DEB = donnees["annexe"]["INDEX_DEBUT"], 
-                                                INDEX_FIN = donnees["annexe"]["INDEX_FIN"], 
-                                                TEMP_AIR = donnees["resultats"]["temp_air"], 
-                                                U_TEMP_AIR = donnees["resultats"]["U_temp_air"],
-                                                ECART_CONSIGNE = donnees["resultats"]["ecart_consigne"],
-                                                MOY_MAX = donnees["resultats"]["moy_max"],
-                                                MOY_MIN = donnees["resultats"]["moy_min"],
-                                                HOMOGENEITE = donnees["resultats"]["homogeneite"],
-                                                STABILITE = donnees["resultats"]["stab"],
-                                                POSITION_STAB = donnees["resultats"]["position_stab"], 
-                                                CONFORMITE_CAPTEUR = donnees["resultats"]["tableau_conformite_par_capteur"], 
-                                                CONFORMITE_GLOBAL = enceinte_conforme, 
-                                                CONSEIL = donnees["resultats"]["conseils"], 
-                                                OBJET_REMARQUE = donnees["resultats"]["objet_remarques"])
-            session.add(new_resultat)
-            session.flush()
-#                if donnees["simulation"]["simulation"]:
-#                    new_simu = self.CARTO_SIMULATION(ID_CARTO_ADMIN = new_carto.ID_CARTO,
-#                                                      DONNEES_SIMU = donnees["simulation"]["donnees_simu"].to_json(orient='index',date_format ='iso')  )
-#                
-#                    session.add(new_simu)
-#                    session.flush()
-            
-            session.commit()
-#            print(f"num rapport bddd {new_carto.NUM_RAPPORT}")
-            return new_carto.NUM_RAPPORT
+                
+                #table donnees
+    
+                
+                new_donnees = self.CARTO_DONNEES(ID_CARTO_ADMIN = new_carto.ID_CARTO, 
+                                                CORRECTION_DONNEES = donnees["annexe"]["CORRECTION_DONNEES"], 
+                                                DONNEES = donnees["annexe"]["DONNEES"].to_json(orient='index',date_format ='iso')) 
+                                                
+                
+                session.add(new_donnees)
+                session.flush()
+                
+                
+                new_resultat = self.CARTO_RESULTAT(ID_CARTO_ADMIN = new_carto.ID_CARTO,
+                                                    RESULTAT = donnees["annexe"]["RESULTATS"].to_json(orient='index'), 
+                                                    INDEX_DEB = donnees["annexe"]["INDEX_DEBUT"], 
+                                                    INDEX_FIN = donnees["annexe"]["INDEX_FIN"], 
+                                                    TEMP_AIR = donnees["resultats"]["temp_air"], 
+                                                    U_TEMP_AIR = donnees["resultats"]["U_temp_air"],
+                                                    ECART_CONSIGNE = donnees["resultats"]["ecart_consigne"],
+                                                    MOY_MAX = donnees["resultats"]["moy_max"],
+                                                    MOY_MIN = donnees["resultats"]["moy_min"],
+                                                    HOMOGENEITE = donnees["resultats"]["homogeneite"],
+                                                    STABILITE = donnees["resultats"]["stab"],
+                                                    POSITION_STAB = donnees["resultats"]["position_stab"], 
+                                                    CONFORMITE_CAPTEUR = donnees["resultats"]["tableau_conformite_par_capteur"], 
+                                                    CONFORMITE_GLOBAL = enceinte_conforme, 
+                                                    CONSEIL = donnees["resultats"]["conseils"], 
+                                                    OBJET_REMARQUE = donnees["resultats"]["objet_remarques"])
+                session.add(new_resultat)
+                session.flush()
+    #                if donnees["simulation"]["simulation"]:
+    #                    new_simu = self.CARTO_SIMULATION(ID_CARTO_ADMIN = new_carto.ID_CARTO,
+    #                                                      DONNEES_SIMU = donnees["simulation"]["donnees_simu"].to_json(orient='index',date_format ='iso')  )
+    #                
+    #                    session.add(new_simu)
+    #                    session.flush()
+                
+                session.commit()
+    #            print(f"num rapport bddd {new_carto.NUM_RAPPORT}")
+                return new_carto.NUM_RAPPORT
             except Exception as e:
                 return e
                 session.rollback()

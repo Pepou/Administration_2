@@ -78,7 +78,7 @@ class Instrument():
         Session = sessionmaker(bind= self.engine)
         session = Session()
 #        print(list_dictionnaire)
-#        try:
+
         try:
 
             for ele in list_dictionnaire:
@@ -116,20 +116,26 @@ class Instrument():
                 instrum_a_modif.PRESTATAIRE = ele["PRESTATAIRE"]
                 instrum_a_modif.ETAT_UTILISATION = ele["ETAT_UTILISATION"]
                 
-#                print(f""" instrum lie {ele["INSTRUMENT_LIE"]} type {type(ele["INSTRUMENT_LIE"])}""")
+    #                print(f""" instrum lie {ele["INSTRUMENT_LIE"]} type {type(ele["INSTRUMENT_LIE"])}""")
                 if ele["INSTRUMENT_LIE"]== "False":
-#                    print("coucu")
+    #                    print("coucu")
                     instrum_a_modif.INSTRUMENT_LIE = False
                     instrum_a_modif.REF_INSTRUMENT = None
                     
                 else:
                     instrum_a_modif.INSTRUMENT_LIE = True
+#                    print(f""" {ele["REF_INSTRUMENT"]} et type {ele["REF_INSTRUMENT"]}""")
                 
                     if ele["REF_INSTRUMENT"] and ele["REF_INSTRUMENT"]!= "None" and ele["REF_INSTRUMENT"] != "nan":
-                        id_instrum_lie = session.query(self.INSTRUMENTS.ID_INSTRUM).filter(self.INSTRUMENTS.IDENTIFICATION == ele["REF_INSTRUMENT"]).first()[0]
+                        try:
+                            id_instrum_lie = session.query(self.INSTRUMENTS.ID_INSTRUM).filter(self.INSTRUMENTS.IDENTIFICATION == ele["REF_INSTRUMENT"]).first()[0]
     #                    print(id_instrum_lie)
-                        instrum_a_modif.REF_INSTRUMENT = int(float(id_instrum_lie))
+                            instrum_a_modif.REF_INSTRUMENT = int(float(id_instrum_lie))
+                        except TypeError:
+                            instrum_a_modif.INSTRUMENT_LIE = False
+                            instrum_a_modif.REF_INSTRUMENT = None
                     else:
+                        instrum_a_modif.INSTRUMENT_LIE = False
                         instrum_a_modif.REF_INSTRUMENT = None
                             
                 session.flush()
@@ -142,7 +148,7 @@ class Instrument():
 #                yield None
         finally:
             session.close()
-#            print("erreur lors de la modification")
+            print("erreur lors de la modification")
             
     
     def creation_instrum_unique(self, new_instrum):

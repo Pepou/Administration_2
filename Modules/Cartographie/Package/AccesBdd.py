@@ -103,6 +103,7 @@ class AccesBdd():
                             table.c.N_SERIE, table.c.ETAT_UTILISATION, table.c.REF_INSTRUMENT])\
                         .where(and_(table.c.ETAT_UTILISATION == "En service", table.c.INSTRUMENT_LIE == True))
         sondes = self.connection.execute(ins).fetchall()
+        print(sondes)
         return sondes
 
     def polynome(self, ident):
