@@ -726,9 +726,11 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                                 ,"BPG", "CA","CB", "CD", "CG", "CH", "CP"]
             
             #gestion tableau tableWidget_sondes_centrale
-            nbr_ligne= self.tableWidget_sondes_centrale.rowCount()
-            for ligne in reversed(range(nbr_ligne)):
-                self.tableWidget_sondes_centrale.removeRow(ligne)
+#            nbr_ligne= self.tableWidget_sondes_centrale.rowCount()
+#            for ligne in reversed(range(nbr_ligne)):
+#                self.tableWidget_sondes_centrale.removeRow(ligne)
+                
+            self.tableWidget_sondes_centrale.setRowCount (0)
                 
             for sonde in list_sondes:
                 self.tableWidget_sondes_centrale.insertRow(0)

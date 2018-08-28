@@ -90,7 +90,7 @@ class AccesBdd():
         table = Table("INSTRUMENTS", self.meta, autoload=True,  autoload_with= self.engine)
         ins = select([table.c.ID_INSTRUM, table.c.IDENTIFICATION,table.c.CONSTRUCTEUR, table.c.REFERENCE_CONSTRUCTEUR, \
                             table.c.N_SERIE, table.c.ETAT_UTILISATION])\
-                        .where(table.c.DESIGNATION == "Centrale de température")
+                        .where(func.lower(table.c.DESIGNATION) == func.lower("Centrale de température"))
         centrales = self.connection.execute(ins).fetchall()
 #        self.connection.close()
         return centrales
@@ -101,8 +101,11 @@ class AccesBdd():
         table = Table("INSTRUMENTS", self.meta, autoload=True,  autoload_with= self.engine)
         ins = select([table.c.ID_INSTRUM, table.c.IDENTIFICATION,table.c.CONSTRUCTEUR, table.c.REFERENCE_CONSTRUCTEUR, \
                             table.c.N_SERIE, table.c.ETAT_UTILISATION, table.c.REF_INSTRUMENT])\
-                        .where(and_(table.c.ETAT_UTILISATION == "En service", table.c.INSTRUMENT_LIE == True))
+                        .where(and_(func.lower(table.c.ETAT_UTILISATION) == func.lower("En service"), table.c.INSTRUMENT_LIE == True))
         sondes = self.connection.execute(ins).fetchall()
+        for ele in sondes:
+            if ele[6] == 1049:
+                print(ele)
         return sondes
 
     def polynome(self, ident):
