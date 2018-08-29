@@ -556,7 +556,7 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
                 accelration_dict[nom] = np.diff(vitesse_dict[nom])                
 #                a =[]
 #                index_dtat= 
-                moyenne_pandas[nom] = [np.mean(vitesse_dict[nom]), np.mean(accelration_dict[nom])]
+                moyenne_pandas[nom] = [np.nanmean(vitesse_dict[nom]), np.nanmean(accelration_dict[nom])]
 #                moyenne_dict[str(nom + "_"+"acceleration")]= 
                 
 #                print(test)
@@ -1222,7 +1222,8 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
         
         tableau_sondes_centrale = []
         for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
-            if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and self.tableWidget_sondes_centrale.item(ligne, 2):
+            if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and (self.tableWidget_sondes_centrale.item(ligne, 2)
+                                                                                                or self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText() !="*"):
                 nom_voie = self.tableWidget_sondes_centrale.item(ligne, 0).text()
                 emplacement = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()                
                 

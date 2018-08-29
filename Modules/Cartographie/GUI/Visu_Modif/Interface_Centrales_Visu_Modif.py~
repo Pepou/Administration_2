@@ -1231,7 +1231,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         
         tableau_sondes_centrale = []
         for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
-            print(self.tableWidget_sondes_centrale.item(ligne, 2))
+#            print(self.tableWidget_sondes_centrale.item(ligne, 2))
             if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and (self.tableWidget_sondes_centrale.item(ligne, 2)
                                                                                                 or self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText() !="*"):
                 
@@ -1243,9 +1243,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 except:
                         nom_fichier =self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText()              
                 
-                
-                print(f"ligne {ligne}  nom voie {nom_voie} emplacement {emplacement}  nom fichier {nom_fichier}")
-                
+                               
                 
                 u_etal = decimal.Decimal(str(self.tableWidget_sondes_centrale.item(ligne, 6).text()))\
                                     .quantize(decimal.Decimal(str(0.01)),rounding = decimal.ROUND_UP)

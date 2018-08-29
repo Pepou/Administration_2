@@ -230,7 +230,7 @@ class Rapport():
         
         signe = administratif["signe_EMT"]
         if float(emt_processus) != 0:
-            c.drawString(13*cm,24.2*cm,"EMT processus : {} {}".format(signe, emt_processus))
+            c.drawString(13*cm,24.2*cm,"EMT processus : {} {} °C".format(signe, emt_processus))
         else:
             c.drawString(13*cm,24.2*cm,"EMT processus : na")
         
@@ -238,6 +238,15 @@ class Rapport():
         nom_resp_mesure = administratif["responsable_mesure"]
         c.drawString(1.7*cm,23.2*cm,"Responsable des mesures : {}".format(nom_resp_mesure))
 
+        
+        index_debut = donnees["annexe"]["INDEX_DEBUT"]        
+#        index_fin = donnees["annexe"]["INDEX_FIN"] + 1
+        date_debut = donnees["annexe"]["DONNEES"]["Date"].iloc[index_debut].strftime("%d-%m-%Y") 
+#        date_fin = donnees["annexe"]["DONNEES"]["Date"].iloc[index_fin-1].strftime("%d-%m-%Y %H:%M:%S")
+        date_execution = "{}".format(date_debut)
+        c.drawString(13*cm,23.2*cm,"Date d'exécution : {}".format(date_execution))
+        
+        
         c.rect(1.3*cm, 22.8*cm, 18.1*cm, 3.8*cm , stroke=1, fill=0)
 
         c.setFont("Arial-Bold", 10)

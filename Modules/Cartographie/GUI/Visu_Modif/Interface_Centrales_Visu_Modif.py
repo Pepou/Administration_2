@@ -1861,7 +1861,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                                 
                 
                 sauvegarde = self.donnees_rapport()
-                print(sauvegarde["administratif"]["tableau_centrale"])
+#                print(sauvegarde["administratif"]["tableau_centrale"])
         #############test a faire voir sil ne manque pas des donnees
                 carto_bdd = Carto_BDD(self.engine)
                 maj_carto = carto_bdd.maj_carto(sauvegarde)
