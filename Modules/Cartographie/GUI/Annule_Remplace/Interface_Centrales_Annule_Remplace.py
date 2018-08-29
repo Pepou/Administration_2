@@ -264,7 +264,7 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
         Slot documentation goes here.
         """
         # TODO: not implemented yet
-        fichier =QFileDialog.getOpenFileNames(self, "Choisir le fichier de donnees", "y:/1.METROLOGIE/1EBRO-1 FD5/")
+        fichier =QFileDialog.getOpenFileNames(self, "Choisir le fichier de donnees", "Y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/3-CARTOS-SIMULATION")
         
         if fichier:            
 
@@ -337,23 +337,22 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
                         
 #                        pos_carto = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()
                         nom_voie_bdd = self.tableWidget_sondes_centrale.item(ligne, 0).text()
-                        nom_voie_bdd_split = nom_voie_bdd.split()
-#                        print(nom_voie_bdd_split)
                         
+                        nom_voie_bdd_split = ""
+                        for caractere_split in [" ", "_"]: #permet de decouper par rapport à diferent valeur de string à completer au fur et à mesure si nouveau format de sonde
+                            if len(nom_voie_bdd.split(caractere_split)) > len(nom_voie_bdd_split):
+                                nom_voie_bdd_split = nom_voie_bdd.split(caractere_split)
+
                         
                         for i in range(1, len(nom_voie_bdd_split)):
                             index=0
                             for ele in list_nom_sondes_fichier:
-#                                print("nom sonde fichier {}".format(ele))
-#                            
-#                                print("decoupage {}".format(nom_voie_bdd_split[i]))
-                                if "v" not in nom_voie_bdd_split[i]or "V" not in nom_voie_bdd_split[i]:
-#                                    print("pas dedans")
-                                    if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
+                                if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
 #                                        print(" ele good {}".format(ele))
-                                        combobox_nom_fichier.setCurrentIndex(index)
-                                    else:
-                                        pass
+                                    combobox_nom_fichier.setCurrentIndex(index)
+                                    list_nom_sondes_fichier.remove(ele)
+                                    break
+
                                 index +=1
       
                     self.tableWidget_sondes_centrale.resizeColumnsToContents()

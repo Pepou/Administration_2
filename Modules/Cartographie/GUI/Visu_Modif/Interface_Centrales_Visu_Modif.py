@@ -266,7 +266,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         Slot documentation goes here.
         """
         # TODO: not implemented yet
-        fichier =QFileDialog.getOpenFileNames(self, "Choisir le fichier de donnees", "y:/1.METROLOGIE/1EBRO-1 FD5/")
+        fichier =QFileDialog.getOpenFileNames(self, "Choisir le fichier de donnees", "Y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/3-CARTOS-SIMULATION")
         
         if fichier:            
 
@@ -339,23 +339,22 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                         
 #                        pos_carto = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()
                         nom_voie_bdd = self.tableWidget_sondes_centrale.item(ligne, 0).text()
-                        nom_voie_bdd_split = nom_voie_bdd.split()
-#                        print(nom_voie_bdd_split)
                         
+                        nom_voie_bdd_split = ""
+                        for caractere_split in [" ", "_"]: #permet de decouper par rapport à diferent valeur de string à completer au fur et à mesure si nouveau format de sonde
+                            if len(nom_voie_bdd.split(caractere_split)) > len(nom_voie_bdd_split):
+                                nom_voie_bdd_split = nom_voie_bdd.split(caractere_split)
+
                         
                         for i in range(1, len(nom_voie_bdd_split)):
                             index=0
                             for ele in list_nom_sondes_fichier:
-#                                print("nom sonde fichier {}".format(ele))
-#                            
-#                                print("decoupage {}".format(nom_voie_bdd_split[i]))
-                                if "v" not in nom_voie_bdd_split[i]or "V" not in nom_voie_bdd_split[i]:
-#                                    print("pas dedans")
-                                    if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
+                                if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
 #                                        print(" ele good {}".format(ele))
-                                        combobox_nom_fichier.setCurrentIndex(index)
-                                    else:
-                                        pass
+                                    combobox_nom_fichier.setCurrentIndex(index)
+                                    list_nom_sondes_fichier.remove(ele)
+                                    break
+
                                 index +=1
       
                     self.tableWidget_sondes_centrale.resizeColumnsToContents()
@@ -559,7 +558,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 accelration_dict[nom] = np.diff(vitesse_dict[nom])                
 #                a =[]
 #                index_dtat= 
-                moyenne_pandas[nom] = [np.mean(vitesse_dict[nom]), np.mean(accelration_dict[nom])]
+                moyenne_pandas[nom] = [np.nanmean(vitesse_dict[nom]), np.nanmean(accelration_dict[nom])]
 #                moyenne_dict[str(nom + "_"+"acceleration")]= 
                 
 #                print(test)
@@ -887,9 +886,7 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                                 ,"BPG", "CA","CB", "CD", "CG", "CH", "CP"]
             
             #gestion tableau tableWidget_sondes_centrale
-            nbr_ligne= self.tableWidget_sondes_centrale.rowCount()
-            for ligne in reversed(range(nbr_ligne)):
-                self.tableWidget_sondes_centrale.removeRow(ligne)
+            self.tableWidget_sondes_centrale.setRowCount(0)
                 
             for sonde in list_sondes:
                 self.tableWidget_sondes_centrale.insertRow(0)
@@ -1234,10 +1231,21 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         
         tableau_sondes_centrale = []
         for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
-            if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and self.tableWidget_sondes_centrale.item(ligne, 2):
+            print(self.tableWidget_sondes_centrale.item(ligne, 2))
+            if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and (self.tableWidget_sondes_centrale.item(ligne, 2)
+                                                                                                or self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText() !="*"):
+                
                 nom_voie = self.tableWidget_sondes_centrale.item(ligne, 0).text()
                 emplacement = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()                
-                nom_fichier = self.tableWidget_sondes_centrale.item(ligne, 2).text()              
+                
+                try:
+                        nom_fichier = self.tableWidget_sondes_centrale.item(ligne, 2).text()              
+                except:
+                        nom_fichier =self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText()              
+                
+                
+                print(f"ligne {ligne}  nom voie {nom_voie} emplacement {emplacement}  nom fichier {nom_fichier}")
+                
                 
                 u_etal = decimal.Decimal(str(self.tableWidget_sondes_centrale.item(ligne, 6).text()))\
                                     .quantize(decimal.Decimal(str(0.01)),rounding = decimal.ROUND_UP)
@@ -1855,8 +1863,8 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                                 
                 
                 sauvegarde = self.donnees_rapport()
-    #            print(sauvegarde)
-        #############test a faire voir sil ne manque paq des donnees
+                print(sauvegarde["administratif"]["tableau_centrale"])
+        #############test a faire voir sil ne manque pas des donnees
                 carto_bdd = Carto_BDD(self.engine)
                 maj_carto = carto_bdd.maj_carto(sauvegarde)
                 

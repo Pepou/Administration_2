@@ -198,6 +198,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                                 if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
 #                                        print(" ele good {}".format(ele))
                                     combobox_nom_fichier.setCurrentIndex(index)
+                                    list_nom_sondes_fichier.remove(ele)
                                     break
 #                                else:
 #                                    pass
