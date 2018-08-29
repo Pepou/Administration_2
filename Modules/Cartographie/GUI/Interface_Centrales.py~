@@ -177,33 +177,24 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                         self.tableWidget_sondes_centrale.setCellWidget(ligne, 2, combobox_nom_fichier)
                        
                         combobox_nom_fichier.addItems(list_nom_sondes_fichier)
-                        
-#                        pos_carto = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()
+
                         nom_voie_bdd = self.tableWidget_sondes_centrale.item(ligne, 0).text()
+                        
                         nom_voie_bdd_split = ""
                         for caractere_split in [" ", "_"]: #permet de decouper par rapport à diferent valeur de string à completer au fur et à mesure si nouveau format de sonde
                             if len(nom_voie_bdd.split(caractere_split)) > len(nom_voie_bdd_split):
                                 nom_voie_bdd_split = nom_voie_bdd.split(caractere_split)
-                        print(nom_voie_bdd_split)
-                        
+
                         
                         for i in range(1, len(nom_voie_bdd_split)):
                             index=0
                             for ele in list_nom_sondes_fichier:
-                                print("nom sonde fichier {}".format(ele))
-                            
-                                print("decoupage {}".format(nom_voie_bdd_split[i]))
-#                                if "v" not in nom_voie_bdd_split[i]or "V" not in nom_voie_bdd_split[i]:
-#                                    print("pas dedans")
                                 if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
 #                                        print(" ele good {}".format(ele))
                                     combobox_nom_fichier.setCurrentIndex(index)
                                     list_nom_sondes_fichier.remove(ele)
                                     break
-#                                else:
-#                                    pass
-#                                else:
-#                                    print("v dedans")
+
                                 index +=1
       
                     self.tableWidget_sondes_centrale.resizeColumnsToContents()
@@ -1098,8 +1089,8 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         tableau_sondes_centrale = []
         for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
             if not self.tableWidget_sondes_centrale.cellWidget(ligne, 2):
-                if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" \
-                    and self.tableWidget_sondes_centrale.item(ligne, 2): ###### probleme pour centrale et EBEOR vs DATALOG
+                if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and (self.tableWidget_sondes_centrale.item(ligne, 2)
+                                                                                                or self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText() !="*"): ###### probleme pour centrale et EBEOR vs DATALOG
                                     
                     nom_voie = self.tableWidget_sondes_centrale.item(ligne, 0).text()
                     emplacement = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()                
