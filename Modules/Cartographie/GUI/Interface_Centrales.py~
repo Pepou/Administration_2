@@ -180,23 +180,29 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                         
 #                        pos_carto = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()
                         nom_voie_bdd = self.tableWidget_sondes_centrale.item(ligne, 0).text()
-                        nom_voie_bdd_split = nom_voie_bdd.split()
-#                        print(nom_voie_bdd_split)
+                        nom_voie_bdd_split = ""
+                        for caractere_split in [" ", "_"]: #permet de decouper par rapport à diferent valeur de string à completer au fur et à mesure si nouveau format de sonde
+                            if len(nom_voie_bdd.split(caractere_split)) > len(nom_voie_bdd_split):
+                                nom_voie_bdd_split = nom_voie_bdd.split(caractere_split)
+                        print(nom_voie_bdd_split)
                         
                         
                         for i in range(1, len(nom_voie_bdd_split)):
                             index=0
                             for ele in list_nom_sondes_fichier:
-#                                print("nom sonde fichier {}".format(ele))
-#                            
-#                                print("decoupage {}".format(nom_voie_bdd_split[i]))
-                                if "v" not in nom_voie_bdd_split[i]or "V" not in nom_voie_bdd_split[i]:
+                                print("nom sonde fichier {}".format(ele))
+                            
+                                print("decoupage {}".format(nom_voie_bdd_split[i]))
+#                                if "v" not in nom_voie_bdd_split[i]or "V" not in nom_voie_bdd_split[i]:
 #                                    print("pas dedans")
-                                    if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
+                                if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
 #                                        print(" ele good {}".format(ele))
-                                        combobox_nom_fichier.setCurrentIndex(index)
-                                    else:
-                                        pass
+                                    combobox_nom_fichier.setCurrentIndex(index)
+                                    break
+#                                else:
+#                                    pass
+#                                else:
+#                                    print("v dedans")
                                 index +=1
       
                     self.tableWidget_sondes_centrale.resizeColumnsToContents()
@@ -726,9 +732,11 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                                 ,"BPG", "CA","CB", "CD", "CG", "CH", "CP"]
             
             #gestion tableau tableWidget_sondes_centrale
-            nbr_ligne= self.tableWidget_sondes_centrale.rowCount()
-            for ligne in reversed(range(nbr_ligne)):
-                self.tableWidget_sondes_centrale.removeRow(ligne)
+#            nbr_ligne= self.tableWidget_sondes_centrale.rowCount()
+#            for ligne in reversed(range(nbr_ligne)):
+#                self.tableWidget_sondes_centrale.removeRow(ligne)
+                
+            self.tableWidget_sondes_centrale.setRowCount (0)
                 
             for sonde in list_sondes:
                 self.tableWidget_sondes_centrale.insertRow(0)

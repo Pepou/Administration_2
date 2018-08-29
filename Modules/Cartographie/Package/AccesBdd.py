@@ -73,8 +73,7 @@ class AccesBdd():
                     .all()
         yield enceintes_des_litt
         session.close()
-    
-    
+        
     
     def centrales(self):
         table = Table("INSTRUMENTS", self.meta, autoload=True,  autoload_with= self.engine)
