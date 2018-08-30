@@ -57,6 +57,8 @@ class Export_excel():
                 self.classeur.ActiveSheet.Name = nom_onglet.replace("/", "_")
             else:
                 self.classeur.ActiveSheet.Name = nom_onglet[:29].replace("/", "_")
+#            print(nom_onglet)
+#            print(adresse)
             #adresse 
             self.classeur.ActiveSheet.Cells(1,1).Value = nom
             self.classeur.ActiveSheet.Cells(2,1).Value = labo

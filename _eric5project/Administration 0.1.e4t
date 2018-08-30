@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
 <!-- eric5 tasks file for project Administration 0.1 -->
-<!-- Saved: 2018-08-30, 10:26:44 -->
+<!-- Saved: 2018-08-30, 17:41:01 -->
 <Tasks version="5.1">
   <ProjectScanFilter></ProjectScanFilter>
   <Task priority="1" completed="False" type="1">
@@ -619,33 +619,6 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-07-19, 16:24:08</Created>
-    <Resource>
-      <Filename>Modules/Reception_expedition/GUI/Reception_Expedition.py</Filename>
-      <Linenumber>65</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-07-19, 16:24:08</Created>
-    <Resource>
-      <Filename>Modules/Reception_expedition/GUI/Reception_Expedition.py</Filename>
-      <Linenumber>97</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-07-19, 16:24:08</Created>
-    <Resource>
-      <Filename>Modules/Reception_expedition/GUI/Reception_Expedition.py</Filename>
-      <Linenumber>174</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
     <Created>2018-07-20, 11:42:53</Created>
     <Resource>
       <Filename>Modules/Afficheurs/GUI/afficheurs.py</Filename>
@@ -772,15 +745,6 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-07-24, 16:21:37</Created>
-    <Resource>
-      <Filename>Modules/Reception_expedition/BondeLivraison/GUI/BonLivraison.py</Filename>
-      <Linenumber>75</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
     <Created>2018-08-29, 14:29:19</Created>
     <Resource>
       <Filename>Modules/Cartographie/GUI/Interface_Centrales.py</Filename>
@@ -803,6 +767,42 @@
     <Resource>
       <Filename>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.py</Filename>
       <Linenumber>268</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-08-30, 15:46:45</Created>
+    <Resource>
+      <Filename>Modules/Reception_expedition/BondeLivraison/GUI/BonLivraison.py</Filename>
+      <Linenumber>75</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-08-30, 17:29:27</Created>
+    <Resource>
+      <Filename>Modules/Reception_expedition/GUI/Reception_Expedition.py</Filename>
+      <Linenumber>68</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-08-30, 17:29:27</Created>
+    <Resource>
+      <Filename>Modules/Reception_expedition/GUI/Reception_Expedition.py</Filename>
+      <Linenumber>100</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-08-30, 17:29:27</Created>
+    <Resource>
+      <Filename>Modules/Reception_expedition/GUI/Reception_Expedition.py</Filename>
+      <Linenumber>177</Linenumber>
     </Resource>
   </Task>
 </Tasks>

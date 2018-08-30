@@ -25,7 +25,7 @@ class AccesBdd():
         
         table = Table("INTERVENTIONS", self.meta)
 #        ins = table.select().where(and_(table.c.DOMAINE_MESURE == type_afficheur, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
-        ins = select([table.c.DATE_INTERVENTION]).where(or_(table.c.INTERVENTION == "Expedition", table.c.INTERVENTION == "Expédition")).order_by(table.c.ID_INTERVENTION)
+        ins = select([table.c.DATE_INTERVENTION]).where(or_(table.c.INTERVENTION == "Expedition", table.c.INTERVENTION == "Expédition")).order_by(table.c.DATE_INTERVENTION.desc())
         
         
         #.where(and_(table.c.DOMAINE_MESURE == type_afficheur)).order_by(table.c.ID_INSTRUM)#, table.c.SITE == site, table.c.DESIGNATION == designation_etalon))#, table.c.AFFECTATION == service))
@@ -40,7 +40,7 @@ class AccesBdd():
                 list_dates.append(ele[0])
             else:
                 pass
-        list_dates.sort()
+#        list_dates.sort()
         list_dates_strint =[x.strftime("%d-%m-%Y" ) for x in list_dates]
 #        print(list_dates_strint)
         return list_dates_strint
@@ -100,6 +100,9 @@ class AccesBdd():
                     if len (result) != 0:                  
                         list_expedition.append((date_expedition, instrument[0], instrument[1], result[len(result)-1][0], result[len(result)-1][1].strftime("%d-%m-%Y" ), site, affectation))
                 
+            else:
+                list_expedition.append((date_expedition, instrument[0], instrument[1], None, None, site, affectation))
+        
         return list_expedition
             
             

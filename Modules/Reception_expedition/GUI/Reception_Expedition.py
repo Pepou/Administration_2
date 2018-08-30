@@ -13,7 +13,7 @@ from PyQt4 import QtGui
 from PyQt4.QtCore import * 
 from PyQt4.QtGui import * 
 
-
+import pendulum
 #from PyQt4.QtGui import QStandardItemModel 
 
 from Modules.Reception_expedition.GUI.Ui_Reception_Expedition import Ui_MainWindow
@@ -44,15 +44,18 @@ class ReceptionExpedition(QMainWindow, Ui_MainWindow):
 
         self.db = AccesBdd(self.engine)
         self.list_identification_instruments = self.db.identification_instrument()
-        
-
 
         self.lineEdit.mise_a_jour_completerList(self.list_identification_instruments)
 
         self.interventions = Intervention(self.engine)
         
         ensemble_interventions = self.interventions.recuperation_interventions()
-        self.tableView.remplir(ensemble_interventions)
+        ensemble_interventions.sort_values(by="DATE_INTERVENTION", ascending=False, inplace=True)
+        
+        annee_en_cour = pendulum.now('Europe/Paris').add(years= - 1)
+#        print(annee_en_cour)
+        
+        self.tableView.remplir(ensemble_interventions[ensemble_interventions["DATE_INTERVENTION"]>annee_en_cour])
     
     
 

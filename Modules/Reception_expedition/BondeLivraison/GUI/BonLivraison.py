@@ -39,7 +39,7 @@ class Bon_Livraison(QMainWindow, Ui_Bon_Livraison):
 #        liste_dates.sort()
 #        print(liste_dates)
         
-        self.date_dernieres_expedition = liste_dates[len(liste_dates)-1]
+        self.date_dernieres_expedition = liste_dates[0]
 #        print(self.date_dernieres_expedition)
         
         self.affichage_instruments_expedies(self.date_dernieres_expedition)
@@ -87,7 +87,7 @@ class Bon_Livraison(QMainWindow, Ui_Bon_Livraison):
         
         list_instruments_expedies = self.db.instruments_expedies(date)
         
-        print(f"date {date} instrum exped {list_instruments_expedies}")
+#        print(f"date {date} instrum exped {list_instruments_expedies}")
         for i in range(len(list_instruments_expedies)):
             self.tableWidget.insertRow(0)
         
