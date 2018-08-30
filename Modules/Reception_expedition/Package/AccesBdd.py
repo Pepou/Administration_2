@@ -48,26 +48,30 @@ class AccesBdd():
         
 
     def recuperation_periodicite_instrum(self, nom_instrum, nom_intervention):
+        try:
+            table = Table("INSTRUMENTS", self.meta)
+            ins = select([table.c.ID_INSTRUM, table.c.DESIGNATION]).where(table.c.IDENTIFICATION == nom_instrum)
+    
+            caract_instrum = self.connection.execute(ins).fetchone()
+            
+            
+            table = Table("INSTRUMENT_DESIGNATION", self.meta)
+            ins = select([table.c.ID_DESIGNATION]).where(table.c.NOM_DESIGNATION == caract_instrum[1])
+            id_designation = self.connection.execute(ins).fetchone()
+#            print(caract_instrum[1])
+            
+            
+            table = Table("INTERVENTION_TYPE", self.meta)
+            ins = select([table.c.PERIODICITE, table.c.UNITE_PERIODICITE]).where(and_(table.c.DESIGNATION == id_designation[0], table.c.NOM_INTERVENTION == nom_intervention))
+            periodicite = self.connection.execute(ins).fetchone()
+            
+#            print(periodicite)
+            return periodicite
         
-        table = Table("INSTRUMENTS", self.meta)
-        ins = select([table.c.ID_INSTRUM, table.c.DESIGNATION]).where(table.c.IDENTIFICATION == nom_instrum)
-
-        caract_instrum = self.connection.execute(ins).fetchone()
+        except:
+            return (1, 'An(s)')
         
         
-        table = Table("INSTRUMENT_DESIGNATION", self.meta)
-        ins = select([table.c.ID_DESIGNATION]).where(table.c.NOM_DESIGNATION == caract_instrum[1])
-        id_designation = self.connection.execute(ins).fetchone()
-        
-        
-        
-        table = Table("INTERVENTION_TYPE", self.meta)
-        ins = select([table.c.PERIODICITE, table.c.UNITE_PERIODICITE]).where(and_(table.c.DESIGNATION == id_designation[0], table.c.NOM_INTERVENTION == nom_intervention))
-        periodicite = self.connection.execute(ins).fetchone()
-        
-        
-        
-        return periodicite
         
         
 #        print(periodicite)
