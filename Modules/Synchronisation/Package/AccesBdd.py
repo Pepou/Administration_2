@@ -31,7 +31,7 @@ class AccesBdd():
     def instruments(self):
         
         table = Table("INSTRUMENTS", self.meta)
-        ins = select([table.c.IDENTIFICATION]).where(table.c.DOMAINE_MESURE == "Température")
+        ins = select([table.c.IDENTIFICATION]).where(func.lower(table.c.DOMAINE_MESURE) == func.lower("Température"))
 
         list_instruments = [inst[0] for inst in self.connection.execute(ins).fetchall()]  
 

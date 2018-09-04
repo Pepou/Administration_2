@@ -12,6 +12,9 @@ from PyQt4 import QtGui
 from .Ui_Gestion_centrales import Ui_Dialog
 from PyQt4.QtCore import SIGNAL
 from Modules.Synchronisation.GUI.extendedcombo import ExtendedCombo
+
+
+
 class Dialog(QDialog, Ui_Dialog):
     """
     Class documentation goes here.
@@ -32,7 +35,9 @@ class Dialog(QDialog, Ui_Dialog):
             item = QtGui.QTableWidgetItem()
             self.tableWidget_instrument.setVerticalHeaderItem(0, item)
             item.setText(str(ident))
+        
         self.tableWidget_instrument.insertColumn(0)
+        
         parc.insert(0,"*")
         for ligne in range(len(self.identifications)):
             
