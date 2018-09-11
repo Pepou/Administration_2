@@ -2,7 +2,7 @@
 from sqlalchemy import *
 from sqlalchemy.orm import *
 #from sqlalchemy.engine import create_engine
-
+from sqlalchemy import func
 
 class AccesBdd():
     '''class gerant la bdd'''
@@ -48,8 +48,10 @@ class AccesBdd():
         table = Table("INSTRUMENTS", self.meta)
         ins = select([table.c.ID_INSTRUM, table.c.IDENTIFICATION,table.c.CONSTRUCTEUR, table.c.REFERENCE_CONSTRUCTEUR, \
                             table.c.N_SERIE, table.c.ETAT_UTILISATION])\
-                        .where(and_(table.c.ETAT_UTILISATION == "En service", table.c.DESIGNATION == "Etalon"))
+                        .where(and_(func.lower(table.c.ETAT_UTILISATION) == func.lower("En service"), table.c.DESIGNATION.contains("Etalon")))
         etalons = self.connection.execute(ins).fetchall()
+        
+#        print(f"etalon {etalons}")
         return etalons
         
     def return_polys_etalon(self, list_etalon):
