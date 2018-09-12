@@ -91,7 +91,8 @@ class GestionBdd:
         query = QtSql.QSqlQuery()
 
         requete =str("""SELECT "IDENTIFICATION" FROM "INSTRUMENTS" """\
-                            +"""WHERE "DOMAINE_MESURE" = 'Température' AND "TYPE" != 'Generateur de Temperature' """\
+                            +"""WHERE "DOMAINE_MESURE" = 'Température' OR "DOMAINE_MESURE" = 'TEMPÉRATURE' """\
+                            +"""AND "TYPE" != 'Generateur de Temperature' """\
                             +"""AND "DESIGNATION" != 'Afficheur de température' """\
                             +"""AND "DESIGNATION" != 'Sonde alarme température' ORDER BY "IDENTIFICATION";""")
         
@@ -239,7 +240,8 @@ class GestionBdd:
     def gestion_combobox_etalon(self):
         query = QtSql.QSqlQuery()
 
-        requete =str("""SELECT "IDENTIFICATION" FROM "INSTRUMENTS" WHERE "DESIGNATION" = 'Etalon' AND "ETAT_UTILISATION" = 'En service' ORDER BY "ID_INSTRUM";""")
+        requete =str("""SELECT "IDENTIFICATION" FROM "INSTRUMENTS" WHERE ("DESIGNATION" = 'Etalon' OR "DESIGNATION" = 'Etalon de Référence')
+                                                                        AND "ETAT_UTILISATION" = 'En service' ORDER BY "ID_INSTRUM";""")
         query.exec_(requete)  
         etalons = []
             
@@ -419,7 +421,8 @@ class GestionBdd:
     def recherche_client(self, code_client):
         '''fonction qui va chercher les données du client'''
         query = QtSql.QSqlQuery()
-        requete =str("""SELECT "SOCIETE", "ADRESSE", "CODE_POSTAL", "VILLE" FROM "CLIENTS" WHERE "CODE_CLIENT" = {};""".format(code_client))
+        requete =str("""SELECT "SOCIETE", "ADRESSE", "CODE_POSTAL", "VILLE" FROM "CLIENTS" WHERE "CODE_CLIENT" = {};""".format(str(code_client)))
+#        print(requete)
         query.exec_(requete)
         
 #        print("requete recherche_client {}".format(requete))
@@ -442,7 +445,7 @@ class GestionBdd:
             n_sap =  query.value(0)
         
         if n_sap is None  :
-            requete =str("""SELECT "N_INVENTAIRE" FROM "PARC_SAP" WHERE "N_SERIE_FABRICANT" = '{}';""".format(n_serie))
+            requete =str("""SELECT "N_INVENTAIRE" FROM "PARC_SAP" WHERE "N_SERIE_FABRICANT" = {};""".format(n_serie))
             query.exec_(requete) 
             while query.next() :
                 n_sap =  query.value(0)
@@ -1414,7 +1417,7 @@ class GestionBdd:
             cv["referentiel_emt"] = nom_ref
             
             
-            requete = """SELECT "TYPE_ERREUR" FROM "REFERENTIEL_CONFORMITE" WHERE "ID_REFERENTIEL" = {} ;""".format(id_referentiel_conformite)
+            requete = """SELECT "TYPE_ERREUR" FROM "REFERENTIEL_CONFORMITE" WHERE "ID_REFERENTIEL" = {} ;""".format(id_ref)
             query.exec_(requete) 
                     
             while query.next() : 

@@ -240,7 +240,8 @@ class GestionBdd:
     def gestion_combobox_etalon(self):
         query = QtSql.QSqlQuery()
 
-        requete =str("""SELECT "IDENTIFICATION" FROM "INSTRUMENTS" WHERE "DESIGNATION" = 'Etalon' AND "ETAT_UTILISATION" = 'En service' ORDER BY "ID_INSTRUM";""")
+        requete =str("""SELECT "IDENTIFICATION" FROM "INSTRUMENTS" WHERE ("DESIGNATION" = 'Etalon' OR "DESIGNATION" = 'Etalon de Référence')
+                                                                        AND "ETAT_UTILISATION" = 'En service' ORDER BY "ID_INSTRUM";""")
         query.exec_(requete)  
         etalons = []
             
@@ -1027,13 +1028,13 @@ class GestionBdd:
         query = QtSql.QSqlQuery()
             #Definition de la requete à executer :
         if designation_generateur == "Bain de Glace Fondante" :
-            if nom_etalon == "THE REF 003" or nom_etalon == "THE REF 004":
+            if nom_etalon == "REF_101A" or nom_etalon == "REF_102B":
                 requete = str ("""SELECT "ARCHIVAGE", "TYPE", "u_FINALE","U_DECLARATION" FROM "INCERTITUDES_MOYENS_MESURE" WHERE ("TYPE" = 'MEILLEURES_BGF' AND "ARCHIVAGE" = 'FALSE');""")
             else :
                 requete = str ("""SELECT "ARCHIVAGE", "TYPE", "u_FINALE", "U_DECLARATION" FROM "INCERTITUDES_MOYENS_MESURE" WHERE ("TYPE" = 'COURANTES_BGF' AND "ARCHIVAGE" = 'FALSE');""")
         
         elif designation_generateur == "Bain d'etalonnage" :
-            if nom_etalon == "THE REF 003" or nom_etalon == "THE REF 004":
+            if nom_etalon == "REF_101A" or nom_etalon == "REF_102B":
                 requete = str ("""SELECT "ARCHIVAGE", "TYPE", "u_FINALE", "U_DECLARATION" FROM "INCERTITUDES_MOYENS_MESURE" WHERE ("TYPE" = 'MEILLEURES_LIQUIDE' AND "ARCHIVAGE" = 'FALSE');""")
             else :
                 requete = str ("""SELECT "ARCHIVAGE", "TYPE", "u_FINALE", "U_DECLARATION" FROM "INCERTITUDES_MOYENS_MESURE" WHERE ("TYPE" = 'COURANTES_LIQUIDE' AND "ARCHIVAGE" = 'FALSE');""")
