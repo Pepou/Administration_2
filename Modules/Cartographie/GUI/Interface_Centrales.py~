@@ -170,13 +170,14 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
 
                     list_nom_sondes_fichier = [x for x in list(self.df) if x not in["Date", "M", "N°", "Heure"]]
                     list_nom_sondes_fichier.insert(0, "*")
-
+                    
+                    list_nom_sondes_fichier_bis = copy.deepcopy(list_nom_sondes_fichier)
                     
                     for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
                         combobox_nom_fichier = QComboBox(self.tableWidget_sondes_centrale)
                         self.tableWidget_sondes_centrale.setCellWidget(ligne, 2, combobox_nom_fichier)
                        
-                        combobox_nom_fichier.addItems(list_nom_sondes_fichier)
+                        combobox_nom_fichier.addItems(list_nom_sondes_fichier_bis)
 
                         nom_voie_bdd = self.tableWidget_sondes_centrale.item(ligne, 0).text()
                         
@@ -398,7 +399,7 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 accelration_dict[nom] = np.diff(vitesse_dict[nom])                
 #                a =[]
 #                index_dtat= 
-                moyenne_pandas[nom] = [np.mean(vitesse_dict[nom]), np.mean(accelration_dict[nom])]
+                moyenne_pandas[nom] = [np.nanmean(vitesse_dict[nom]), np.nanmean(accelration_dict[nom])]
 #                moyenne_dict[str(nom + "_"+"acceleration")]= 
                 
 #                print(test)

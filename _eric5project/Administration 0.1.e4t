@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
 <!-- eric5 tasks file for project Administration 0.1 -->
-<!-- Saved: 2018-09-12, 15:25:35 -->
+<!-- Saved: 2018-09-12, 17:00:52 -->
 <Tasks version="5.1">
   <ProjectScanFilter></ProjectScanFilter>
   <Task priority="1" completed="False" type="1">
@@ -371,15 +371,6 @@
     <Resource>
       <Filename>GUI/Main_Administration.py</Filename>
       <Linenumber>283</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-08-29, 14:29:19</Created>
-    <Resource>
-      <Filename>Modules/Cartographie/GUI/Interface_Centrales.py</Filename>
-      <Linenumber>104</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" type="1">
@@ -803,6 +794,15 @@
     <Resource>
       <Filename>Modules/Labo_Temp/IHM/Saisie_etalonnage.py</Filename>
       <Linenumber>3395</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-09-12, 17:00:49</Created>
+    <Resource>
+      <Filename>Modules/Cartographie/GUI/Interface_Centrales.py</Filename>
+      <Linenumber>105</Linenumber>
     </Resource>
   </Task>
 </Tasks>
