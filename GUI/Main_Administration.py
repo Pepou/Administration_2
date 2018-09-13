@@ -85,7 +85,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         #mise en place pour le tri
         self.comboBox_nom_colonne.addItems(list(self.parc))
 
-    
+        self.groupBox.setChecked(True)
+        
     @pyqtSlot()
     def on_actionLaboTemp_triggered(self):
         """

@@ -225,7 +225,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def on_actionReception_Expedition_triggered(self):
         self.reception_expedition = ReceptionExpedition(self.engine)
         self.reception_expedition.showMaximized()
-        self.close()
+        
     
     @pyqtSlot()
     def on_actionModification_2_triggered(self):
