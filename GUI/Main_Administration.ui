@@ -268,7 +268,7 @@
   </action>
   <action name="actionSynchronisation_enregisteurs">
    <property name="text">
-    <string>Synchronisation enregisteurs</string>
+    <string>Synchronisation enregistreurs</string>
    </property>
   </action>
   <action name="actionCaracterisation_Generateurs">

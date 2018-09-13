@@ -252,7 +252,7 @@ class Ui_MainWindow(object):
         self.menuBase_de_Donnees.setTitle(_translate("MainWindow", "Base de Donnees", None))
         self.menuExploitation_Certificats.setTitle(_translate("MainWindow", "Exploitation Certificats", None))
         self.actionLaboTemp.setText(_translate("MainWindow", "LaboTemp", None))
-        self.actionSynchronisation_enregisteurs.setText(_translate("MainWindow", "Synchronisation enregisteurs", None))
+        self.actionSynchronisation_enregisteurs.setText(_translate("MainWindow", "Synchronisation enregistreurs", None))
         self.actionCaracterisation_Generateurs.setText(_translate("MainWindow", "Caracterisation Generateurs", None))
         self.actionAfficheurs.setText(_translate("MainWindow", "Afficheurs", None))
         self.actionIndicateurs.setText(_translate("MainWindow", "Indicateurs", None))
