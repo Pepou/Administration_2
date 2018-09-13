@@ -135,7 +135,7 @@ class AccesBdd():
         
         table = Table("INSTRUMENTS", self.meta)
         
-        ins = select([table.c.IDENTIFICATION]).where(and_((func.lower(table.c.DESIGNATION)).contains(func.lower('Etalon')),func.lower(table.c.ETAT_UTILISATION) == func.lower('En service' ))).order_by(table.c.ID_INSTRUM)
+        ins = select([table.c.IDENTIFICATION]).where(and_(table.c.DESIGNATION.contains('Etalon'),func.lower(table.c.ETAT_UTILISATION) == func.lower('En service' ))).order_by(table.c.ID_INSTRUM)
         list_etalon = [x[0] for x in self.connection.execute(ins).fetchall()]
         
         
