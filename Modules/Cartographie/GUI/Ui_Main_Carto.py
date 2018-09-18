@@ -182,7 +182,7 @@ class Ui_Cartographie(object):
         QtCore.QMetaObject.connectSlotsByName(Cartographie)
 
     def retranslateUi(self, Cartographie):
-        Cartographie.setWindowTitle(_translate("Cartographie", "Cartographie v 0.3", None))
+        Cartographie.setWindowTitle(_translate("Cartographie", "Cartographie v 1.0", None))
         self.label_7.setText(_translate("Cartographie", "Recapitulatif des Cartographies", None))
         self.tableWidget_recap.setSortingEnabled(True)
         item = self.tableWidget_recap.horizontalHeaderItem(0)

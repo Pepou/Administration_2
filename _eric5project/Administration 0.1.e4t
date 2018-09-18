@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
 <!-- eric5 tasks file for project Administration 0.1 -->
-<!-- Saved: 2018-09-13, 10:35:13 -->
+<!-- Saved: 2018-09-18, 15:39:28 -->
 <Tasks version="5.1">
   <ProjectScanFilter></ProjectScanFilter>
   <Task priority="1" completed="False" type="1">
@@ -299,24 +299,6 @@
     <Resource>
       <Filename>Modules/Afficheurs/GUI/afficheurs.py</Filename>
       <Linenumber>1658</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-08-29, 14:30:58</Created>
-    <Resource>
-      <Filename>Modules/Cartographie/GUI/Annule_Remplace/Interface_Centrales_Annule_Remplace.py</Filename>
-      <Linenumber>266</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
-    <Created>2018-08-29, 14:31:17</Created>
-    <Resource>
-      <Filename>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.py</Filename>
-      <Linenumber>268</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" type="1">
@@ -727,15 +709,6 @@
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2018-09-12, 18:12:13</Created>
-    <Resource>
-      <Filename>Modules/Cartographie/GUI/Interface_Centrales.py</Filename>
-      <Linenumber>105</Linenumber>
-    </Resource>
-  </Task>
-  <Task priority="1" completed="False" type="1">
-    <Summary>TODO: not implemented yet</Summary>
-    <Description></Description>
     <Created>2018-09-13, 10:35:10</Created>
     <Resource>
       <Filename>GUI/Main_Administration.py</Filename>
@@ -803,6 +776,33 @@
     <Resource>
       <Filename>GUI/Main_Administration.py</Filename>
       <Linenumber>284</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-09-18, 15:16:10</Created>
+    <Resource>
+      <Filename>Modules/Cartographie/GUI/Interface_Centrales.py</Filename>
+      <Linenumber>105</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-09-18, 15:39:16</Created>
+    <Resource>
+      <Filename>Modules/Cartographie/GUI/Visu_Modif/Interface_Centrales_Visu_Modif.py</Filename>
+      <Linenumber>268</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2018-09-18, 15:39:25</Created>
+    <Resource>
+      <Filename>Modules/Cartographie/GUI/Annule_Remplace/Interface_Centrales_Annule_Remplace.py</Filename>
+      <Linenumber>266</Linenumber>
     </Resource>
   </Task>
 </Tasks>

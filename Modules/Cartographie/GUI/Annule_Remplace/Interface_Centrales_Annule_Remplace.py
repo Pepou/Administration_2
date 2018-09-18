@@ -334,23 +334,24 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
                         self.tableWidget_sondes_centrale.setCellWidget(ligne, 2, combobox_nom_fichier)
                        
                         combobox_nom_fichier.addItems(list_nom_sondes_fichier)
-                        
-#                        pos_carto = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()
+
                         nom_voie_bdd = self.tableWidget_sondes_centrale.item(ligne, 0).text()
                         
                         nom_voie_bdd_split = ""
                         for caractere_split in [" ", "_"]: #permet de decouper par rapport à diferent valeur de string à completer au fur et à mesure si nouveau format de sonde
+                                                       
                             if len(nom_voie_bdd.split(caractere_split)) > len(nom_voie_bdd_split):
                                 nom_voie_bdd_split = nom_voie_bdd.split(caractere_split)
-
                         
-                        for i in range(1, len(nom_voie_bdd_split)):
+                        
+                        
+                        for i in reversed(range(1, len(nom_voie_bdd_split))):
                             index=0
                             for ele in list_nom_sondes_fichier:
                                 if nom_voie_bdd_split[i] in ele or nom_voie_bdd_split[i].upper() in str(ele).upper() :
 #                                        print(" ele good {}".format(ele))
                                     combobox_nom_fichier.setCurrentIndex(index)
-                                    list_nom_sondes_fichier.remove(ele)
+#                                    list_nom_sondes_fichier.remove(ele)
                                     break
 
                                 index +=1
@@ -1222,13 +1223,22 @@ class Exploitation_Centrales_Annule_Remplace(QMainWindow, Ui_Exploitation_Centra
         
         tableau_sondes_centrale = []
         for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
-            if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and (self.tableWidget_sondes_centrale.item(ligne, 2)
-                                                                                                or self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText() !="*"):
+            
+            #test sur tableau sondes centrale colonne : nom sur le fichier:
+            try:
+                nom_fichier = self.tableWidget_sondes_centrale.cellWidget(ligne, 2).currentText()                 
+            except:
+                try: 
+                    nom_fichier = self.tableWidget_sondes_centrale.item(ligne, 2).text() 
+                except:
+                    nom_fichier = None
+                    
+            if self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText() != "*" and (
+                                                    nom_fichier or nom_fichier !="*"):
+                
                 nom_voie = self.tableWidget_sondes_centrale.item(ligne, 0).text()
                 emplacement = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()                
-                
-                nom_fichier = self.tableWidget_sondes_centrale.item(ligne, 2).text()              
-                
+
                 u_etal = decimal.Decimal(str(self.tableWidget_sondes_centrale.item(ligne, 6).text()))\
                                     .quantize(decimal.Decimal(str(0.01)),rounding = decimal.ROUND_UP)
                                     

@@ -126,6 +126,7 @@ class AccesBdd():
     
     def u_etal(self, ident):
        
+#        print(f"ident {ident}")
        #verification des polynomes savoir si l'etalonnage est encore actif
         table = Table("POLYNOME_CORRECTION", self.meta, autoload=True,  autoload_with= self.engine)
         ins = select([table.c.NUM_CERTIFICAT, table.c.ID_POLYNOME]).where(and_(table.c.IDENTIFICATION == ident, table.c.ARCHIVAGE == False))
@@ -133,7 +134,7 @@ class AccesBdd():
         poly_actif = (x[0] for x in result)
 #        print(f" type poly {type(poly_actif)}")
         id_poly_actif = (x[1] for x in result)
-#        print(id_poly_actif)
+#        print([x[1] for x in result])
        
         table = Table("ETALONNAGE_RESULTAT", self.meta, autoload=True,  autoload_with= self.engine)
         ins = select([table.c.U, table.c.ID_ETAL_RESULT]).where(and_(table.c.CODE_INSTRUM == ident, table.c.NUM_ETAL.in_(poly_actif))).order_by(table.c.ID_ETAL_RESULT.desc())
@@ -141,11 +142,13 @@ class AccesBdd():
 #        print(f"result count {result}")
 
         etal_u = (x[0] for x in result)
+#        print(f"etal_u {[x[0] for x in result]}")
         if result:
             max_etal_u = max(etal_u)
         else:
             max_etal_u =0
         
+#        print(max_etal_u)
         
         table = Table("POLYNOME_TABLE_ETALONNAGE", self.meta, autoload=True,  autoload_with= self.engine)
         ins = select([table.c.INCERTITUDE]).where(table.c.ID_POLYNOME.in_(id_poly_actif)).order_by(table.c.ID_POLY_TABLE_ETAL.desc())
@@ -628,7 +631,7 @@ class Carto_BDD():
         def insertion_carto_annule_remplace(self, donnees):
             Session = sessionmaker(bind= self.engine)
             session = Session()
-            print(donnees)
+#            print(donnees)
             #########################################################################################
             def num_rapport():
                 """fct pour generer le num carto"""
