@@ -79,8 +79,9 @@ class AccesBdd():
         table = Table("INSTRUMENTS", self.meta, autoload=True,  autoload_with= self.engine)
         ins = select([table.c.ID_INSTRUM, table.c.IDENTIFICATION,table.c.CONSTRUCTEUR, table.c.REFERENCE_CONSTRUCTEUR, \
                             table.c.N_SERIE, table.c.ETAT_UTILISATION])\
-                        .where(and_(table.c.ETAT_UTILISATION == "En service", table.c.DESIGNATION == "Centrale de température"))
+                        .where(and_(func.lower(table.c.ETAT_UTILISATION) == func.lower("En service"), func.lower(table.c.DESIGNATION) == func.lower("Centrale de température")))
         centrales = self.connection.execute(ins).fetchall()
+
 #        self.connection.close()
         return centrales
         
