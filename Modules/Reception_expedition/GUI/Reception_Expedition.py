@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import * 
 
 import pendulum
+import pandas as pd
 #from PyQt4.QtGui import QStandardItemModel 
 
 from Modules.Reception_expedition.GUI.Ui_Reception_Expedition import Ui_MainWindow
@@ -52,10 +53,12 @@ class ReceptionExpedition(QMainWindow, Ui_MainWindow):
         ensemble_interventions = self.interventions.recuperation_interventions()
         ensemble_interventions.sort_values(by="DATE_INTERVENTION", ascending=False, inplace=True)
         
-        annee_en_cour = pendulum.now('Europe/Paris').add(years= - 1)
+        annee_en_cour = pendulum.now('Europe/Paris').subtract(years = 1)
 #        print(annee_en_cour)
-        
-        self.tableView.remplir(ensemble_interventions[ensemble_interventions["DATE_INTERVENTION"]>annee_en_cour])
+#        print(type(ensemble_interventions["DATE_INTERVENTION"]))
+#        
+        ensemble_interventions["DATE_INTERVENTION"] = pd.to_datetime(ensemble_interventions["DATE_INTERVENTION"])
+        self.tableView.remplir(ensemble_interventions[ensemble_interventions["DATE_INTERVENTION"]> annee_en_cour])
     
     
 

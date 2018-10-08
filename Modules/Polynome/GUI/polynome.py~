@@ -19,7 +19,7 @@ import os
 import numpy as np
 import scipy.stats as sp
 import decimal
-
+import warnings
 #from PyQt4.Qwt5 import *
 #from PyQt4.Qwt5.qplt import *
 #import PyQt4.Qwt5.iqt
@@ -523,7 +523,7 @@ class Polynome(QMainWindow, Ui_Polynome):
             i+=1
             
         # gestion incertitude max , residu max,....
-        
+#        print(f"list Tlue {list_Tlue} et residu {residu} ")
         incertitude_max = np.amax(list_incertitude)
         self.lineEdit_incertitude_max_etal.setText(str(incertitude_max))
         
@@ -543,11 +543,15 @@ class Polynome(QMainWindow, Ui_Polynome):
         self.lineEdit_incertitude_residu_max.setText(str(incertitude_residu_max))
         
         #normalite
-        test = sp.shapiro(residu)
-        if test[1] > 0.05:
-            normalite = "Hypothese de normalite non rejetee"
-        else:
-            normalite = "Hypothese rejetee"
+        try:
+            test = sp.shapiro(residu)
+            if test[1] > 0.05:
+                normalite = "Hypothese de normalite non rejetee"
+            else:
+                normalite = "Hypothese rejetee"
+        except Warning:
+            normalite = "Warning : Evaluation impossible."
+            
         self.lineEdit_normalite_residus.setText(normalite)
         
         # graphique residu
@@ -555,10 +559,12 @@ class Polynome(QMainWindow, Ui_Polynome):
         
     def graphique_residus(self, list_Tlue, list_residu, ecartype_residu):
         '''fct qui gere l'affichage des residus dans le graphique'''
-        
+        print(f"list _ Tlue {list_Tlue} \n list residu {list_residu} \n ecarttype {ecartype_residu}")
         self.graphicsView_2.clear()
-        
-        list_residus_normalises = [(x/ecartype_residu) for x in list_residu]
+        try:
+            list_residus_normalises = [(x/ecartype_residu) for x in list_residu]
+        except RuntimeWarning:
+            list_residus_normalises = [0 for x in list_residu]
         list_temp_et_residus = [(x, y) for (x, y) in zip (list_Tlue, list_residus_normalises)]
         list_temp_et_residus.sort(key=itemgetter(0))
         
@@ -795,7 +801,7 @@ class Polynome(QMainWindow, Ui_Polynome):
         """
         Slot documentation goes here.
         """
-        dossier = QFileDialog.getExistingDirectory(None ,  "Selectionner le dossier de sauvegarde des Rapports", 'y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/1-TEMPERATURE/')
+        dossier = QFileDialog.getExistingDirectory(None ,  "Selectionner le dossier de sauvegarde des Rapports", 'y:/1.METROLOGIE/MATERIEL/')
         if dossier !="":
             rapport_poly = RapportSaisie()
             

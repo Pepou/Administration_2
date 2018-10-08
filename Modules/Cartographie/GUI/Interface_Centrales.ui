@@ -851,15 +851,21 @@ Consigne</string>
                  <property name="text">
                   <string>Oui</string>
                  </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
                 </widget>
                </item>
                <item row="0" column="1">
                 <widget class="QRadioButton" name="radioButton_correction_non">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
                  <property name="text">
                   <string>Non</string>
                  </property>
                  <property name="checked">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                 </widget>
                </item>

@@ -884,7 +884,9 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
     def appli_correction(self, mesure_brute):
         """fct utilise par la dtataframe pour corriger les donnees qui recupere le polynome dans le tableau  tableWidget_sondes_centrale en fct de la position de la sonde 
         et retourne la valeur corrigée a integrer dans la dtataframe copy"""
-#        print(mesure_brute.name)
+        print(mesure_brute)
+        print(mesure_brute.name)
+
         if mesure_brute.name !="Date" :
             for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
                 pos = self.tableWidget_sondes_centrale.cellWidget(ligne, 1).currentText()
@@ -905,12 +907,12 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                         poly=(coeff_a, coeff_b, coeff_c)
 
                 
-            try:
-                mesure_corrigee = mesure_brute + poly[0]* np.power(mesure_brute, 2) + poly[1] * mesure_brute + poly[2]  
+#            try:
+            mesure_corrigee = mesure_brute + poly[0]* np.power(mesure_brute, 2) + poly[1] * mesure_brute + poly[2]  
 
-                return mesure_corrigee
-            except:
-                return mesure_brute
+            return mesure_corrigee
+#            except:
+#                return mesure_brute
         else:
             return mesure_brute
     
