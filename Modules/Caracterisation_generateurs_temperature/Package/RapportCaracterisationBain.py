@@ -8,7 +8,7 @@ class RapportCaracterisationBain():
         
         self.path = path_sauvegarde #os.path.abspath("C:/Labo_Temp/AppData/")
         self.nom_fichier = nom_fichier
-        self.feuille_saisie = os.path.abspath("Report/PDLPILSURMETFO004.xlsm")
+        self.feuille_saisie = os.path.abspath("Modules/Caracterisation_generateurs_temperature/Report/PDLPILSURMETFO004.xlsm")
         
         self.xl = win32com.client.DispatchEx('Excel.Application')
         
