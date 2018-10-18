@@ -232,6 +232,8 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         react_thread = Reaffect_Thread(table_donnees,table_resultats , table_admin)
         
         react_thread.signalCopy_data.connect(self.tableView_donnees_fichier.remplir)
+        react_thread.signalNbr_Sondes.connect(self.lineEdit_nbr_sondes.setText)
+        
         react_thread.signalCopy_data.connect(self.plot_graph_total)
         react_thread.signalCopy_data.connect(self.affecter_copy_data)
         
@@ -268,7 +270,8 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
         # TODO: not implemented yet
         fichier =QFileDialog.getOpenFileNames(self, "Choisir le fichier de donnees", "Y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/3-CARTOS-SIMULATION")
         
-        if fichier:            
+        if fichier:
+            self.lineEdit_nbr_sondes.clear()
 
             if self.comboBox_centrale.currentText()== "EBI 10-T":
                 self.df = pd.read_excel(fichier[0], 0, 0)
@@ -981,6 +984,10 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                                             
     #        print("replace {}".format(self.copy_data))
             self.tableView_donnees_fichier.remplir(self.copy_data)
+            
+            nbr_sondes = self.copy_data.shape[1] -1 ###equivalent à len(self.copy_data.columns)
+            self.lineEdit_nbr_sondes.setText(str(nbr_sondes))
+            dates = [str(date) for date in self.copy_data["Date"]]
     
             dates = [str(date) for date in self.copy_data["Date"]]
     
@@ -1591,39 +1598,39 @@ class Exploitation_Centrales_Visu_Modif(QMainWindow, Ui_Exploitation_Centrales_V
                 valeur_haute = temp_desiree + emt
                 valeur_basse = temp_desiree - emt
                 
-                if ( y + err ) < valeur_haute and ( y + err ) > valeur_basse:
+                if ( y + err ) <= valeur_haute and ( y + err ) >= valeur_basse:
                     conforme = True
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute or y< valeur_basse:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) >= valeur_haute or ( y + err ) <= valeur_basse:
+                elif ( y + err ) > valeur_haute or ( y + err ) < valeur_basse:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
                     
             elif self.comboBox_signe_emt.currentText() == "+":
                 valeur_haute = temp_desiree + emt
                 valeur_basse = None
-                if ( y + err ) < valeur_haute :
+                if ( y + err ) <= valeur_haute :
                     conforme = True
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) >= valeur_haute :
+                elif ( y + err ) > valeur_haute :
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
                 
             elif self.comboBox_signe_emt.currentText() == "-":
                 valeur_haute = None
                 valeur_basse = temp_desiree - emt
-                if ( y + err ) > valeur_basse:
+                if ( y - err ) >= valeur_basse:
                     conforme = True
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y< valeur_basse:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) <= valeur_basse:
+                elif ( y - err ) < valeur_basse:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
 
@@ -1954,6 +1961,7 @@ class Reaffect_Thread (QThread):
     signalConseil = pyqtSignal(str)
     signalSimu = pyqtSignal()
     signalObjet_Remarque = pyqtSignal(str)
+    signalNbr_Sondes = pyqtSignal(str)
     
     def __init__(self, table_donnees,table_resultats , table_admin):
         QThread.__init__(self)
@@ -1985,8 +1993,10 @@ class Reaffect_Thread (QThread):
         index_result = [ sonde for sonde in index_bis if sonde in index]
         copy_data = copy_data[index_result]
         
+        nb_sondes = copy_data.shape[1]-1
         
         self.signalCopy_data.emit(copy_data)
+        self.signalNbr_Sondes.emit(str(nb_sondes))
 #        
         dates = [str(date) for date in copy_data["Date"]]
 #        print(dates)

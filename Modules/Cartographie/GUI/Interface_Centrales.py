@@ -106,11 +106,14 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
         fichier =QFileDialog.getOpenFileNames(self, "Choisir le fichier de donnees", "Y:/1.METROLOGIE/0.ARCHIVES ETALONNAGE-VERIFICATIONS/3-CARTOS-SIMULATION")
         
         if fichier:
+            self.lineEdit_nbr_sondes.clear()
             
             self.graph_total.canvas.ax.clear()
             self.graph_total.canvas.draw()
             self.graph_zoom.canvas.ax.clear()
             self.graph_zoom.canvas.draw()
+            
+            self.lineEdit_nbr_sondes.clear()
 
             if self.comboBox_centrale.currentText()== "EBI 10-T":
                 self.df = pd.read_excel(fichier[0], 0, 0)
@@ -829,7 +832,9 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
     #            print("replace {}".format(self.copy_data))
             if len(list(self.copy_data)):
                 self.tableView_donnees_fichier.remplir(self.copy_data)
-        
+                
+                nbr_sondes = self.copy_data.shape[1] -1 ###equivalent à len(self.copy_data.columns)
+                self.lineEdit_nbr_sondes.setText(str(nbr_sondes))
                 dates = [str(date) for date in self.copy_data["Date"]]
     
                 self.comboBox_debut_zone.addItems(dates)
@@ -884,8 +889,8 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
     def appli_correction(self, mesure_brute):
         """fct utilise par la dtataframe pour corriger les donnees qui recupere le polynome dans le tableau  tableWidget_sondes_centrale en fct de la position de la sonde 
         et retourne la valeur corrigée a integrer dans la dtataframe copy"""
-        print(mesure_brute)
-        print(mesure_brute.name)
+#        print(mesure_brute)
+#        print(mesure_brute.name)
 
         if mesure_brute.name !="Date" :
             for ligne in range(self.tableWidget_sondes_centrale.rowCount()):
@@ -1477,39 +1482,39 @@ class Exploitation_Centrales(QMainWindow, Ui_Exploitation_Centrales):
                 valeur_haute = temp_desiree + emt
                 valeur_basse = temp_desiree - emt
                 
-                if ( y + err ) < valeur_haute and ( y + err ) > valeur_basse:
+                if ( y + err ) <= valeur_haute and ( y + err ) >= valeur_basse:
                     conforme = True
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute or y< valeur_basse:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) >= valeur_haute or ( y + err ) <= valeur_basse:
+                elif ( y + err ) > valeur_haute or ( y + err ) < valeur_basse:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
                     
             elif self.comboBox_signe_emt.currentText() == "+":
                 valeur_haute = temp_desiree + emt
                 valeur_basse = None
-                if ( y + err ) < valeur_haute :
+                if ( y + err ) <= valeur_haute :
                     conforme = True
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y> valeur_haute:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) >= valeur_haute :
+                elif ( y + err ) > valeur_haute :
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
                 
             elif self.comboBox_signe_emt.currentText() == "-":
                 valeur_haute = None
                 valeur_basse = temp_desiree - emt
-                if ( y + err ) > valeur_basse:
+                if ( y - err ) >= valeur_basse:
                     conforme = True
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme")                
                 elif y< valeur_basse:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Non Conforme")
-                elif ( y + err ) <= valeur_basse:
+                elif ( y - err ) < valeur_basse:
                     conforme = False
 #                    resultat_conf = "{} : {}".format(index_result[i],"Conforme avec Risque")
 

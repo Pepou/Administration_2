@@ -25,7 +25,7 @@ except AttributeError:
 class Ui_Exploitation_Centrales_Visu_Modif(object):
     def setupUi(self, Exploitation_Centrales_Visu_Modif):
         Exploitation_Centrales_Visu_Modif.setObjectName(_fromUtf8("Exploitation_Centrales_Visu_Modif"))
-        Exploitation_Centrales_Visu_Modif.resize(948, 859)
+        Exploitation_Centrales_Visu_Modif.resize(948, 866)
         Exploitation_Centrales_Visu_Modif.setStyleSheet(_fromUtf8("QLabel {\n"
 "\n"
 "font:  10pt  \"Calibrii\" ;\n"
@@ -454,6 +454,22 @@ class Ui_Exploitation_Centrales_Visu_Modif(object):
         self.tableView_donnees_fichier.setObjectName(_fromUtf8("tableView_donnees_fichier"))
         self.verticalLayout.addWidget(self.tableView_donnees_fichier)
         self.verticalLayout_6.addWidget(self.splitter)
+        self.horizontalLayout_16 = QtGui.QHBoxLayout()
+        self.horizontalLayout_16.setObjectName(_fromUtf8("horizontalLayout_16"))
+        self.label_47 = QtGui.QLabel(self.tab)
+        self.label_47.setObjectName(_fromUtf8("label_47"))
+        self.horizontalLayout_16.addWidget(self.label_47)
+        self.lineEdit_nbr_sondes = QtGui.QLineEdit(self.tab)
+        self.lineEdit_nbr_sondes.setEnabled(False)
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Calibri"))
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit_nbr_sondes.setFont(font)
+        self.lineEdit_nbr_sondes.setObjectName(_fromUtf8("lineEdit_nbr_sondes"))
+        self.horizontalLayout_16.addWidget(self.lineEdit_nbr_sondes)
+        self.verticalLayout_6.addLayout(self.horizontalLayout_16)
         self.tabWidget.addTab(self.tab, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
@@ -977,6 +993,7 @@ class Ui_Exploitation_Centrales_Visu_Modif(object):
         item = self.tableWidget_sondes_centrale.horizontalHeaderItem(10)
         item.setText(_translate("Exploitation_Centrales_Visu_Modif", "Dérive", None))
         self.commandLinkButton_affiche_donnees.setText(_translate("Exploitation_Centrales_Visu_Modif", "Afficher donnees", None))
+        self.label_47.setText(_translate("Exploitation_Centrales_Visu_Modif", "Nbr de sondes selectionnées", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Exploitation_Centrales_Visu_Modif", "Administration", None))
         self.label_29.setText(_translate("Exploitation_Centrales_Visu_Modif", "Selection  Debut de la Zone", None))
         self.label_30.setText(_translate("Exploitation_Centrales_Visu_Modif", "Selection Fin de la Zone", None))

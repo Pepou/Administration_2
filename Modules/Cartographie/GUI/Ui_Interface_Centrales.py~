@@ -558,6 +558,22 @@ class Ui_Exploitation_Centrales(object):
         self.tableView_donnees_fichier.setObjectName(_fromUtf8("tableView_donnees_fichier"))
         self.verticalLayout.addWidget(self.tableView_donnees_fichier)
         self.verticalLayout_6.addWidget(self.splitter)
+        self.horizontalLayout_15 = QtGui.QHBoxLayout()
+        self.horizontalLayout_15.setObjectName(_fromUtf8("horizontalLayout_15"))
+        self.label_46 = QtGui.QLabel(self.tab)
+        self.label_46.setObjectName(_fromUtf8("label_46"))
+        self.horizontalLayout_15.addWidget(self.label_46)
+        self.lineEdit_nbr_sondes = QtGui.QLineEdit(self.tab)
+        self.lineEdit_nbr_sondes.setEnabled(False)
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Calibri"))
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit_nbr_sondes.setFont(font)
+        self.lineEdit_nbr_sondes.setObjectName(_fromUtf8("lineEdit_nbr_sondes"))
+        self.horizontalLayout_15.addWidget(self.lineEdit_nbr_sondes)
+        self.verticalLayout_6.addLayout(self.horizontalLayout_15)
         self.tabWidget.addTab(self.tab, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
@@ -1077,6 +1093,7 @@ class Ui_Exploitation_Centrales(object):
         item = self.tableWidget_sondes_centrale.horizontalHeaderItem(10)
         item.setText(_translate("Exploitation_Centrales", "Dérive", None))
         self.commandLinkButton_affiche_donnees.setText(_translate("Exploitation_Centrales", "Afficher donnees", None))
+        self.label_46.setText(_translate("Exploitation_Centrales", "Nbr de sondes selectionnées", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Exploitation_Centrales", "Administration", None))
         self.label_29.setText(_translate("Exploitation_Centrales", "Selection  Debut de la Zone", None))
         self.label_30.setText(_translate("Exploitation_Centrales", "Selection Fin de la Zone", None))
@@ -1132,8 +1149,8 @@ from Modules.Cartographie.GUI.extendedlineedit import ExtendedLine
 from Modules.Cartographie.GUI.matplotlibwidgetFile_graph_total import matplotlibWidget
 from Modules.Cartographie.GUI.qtableview_donnees import Tableview_donnees_fichier
 from Modules.Cartographie.GUI.tableview_resultats import Tableview_resultats
-import Package.icones_rc
-import Modules.Cartographie.Ressources.ressource_rc
+import GUI.Clients.icones_rc
+import Ressources.ressource_rc
 
 if __name__ == "__main__":
     import sys
