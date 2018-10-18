@@ -81,8 +81,7 @@ class AccesBdd():
                             table.c.N_SERIE, table.c.ETAT_UTILISATION])\
                         .where(and_(func.lower(table.c.ETAT_UTILISATION) == func.lower("En service"), func.lower(table.c.DESIGNATION) == func.lower("Centrale de température")))
         centrales = self.connection.execute(ins).fetchall()
-        print(func.lower("Centrale de température"))
-        print(centrales)
+
 #        self.connection.close()
         return centrales
         

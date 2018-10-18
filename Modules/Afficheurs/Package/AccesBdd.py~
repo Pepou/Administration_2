@@ -177,9 +177,9 @@ class AccesBdd():
         ins = select([table.c.N_SERIE, table.c.CONSTRUCTEUR, table.c.TYPE, table.c.COMMENTAIRE, table.c.RESOLUTION,
                         table.c.AFFECTATION, table.c.SITE, table.c.CODE, table.c.ID_INSTRUM]).where(table .c.IDENTIFICATION == identification)
         result = self.connection.execute(ins)    
-#        print(f"result {result}")
+        print(f"result {result}")
         for ele in result:
-#            print("ele {}".format(ele))
+            print("ele {}".format(ele))
             n_serie = ele[0]
             constructeur = ele[1]
             type = ele[2]
@@ -328,7 +328,7 @@ class AccesBdd():
             prefix = "AFM"
         elif afficheur["designation"].upper() == "Afficheur de vitesse".upper():
             prefix = "AFV"            
-        elif afficheur["designation"] == "Temoin d'environnement":
+        elif afficheur["designation"].upper() == "Témoin d'environnement".upper():
             prefix = "TEV"  
         
         donnees["NUM_DOC"] = prefix + afficheur["num_doc_provisoire"]+"_"+ str(n_saisie)

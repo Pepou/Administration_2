@@ -197,6 +197,7 @@ class AccesBdd():
     
             list_nom_prenom_cmr = [str(x.NOM+" "+x.PRENOM) for x in cmr ]
             list_nom_prenom_cmr.sort()
+            list_nom_prenom_cmr.insert(0, "*")
     #        print(list_nom_prenom_cmr)
             combobox.addItems(list_nom_prenom_cmr)
                 
