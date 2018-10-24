@@ -1024,6 +1024,7 @@ class GestionBdd:
         '''recupere les eiv en fct des moyens mis en oeuvre lors de l'etalonnage'''
         
         designation_generateur = self.recherche_designation_instrument(nom_generateur)
+#        print(str(designation_generateur))
         
         query = QtSql.QSqlQuery()
             #Definition de la requete à executer :
@@ -1041,12 +1042,13 @@ class GestionBdd:
         
             
         else :
-            requete = str ("""SELECT "ARCHIVAGE", "TYPE", "u_FINALE", "U_DECLARATION" FROM "INCERTITUDES_MOYENS_MESURE" WHERE ("TYPE" ='COURANTE_AIR' AND "ARCHIVAGE" = 'FALSE');""")
+            requete = str ("""SELECT "ARCHIVAGE", "TYPE", "u_FINALE", "U_DECLARATION" FROM "INCERTITUDES_MOYENS_MESURE" WHERE ("TYPE" ='COURANTE_AIR' OR "TYPE" ='COURANTES_AIR' AND "ARCHIVAGE" = 'FALSE');""")
 
 #        print("requete recuperation_eiv {}".format(requete))
         query.exec_(requete)
         
         while query.next() :
+#            print(query.value)
             u = query.value(2)
             u_declaration = query.value(3)
 
