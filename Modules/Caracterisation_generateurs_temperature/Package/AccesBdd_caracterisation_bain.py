@@ -53,8 +53,8 @@ class AccesBdd_caracterisation_Bain():
         
         table = Table("INSTRUMENTS", self.meta)
         ins = select([table.c.ID_INSTRUM, table.c.IDENTIFICATION,table.c.CONSTRUCTEUR, table.c.REFERENCE_CONSTRUCTEUR, \
-                            table.c.N_SERIE, table.c.ETAT_UTILISATION, table.c.REF_INSTRUMENT])\
-                        .where(and_(table.c.ETAT_UTILISATION == "En service", table.c.INSTRUMENT_LIE == True))
+                            table.c.N_SERIE, table.c.ETAT_UTILISATION, table.c.REF_INSTRUMENT])#
+#                        .where(and_(table.c.ETAT_UTILISATION == "En service", table.c.INSTRUMENT_LIE == True))
         sondes = self.connection.execute(ins).fetchall()
         return sondes
         

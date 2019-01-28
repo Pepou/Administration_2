@@ -8,9 +8,9 @@ from PyQt4.QtCore import pyqtSlot, SIGNAL, Qt
 from PyQt4.QtGui import QMainWindow,  QTableWidgetItem, QFont, QMenu, QAction, QApplication, QMessageBox, QFileDialog
 import numpy as np
 from .Ui_Caracterisation_Bain_maj_visualisation import Ui_Caracterisation_Bain_Maj
-from Package.AccesBdd_caracterisation_bain import AccesBdd_caracterisation_Bain
+from Modules.Caracterisation_generateurs_temperature.Package.AccesBdd_caracterisation_bain import AccesBdd_caracterisation_Bain
 
-from Package.RapportCaracterisationBain import RapportCaracterisationBain
+from Modules.Caracterisation_generateurs_temperature.Package.RapportCaracterisationBain import RapportCaracterisationBain
 
 class Caracterisation_Bain_Maj(QMainWindow, Ui_Caracterisation_Bain_Maj):
     """
@@ -379,7 +379,8 @@ class Caracterisation_Bain_Maj(QMainWindow, Ui_Caracterisation_Bain_Maj):
             
         #gestion moyen mesure 
         id= stab[5]
-#        print("id instrum stab {}".format(id))
+        print("id instrum stab {}".format(id))
+        print(self.etalons)
         if id in (x[0] for x in self.etalons):
             nom = next(x[1] for x in self.etalons if x[0] == id)
         else:

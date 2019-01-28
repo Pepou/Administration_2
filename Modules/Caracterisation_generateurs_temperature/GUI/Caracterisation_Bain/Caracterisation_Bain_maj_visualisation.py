@@ -379,7 +379,9 @@ class Caracterisation_Bain_Maj(QMainWindow, Ui_Caracterisation_Bain_Maj):
             
         #gestion moyen mesure 
         id= stab[5]
-#        print("id instrum stab {}".format(id))
+        print("id instrum stab {}".format(id))
+        print(self.sondes_centrales)
+        print(self.etalons)
         if id in (x[0] for x in self.etalons):
             nom = next(x[1] for x in self.etalons if x[0] == id)
         else:
